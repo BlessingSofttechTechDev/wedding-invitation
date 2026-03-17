@@ -463,8 +463,8 @@ function CourtyardHero({ event }: { event: WeddingEvent }) {
   ];
 
   return (
-    <section ref={wrapRef} style={{ height: "105vh" }}>
-      <div ref={pinRef} className="relative w-full h-screen overflow-hidden">
+    <section ref={wrapRef} className="min-h-[105vh] md:min-h-0 md:h-[105vh]">
+      <div ref={pinRef} className="relative w-full min-h-screen overflow-visible md:min-h-0 md:h-screen">
         <div
           className="hero-bg-light absolute inset-0"
           style={{ background: `linear-gradient(180deg,#d5c4ac 0%,#c8b8a0 40%,#bfb096 100%)` }}
@@ -504,10 +504,10 @@ function CourtyardHero({ event }: { event: WeddingEvent }) {
           <FloralGarlandStrand x={350} accent={palette.accent} primary={palette.primary} />
         </svg>
 
-        {/* Hero content */}
-        <div className="absolute inset-0 flex flex-col items-center justify-start pt-[12vh] z-10 px-6">
+        {/* Hero content — on mobile: in-flow so section grows and cards aren't clipped; on desktop: absolute */}
+        <div className="relative md:absolute left-0 right-0 top-0 flex flex-col items-center justify-start pt-[8vh] md:pt-[12vh] pb-6 md:pb-10 z-10 px-6 overflow-visible">
           <h1
-            className="font-serif text-4xl md:text-6xl lg:text-7xl tracking-[0.03em] mb-5"
+            className="font-serif text-4xl md:text-6xl lg:text-7xl tracking-[0.03em] mb-3 md:mb-5"
             style={{ color: palette.foreground }}
           >
             The Courtyard Edit
@@ -519,13 +519,13 @@ function CourtyardHero({ event }: { event: WeddingEvent }) {
             आंगन
           </p>
           <h2
-            className="text-sm md:text-base uppercase tracking-[0.3em] font-light mb-10"
+            className="text-sm md:text-base uppercase tracking-[0.3em] font-light mb-6 md:mb-10"
             style={{ color: `${palette.foreground}aa` }}
           >
             A Victorian Hi-Tea at a Royal Palace
           </h2>
 
-          <div className="max-w-xl text-center space-y-1.5 mb-10">
+          <div className="max-w-xl text-center space-y-1.5 mb-6 md:mb-10">
             {narrative.map((line, i) => (
               <p
                 key={i}
@@ -537,7 +537,7 @@ function CourtyardHero({ event }: { event: WeddingEvent }) {
             ))}
           </div>
 
-          <div className="flex items-center gap-6 md:gap-8 mb-10">
+          <div className="flex items-center gap-4 md:gap-8 mb-6 md:mb-10">
             {[
               { icon: CalendarDays, label: event.date },
               { icon: Clock, label: event.time },
@@ -552,12 +552,12 @@ function CourtyardHero({ event }: { event: WeddingEvent }) {
             ))}
           </div>
 
-          {/* Hi-tea detail cards */}
-          <div className="flex flex-wrap items-center justify-center gap-4 md:gap-6">
+          {/* Hi-tea detail cards — extra bottom padding on mobile so full card + content below is visible */}
+          <div className="flex flex-wrap items-center justify-center gap-3 md:gap-6 pb-4 md:pb-2">
             {hiTeaDetails.map((d) => (
               <div
                 key={d.label}
-                className="detail-card group relative px-5 py-4 rounded-sm text-center opacity-0 cursor-default"
+                className="detail-card group relative px-5 py-5 min-h-[5rem] rounded-sm text-center opacity-0 cursor-default overflow-visible flex flex-col justify-center"
                 style={{
                   backgroundColor: `${palette.background}cc`,
                   border: `1px solid ${palette.accent}30`,
@@ -571,10 +571,10 @@ function CourtyardHero({ event }: { event: WeddingEvent }) {
                     background: `radial-gradient(circle at 50% 50%,${palette.primary}20,transparent 70%)`,
                   }}
                 />
-                <p className="text-[10px] uppercase tracking-[0.2em] mb-1 relative z-10" style={{ color: palette.accent }}>
+                <p className="text-[10px] uppercase tracking-[0.2em] mb-1.5 relative z-10" style={{ color: palette.accent }}>
                   {d.label}
                 </p>
-                <p className="font-serif text-sm relative z-10" style={{ color: palette.foreground }}>
+                <p className="font-serif text-sm leading-snug relative z-10 break-words" style={{ color: palette.foreground }}>
                   {d.value}
                 </p>
               </div>
@@ -624,21 +624,21 @@ function CourtyardQuote({ event }: { event: WeddingEvent }) {
   );
 
   return (
-    <section ref={ref} className="py-8 md:py-10 px-6 relative overflow-hidden" style={{ backgroundColor: palette.background }}>
+    <section ref={ref} className="py-5 md:py-8 px-6 relative overflow-hidden" style={{ backgroundColor: palette.background }}>
       <div
         className="absolute inset-0"
         style={{ background: `linear-gradient(180deg,${palette.background},${palette.muted}20,${palette.background})` }}
       />
       <div className="relative z-10 max-w-3xl mx-auto text-center">
         <OrnamentalDivider accent={palette.accent} />
-        <p className="font-serif italic text-xl md:text-2xl mt-8 leading-relaxed" style={{ color: `${palette.foreground}66` }}>
+        <p className="font-serif italic text-xl md:text-2xl mt-6 leading-relaxed" style={{ color: `${palette.foreground}66` }}>
           &ldquo;
           {quote.split(" ").map((w, i) => (
             <span key={i} className="aq-w inline-block mr-[0.3em]">{w}</span>
           ))}
           &rdquo;
         </p>
-        <p className="font-serif text-2xl md:text-4xl mt-6 tracking-[0.15em]" style={{ color: `${palette.accent}18` }}>
+        <p className="font-serif text-2xl md:text-4xl mt-3 md:mt-4 tracking-[0.15em]" style={{ color: `${palette.accent}b3` }}>
           विरासत
         </p>
       </div>
@@ -668,7 +668,7 @@ function StorySection({ event }: { event: WeddingEvent }) {
   }, { scope: ref });
 
   return (
-    <section ref={ref} className="py-8 md:py-12 px-6 relative" style={{ backgroundColor: palette.background }}>
+    <section ref={ref} className="py-5 md:py-12 px-6 relative" style={{ backgroundColor: palette.background }}>
       <div
         className="absolute inset-0 pointer-events-none"
         style={{ background: `radial-gradient(ellipse 80% 40% at 50% 50%,${palette.accent}04,transparent 70%)` }}
@@ -710,17 +710,17 @@ function CourtyardDressCode({ event }: { event: WeddingEvent }) {
   );
 
   return (
-    <section ref={ref} className="relative py-12 md:py-16 px-6 overflow-hidden" style={{ backgroundColor: palette.background }}>
+    <section ref={ref} className="relative py-6 md:py-16 px-6 overflow-hidden" style={{ backgroundColor: palette.background }}>
       <div
         className="absolute inset-0"
         style={{ background: `radial-gradient(ellipse 70% 50% at 50% 40%,${palette.primary}08,transparent 70%)` }}
       />
       <div className="relative z-10 max-w-3xl mx-auto">
-        <p className="text-[11px] uppercase tracking-[0.3em] mb-12 font-medium text-center" style={{ color: palette.accent }}>
+        <p className="text-[11px] uppercase tracking-[0.3em] mb-8 md:mb-12 font-medium text-center" style={{ color: palette.accent }}>
           Attire · परिधान
         </p>
         <div
-          className="dc-card relative rounded-sm p-10 md:p-14 opacity-0"
+          className="dc-card relative rounded-sm p-6 md:p-14 opacity-0"
           style={{
             background: `linear-gradient(165deg,${palette.secondary}40,${palette.background} 50%,${palette.muted}30)`,
             border: `1px solid ${palette.accent}15`,
@@ -739,7 +739,7 @@ function CourtyardDressCode({ event }: { event: WeddingEvent }) {
             </svg>
           ))}
 
-          <div className="text-center mb-10">
+          <div className="text-center mb-6 md:mb-10">
             <p className="font-serif text-2xl md:text-3xl tracking-[0.04em] mb-3" style={{ color: palette.foreground }}>
               {dressCode.title}
             </p>
@@ -749,13 +749,13 @@ function CourtyardDressCode({ event }: { event: WeddingEvent }) {
             </p>
           </div>
 
-          <div className="flex items-center gap-4 mb-10">
+          <div className="flex items-center gap-4 mb-6 md:mb-10">
             <div className="flex-1 h-px" style={{ background: `linear-gradient(90deg,transparent,${palette.accent}20)` }} />
             <OrnamentalDivider accent={palette.accent} />
             <div className="flex-1 h-px" style={{ background: `linear-gradient(90deg,${palette.accent}20,transparent)` }} />
           </div>
 
-          <div className="grid md:grid-cols-2 gap-10 md:gap-16">
+          <div className="grid md:grid-cols-2 gap-8 md:gap-16">
             <div>
               <h4 className="text-xs uppercase tracking-[0.25em] mb-6 font-medium" style={{ color: palette.accent }}>
                 Embrace
@@ -800,7 +800,7 @@ function CourtyardMoodSection({ event }: { event: WeddingEvent }) {
   return (
     <section
       ref={ref}
-      className="py-24 md:py-36 relative overflow-hidden"
+      className="py-8 md:py-24 relative overflow-hidden"
       style={{ backgroundColor: palette.background }}
     >
       {/* Continuity texture & glow */}
@@ -813,8 +813,8 @@ function CourtyardMoodSection({ event }: { event: WeddingEvent }) {
 
       <div className="max-w-6xl mx-auto px-6 relative z-10">
         {/* Magazine-style Header */}
-        <div className="text-center mb-20">
-          <div className="inline-flex items-center gap-4 mb-6">
+        <div className="text-center mb-12 md:mb-16">
+          <div className="inline-flex items-center gap-4 mb-4 md:mb-6">
             <div className="h-px w-8 bg-current opacity-20" />
             <p
               className="text-[10px] uppercase tracking-[0.5em] font-medium"
@@ -826,7 +826,7 @@ function CourtyardMoodSection({ event }: { event: WeddingEvent }) {
           </div>
 
           <h3
-            className="font-serif text-5xl md:text-7xl mb-10 tracking-tight"
+            className="font-serif text-5xl md:text-7xl mb-6 md:mb-8 tracking-tight"
             style={{ color: palette.foreground }}
           >
             Motifs <span className="opacity-40 italic">&amp;</span> Modernity
@@ -850,9 +850,9 @@ function CourtyardVenue({ event }: { event: WeddingEvent }) {
   const { palette } = event;
 
   return (
-    <section className="py-8 md:py-12 px-6 relative overflow-hidden" style={{ backgroundColor: palette.background }}>
+    <section className="py-5 md:py-12 px-6 relative overflow-hidden" style={{ backgroundColor: palette.background }}>
       <div className="relative z-10 max-w-4xl mx-auto">
-        <p className="text-[11px] uppercase tracking-[0.3em] mb-8 font-medium" style={{ color: palette.accent }}>
+        <p className="text-[11px] uppercase tracking-[0.3em] mb-6 md:mb-8 font-medium" style={{ color: palette.accent }}>
           Venue · स्थान
         </p>
         <h3 className="font-serif text-3xl md:text-4xl lg:text-5xl mb-3" style={{ color: palette.foreground }}>
@@ -892,7 +892,7 @@ export default function SecondChapterContent({ event }: ChapterProps) {
       <CourtyardQuote event={event} />
 
       <FadeInView>
-        <section className="border-y py-8" style={{ borderColor: `${palette.foreground}0a`, backgroundColor: palette.background }}>
+        <section className="border-y py-5 md:py-8" style={{ borderColor: `${palette.foreground}0a`, backgroundColor: palette.background }}>
           <div className="max-w-5xl mx-auto px-6 flex flex-wrap justify-center gap-8 md:gap-16">
             {[
               { icon: CalendarDays, label: `${event.date} · ${event.day}` },
@@ -910,19 +910,19 @@ export default function SecondChapterContent({ event }: ChapterProps) {
 
       <StorySection event={event} />
 
-      <div className="flex justify-center" style={{ backgroundColor: palette.background }}>
+      <div className="flex justify-center py-2 md:py-0" style={{ backgroundColor: palette.background }}>
         <OrnamentalDivider accent={palette.accent} />
       </div>
 
       <CourtyardDressCode event={event} />
 
-      <div className="flex justify-center" style={{ backgroundColor: palette.background }}>
+      <div className="flex justify-center py-2 md:py-0" style={{ backgroundColor: palette.background }}>
         <OrnamentalDivider accent={palette.accent} />
       </div>
 
       <CourtyardMoodSection event={event} />
 
-      <div className="flex justify-center" style={{ backgroundColor: palette.background }}>
+      <div className="flex justify-center py-2 md:py-0" style={{ backgroundColor: palette.background }}>
         <OrnamentalDivider accent={palette.accent} />
       </div>
 
@@ -931,11 +931,11 @@ export default function SecondChapterContent({ event }: ChapterProps) {
       {/* Chapter navigation */}
       <FadeInView>
         <section
-          className="py-8 md:py-10 px-6 border-t"
+          className="py-5 md:py-10 px-6 border-t"
           style={{ borderColor: `${palette.foreground}08`, backgroundColor: palette.background }}
         >
           <div className="max-w-5xl mx-auto">
-            <div className="text-center mb-16">
+            <div className="text-center mb-10 md:mb-16">
               <Link
                 href="/itinerary"
                 className="inline-flex items-center gap-2 text-sm transition-all duration-300 hover:gap-3"
@@ -990,7 +990,7 @@ export default function SecondChapterContent({ event }: ChapterProps) {
       </FadeInView>
 
       {/* Bhaat — rice ceremony */}
-      <section className="py-8 md:py-12 px-6 relative overflow-hidden" style={{ backgroundColor: palette.background }}>
+      <section className="py-5 md:py-12 px-6 relative overflow-hidden" style={{ backgroundColor: palette.background }}>
         <div
           className="absolute inset-0 pointer-events-none"
           style={{
@@ -1026,8 +1026,8 @@ export default function SecondChapterContent({ event }: ChapterProps) {
         className="relative"
         style={{ backgroundColor: "#d8d0c4", borderTop: `1px solid ${palette.accent}20` }}
       >
-        <div className="max-w-7xl mx-auto px-6 py-12 md:py-16 text-center">
-          <div className="flex justify-center mb-6">
+        <div className="max-w-7xl mx-auto px-6 py-8 md:py-16 text-center">
+          <div className="flex justify-center mb-4 md:mb-6">
             <OrnamentalDivider accent={palette.accent} />
           </div>
           <p className="font-serif text-xs mb-4 tracking-[0.3em]" style={{ color: `${palette.accent}` }}>
@@ -1040,7 +1040,7 @@ export default function SecondChapterContent({ event }: ChapterProps) {
             {COUPLE.hashtag}
           </p>
 
-          <div className="relative my-12 py-10 px-8 rounded-sm mx-auto max-w-lg" style={{ border: `1px solid ${palette.accent}30`, background: `linear-gradient(165deg,${palette.accent}08,transparent 40%,${palette.primary}05)` }}>
+          <div className="relative my-8 md:my-12 py-6 md:py-10 px-6 md:px-8 rounded-sm mx-auto max-w-lg" style={{ border: `1px solid ${palette.accent}30`, background: `linear-gradient(165deg,${palette.accent}08,transparent 40%,${palette.primary}05)` }}>
             <p className="text-[10px] uppercase tracking-[0.35em] mb-4 font-medium" style={{ color: `${palette.accent}` }}>Your Presence Matters</p>
             <p className="font-serif text-lg md:text-xl leading-relaxed italic" style={{ color: `${palette.foreground}dd` }}>
               The celebration is incomplete without you.

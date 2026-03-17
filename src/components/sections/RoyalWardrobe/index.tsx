@@ -379,7 +379,7 @@ function ChapterRail({ selectedChapter, onSelect }: { selectedChapter: string; o
                   className="w-full text-left rounded-lg py-4 px-5 transition-colors duration-300"
                   style={{ border: `1px solid ${isSelected ? `${P.gold}40` : `${P.cream}0a`}`, backgroundColor: isSelected ? "rgba(212,175,55,0.06)" : "rgba(255,255,255,0.02)" }}
                 >
-                  {event && <div className="text-[10px] uppercase tracking-[0.25em] font-body mb-1" style={{ color: P.bronze }}>{event.dateShort} · Ch. {event.chapterNumber}</div>}
+                  {event && <div className="text-[10px] uppercase tracking-[0.25em] font-body mb-1" style={{ color: P.bronze }}>{event.dateShort} · {event.time.replace(/\s+onwards$/i, "").trim()} · Ch. {event.chapterNumber}</div>}
                   <div className="font-serif text-lg" style={{ color: P.cream }}>{chapter.title}</div>
                 </button>
               );
@@ -718,7 +718,7 @@ function ChapterEtiquetteNote({ chapter, theme }: { chapter: ChapterWardrobe; th
   }, { scope: ref, dependencies: [chapter.id] });
 
   return (
-    <section ref={ref} className="max-w-3xl mx-auto px-6 py-16 md:py-24" key={chapter.id}>
+    <section ref={ref} className="max-w-3xl mx-auto px-6 pt-10 md:pt-16 pb-4 md:pb-8" key={chapter.id}>
       <div className="en-el relative p-8 md:p-12 rounded-lg" style={{ border: `1px solid ${P.cream}08`, backgroundColor: "rgba(255,255,255,0.012)", boxShadow: `0 2px 30px rgba(0,0,0,0.15), inset 0 1px 0 ${P.cream}05` }}>
         <div
           className="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2 w-8 h-8 rotate-45 flex items-center justify-center"
@@ -815,7 +815,7 @@ export default function RoyalWardrobePage() {
         />
       </div>
 
-      <div ref={contentRef} className="pb-32 px-4 sm:px-6">
+      <div ref={contentRef} className="pb-6 md:pb-12 px-4 sm:px-6">
         <div className="max-w-7xl mx-auto mt-12 space-y-24">
           <section className="grid grid-cols-1 xl:grid-cols-12 gap-10 lg:gap-16 items-start">
             <div className="xl:col-span-8 xl:sticky xl:top-24 xl:self-start">
@@ -826,7 +826,7 @@ export default function RoyalWardrobePage() {
             </div>
           </section>
 
-          <Flourish className="mt-40 mb-20" accent={theme.accent} />
+          <Flourish className="mt-24 md:mt-32 mb-8 md:mb-12" accent={theme.accent} />
           <ChapterEtiquetteNote chapter={selectors.currentWardrobe} theme={theme} />
         </div>
       </div>

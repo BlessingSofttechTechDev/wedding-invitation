@@ -113,7 +113,7 @@ export default function Navbar() {
                             className="text-[10px] uppercase tracking-wider block mb-0.5"
                             style={{ color: `${P.cream}50` }}
                           >
-                            Ch. {String(event.chapterNumber).padStart(2, "0")} · {event.dateShort}
+                            Ch. {String(event.chapterNumber).padStart(2, "0")} · {event.dateShort} · {event.time.replace(/\s+onwards$/i, "").trim()}
                           </span>
                           <span className="font-serif">{event.title}</span>
                         </Link>
@@ -168,7 +168,7 @@ export default function Navbar() {
                             className="text-[10px] uppercase tracking-wider block mb-0.5"
                             style={{ color: `${P.cream}50` }}
                           >
-                            Ch. {String(event.chapterNumber).padStart(2, "0")} · {event.dateShort}
+                            Ch. {String(event.chapterNumber).padStart(2, "0")} · {event.dateShort} · {event.time.replace(/\s+onwards$/i, "").trim()}
                           </span>
                           <span className="font-serif">{event.title}</span>
                         </Link>
@@ -306,7 +306,7 @@ export default function Navbar() {
                         }}
                       >
                         <span className="block text-[10px] uppercase tracking-wider mb-1" style={{ color: `${P.cream}50` }}>
-                          {event.dateShort} · Ch. {event.chapterNumber}
+                          {event.dateShort} · {event.time.replace(/\s+onwards$/i, "").trim()} · Ch. {event.chapterNumber}
                         </span>
                         {event.title}
                       </Link>
@@ -356,7 +356,7 @@ export default function Navbar() {
                         }}
                       >
                         <span className="block text-[10px] uppercase tracking-wider mb-1" style={{ color: `${P.cream}50` }}>
-                          {event.dateShort} · Ch. {event.chapterNumber}
+                          {event.dateShort} · {event.time.replace(/\s+onwards$/i, "").trim()} · Ch. {event.chapterNumber}
                         </span>
                         {event.title}
                       </Link>

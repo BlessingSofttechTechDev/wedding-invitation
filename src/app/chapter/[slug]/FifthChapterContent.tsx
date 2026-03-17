@@ -100,7 +100,7 @@ function JourneyMap({ accent, fg }: { accent: string; fg: string }) {
         d="M30 65 C55 60 75 55 100 55 C140 55 160 32 200 30 C230 32 260 36 275 40 C290 44 320 46 350 48"
         stroke={accent}
         strokeWidth="1"
-        opacity="0.5"
+        opacity="0.75"
         strokeLinecap="round"
       />
       {/* City dots and labels */}
@@ -491,11 +491,11 @@ function WorldHero({ event }: { event: WeddingEvent }) {
           <p className="font-serif font-hindi text-3xl md:text-5xl lg:text-6xl tracking-[0.04em] mb-3" style={{ color: "#4a3520", textShadow: `0 0 30px ${palette.accent}30` }}>
             हमारी दुनिया
           </p>
-          <p className="text-xs italic tracking-[0.12em] mb-6" style={{ color: `${palette.foreground}aa` }}>
+          <p className="text-xs italic tracking-[0.12em] mb-4" style={{ color: `${palette.foreground}aa` }}>
             Where every city they've lived in meets in one afternoon
           </p>
 
-          <div className="max-w-md text-center mb-6 space-y-1">
+          <div className="max-w-md text-center mb-4 space-y-1">
             {[
               "Mumbai was the first meeting.",
               "Pune was where he grew up.",
@@ -506,7 +506,7 @@ function WorldHero({ event }: { event: WeddingEvent }) {
             ))}
           </div>
 
-          <div className="flex items-center gap-6 mb-6">
+          <div className="flex items-center gap-6 mb-3">
             {[
               { icon: CalendarDays, label: event.date },
               { icon: Clock, label: event.time },
@@ -519,7 +519,7 @@ function WorldHero({ event }: { event: WeddingEvent }) {
             ))}
           </div>
 
-          <div className="hero-journey w-full max-w-xs md:max-w-md mb-6">
+          <div className="hero-journey w-full max-w-xs md:max-w-md mb-3">
             <JourneyMap accent={palette.accent} fg={palette.foreground} />
           </div>
         </div>

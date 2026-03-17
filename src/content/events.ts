@@ -108,7 +108,7 @@ export const EVENTS: WeddingEvent[] = [
     palette: {
       primary: "#b8860b",
       secondary: "#e8c872",
-      accent: "#d4a017",
+      accent: "#a67c0a",
       background: "#faf6ee",
       foreground: "#2c1e08",
       muted: "#f0e4c8",

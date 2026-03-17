@@ -7,6 +7,7 @@ import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { useGSAP } from "@gsap/react";
 import { motion, useReducedMotion } from "framer-motion";
+import { Shirt } from "lucide-react";
 import { COUPLE, EVENTS } from "@/content/events";
 import { CountdownTimer } from "@/components/shared/CountdownTimer";
 
@@ -860,7 +861,7 @@ function Hero({ loaded }: { loaded: boolean }) {
           </Link>
           <Link href="/wardrobe" className="group relative px-10 py-4 text-[11px] uppercase tracking-[0.25em] font-body font-medium transition-all duration-700 overflow-hidden" style={{ color: P.bg, background: `linear-gradient(135deg, ${P.gold}, #c9a030, ${P.gold})`, boxShadow: `0 8px 24px rgba(212,175,55,0.2), inset 0 1px 0 rgba(255,255,255,0.15)` }}>
             <span className="relative z-10 flex items-center gap-2">
-              <svg width="14" height="10" viewBox="0 0 14 10" fill="none"><path d="M1 1h12v8H1z" stroke={P.bg} strokeWidth="0.8" /><path d="M1 1l6 4 6-4" stroke={P.bg} strokeWidth="0.6" /></svg>
+              <Shirt size={14} strokeWidth={1.2} style={{ color: P.bg }} />
               Check out the Wardrobe
             </span>
           </Link>
