@@ -1037,22 +1037,26 @@ function StoryQuote() {
         </p>
 
         {/* Parents' blessing section */}
-        <div className="sq-fade flex flex-col items-center gap-6 py-8 px-6 mx-auto max-w-lg rounded" style={{ border: `1px solid ${P.gold}12`, background: `linear-gradient(135deg, ${P.gold}04, transparent, ${P.gold}03)` }}>
+        <div className="sq-fade flex flex-col items-center gap-6 py-10 px-6 mx-auto max-w-xl rounded" style={{ border: `1px solid ${P.gold}12`, background: `linear-gradient(135deg, ${P.gold}04, transparent, ${P.gold}03)` }}>
           <p className="text-[10px] uppercase tracking-[0.4em] font-body" style={{ color: `${P.gold}60` }}>
             With the Blessings of Our Families
           </p>
           <p className="font-serif italic text-xs" style={{ color: `${P.gold}40` }}>
             सर्वे भवन्तु सुखिनः
           </p>
-          <div className="flex items-center gap-8 md:gap-12">
-            <div className="text-center">
+          <div className="flex items-center gap-8 md:gap-14">
+            <div className="text-center space-y-2">
               <p className="font-serif text-sm md:text-base" style={{ color: `${P.cream}cc` }}>The Goel Family</p>
-              <p className="text-[9px] uppercase tracking-[0.2em] font-body mt-1" style={{ color: `${P.cream}50` }}>Groom&apos;s Family</p>
+              <p className="text-[9px] uppercase tracking-[0.2em] font-body" style={{ color: `${P.cream}50` }}>Groom&apos;s Family</p>
+              <div className="w-8 mx-auto my-2" style={{ borderTop: `1px solid ${P.gold}18` }} />
+              <p className="font-serif text-xs md:text-sm" style={{ color: `${P.cream}99` }}>Mr. Atul &amp; Mrs. Amrita Goel</p>
             </div>
-            <div className="w-px h-10" style={{ backgroundColor: `${P.gold}20` }} />
-            <div className="text-center">
+            <div className="w-px h-16" style={{ backgroundColor: `${P.gold}20` }} />
+            <div className="text-center space-y-2">
               <p className="font-serif text-sm md:text-base" style={{ color: `${P.cream}cc` }}>The Harlalka Family</p>
-              <p className="text-[9px] uppercase tracking-[0.2em] font-body mt-1" style={{ color: `${P.cream}50` }}>Bride&apos;s Family</p>
+              <p className="text-[9px] uppercase tracking-[0.2em] font-body" style={{ color: `${P.cream}50` }}>Bride&apos;s Family</p>
+              <div className="w-8 mx-auto my-2" style={{ borderTop: `1px solid ${P.gold}18` }} />
+              <p className="font-serif text-xs md:text-sm" style={{ color: `${P.cream}99` }}>Mr. Sanjay &amp; Mrs. Vandana Harlalka</p>
             </div>
           </div>
         </div>
