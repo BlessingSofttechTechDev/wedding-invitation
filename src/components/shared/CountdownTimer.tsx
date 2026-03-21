@@ -54,7 +54,7 @@ export function CountdownTimer({ targetDate }: { targetDate: string }) {
           <span className="text-2xl sm:text-3xl md:text-5xl font-serif text-stone-100 tabular-nums leading-none">
             {String(unit.value).padStart(2, "0")}
           </span>
-          <span className="text-[9px] sm:text-[10px] md:text-xs uppercase tracking-[0.2em] text-stone-500 mt-2 font-body">
+          <span className="text-xs md:text-[9px] sm:text-xs md:text-[10px] md:text-xs uppercase tracking-[0.2em] text-stone-500 mt-2 font-body">
             {unit.label}
           </span>
         </div>

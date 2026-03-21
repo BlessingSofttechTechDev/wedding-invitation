@@ -2,6 +2,7 @@
 
 import { useRef } from "react";
 import Image from "next/image";
+import Link from "next/link";
 import {
   motion,
   useScroll,
@@ -58,7 +59,7 @@ export function StorySection() {
         <FadeInView>
           <div className="flex items-center justify-center gap-4 mb-14">
             <div className="h-px w-14 bg-amber-400/15" />
-            <span className="text-[10px] uppercase tracking-[0.4em] text-amber-400/30 font-body select-none">
+            <span className="text-xs md:text-[10px] uppercase tracking-[0.4em] text-amber-400/30 font-body select-none">
               Our Story
             </span>
             <div className="h-px w-14 bg-amber-400/15" />
@@ -76,7 +77,7 @@ export function StorySection() {
         <FadeInView delay={0.24}>
           <div className="flex items-center justify-center gap-3 my-10 md:my-12">
             <div className="h-px w-8 bg-amber-400/15" />
-            <span className="text-amber-400/25 text-[9px] select-none">◆</span>
+            <span className="text-amber-400/25 text-xs md:text-[9px] select-none">◆</span>
             <div className="h-px w-8 bg-amber-400/15" />
           </div>
         </FadeInView>
@@ -94,7 +95,16 @@ export function StorySection() {
           </p>
         </FadeInView>
         <FadeInView delay={0.48}>
-          <div className="mt-14 text-amber-400/15 text-sm tracking-[0.6em] select-none">
+          <Link
+            href="/story"
+            className="inline-block mt-10 text-xs md:text-[10px] uppercase tracking-[0.3em] font-body transition-colors duration-500 px-8 py-3"
+            style={{ color: "#d4af3799", border: "1px solid #d4af3720" }}
+          >
+            Read Our Full Story →
+          </Link>
+        </FadeInView>
+        <FadeInView delay={0.56}>
+          <div className="mt-10 text-amber-400/15 text-sm tracking-[0.6em] select-none">
             ─── ◆ ───
           </div>
         </FadeInView>

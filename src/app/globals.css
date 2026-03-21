@@ -129,6 +129,20 @@
   }
 }
 
+/* Whole-site mobile readability: bump root rem + enforce minimum text size */
+@media (max-width: 767px) {
+  html {
+    -webkit-text-size-adjust: 100%;
+    font-size: 107%;
+  }
+}
+
+@media (max-width: 480px) {
+  html {
+    font-size: 112.5%;
+  }
+}
+
 /* Prevent horizontal scroll while maintaining sticky compatibility */
 html,
 body {

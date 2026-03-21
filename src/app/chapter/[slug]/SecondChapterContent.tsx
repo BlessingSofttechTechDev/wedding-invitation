@@ -28,7 +28,11 @@ interface ChapterProps {
 
 function HaveliArchOutline({ accent }: { accent: string }) {
   return (
-    <svg viewBox="0 0 420 520" className="arch-svg w-[280px] md:w-[360px] mx-auto" fill="none">
+    <svg
+      viewBox="0 0 420 520"
+      className="arch-svg w-full h-auto max-w-[min(280px,88vw)] md:max-w-[360px] mx-auto block shrink-0"
+      fill="none"
+    >
       <path
         className="arch-stroke"
         d="M40 520 L40 190 Q40 120 90 80 Q150 40 210 30 Q270 40 330 80 Q380 120 380 190 L380 520"
@@ -251,17 +255,17 @@ function CourtyardIntro({
       );
 
       introTl.fromTo(
-        el.querySelectorAll(".it-char"),
-        { opacity: 0, y: 14 },
-        { opacity: 1, y: 0, duration: 0.35, stagger: 0.03, ease: "power3.out" },
+        el.querySelectorAll(".it-word"),
+        { opacity: 0, y: 12 },
+        { opacity: 1, y: 0, duration: 0.45, stagger: 0.07, ease: "power3.out" },
         1.0
       );
 
       introTl.fromTo(
-        el.querySelectorAll(".is-char"),
-        { opacity: 0, y: 8 },
-        { opacity: 1, y: 0, duration: 0.25, stagger: 0.015, ease: "power3.out" },
-        1.6
+        el.querySelectorAll(".is-line"),
+        { opacity: 0, y: 10 },
+        { opacity: 1, y: 0, duration: 0.5, stagger: 0.12, ease: "power3.out" },
+        1.35
       );
 
       introTl.fromTo(
@@ -304,12 +308,12 @@ function CourtyardIntro({
   }, [onComplete]);
 
   const title = "The Courtyard Edit";
-  const sub = "Bhaat · A Victorian Hi-Tea at a Royal Palace";
+  const titleWords = title.split(" ");
 
   return (
     <div
       ref={ref}
-      className="fixed inset-0 z-50 flex flex-col items-center justify-center overflow-hidden"
+      className="fixed inset-0 z-50 flex flex-col items-center justify-center overflow-x-hidden overflow-y-auto"
       style={{ backgroundColor: "#c8b8a4" }}
     >
       <StripeCanopy accent={palette.accent} primary={palette.primary} />
@@ -319,39 +323,41 @@ function CourtyardIntro({
         <FrescoBorderFrame accent={palette.accent} fg={palette.foreground} />
       </div>
 
-      <div className="relative z-10 text-center">
-        <HaveliArchOutline accent={palette.accent} />
-        <div className="absolute inset-0 flex flex-col items-center justify-center">
-          <p
-            className="font-serif text-3xl md:text-5xl mb-2 tracking-[0.04em] whitespace-nowrap"
+      {/* Arch above copy — avoids cramped overlay and awkward per-letter wraps */}
+      <div className="relative z-10 w-full max-w-md mx-auto px-5 sm:px-8 flex flex-col items-center text-center">
+        <div className="w-full max-w-[min(280px,85vw)] md:max-w-[320px] mx-auto shrink-0">
+          <HaveliArchOutline accent={palette.accent} />
+        </div>
+
+        <div className="mt-1 sm:mt-2 flex flex-col items-center gap-3 sm:gap-3.5 w-full">
+          <h2
+            className="font-serif text-[1.65rem] sm:text-3xl md:text-4xl font-normal leading-[1.2] tracking-tight text-balance max-w-[18rem] sm:max-w-none mx-auto"
             style={{ color: palette.foreground }}
           >
-            {title.split("").map((c, i) => (
-              <span
-                key={i}
-                className="it-char inline-block opacity-0"
-                style={c === " " ? { whiteSpace: "pre" } : undefined}
-              >
-                {c}
+            {titleWords.map((word, wi) => (
+              <span key={wi} className="it-word inline-block opacity-0 mr-[0.28em] last:mr-0">
+                {word}
               </span>
             ))}
-          </p>
+          </h2>
+
+          <div className="flex flex-col items-center gap-1.5 w-full max-w-[20rem] sm:max-w-sm mx-auto">
+            <p
+              className="is-line font-body text-[11px] sm:text-xs uppercase tracking-[0.22em] sm:tracking-[0.26em] font-medium opacity-0"
+              style={{ color: `${palette.foreground}d0` }}
+            >
+              Bhaat
+            </p>
+            <p
+              className="is-line font-body text-[10px] sm:text-[11px] md:text-xs uppercase tracking-[0.14em] sm:tracking-[0.18em] font-normal leading-relaxed text-balance opacity-0"
+              style={{ color: `${palette.foreground}9e` }}
+            >
+              A Victorian Hi-Tea at a Royal Palace
+            </p>
+          </div>
+
           <p
-            className="text-[11px] md:text-xs uppercase tracking-[0.35em] font-light whitespace-nowrap"
-            style={{ color: `${palette.foreground}aa` }}
-          >
-            {sub.split("").map((c, i) => (
-              <span
-                key={i}
-                className="is-char inline-block opacity-0"
-                style={c === " " ? { whiteSpace: "pre" } : undefined}
-              >
-                {c}
-              </span>
-            ))}
-          </p>
-          <p
-            className="id-script font-serif text-base md:text-lg mt-3 tracking-[0.2em] opacity-0"
+            className="id-script font-serif text-lg md:text-xl mt-1 tracking-[0.35em] opacity-0"
             style={{ color: palette.accent }}
           >
             आंगन
@@ -520,7 +526,7 @@ function CourtyardHero({ event }: { event: WeddingEvent }) {
           </p>
           <h2
             className="text-sm md:text-base uppercase tracking-[0.3em] font-light mb-6 md:mb-10"
-            style={{ color: `${palette.foreground}aa` }}
+            style={{ color: `${palette.foreground}b8` }}
           >
             A Victorian Hi-Tea at a Royal Palace
           </h2>
@@ -530,7 +536,7 @@ function CourtyardHero({ event }: { event: WeddingEvent }) {
               <p
                 key={i}
                 className="h-line font-serif text-[15px] md:text-lg italic leading-relaxed"
-                style={{ color: `${palette.foreground}bb` }}
+                style={{ color: `${palette.foreground}c4` }}
               >
                 {line}
               </p>
@@ -545,7 +551,7 @@ function CourtyardHero({ event }: { event: WeddingEvent }) {
             ].map(({ icon: Icon, label }) => (
               <div key={label} className="h-dec text-center opacity-0">
                 <Icon size={16} style={{ color: palette.accent }} className="mx-auto mb-1.5" />
-                <p className="text-[11px] uppercase tracking-[0.15em]" style={{ color: `${palette.foreground}88` }}>
+                <p className="text-xs md:text-[11px] uppercase tracking-[0.15em]" style={{ color: `${palette.foreground}a3` }}>
                   {label}
                 </p>
               </div>
@@ -571,7 +577,7 @@ function CourtyardHero({ event }: { event: WeddingEvent }) {
                     background: `radial-gradient(circle at 50% 50%,${palette.primary}20,transparent 70%)`,
                   }}
                 />
-                <p className="text-[10px] uppercase tracking-[0.2em] mb-1.5 relative z-10" style={{ color: palette.accent }}>
+                <p className="text-xs md:text-[10px] uppercase tracking-[0.2em] mb-1.5 relative z-10" style={{ color: palette.accent }}>
                   {d.label}
                 </p>
                 <p className="font-serif text-sm leading-snug relative z-10 break-words" style={{ color: palette.foreground }}>
@@ -631,7 +637,7 @@ function CourtyardQuote({ event }: { event: WeddingEvent }) {
       />
       <div className="relative z-10 max-w-3xl mx-auto text-center">
         <OrnamentalDivider accent={palette.accent} />
-        <p className="font-serif italic text-xl md:text-2xl mt-6 leading-relaxed" style={{ color: `${palette.foreground}66` }}>
+        <p className="font-serif italic text-xl md:text-2xl mt-6 leading-relaxed" style={{ color: `${palette.foreground}90` }}>
           &ldquo;
           {quote.split(" ").map((w, i) => (
             <span key={i} className="aq-w inline-block mr-[0.3em]">{w}</span>
@@ -674,7 +680,7 @@ function StorySection({ event }: { event: WeddingEvent }) {
         style={{ background: `radial-gradient(ellipse 80% 40% at 50% 50%,${palette.accent}04,transparent 70%)` }}
       />
       <div className="relative z-10 max-w-3xl mx-auto text-center">
-        <p className="text-[11px] uppercase tracking-[0.3em] mb-8 font-medium" style={{ color: palette.accent }}>
+        <p className="text-xs md:text-[11px] uppercase tracking-[0.3em] mb-8 font-medium" style={{ color: palette.accent }}>
           The Vibe · <span className="text-[0.78em] font-normal">माहौल</span>
         </p>
         <blockquote className="story-quote font-serif italic text-lg md:text-xl lg:text-2xl leading-relaxed px-2" style={{ color: `${palette.foreground}cc` }}>
@@ -716,7 +722,7 @@ function CourtyardDressCode({ event }: { event: WeddingEvent }) {
         style={{ background: `radial-gradient(ellipse 70% 50% at 50% 40%,${palette.primary}08,transparent 70%)` }}
       />
       <div className="relative z-10 max-w-3xl mx-auto">
-        <p className="text-[11px] uppercase tracking-[0.3em] mb-8 md:mb-12 font-medium text-center" style={{ color: palette.accent }}>
+        <p className="text-xs md:text-[11px] uppercase tracking-[0.3em] mb-8 md:mb-12 font-medium text-center" style={{ color: palette.accent }}>
           Attire · परिधान
         </p>
         <div
@@ -744,7 +750,7 @@ function CourtyardDressCode({ event }: { event: WeddingEvent }) {
               {dressCode.title}
             </p>
             <div className="w-16 h-px mx-auto mb-5" style={{ background: `linear-gradient(90deg,transparent,${palette.accent}40,transparent)` }} />
-            <p className="font-serif text-base md:text-lg italic leading-relaxed max-w-lg mx-auto" style={{ color: `${palette.foreground}88` }}>
+            <p className="font-serif text-base md:text-lg italic leading-relaxed max-w-lg mx-auto" style={{ color: `${palette.foreground}a3` }}>
               {dressCode.description}
             </p>
           </div>
@@ -764,20 +770,20 @@ function CourtyardDressCode({ event }: { event: WeddingEvent }) {
                 {dressCode.dos.map((item) => (
                   <li key={item} className="dc-i flex items-start gap-3">
                     <span className="mt-1.5 w-1.5 h-1.5 rounded-full shrink-0" style={{ backgroundColor: palette.accent }} />
-                    <span className="text-[15px] leading-relaxed font-light" style={{ color: `${palette.foreground}bb` }}>{item}</span>
+                    <span className="text-[15px] leading-relaxed font-light" style={{ color: `${palette.foreground}c4` }}>{item}</span>
                   </li>
                 ))}
               </ul>
             </div>
             <div>
-              <h4 className="text-xs uppercase tracking-[0.25em] mb-6 font-medium" style={{ color: `${palette.foreground}55` }}>
+              <h4 className="text-xs uppercase tracking-[0.25em] mb-6 font-medium" style={{ color: `${palette.foreground}85` }}>
                 Kindly Avoid
               </h4>
               <ul className="space-y-4">
                 {dressCode.donts.map((item) => (
                   <li key={item} className="dc-i flex items-start gap-3">
                     <span className="mt-1.5 w-1.5 h-1.5 rounded-full shrink-0" style={{ backgroundColor: `${palette.foreground}25` }} />
-                    <span className="text-[15px] leading-relaxed font-light" style={{ color: `${palette.foreground}66` }}>{item}</span>
+                    <span className="text-[15px] leading-relaxed font-light" style={{ color: `${palette.foreground}90` }}>{item}</span>
                   </li>
                 ))}
               </ul>
@@ -817,7 +823,7 @@ function CourtyardMoodSection({ event }: { event: WeddingEvent }) {
           <div className="inline-flex items-center gap-4 mb-4 md:mb-6">
             <div className="h-px w-8 bg-current opacity-20" />
             <p
-              className="text-[10px] uppercase tracking-[0.5em] font-medium"
+              className="text-xs md:text-[10px] uppercase tracking-[0.5em] font-medium"
               style={{ color: palette.accent }}
             >
               Aesthetic Narrative · विजन
@@ -852,13 +858,13 @@ function CourtyardVenue({ event }: { event: WeddingEvent }) {
   return (
     <section className="py-5 md:py-12 px-6 relative overflow-hidden" style={{ backgroundColor: palette.background }}>
       <div className="relative z-10 max-w-4xl mx-auto">
-        <p className="text-[11px] uppercase tracking-[0.3em] mb-6 md:mb-8 font-medium" style={{ color: palette.accent }}>
+        <p className="text-xs md:text-[11px] uppercase tracking-[0.3em] mb-6 md:mb-8 font-medium" style={{ color: palette.accent }}>
           Venue · स्थान
         </p>
         <h3 className="font-serif text-3xl md:text-4xl lg:text-5xl mb-3" style={{ color: palette.foreground }}>
           {event.location}
         </h3>
-        <p className="text-lg mb-12" style={{ color: `${palette.foreground}77` }}>{event.venue}</p>
+        <p className="text-lg mb-12" style={{ color: `${palette.foreground}96` }}>{event.venue}</p>
       </div>
     </section>
   );
@@ -899,7 +905,7 @@ export default function SecondChapterContent({ event }: ChapterProps) {
               { icon: Clock, label: event.time },
               { icon: MapPin, label: `${event.location}, ${event.venue}` },
             ].map(({ icon: Icon, label }) => (
-              <div key={label} className="flex items-center gap-3 text-sm" style={{ color: `${palette.foreground}88` }}>
+              <div key={label} className="flex items-center gap-3 text-sm" style={{ color: `${palette.foreground}a3` }}>
                 <Icon size={16} style={{ color: palette.accent }} />
                 <span>{label}</span>
               </div>
@@ -939,7 +945,7 @@ export default function SecondChapterContent({ event }: ChapterProps) {
               <Link
                 href="/itinerary"
                 className="inline-flex items-center gap-2 text-sm transition-all duration-300 hover:gap-3"
-                style={{ color: `${palette.foreground}77` }}
+                style={{ color: `${palette.foreground}96` }}
               >
                 <ArrowLeft size={14} />
                 Back to Itinerary
@@ -957,9 +963,9 @@ export default function SecondChapterContent({ event }: ChapterProps) {
                     <div className="absolute inset-0" style={{ background: `linear-gradient(to bottom,transparent,${palette.background}ee)` }} />
                   </div>
                   <div className="p-6 md:p-8 relative">
-                    <p className="text-[11px] uppercase tracking-[0.2em] mb-3 font-medium" style={{ color: `${palette.foreground}44` }}>← Previous Chapter</p>
-                    <p className="font-serif text-lg md:text-xl" style={{ color: `${palette.foreground}bb` }}>{prevEvent.title}</p>
-                    <p className="text-sm mt-1 italic" style={{ color: `${palette.foreground}55` }}>{prevEvent.subtitle}</p>
+                    <p className="text-xs md:text-[11px] uppercase tracking-[0.2em] mb-3 font-medium" style={{ color: `${palette.foreground}78` }}>← Previous Chapter</p>
+                    <p className="font-serif text-lg md:text-xl" style={{ color: `${palette.foreground}c4` }}>{prevEvent.title}</p>
+                    <p className="text-sm mt-1 italic" style={{ color: `${palette.foreground}85` }}>{prevEvent.subtitle}</p>
                   </div>
                 </Link>
               ) : (
@@ -976,9 +982,9 @@ export default function SecondChapterContent({ event }: ChapterProps) {
                     <div className="absolute inset-0" style={{ background: `linear-gradient(to bottom,transparent,${palette.background}ee)` }} />
                   </div>
                   <div className="p-6 md:p-8 relative">
-                    <p className="text-[11px] uppercase tracking-[0.2em] mb-3 font-medium" style={{ color: `${palette.foreground}44` }}>Next Chapter →</p>
-                    <p className="font-serif text-lg md:text-xl" style={{ color: `${palette.foreground}bb` }}>{nextEvent.title}</p>
-                    <p className="text-sm mt-1 italic" style={{ color: `${palette.foreground}55` }}>{nextEvent.subtitle}</p>
+                    <p className="text-xs md:text-[11px] uppercase tracking-[0.2em] mb-3 font-medium" style={{ color: `${palette.foreground}78` }}>Next Chapter →</p>
+                    <p className="font-serif text-lg md:text-xl" style={{ color: `${palette.foreground}c4` }}>{nextEvent.title}</p>
+                    <p className="text-sm mt-1 italic" style={{ color: `${palette.foreground}85` }}>{nextEvent.subtitle}</p>
                   </div>
                 </Link>
               ) : (
@@ -1006,14 +1012,14 @@ export default function SecondChapterContent({ event }: ChapterProps) {
             भात
           </p>
           <p
-            className="text-[11px] uppercase tracking-[0.3em] mb-2 font-medium"
+            className="text-xs md:text-[11px] uppercase tracking-[0.3em] mb-2 font-medium"
             style={{ color: `${palette.accent}99` }}
           >
             Bhaat
           </p>
           <p
             className="font-body text-sm md:text-base leading-relaxed max-w-xl mx-auto"
-            style={{ color: `${palette.foreground}99` }}
+            style={{ color: `${palette.foreground}b0` }}
           >
             This chapter includes the Bhaat (Mayra) ceremony — a pre-wedding ritual where the maternal uncle (Mama) brings gifts, clothes, and sweets, honouring his role in the family.
           </p>
@@ -1036,12 +1042,12 @@ export default function SecondChapterContent({ event }: ChapterProps) {
           <p className="font-serif text-2xl md:text-3xl mb-2" style={{ color: palette.foreground }}>
             Tarush <span style={{ color: palette.accent }}>&amp;</span> Sanjana
           </p>
-          <p className="text-[10px] tracking-[0.3em] font-body mb-10" style={{ color: `${palette.accent}cc` }}>
+          <p className="text-xs md:text-[10px] tracking-[0.3em] font-body mb-10" style={{ color: `${palette.accent}cc` }}>
             {COUPLE.hashtag}
           </p>
 
           <div className="relative my-8 md:my-12 py-6 md:py-10 px-6 md:px-8 rounded-sm mx-auto max-w-lg" style={{ border: `1px solid ${palette.accent}30`, background: `linear-gradient(165deg,${palette.accent}08,transparent 40%,${palette.primary}05)` }}>
-            <p className="text-[10px] uppercase tracking-[0.35em] mb-4 font-medium" style={{ color: `${palette.accent}` }}>Your Presence Matters</p>
+            <p className="text-xs md:text-[10px] uppercase tracking-[0.35em] mb-4 font-medium" style={{ color: `${palette.accent}` }}>Your Presence Matters</p>
             <p className="font-serif text-lg md:text-xl leading-relaxed italic" style={{ color: `${palette.foreground}dd` }}>
               The celebration is incomplete without you.
             </p>
@@ -1067,8 +1073,8 @@ export default function SecondChapterContent({ event }: ChapterProps) {
               <Link
                 key={link.href}
                 href={link.href}
-                className="text-[11px] uppercase tracking-[0.2em] font-body transition-colors duration-300 hover:opacity-70"
-                style={{ color: `${palette.foreground}99` }}
+                className="text-xs md:text-[11px] uppercase tracking-[0.2em] font-body transition-colors duration-300 hover:opacity-70"
+                style={{ color: `${palette.foreground}b0` }}
               >
                 {link.label}
               </Link>
@@ -1079,7 +1085,7 @@ export default function SecondChapterContent({ event }: ChapterProps) {
             <div className="w-1.5 h-1.5 rotate-45" style={{ border: `1px solid ${palette.accent}50` }} />
             <div className="h-px w-10 md:w-20" style={{ background: `linear-gradient(to left,transparent,${palette.accent}50)` }} />
           </div>
-          <p className="text-[11px] font-body tracking-wide mb-6" style={{ color: `${palette.foreground}77` }}>
+          <p className="text-xs md:text-[11px] font-body tracking-wide mb-6" style={{ color: `${palette.foreground}96` }}>
             April 19–21, 2026 · Udaipur, Rajasthan
           </p>
           <div className="flex flex-wrap items-center justify-center gap-2.5 text-xs font-body tracking-wide" style={{ color: `${palette.foreground}25` }}>

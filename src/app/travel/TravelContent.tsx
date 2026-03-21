@@ -245,7 +245,7 @@ function TravelConcierge() {
                 <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke={P.gold} strokeWidth="1.5">
                   <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5" />
                 </svg>
-                <p className="text-[10px] uppercase tracking-[0.35em] font-bold" style={{ color: `${P.gold}88` }}>
+                <p className="text-xs md:text-[10px] uppercase tracking-[0.35em] font-bold" style={{ color: `${P.gold}88` }}>
                   Travel Concierge
                 </p>
               </div>
@@ -330,7 +330,7 @@ function ArrivalGate() {
     <section ref={ref} className="py-16 md:py-24">
       <div className="max-w-4xl mx-auto px-6">
         <div className="text-center mb-10">
-          <p className="scroll-heading text-[10px] uppercase tracking-[0.35em] font-bold mb-4 opacity-0" style={{ color: `${P.gold}66` }}>
+          <p className="scroll-heading text-xs md:text-[10px] uppercase tracking-[0.35em] font-bold mb-4 opacity-0" style={{ color: `${P.gold}66` }}>
             The Arrival Gate · आगमन द्वार
           </p>
           <h2 className="scroll-heading font-serif text-3xl md:text-4xl opacity-0" style={{ color: P.cream }}>
@@ -355,7 +355,7 @@ function ArrivalGate() {
                 className="gate-chip px-4 py-2 rounded-sm text-center opacity-0"
                 style={{ border: `1px solid ${P.gold}15`, backgroundColor: `${P.muted}40` }}
               >
-                <p className="text-[9px] uppercase tracking-[0.2em] mb-0.5" style={{ color: `${P.gold}66` }}>{chip.label}</p>
+                <p className="text-xs md:text-[9px] uppercase tracking-[0.2em] mb-0.5" style={{ color: `${P.gold}66` }}>{chip.label}</p>
                 <p className="font-serif text-sm" style={{ color: `${P.cream}cc` }}>{chip.value}</p>
               </div>
             ))}
@@ -421,7 +421,7 @@ function ArrivalTimeline() {
     <section ref={ref} className="py-16 md:py-20 overflow-hidden">
       <div className="max-w-5xl mx-auto px-6">
         <div className="text-center mb-12">
-          <p className="scroll-heading text-[10px] uppercase tracking-[0.35em] font-bold mb-4 opacity-0" style={{ color: `${P.gold}55` }}>
+          <p className="scroll-heading text-xs md:text-[10px] uppercase tracking-[0.35em] font-bold mb-4 opacity-0" style={{ color: `${P.gold}55` }}>
             Your Arrival Protocol
           </p>
           <h2 className="scroll-heading font-serif text-2xl md:text-3xl opacity-0" style={{ color: `${P.cream}dd` }}>
@@ -447,12 +447,12 @@ function ArrivalTimeline() {
                     <path d={step.icon} />
                     {step.extra && <path d={step.extra} />}
                   </svg>
-                  <div className="absolute -top-1 -right-1 w-5 h-5 rounded-full flex items-center justify-center text-[9px] font-bold" style={{ backgroundColor: P.maroon, color: `${P.gold}cc`, border: `1px solid ${P.gold}25` }}>
+                  <div className="absolute -top-1 -right-1 w-5 h-5 rounded-full flex items-center justify-center text-xs md:text-[9px] font-bold" style={{ backgroundColor: P.maroon, color: `${P.gold}cc`, border: `1px solid ${P.gold}25` }}>
                     {i + 1}
                   </div>
                 </div>
                 <p className="font-serif text-sm mb-1" style={{ color: `${P.cream}cc` }}>{step.label}</p>
-                <p className="text-[10px] tracking-wide" style={{ color: `${P.gold}44` }}>{step.hindi}</p>
+                <p className="text-xs md:text-[10px] tracking-wide" style={{ color: `${P.gold}44` }}>{step.hindi}</p>
               </div>
             ))}
           </div>
@@ -535,7 +535,7 @@ function TransportTabs() {
     <section ref={ref} className="py-16 md:py-24">
       <div className="max-w-4xl mx-auto px-6">
         <div className="text-center mb-10">
-          <p className="scroll-heading text-[10px] uppercase tracking-[0.35em] font-bold mb-4 opacity-0" style={{ color: `${P.gold}66` }}>
+          <p className="scroll-heading text-xs md:text-[10px] uppercase tracking-[0.35em] font-bold mb-4 opacity-0" style={{ color: `${P.gold}66` }}>
             How to Reach · मार्गदर्शन
           </p>
           <h2 className="scroll-heading font-serif text-3xl md:text-4xl opacity-0" style={{ color: P.cream }}>
@@ -648,7 +648,7 @@ function CourtOfAssistance() {
     <section ref={ref} className="py-16 md:py-24">
       <div className="max-w-4xl mx-auto px-6">
         <div className="text-center mb-12">
-          <p className="scroll-heading text-[10px] uppercase tracking-[0.35em] font-bold mb-4 opacity-0" style={{ color: `${P.gold}66` }}>
+          <p className="scroll-heading text-xs md:text-[10px] uppercase tracking-[0.35em] font-bold mb-4 opacity-0" style={{ color: `${P.gold}66` }}>
             The Court of Assistance · <span className="text-[0.78em] font-normal">सहायता दरबार</span>
           </p>
           <h2 className="scroll-heading font-serif text-3xl md:text-4xl opacity-0" style={{ color: P.cream }}>
@@ -693,14 +693,14 @@ function CourtOfAssistance() {
                 <h3 className="font-serif text-lg mb-1" style={{ color: `${P.cream}dd` }}>
                   {contact.name}
                 </h3>
-                <p className="text-[10px] uppercase tracking-[0.2em] font-body mb-5" style={{ color: `${P.gold}66` }}>
+                <p className="text-xs md:text-[10px] uppercase tracking-[0.2em] font-body mb-5" style={{ color: `${P.gold}66` }}>
                   {contact.role}
                 </p>
 
                 <div className="flex justify-center gap-2">
                   <a
                     href={`tel:${contact.phone.replace(/\s/g, "")}`}
-                    className="inline-flex items-center gap-1.5 px-4 py-2 text-[10px] uppercase tracking-[0.15em] font-medium rounded-sm transition-all duration-300 hover:scale-105"
+                    className="inline-flex items-center gap-1.5 px-4 py-2 text-xs md:text-[10px] uppercase tracking-[0.15em] font-medium rounded-sm transition-all duration-300 hover:scale-105"
                     style={{ color: `${P.cream}88`, border: `1px solid ${P.gold}18`, backgroundColor: `${P.gold}08` }}
                   >
                     <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
@@ -712,7 +712,7 @@ function CourtOfAssistance() {
                     href={`https://wa.me/${contact.phone.replace(/[\s+]/g, "")}`}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="inline-flex items-center gap-1.5 px-4 py-2 text-[10px] uppercase tracking-[0.15em] font-medium rounded-sm transition-all duration-300 hover:scale-105"
+                    className="inline-flex items-center gap-1.5 px-4 py-2 text-xs md:text-[10px] uppercase tracking-[0.15em] font-medium rounded-sm transition-all duration-300 hover:scale-105"
                     style={{ color: `${P.cream}88`, border: `1px solid ${P.gold}18`, backgroundColor: `${P.gold}08` }}
                   >
                     <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
@@ -763,7 +763,7 @@ function RoyalDispatches() {
     <section ref={ref} className="py-16 md:py-24">
       <div className="max-w-4xl mx-auto px-6">
         <div className="text-center mb-12">
-          <p className="scroll-heading text-[10px] uppercase tracking-[0.35em] font-bold mb-4 opacity-0" style={{ color: `${P.gold}66` }}>
+          <p className="scroll-heading text-xs md:text-[10px] uppercase tracking-[0.35em] font-bold mb-4 opacity-0" style={{ color: `${P.gold}66` }}>
             Royal Dispatches · शाही सन्देश
           </p>
           <h2 className="scroll-heading font-serif text-3xl md:text-4xl opacity-0" style={{ color: P.cream }}>
@@ -800,7 +800,7 @@ function RoyalDispatches() {
 
                   <div className="flex justify-center">
                     <div
-                      className="px-4 py-1.5 rounded-sm text-[10px] uppercase tracking-[0.2em] font-medium"
+                      className="px-4 py-1.5 rounded-sm text-xs md:text-[10px] uppercase tracking-[0.2em] font-medium"
                       style={{ backgroundColor: `${P.gold}0a`, color: `${P.gold}55`, border: `1px solid ${P.gold}12` }}
                     >
                       {doc.status}

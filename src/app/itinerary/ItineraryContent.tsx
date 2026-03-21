@@ -205,7 +205,7 @@ export default function ItineraryContent() {
                   }}
                 >
                   <span
-                    className="block text-[10px] uppercase tracking-widest mb-0.5"
+                    className="block text-xs md:text-[10px] uppercase tracking-widest mb-0.5"
                     style={{ color: `${P.cream}40` }}
                   >
                     {event.dateShort} ·{" "}
@@ -323,7 +323,7 @@ export default function ItineraryContent() {
                         </div>
 
                         <p
-                          className="text-[10px] uppercase tracking-[0.3em] font-body mb-2"
+                          className="text-xs md:text-[10px] uppercase tracking-[0.3em] font-body mb-2"
                           style={{ color: `${event.palette.accent}99` }}
                         >
                           {event.chapterNumber >= 1

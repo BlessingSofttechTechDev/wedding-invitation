@@ -8,6 +8,7 @@ import { COUPLE, EVENTS_FOR_CHAPTER_NAV } from "@/content/events";
 import { P } from "@/components/shared/RoyalPageLayout";
 
 const NAV_LINKS = [
+  { href: "/story", label: "Our Story" },
   { href: "/itinerary", label: "Itinerary" },
   { href: "/rsvp", label: "RSVP" },
 ];
@@ -58,7 +59,7 @@ export default function Navbar() {
         <div className="max-w-7xl mx-auto px-6 flex items-center justify-between h-16 md:h-20">
           <Link
             href="/"
-            className="font-serif text-lg md:text-xl tracking-tight transition-colors duration-300 hover:opacity-80"
+            className="font-serif text-xl md:text-xl tracking-tight transition-colors duration-300 hover:opacity-80"
             style={{ color: P.cream }}
           >
             {COUPLE.partner1}{" "}
@@ -76,8 +77,8 @@ export default function Navbar() {
               onMouseLeave={() => setChaptersHover(false)}
             >
               <button
-                className="text-[11px] uppercase tracking-[0.2em] font-body transition-colors duration-300 px-4 py-2 flex items-center gap-1"
-                style={{ color: chaptersHover ? `${P.gold}cc` : `${P.cream}73` }}
+                className="text-xs md:text-[11px] uppercase tracking-[0.2em] font-body transition-colors duration-300 px-4 py-2 flex items-center gap-1"
+                style={{ color: chaptersHover ? `${P.gold}e6` : `${P.cream}90` }}
               >
                 Chapters
                 <ChevronDown
@@ -110,7 +111,7 @@ export default function Navbar() {
                           style={{ color: `${P.cream}cc` }}
                         >
                           <span
-                            className="text-[10px] uppercase tracking-wider block mb-0.5"
+                            className="text-xs md:text-[10px] uppercase tracking-wider block mb-0.5"
                             style={{ color: `${P.cream}50` }}
                           >
                             Ch. {String(event.chapterNumber).padStart(2, "0")} · {event.dateShort} · {event.time.replace(/\s+onwards$/i, "").trim()}
@@ -131,8 +132,8 @@ export default function Navbar() {
               onMouseLeave={() => setWardrobeHover(false)}
             >
               <button
-                className="text-[11px] uppercase tracking-[0.2em] font-body transition-colors duration-300 px-4 py-2 flex items-center gap-1"
-                style={{ color: wardrobeHover ? `${P.gold}cc` : `${P.cream}73` }}
+                className="text-xs md:text-[11px] uppercase tracking-[0.2em] font-body transition-colors duration-300 px-4 py-2 flex items-center gap-1"
+                style={{ color: wardrobeHover ? `${P.gold}e6` : `${P.cream}90` }}
               >
                 Wardrobe
                 <ChevronDown
@@ -165,7 +166,7 @@ export default function Navbar() {
                           style={{ color: `${P.cream}cc` }}
                         >
                           <span
-                            className="text-[10px] uppercase tracking-wider block mb-0.5"
+                            className="text-xs md:text-[10px] uppercase tracking-wider block mb-0.5"
                             style={{ color: `${P.cream}50` }}
                           >
                             Ch. {String(event.chapterNumber).padStart(2, "0")} · {event.dateShort} · {event.time.replace(/\s+onwards$/i, "").trim()}
@@ -183,13 +184,13 @@ export default function Navbar() {
               <span key={link.href} className="flex items-center">
                 <Link
                   href={link.href}
-                  className="text-[11px] uppercase tracking-[0.2em] font-body transition-colors duration-300 px-4 py-2"
-                  style={{ color: `${P.cream}73` }}
+                  className="text-xs md:text-[11px] uppercase tracking-[0.2em] font-body transition-colors duration-300 px-4 py-2"
+                  style={{ color: `${P.cream}90` }}
                   onMouseEnter={(e) =>
                     (e.currentTarget.style.color = `${P.gold}cc`)
                   }
                   onMouseLeave={(e) =>
-                    (e.currentTarget.style.color = `${P.cream}73`)
+                    (e.currentTarget.style.color = `${P.cream}90`)
                   }
                 >
                   {link.label}
@@ -244,7 +245,7 @@ export default function Navbar() {
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
             transition={{ duration: 0.3 }}
-            className="fixed inset-0 z-40 flex flex-col items-center justify-center gap-10"
+            className="fixed inset-0 z-40 flex flex-col overflow-hidden"
             style={{
               backgroundColor: `${P.bg}fa`,
               backdropFilter: "blur(20px)",
@@ -265,23 +266,33 @@ export default function Navbar() {
               </svg>
             </div>
 
+            {/* Scrollable menu — prevents overflow when Chapters / Wardrobe lists expand */}
+            <div
+              className="relative z-10 flex-1 min-h-0 overflow-y-auto overflow-x-hidden overscroll-contain px-4"
+              style={{
+                paddingTop: "calc(5.5rem + env(safe-area-inset-top, 0px))",
+                paddingBottom: "calc(1.5rem + env(safe-area-inset-bottom, 0px))",
+              }}
+            >
+              <div className="flex flex-col items-center gap-6 max-w-sm mx-auto w-full pb-4">
             {/* Chapters expandable */}
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               exit={{ opacity: 0, y: -10 }}
               transition={{ delay: 0.1, duration: 0.4, ease: [0.16, 1, 0.3, 1] }}
-              className="flex flex-col items-center gap-4"
+              className="flex flex-col items-stretch w-full gap-3"
             >
               <button
+                type="button"
                 onClick={() => setChaptersOpen(!chaptersOpen)}
-                className="font-serif text-3xl transition-colors duration-300 flex items-center gap-2"
+                className="font-serif text-2xl sm:text-3xl transition-colors duration-300 flex items-center justify-center gap-2 shrink-0"
                 style={{ color: `${P.cream}cc` }}
               >
                 Chapters
                 <ChevronDown
-                  size={24}
-                  className={`transition-transform duration-200 ${chaptersOpen ? "rotate-180" : ""}`}
+                  size={20}
+                  className={`shrink-0 transition-transform duration-200 ${chaptersOpen ? "rotate-180" : ""}`}
                 />
               </button>
               <AnimatePresence>
@@ -290,25 +301,25 @@ export default function Navbar() {
                     initial={{ opacity: 0, height: 0 }}
                     animate={{ opacity: 1, height: "auto" }}
                     exit={{ opacity: 0, height: 0 }}
-                    transition={{ duration: 0.3 }}
-                    className="flex flex-col gap-2 overflow-hidden"
+                    transition={{ duration: 0.25 }}
+                    className="w-full max-h-[42vh] overflow-y-auto overflow-x-hidden flex flex-col gap-1.5 pr-1 -mr-1"
                   >
-                    {EVENTS_FOR_CHAPTER_NAV.map((event, i) => (
+                    {EVENTS_FOR_CHAPTER_NAV.map((event) => (
                       <Link
                         key={event.slug}
                         href={`/chapter/${event.slug}`}
                         onClick={() => setMobileOpen(false)}
-                        className="font-serif text-lg text-center py-2 px-6 rounded-sm transition-colors"
+                        className="font-serif text-base text-center py-2 px-3 rounded-sm transition-colors leading-tight"
                         style={{
                           color: `${P.cream}99`,
                           backgroundColor: `${P.gold}08`,
                           border: `1px solid ${P.gold}12`,
                         }}
                       >
-                        <span className="block text-[10px] uppercase tracking-wider mb-1" style={{ color: `${P.cream}50` }}>
-                          {event.dateShort} · {event.time.replace(/\s+onwards$/i, "").trim()} · Ch. {event.chapterNumber}
+                        <span className="block text-[10px] uppercase tracking-[0.12em] mb-0.5 leading-tight" style={{ color: `${P.cream}72` }}>
+                          {event.dateShort} · {event.time.replace(/\s+onwards$/i, "").trim()} · Ch.{event.chapterNumber}
                         </span>
-                        {event.title}
+                        <span className="block">{event.title}</span>
                       </Link>
                     ))}
                   </motion.div>
@@ -321,17 +332,18 @@ export default function Navbar() {
               animate={{ opacity: 1, y: 0 }}
               exit={{ opacity: 0, y: -10 }}
               transition={{ delay: 0.18, duration: 0.4, ease: [0.16, 1, 0.3, 1] }}
-              className="flex flex-col items-center gap-4"
+              className="flex flex-col items-stretch w-full gap-3"
             >
               <button
+                type="button"
                 onClick={() => setWardrobeOpen(!wardrobeOpen)}
-                className="font-serif text-3xl transition-colors duration-300 flex items-center gap-2"
+                className="font-serif text-2xl sm:text-3xl transition-colors duration-300 flex items-center justify-center gap-2 shrink-0"
                 style={{ color: `${P.cream}cc` }}
               >
                 Wardrobe
                 <ChevronDown
-                  size={24}
-                  className={`transition-transform duration-200 ${wardrobeOpen ? "rotate-180" : ""}`}
+                  size={20}
+                  className={`shrink-0 transition-transform duration-200 ${wardrobeOpen ? "rotate-180" : ""}`}
                 />
               </button>
               <AnimatePresence>
@@ -340,25 +352,25 @@ export default function Navbar() {
                     initial={{ opacity: 0, height: 0 }}
                     animate={{ opacity: 1, height: "auto" }}
                     exit={{ opacity: 0, height: 0 }}
-                    transition={{ duration: 0.3 }}
-                    className="flex flex-col gap-2 overflow-hidden"
+                    transition={{ duration: 0.25 }}
+                    className="w-full max-h-[42vh] overflow-y-auto overflow-x-hidden flex flex-col gap-1.5 pr-1 -mr-1"
                   >
                     {EVENTS_FOR_CHAPTER_NAV.map((event) => (
                       <Link
                         key={event.slug}
                         href={`/wardrobe?chapter=${event.slug}`}
                         onClick={() => setMobileOpen(false)}
-                        className="font-serif text-lg text-center py-2 px-6 rounded-sm transition-colors"
+                        className="font-serif text-base text-center py-2 px-3 rounded-sm transition-colors leading-tight"
                         style={{
                           color: `${P.cream}99`,
                           backgroundColor: `${P.gold}08`,
                           border: `1px solid ${P.gold}12`,
                         }}
                       >
-                        <span className="block text-[10px] uppercase tracking-wider mb-1" style={{ color: `${P.cream}50` }}>
-                          {event.dateShort} · {event.time.replace(/\s+onwards$/i, "").trim()} · Ch. {event.chapterNumber}
+                        <span className="block text-[10px] uppercase tracking-[0.12em] mb-0.5 leading-tight" style={{ color: `${P.cream}72` }}>
+                          {event.dateShort} · {event.time.replace(/\s+onwards$/i, "").trim()} · Ch.{event.chapterNumber}
                         </span>
-                        {event.title}
+                        <span className="block">{event.title}</span>
                       </Link>
                     ))}
                   </motion.div>
@@ -376,24 +388,28 @@ export default function Navbar() {
                   duration: 0.4,
                   ease: [0.16, 1, 0.3, 1],
                 }}
+                className="shrink-0"
               >
                 <Link
                   href={link.href}
                   onClick={() => setMobileOpen(false)}
-                  className="font-serif text-3xl transition-colors duration-300"
+                  className="font-serif text-2xl sm:text-3xl transition-colors duration-300 block text-center"
                   style={{ color: `${P.cream}cc` }}
                 >
                   {link.label}
                 </Link>
               </motion.div>
             ))}
+              </div>
+            </div>
 
             {/* Decorative bottom text */}
             <motion.div
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ delay: 0.4, duration: 0.5 }}
-              className="absolute bottom-12 flex flex-col items-center gap-2"
+              className="relative z-20 shrink-0 flex flex-col items-center gap-2 py-4 border-t"
+              style={{ borderColor: `${P.gold}10` }}
             >
               <div className="flex items-center gap-2">
                 <div
@@ -414,8 +430,8 @@ export default function Navbar() {
                 />
               </div>
               <span
-                className="text-[10px] tracking-[0.3em] font-body"
-                style={{ color: `${P.gold}30` }}
+                className="text-xs md:text-[10px] tracking-[0.3em] font-body"
+                style={{ color: `${P.gold}55` }}
               >
                 {COUPLE.hashtag}
               </span>

@@ -40,7 +40,7 @@ export function ChapterCard({ event }: ChapterCardProps) {
         {/* Chapter number */}
         <div className="absolute top-4 right-4 z-10">
           <span
-            className="text-[10px] uppercase tracking-[0.3em] font-body"
+            className="text-xs md:text-[10px] uppercase tracking-[0.3em] font-body"
             style={{ color: `${event.palette.foreground}60` }}
           >
             {String(event.chapterNumber).padStart(2, "0")}
@@ -66,7 +66,7 @@ export function ChapterCard({ event }: ChapterCardProps) {
       {/* Content */}
       <div className="p-6 md:p-7">
         <p
-          className="text-[10px] uppercase tracking-[0.2em] font-body mb-4"
+          className="text-xs md:text-[10px] uppercase tracking-[0.2em] font-body mb-4"
           style={{ color: `${P.cream}40` }}
         >
           {event.date} · {event.time}
@@ -98,7 +98,7 @@ export function ChapterCard({ event }: ChapterCardProps) {
           style={{ borderTop: `1px solid ${P.gold}08` }}
         >
           <span
-            className="text-[10px] uppercase tracking-[0.15em] font-body"
+            className="text-xs md:text-[10px] uppercase tracking-[0.15em] font-body"
             style={{ color: `${P.cream}30` }}
           >
             {event.location}
