@@ -23,6 +23,9 @@ const notoSerifDevanagari = Noto_Serif_Devanagari({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL(
+    process.env.NEXT_PUBLIC_SITE_URL ?? "https://tarushandsanjana.com"
+  ),
   title: "T & S — A Wedding Celebration",
   description:
     "Join us in celebrating the wedding of T & S. A weekend of love, laughter, and happily ever after.",

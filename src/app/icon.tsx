@@ -10,27 +10,26 @@ export default function Icon() {
         style={{
           width: 32,
           height: 32,
-          background: "linear-gradient(135deg, #1a0a0a, #2e1212)",
+          background: "linear-gradient(145deg, #1a0a0a 0%, #2e1212 60%, #3d1515 100%)",
           borderRadius: 6,
           display: "flex",
           alignItems: "center",
           justifyContent: "center",
           position: "relative",
+          border: "1px solid rgba(212,175,55,0.25)",
         }}
       >
-        {/* Gold T&S monogram */}
         <span
           style={{
             fontFamily: "serif",
-            fontSize: 16,
+            fontSize: 14,
             fontWeight: 700,
-            background: "linear-gradient(180deg, #d4af37, #c9956b)",
-            backgroundClip: "text",
             color: "#d4af37",
-            letterSpacing: -1,
+            letterSpacing: -0.5,
+            lineHeight: 1,
           }}
         >
-          T&S
+          T&amp;S
         </span>
       </div>
     ),
