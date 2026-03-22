@@ -14,7 +14,7 @@ import {
 
 /** Single editorial image — venue only (meaningful, one network decode). */
 const VENUE_IMAGE =
-  "https://res.cloudinary.com/dctn3ike2/image/upload/f_auto,q_auto:good,w_1600/v1773415146/fairmont_rbltfh.jpg";
+  "/cdn-images/f_auto,q_auto:good,w_1600/v1773415146/fairmont_rbltfh.jpg";
 
 /* ─────────────────────────────────────────────────────────────── */
 /*  Light ornament — fewer nodes than full mehendi border          */

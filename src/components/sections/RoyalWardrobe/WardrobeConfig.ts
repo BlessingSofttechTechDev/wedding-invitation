@@ -17,11 +17,11 @@ export const W = {
   coutureHim: "/images/wardrobe/couture_him.png",
   coutureHer: "/images/wardrobe/couture_her.png",
   // Lookbook images (per chapter — "The Lookbook" view)
-  courtyardIllustration: "https://res.cloudinary.com/dctn3ike2/image/upload/v1773253847/Screenshot_2026-03-11_at_11.57.48_PM_x5cn0k.png",
-  midnightIllustration: "https://res.cloudinary.com/dctn3ike2/image/upload/v1773253898/Screenshot_2026-03-12_at_12.01.29_AM_wkbszv.png",
-  worldIllustration: "https://res.cloudinary.com/dctn3ike2/image/upload/v1773253926/Screenshot_2026-03-12_at_12.01.51_AM_pnjomb.png",
-  royalIllustration: "https://res.cloudinary.com/dctn3ike2/image/upload/v1773253940/Screenshot_2026-03-12_at_12.02.09_AM_tqmsa8.png",
-  thrillIllustration: "https://res.cloudinary.com/dctn3ike2/image/upload/v1773253957/Screenshot_2026-03-12_at_12.02.27_AM_wspr39.png",
+  courtyardIllustration: "/cdn-images/v1773253847/Screenshot_2026-03-11_at_11.57.48_PM_x5cn0k.png",
+  midnightIllustration: "/cdn-images/v1773253898/Screenshot_2026-03-12_at_12.01.29_AM_wkbszv.png",
+  worldIllustration: "/cdn-images/v1773253926/Screenshot_2026-03-12_at_12.01.51_AM_pnjomb.png",
+  royalIllustration: "/cdn-images/v1773253940/Screenshot_2026-03-12_at_12.02.09_AM_tqmsa8.png",
+  thrillIllustration: "/cdn-images/v1773253957/Screenshot_2026-03-12_at_12.02.27_AM_wspr39.png",
   haldiIllustration: "/images/wardrobe/illustrations/haldi.png",
 } as const;
 
@@ -166,14 +166,14 @@ export const wardrobeConfig: Record<string, ChapterWardrobe> = {
     },
     mood: "Relaxed luxury travel",
     men: [
-      { id: "woo-m-1", name: "Linen Blazer", description: "Cream or sand double-breasted, open collar, lakeside-ready.", image: "https://images.unsplash.com/photo-1594938298603-c8148c4dae35?w=800&q=80", tags: ["Linen", "Relaxed"] },
-      { id: "woo-m-2", name: "Tailored Earth Tones", description: "Tan trousers with olive shirt — refined ease.", image: "https://images.unsplash.com/photo-1488161628813-244a2ceba24b?w=800&q=80", tags: ["Resort", "Minimal"] },
-      { id: "woo-m-3", name: "Neutral Suit", description: "Soft structure in warm neutrals, sun-ready.", image: "https://images.unsplash.com/photo-1593032465175-481ac7f401a0?w=800&q=80", tags: ["Neutral", "Smart Casual"] },
+      { id: "woo-m-1", name: "Linen Blazer", description: "Cream or sand double-breasted, open collar, lakeside-ready.", image: "/cdn-unsplash/photo-1594938298603-c8148c4dae35?w=800&q=80", tags: ["Linen", "Relaxed"] },
+      { id: "woo-m-2", name: "Tailored Earth Tones", description: "Tan trousers with olive shirt — refined ease.", image: "/cdn-unsplash/photo-1488161628813-244a2ceba24b?w=800&q=80", tags: ["Resort", "Minimal"] },
+      { id: "woo-m-3", name: "Neutral Suit", description: "Soft structure in warm neutrals, sun-ready.", image: "/cdn-unsplash/photo-1593032465175-481ac7f401a0?w=800&q=80", tags: ["Neutral", "Smart Casual"] },
     ],
     women: [
-      { id: "woo-w-1", name: "Embroidered Co-ords", description: "Sleeveless vest with wide-leg trousers in raw silk.", image: "https://images.unsplash.com/photo-1583391733956-6c70273b586e?w=800&q=80", tags: ["Linen", "Resort"] },
-      { id: "woo-w-2", name: "Draped Kaftan", description: "Champagne or beige with elegant layering — effortless.", image: "https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?w=800&q=80", tags: ["Kaftan", "Light"] },
-      { id: "woo-w-3", name: "Resort Midi Dress", description: "Terracotta linen with gold accessories — warm and easy.", image: "https://images.unsplash.com/photo-1496747611176-843222e1e57c?w=800&q=80", tags: ["Resort", "Minimal"] },
+      { id: "woo-w-1", name: "Embroidered Co-ords", description: "Sleeveless vest with wide-leg trousers in raw silk.", image: "/cdn-unsplash/photo-1583391733956-6c70273b586e?w=800&q=80", tags: ["Linen", "Resort"] },
+      { id: "woo-w-2", name: "Draped Kaftan", description: "Champagne or beige with elegant layering — effortless.", image: "/cdn-unsplash/photo-1515886657613-9f3515b0c78f?w=800&q=80", tags: ["Kaftan", "Light"] },
+      { id: "woo-w-3", name: "Resort Midi Dress", description: "Terracotta linen with gold accessories — warm and easy.", image: "/cdn-unsplash/photo-1496747611176-843222e1e57c?w=800&q=80", tags: ["Resort", "Minimal"] },
     ],
     illustrationImage: W.worldIllustration,
     palette: {
@@ -212,14 +212,14 @@ export const wardrobeConfig: Record<string, ChapterWardrobe> = {
     },
     mood: "Grand Indian heritage",
     men: [
-      { id: "rc-m-1", name: "Ceremonial Sherwani", description: "Gold and cream mirror-work sherwani with churidar and mojaris.", image: "https://images.unsplash.com/photo-1594938298603-c8148c4dae35?w=800&q=80", tags: ["Sherwani", "Traditional"] },
-      { id: "rc-m-2", name: "Heritage Bandhgala", description: "Raw silk bandhgala with antique gold buttons — understated grandeur.", image: "https://images.unsplash.com/photo-1617130863154-8250122e8f5a?w=800&q=80", tags: ["Bandhgala", "Heritage"] },
-      { id: "rc-m-3", name: "Embroidered Achkan", description: "Full traditional with safa — court-worthy elegance.", image: "https://images.unsplash.com/photo-1593032465175-481ac7f401a0?w=800&q=80", tags: ["Achkan", "Mojaris"] },
+      { id: "rc-m-1", name: "Ceremonial Sherwani", description: "Gold and cream mirror-work sherwani with churidar and mojaris.", image: "/cdn-unsplash/photo-1594938298603-c8148c4dae35?w=800&q=80", tags: ["Sherwani", "Traditional"] },
+      { id: "rc-m-2", name: "Heritage Bandhgala", description: "Raw silk bandhgala with antique gold buttons — understated grandeur.", image: "/cdn-unsplash/photo-1617130863154-8250122e8f5a?w=800&q=80", tags: ["Bandhgala", "Heritage"] },
+      { id: "rc-m-3", name: "Embroidered Achkan", description: "Full traditional with safa — court-worthy elegance.", image: "/cdn-unsplash/photo-1593032465175-481ac7f401a0?w=800&q=80", tags: ["Achkan", "Mojaris"] },
     ],
     women: [
-      { id: "rc-w-1", name: "Grand Lehanga", description: "Heavy mirror-work lehanga, choli, and mockup with kundan set.", image: "https://images.unsplash.com/photo-1583391733956-6c70273b586e?w=800&q=80", tags: ["Lehanga", "Bridal"] },
-      { id: "rc-w-2", name: "Banarasi Saree", description: "Heritage Banarasi in gold or maroon with maang tikka.", image: "https://images.unsplash.com/photo-1610030469983-98e550d6193c?w=800&q=80", tags: ["Banarasi", "Heritage"] },
-      { id: "rc-w-3", name: "Couture Anarkali", description: "Royal silhouette, full grandeur, ceremonial jewellery.", image: "https://images.unsplash.com/photo-1595950653106-6c9ebd614d3a?w=800&q=80", tags: ["Anarkali", "Couture"] },
+      { id: "rc-w-1", name: "Grand Lehanga", description: "Heavy mirror-work lehanga, choli, and mockup with kundan set.", image: "/cdn-unsplash/photo-1583391733956-6c70273b586e?w=800&q=80", tags: ["Lehanga", "Bridal"] },
+      { id: "rc-w-2", name: "Banarasi Saree", description: "Heritage Banarasi in gold or maroon with maang tikka.", image: "/cdn-unsplash/photo-1610030469983-98e550d6193c?w=800&q=80", tags: ["Banarasi", "Heritage"] },
+      { id: "rc-w-3", name: "Couture Anarkali", description: "Royal silhouette, full grandeur, ceremonial jewellery.", image: "/cdn-unsplash/photo-1595950653106-6c9ebd614d3a?w=800&q=80", tags: ["Anarkali", "Couture"] },
     ],
     illustrationImage: W.royalIllustration,
     palette: {
@@ -258,14 +258,14 @@ export const wardrobeConfig: Record<string, ChapterWardrobe> = {
     },
     mood: "Experimental, nightclub energy",
     men: [
-      { id: "tt-m-1", name: "Sequin Statement Jacket", description: "Two-tone silver-and-black sequin blazer with pearl chain.", image: "https://images.unsplash.com/photo-1555066931-4365d14bab8c?w=800&q=80", tags: ["Sequin", "Party"] },
-      { id: "tt-m-2", name: "Metallic Street Luxe", description: "Chrome-finish shirt, layered chains, experimental edge.", image: "https://images.unsplash.com/photo-1523381235312-ca999d162310?w=800&q=80", tags: ["Metallic", "Bold"] },
-      { id: "tt-m-3", name: "Avant-Garde Suit", description: "Unconventional texture, deconstructed fit — nightclub-ready.", image: "https://images.unsplash.com/photo-1539106602014-d69c4b2744e0?w=800&q=80", tags: ["Fashion", "Experimental"] },
+      { id: "tt-m-1", name: "Sequin Statement Jacket", description: "Two-tone silver-and-black sequin blazer with pearl chain.", image: "/cdn-unsplash/photo-1555066931-4365d14bab8c?w=800&q=80", tags: ["Sequin", "Party"] },
+      { id: "tt-m-2", name: "Metallic Street Luxe", description: "Chrome-finish shirt, layered chains, experimental edge.", image: "/cdn-unsplash/photo-1523381235312-ca999d162310?w=800&q=80", tags: ["Metallic", "Bold"] },
+      { id: "tt-m-3", name: "Avant-Garde Suit", description: "Unconventional texture, deconstructed fit — nightclub-ready.", image: "/cdn-unsplash/photo-1539106602014-d69c4b2744e0?w=800&q=80", tags: ["Fashion", "Experimental"] },
     ],
     women: [
-      { id: "tt-w-1", name: "Sequined Mini-Dress", description: "Oversized sequin shirt as mini-dress, metallic knee-highs.", image: "https://images.unsplash.com/photo-1566174053879-31528523f8ae?w=800&q=80", tags: ["Glitter", "Party"] },
-      { id: "tt-w-2", name: "Metallic Co-ords", description: "Chrome or gold co-ord set with platform boots.", image: "https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?w=800&q=80", tags: ["Fringe", "Bold"] },
-      { id: "tt-w-3", name: "Futuristic Sculptural", description: "Asymmetric cut, neon accent, experimental glamour.", image: "https://images.unsplash.com/photo-1496747611176-843222e1e57c?w=800&q=80", tags: ["Futuristic", "Avant-Garde"] },
+      { id: "tt-w-1", name: "Sequined Mini-Dress", description: "Oversized sequin shirt as mini-dress, metallic knee-highs.", image: "/cdn-unsplash/photo-1566174053879-31528523f8ae?w=800&q=80", tags: ["Glitter", "Party"] },
+      { id: "tt-w-2", name: "Metallic Co-ords", description: "Chrome or gold co-ord set with platform boots.", image: "/cdn-unsplash/photo-1515886657613-9f3515b0c78f?w=800&q=80", tags: ["Fringe", "Bold"] },
+      { id: "tt-w-3", name: "Futuristic Sculptural", description: "Asymmetric cut, neon accent, experimental glamour.", image: "/cdn-unsplash/photo-1496747611176-843222e1e57c?w=800&q=80", tags: ["Futuristic", "Avant-Garde"] },
     ],
     illustrationImage: W.thrillIllustration,
     palette: {

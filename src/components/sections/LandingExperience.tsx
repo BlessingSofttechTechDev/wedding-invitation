@@ -1063,7 +1063,7 @@ function VenueShowcase() {
     >
       <div className="vs-img absolute inset-0 min-h-full">
         <Image
-          src="https://res.cloudinary.com/dctn3ike2/image/upload/v1773415146/fairmont_rbltfh.jpg"
+          src="/cdn-images/v1773415146/fairmont_rbltfh.jpg"
           alt="Fairmont Udaipur"
           fill
           className="object-cover"

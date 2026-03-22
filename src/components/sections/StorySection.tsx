@@ -39,7 +39,7 @@ export function StorySection() {
           style={{ scale: prefersReducedMotion ? 1 : imgScale }}
         >
           <Image
-            src="https://images.unsplash.com/photo-1769183345247-fba7c42c991b?w=1920&q=80"
+            src="/cdn-unsplash/photo-1769183345247-fba7c42c991b?w=1920&q=80"
             alt=""
             fill
             className="object-cover"

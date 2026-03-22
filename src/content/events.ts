@@ -44,7 +44,7 @@ export const EVENTS: WeddingEvent[] = [
       gradientVia: "#f5dde0",
       gradientTo: "#f0d8dc",
     },
-    heroImage: "https://res.cloudinary.com/dctn3ike2/image/upload/v1773076734/second-chapter_rkwt1t.jpg",
+    heroImage: "/cdn-images/v1773076734/second-chapter_rkwt1t.jpg",
     galleryImages: [],
   },
   {
@@ -80,7 +80,7 @@ export const EVENTS: WeddingEvent[] = [
       gradientVia: "#1a3a2a",
       gradientTo: "#0d2818",
     },
-    heroImage: "https://res.cloudinary.com/dctn3ike2/image/upload/v1773076734/jungle_tqgtzs.jpg",
+    heroImage: "/cdn-images/v1773076734/jungle_tqgtzs.jpg",
     galleryImages: [],
   },
   {
@@ -116,7 +116,7 @@ export const EVENTS: WeddingEvent[] = [
       gradientVia: "#f0e4c8",
       gradientTo: "#e8dab0",
     },
-    heroImage: "https://res.cloudinary.com/dctn3ike2/image/upload/v1773076734/courtyard-edit_zfuipm.jpg",
+    heroImage: "/cdn-images/v1773076734/courtyard-edit_zfuipm.jpg",
     galleryImages: [],
   },
   {
@@ -152,7 +152,7 @@ export const EVENTS: WeddingEvent[] = [
       gradientVia: "#2e1212",
       gradientTo: "#1a0808",
     },
-    heroImage: "https://res.cloudinary.com/dctn3ike2/image/upload/v1773076594/Gemini_Generated_Image_mbr5pgmbr5pgmbr5_aeiudv.png",
+    heroImage: "/cdn-images/v1773076594/Gemini_Generated_Image_mbr5pgmbr5pgmbr5_aeiudv.png",
     galleryImages: [],
   },
   {
@@ -188,7 +188,7 @@ export const EVENTS: WeddingEvent[] = [
       gradientVia: "#1a0a2e",
       gradientTo: "#0f0a1a",
     },
-    heroImage: "https://res.cloudinary.com/dctn3ike2/image/upload/v1773088840/Gemini_Generated_Image_kvyg5jkvyg5jkvyg_xdxrqf.png",
+    heroImage: "/cdn-images/v1773088840/Gemini_Generated_Image_kvyg5jkvyg5jkvyg_xdxrqf.png",
     galleryImages: [],
   },
   {
@@ -224,7 +224,7 @@ export const EVENTS: WeddingEvent[] = [
       gradientVia: "#f5f5f5",
       gradientTo: "#fafafa",
     },
-    heroImage: "https://images.unsplash.com/photo-1544644181-1407834571d7?w=1920&q=80",
+    heroImage: "/cdn-unsplash/photo-1544644181-1407834571d7?w=1920&q=80",
     galleryImages: [],
   },
   {
@@ -260,7 +260,7 @@ export const EVENTS: WeddingEvent[] = [
       gradientVia: "#f5f5f5",
       gradientTo: "#fafafa",
     },
-    heroImage: "https://images.unsplash.com/photo-1544644181-1407834571d7?w=1920&q=80",
+    heroImage: "/cdn-unsplash/photo-1544644181-1407834571d7?w=1920&q=80",
     galleryImages: [],
   },
 ];

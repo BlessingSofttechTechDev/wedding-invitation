@@ -20,6 +20,18 @@ const nextConfig = {
       { protocol: "https", hostname: "all.accor.com" },
     ],
   },
+  async rewrites() {
+    return [
+      {
+        source: "/cdn-images/:path*",
+        destination: "https://res.cloudinary.com/dctn3ike2/image/upload/:path*",
+      },
+      {
+        source: "/cdn-unsplash/:path*",
+        destination: "https://images.unsplash.com/:path*",
+      },
+    ];
+  },
 };
 
 module.exports = nextConfig;

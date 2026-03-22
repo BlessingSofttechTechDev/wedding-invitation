@@ -62,7 +62,7 @@ export function HeroSection() {
         }}
       >
         <Image
-          src="https://images.unsplash.com/photo-1759222198113-d0e2b862a3b5?w=1920&q=80"
+          src="/cdn-unsplash/photo-1759222198113-d0e2b862a3b5?w=1920&q=80"
           alt=""
           fill
           className="object-cover"
