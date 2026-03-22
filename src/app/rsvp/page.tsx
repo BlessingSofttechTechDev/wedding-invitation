@@ -2,6 +2,7 @@
 
 import Link from "next/link";
 import { Phone } from "lucide-react";
+import { COUPLE } from "@/content/events";
 import Navbar from "@/components/layout/Navbar";
 import Footer from "@/components/layout/Footer";
 import FadeInView from "@/components/motion/FadeInView";
@@ -33,7 +34,13 @@ export default function RSVPPage() {
         <section className="px-6 pb-24 md:pb-32">
           <div className="max-w-2xl mx-auto text-center">
             <FadeInView>
-              <RoyalFlourish className="mb-10" />
+              <RoyalFlourish className="mb-6" />
+              <p
+                className="text-xs md:text-[11px] font-body tracking-[0.35em] mb-10"
+                style={{ color: `${P.gold}60` }}
+              >
+                {COUPLE.hashtag}
+              </p>
             </FadeInView>
 
             <FadeInView delay={0.06}>
