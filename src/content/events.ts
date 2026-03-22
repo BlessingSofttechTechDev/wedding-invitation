@@ -4,7 +4,7 @@ export const COUPLE = {
   partner1: "Tarush",
   partner2: "Sanjana",
   hashtag: "#AThousandTimesYes",
-  weddingDate: "2026-04-21",
+  weddingDate: "2026-04-20",
   location: "Udaipur, Rajasthan",
   venue: "Fairmont Udaipur",
   tagline: "Mumbai, Pune, London — different cities, one love story.",

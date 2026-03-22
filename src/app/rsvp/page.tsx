@@ -29,21 +29,18 @@ export default function RSVPPage() {
           label="You're Invited"
           title="RSVP"
           subtitle="We'd love to have you celebrate with us"
-        />
+        >
+          <p
+            className="mt-5 text-xs md:text-[11px] font-body tracking-[0.35em]"
+            style={{ color: `${P.gold}60` }}
+          >
+            {COUPLE.hashtag}
+          </p>
+        </RoyalPageHero>
 
         <section className="px-6 pb-24 md:pb-32">
           <div className="max-w-2xl mx-auto text-center">
             <FadeInView>
-              <RoyalFlourish className="mb-6" />
-              <p
-                className="text-xs md:text-[11px] font-body tracking-[0.35em] mb-10"
-                style={{ color: `${P.gold}60` }}
-              >
-                {COUPLE.hashtag}
-              </p>
-            </FadeInView>
-
-            <FadeInView delay={0.06}>
               <p
                 className="font-serif italic text-lg md:text-xl leading-relaxed mb-2"
                 style={{ color: `${P.cream}cc` }}

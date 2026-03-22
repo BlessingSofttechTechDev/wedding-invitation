@@ -698,8 +698,7 @@ function Hero({ loaded }: { loaded: boolean }) {
   const archOuterRef = useRef<SVGPathElement>(null);
   const archInnerRef = useRef<SVGPathElement>(null);
 
-  const weddingDate = new Date(COUPLE.weddingDate);
-  const formattedDate = weddingDate.toLocaleDateString("en-US", { month: "long", day: "numeric", year: "numeric" });
+  const formattedDate = "April 20–21, 2026";
 
   useGSAP(() => {
     if (!loaded) return;
@@ -1059,7 +1058,7 @@ function VenueShowcase() {
   return (
     <section
       ref={ref}
-      className="relative min-h-0 md:min-h-0 flex items-center justify-center overflow-x-hidden py-14 sm:py-16 md:py-0 md:h-[85vh]"
+      className="relative flex items-center justify-center overflow-hidden py-14 sm:py-16 md:py-24"
       style={{ backgroundColor: P.bg }}
     >
       <div className="vs-img absolute inset-0 min-h-full">
