@@ -18,86 +18,69 @@ import {
 } from "@/components/shared/RoyalPageLayout";
 
 /* ────────────────────────────────────────────────────────
-   ICS Calendar File Generation
+   Google Calendar — opens directly in the calendar app
    ──────────────────────────────────────────────────────── */
 
-function parseEventTime(time: string): { start: string; end: string } {
+function to24h(hours: number, period: string): number {
+  if (period === "PM" && hours !== 12) return hours + 12;
+  if (period === "AM" && hours === 12) return 0;
+  return hours;
+}
+
+function parseEventTime(time: string): { startH: number; startM: number; endH: number; endM: number } {
   const onwardsMatch = time.match(/(\d{1,2}):(\d{2})\s*(AM|PM)\s*onwards/i);
   if (onwardsMatch) {
-    let hours = parseInt(onwardsMatch[1]);
-    const minutes = onwardsMatch[2];
-    const period = onwardsMatch[3].toUpperCase();
-    if (period === "PM" && hours !== 12) hours += 12;
-    if (period === "AM" && hours === 12) hours = 0;
-    const endHours = Math.min(hours + 4, 23);
-    return {
-      start: `${hours.toString().padStart(2, "0")}${minutes}00`,
-      end: `${endHours.toString().padStart(2, "0")}0000`,
-    };
+    const h = to24h(parseInt(onwardsMatch[1]), onwardsMatch[3].toUpperCase());
+    const m = parseInt(onwardsMatch[2]);
+    return { startH: h, startM: m, endH: Math.min(h + 4, 23), endM: m };
   }
 
   const rangeMatch = time.match(
     /(\d{1,2}):(\d{2})\s*(AM|PM)\s*[–\-]\s*(\d{1,2}):(\d{2})\s*(AM|PM)/i
   );
   if (rangeMatch) {
-    let startH = parseInt(rangeMatch[1]);
-    const startM = rangeMatch[2];
-    const startP = rangeMatch[3].toUpperCase();
-    let endH = parseInt(rangeMatch[4]);
-    const endM = rangeMatch[5];
-    const endP = rangeMatch[6].toUpperCase();
-    if (startP === "PM" && startH !== 12) startH += 12;
-    if (startP === "AM" && startH === 12) startH = 0;
-    if (endP === "PM" && endH !== 12) endH += 12;
-    if (endP === "AM" && endH === 12) endH = 0;
     return {
-      start: `${startH.toString().padStart(2, "0")}${startM}00`,
-      end: `${endH.toString().padStart(2, "0")}${endM}00`,
+      startH: to24h(parseInt(rangeMatch[1]), rangeMatch[3].toUpperCase()),
+      startM: parseInt(rangeMatch[2]),
+      endH: to24h(parseInt(rangeMatch[4]), rangeMatch[6].toUpperCase()),
+      endM: parseInt(rangeMatch[5]),
     };
   }
 
-  return { start: "180000", end: "220000" };
+  const byMatch = time.match(/(\d{1,2}):(\d{2})\s*(AM|PM)/i);
+  if (byMatch) {
+    const h = to24h(parseInt(byMatch[1]), byMatch[3].toUpperCase());
+    return { startH: Math.max(h - 3, 0), startM: 0, endH: h, endM: parseInt(byMatch[2]) };
+  }
+
+  return { startH: 18, startM: 0, endH: 22, endM: 0 };
 }
 
 const DATE_MAP: Record<string, string> = {
-  "Apr 5": "20260405",
   "Apr 19": "20260419",
   "Apr 20": "20260420",
   "Apr 21": "20260421",
   "Apr 22": "20260422",
 };
 
-function downloadICS(event: WeddingEvent) {
-  const dateStr = DATE_MAP[event.dateShort] || "20260419";
-  const { start, end } = parseEventTime(event.time);
+function getGoogleCalendarUrl(event: WeddingEvent): string {
+  const dateStr = DATE_MAP[event.dateShort] || "20260420";
+  const { startH, startM, endH, endM } = parseEventTime(event.time);
 
-  const ics = [
-    "BEGIN:VCALENDAR",
-    "VERSION:2.0",
-    "PRODID:-//T&S Wedding//EN",
-    "CALSCALE:GREGORIAN",
-    "METHOD:PUBLISH",
-    "BEGIN:VEVENT",
-    `DTSTART;TZID=Asia/Kolkata:${dateStr}T${start}`,
-    `DTEND;TZID=Asia/Kolkata:${dateStr}T${end}`,
-    `SUMMARY:${event.title} — T & S Wedding`,
-    `LOCATION:${event.location}\\, ${event.venue}`,
-    `DESCRIPTION:${event.description.replace(/,/g, "\\,").replace(/\n/g, "\\n")}`,
-    "STATUS:CONFIRMED",
-    `UID:${event.slug}@tanviandsahil.com`,
-    "END:VEVENT",
-    "END:VCALENDAR",
-  ].join("\r\n");
+  const pad = (n: number) => String(n).padStart(2, "0");
+  const startIST = `${dateStr}T${pad(startH)}${pad(startM)}00`;
+  const endIST = `${dateStr}T${pad(endH)}${pad(endM)}00`;
 
-  const blob = new Blob([ics], { type: "text/calendar;charset=utf-8" });
-  const url = URL.createObjectURL(blob);
-  const anchor = document.createElement("a");
-  anchor.href = url;
-  anchor.download = `${event.slug}.ics`;
-  document.body.appendChild(anchor);
-  anchor.click();
-  document.body.removeChild(anchor);
-  URL.revokeObjectURL(url);
+  const params = new URLSearchParams({
+    action: "TEMPLATE",
+    text: `${event.title} — T & S Wedding`,
+    dates: `${startIST}/${endIST}`,
+    ctz: "Asia/Kolkata",
+    location: `${event.location}, ${event.venue}`,
+    details: event.description,
+  });
+
+  return `https://calendar.google.com/calendar/render?${params.toString()}`;
 }
 
 /* ────────────────────────────────────────────────────────
@@ -390,14 +373,16 @@ export default function ItineraryContent() {
                             </Link>
                           )}
 
-                          <button
-                            onClick={() => downloadICS(event)}
-                            className="inline-flex items-center gap-2 text-sm transition-colors duration-300"
+                          <a
+                            href={getGoogleCalendarUrl(event)}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="inline-flex items-center gap-2 text-sm transition-colors duration-300 hover:opacity-80"
                             style={{ color: `${P.cream}60` }}
                           >
                             <Calendar size={14} />
                             Add to Calendar
-                          </button>
+                          </a>
                         </div>
                       </div>
                     </FadeInView>
