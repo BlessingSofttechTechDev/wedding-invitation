@@ -17,6 +17,13 @@ import {
   RoyalFlourish,
 } from "@/components/shared/RoyalPageLayout";
 
+/** Readable on maroon cards; lighter than raw palette.accent */
+const itineraryAccentText = (event: WeddingEvent) => event.palette.secondary;
+
+/** Schedule times / section dates — bright gold, bold */
+const ITINERARY_GOLD_TEXT = "#f8e8b8";
+const ITINERARY_GOLD_MUTED = "#e8d48a";
+
 /* ────────────────────────────────────────────────────────
    Google Calendar — opens directly in the calendar app
    ──────────────────────────────────────────────────────── */
@@ -156,8 +163,8 @@ export default function ItineraryContent() {
         <aside className="hidden lg:block lg:w-60 shrink-0 sticky top-32 h-fit self-start">
           <nav>
             <p
-              className="text-[11px] uppercase tracking-[0.25em] mb-5 font-medium"
-              style={{ color: `${P.gold}66` }}
+              className="text-[11px] uppercase tracking-[0.25em] mb-5 font-semibold"
+              style={{ color: ITINERARY_GOLD_MUTED }}
             >
               Chapters
             </p>
@@ -209,14 +216,14 @@ export default function ItineraryContent() {
               <FadeInView>
                 <div className="mb-14 pl-10">
                   <p
-                    className="text-[11px] uppercase tracking-[0.3em] mb-2 font-medium"
-                    style={{ color: `${P.gold}66` }}
+                    className="text-[11px] uppercase tracking-[0.3em] mb-2 font-semibold"
+                    style={{ color: ITINERARY_GOLD_MUTED }}
                   >
                     {group.day}
                   </p>
                   <h2
-                    className="font-serif text-3xl md:text-4xl lg:text-5xl"
-                    style={{ color: `${P.cream}cc` }}
+                    className="font-serif text-3xl md:text-4xl lg:text-5xl font-semibold tracking-tight"
+                    style={{ color: ITINERARY_GOLD_TEXT }}
                   >
                     {group.fullDate}
                   </h2>
@@ -230,7 +237,7 @@ export default function ItineraryContent() {
                 <div
                   className="absolute left-[7px] top-2 bottom-0 w-[2px] rounded-full"
                   style={{
-                    background: `linear-gradient(to bottom, ${P.gold}40, ${P.gold}20, transparent)`,
+                    background: `linear-gradient(to bottom, ${P.gold}70, ${P.gold}35, transparent)`,
                   }}
                 />
 
@@ -252,14 +259,14 @@ export default function ItineraryContent() {
                         <div
                           className="w-3 h-3 rotate-45 transition-all duration-500"
                           style={{
-                            border: `1.5px solid ${event.palette.accent}`,
+                            border: `1.5px solid ${P.gold}`,
                             backgroundColor:
                               activeSlug === event.slug
-                                ? `${event.palette.accent}40`
+                                ? `${P.gold}45`
                                 : P.bg,
                             boxShadow:
                               activeSlug === event.slug
-                                ? `0 0 12px ${event.palette.accent}60`
+                                ? `0 0 14px ${P.gold}55`
                                 : "none",
                           }}
                         />
@@ -293,21 +300,22 @@ export default function ItineraryContent() {
                           }}
                         />
 
-                        {/* Time pill */}
+                        {/* Time pill — light gold, bold (readable on dark cards) */}
                         <div
-                          className="inline-flex items-center gap-2 text-sm font-medium px-3 py-1.5 rounded-sm mb-5"
+                          className="inline-flex items-center gap-2 text-sm font-bold px-3 py-1.5 rounded-sm mb-5"
                           style={{
-                            color: event.palette.accent,
-                            backgroundColor: `${event.palette.accent}12`,
+                            color: ITINERARY_GOLD_TEXT,
+                            backgroundColor: `${P.gold}22`,
+                            border: `1px solid ${P.gold}35`,
                           }}
                         >
-                          <Clock size={13} />
+                          <Clock size={13} strokeWidth={2.25} />
                           <span>{event.time}</span>
                         </div>
 
                         <p
-                          className="text-xs md:text-[10px] uppercase tracking-[0.3em] font-body mb-2"
-                          style={{ color: `${event.palette.accent}99` }}
+                          className="text-xs md:text-[10px] uppercase tracking-[0.3em] font-body font-semibold mb-2"
+                          style={{ color: itineraryAccentText(event) }}
                         >
                           {event.chapterNumber >= 1
                             ? `Chapter ${event.chapterNumber}`
@@ -321,8 +329,8 @@ export default function ItineraryContent() {
                         </h3>
                         {event.subtitle ? (
                           <p
-                            className="text-sm italic mb-5"
-                            style={{ color: `${event.palette.accent}cc` }}
+                            className="text-sm italic font-medium mb-5"
+                            style={{ color: itineraryAccentText(event) }}
                           >
                             {event.subtitle}
                           </p>
@@ -351,6 +359,7 @@ export default function ItineraryContent() {
                           <DressCodeBadge
                             title={event.dressCode.title}
                             palette={event.palette}
+                            onDarkBackground
                           />
                         </div>
 
@@ -362,8 +371,8 @@ export default function ItineraryContent() {
                           {event.slug !== "gratitude" && event.slug !== "departure" && (
                             <Link
                               href={`/chapter/${event.slug}`}
-                              className="inline-flex items-center gap-2 text-sm font-medium transition-all duration-300 group"
-                              style={{ color: event.palette.accent }}
+                              className="inline-flex items-center gap-2 text-sm font-semibold transition-all duration-300 group"
+                              style={{ color: itineraryAccentText(event) }}
                             >
                               Explore Chapter
                               <ArrowRight

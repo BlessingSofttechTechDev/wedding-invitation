@@ -637,7 +637,15 @@ function CourtQuote({ event }: { event: WeddingEvent }) {
         <p className="font-serif italic text-xl md:text-2xl mt-8 leading-relaxed" style={{ color: `${palette.foreground}a8` }}>
           &ldquo;{quote.split(" ").map((w, i) => (<span key={i} className="aq-w inline-block mr-[0.3em]">{w}</span>))}&rdquo;
         </p>
-        <p className="font-serif text-2xl md:text-4xl mt-6" style={{ color: `${palette.accent}12` }}>दरबार</p>
+        <p
+          className="font-serif text-2xl md:text-4xl mt-6 font-semibold tracking-wide"
+          style={{
+            color: palette.secondary,
+            textShadow: "0 1px 3px rgba(0,0,0,0.35)",
+          }}
+        >
+          दरबार
+        </p>
       </div>
     </section>
   );
@@ -926,43 +934,19 @@ export default function SixthChapterContent({ event }: ChapterProps) {
 
       {/* Footer */}
       <footer className="relative" style={{ backgroundColor: palette.background, borderTop: `1px solid ${palette.accent}12` }}>
-        <div className="absolute -top-20 left-0 right-0 h-20 pointer-events-none" style={{ background: `linear-gradient(to bottom,transparent,${palette.background})` }} />
         <div className="max-w-7xl mx-auto px-6 py-12 md:py-16 text-center">
           <CourtDivider accent={palette.accent} />
-          <p className="font-serif text-xs mb-4 mt-6" style={{ color: `${palette.accent}55` }}>शुभ विवाह</p>
+          <p className="font-serif text-xs mb-4 mt-6 font-semibold tracking-[0.12em]" style={{ color: `${palette.secondary}ee` }}>शुभ विवाह</p>
           <p className="font-serif text-2xl md:text-3xl mb-2" style={{ color: `${palette.foreground}cc` }}>
             Tarush <span style={{ color: `${palette.accent}77` }}>&amp;</span> Sanjana
           </p>
           <p className="text-[10px] tracking-[0.3em] font-body mb-10" style={{ color: `${palette.accent}55` }}>{COUPLE.hashtag}</p>
 
-          <div className="relative my-12 py-10 px-8 rounded-sm mx-auto max-w-lg" style={{ border: `1px solid ${palette.accent}18`, background: `linear-gradient(165deg,${palette.accent}06,transparent 40%,${palette.primary}04)` }}>
-            <p className="text-[10px] uppercase tracking-[0.35em] mb-4 font-medium" style={{ color: `${palette.accent}55` }}>Your Presence Matters</p>
-            <p className="font-serif text-lg md:text-xl leading-relaxed italic" style={{ color: `${palette.foreground}bb` }}>
-              The celebration is incomplete without you.
-            </p>
-            <p className="font-serif text-lg md:text-xl leading-relaxed italic mt-1" style={{ color: `${palette.foreground}bb` }}>
-              We eagerly await your presence.
-            </p>
-            <p className="mt-5 text-sm tracking-[0.08em]" style={{ color: `${palette.accent}55` }}>
-              आपकी उपस्थिति हमारा सम्मान है
-            </p>
-            <div className="flex justify-center mt-6">
-              <Link href="/rsvp" className="inline-flex items-center gap-2 px-8 py-3 text-xs uppercase tracking-[0.2em] font-medium transition-all duration-300 rounded-sm hover:scale-105" style={{ backgroundColor: `${palette.accent}15`, color: palette.accent, border: `1px solid ${palette.accent}25` }}>
-                RSVP Now
-              </Link>
-            </div>
-          </div>
-
-          <div className="flex items-center justify-center gap-8 mb-10">
-            {[{ href: "/itinerary", label: "Itinerary" }, { href: "/rsvp", label: "RSVP" }].map((link) => (
-              <Link key={link.href} href={link.href} className="text-[11px] uppercase tracking-[0.2em] font-body transition-colors duration-300 hover:opacity-80" style={{ color: `${palette.foreground}96` }}>{link.label}</Link>
-            ))}
-          </div>
-          <p className="text-[11px] font-body tracking-wide mb-6" style={{ color: `${palette.foreground}40` }}>April 19–21, 2026 · Udaipur, Rajasthan</p>
-          <div className="flex flex-wrap items-center justify-center gap-2.5 text-xs font-body tracking-wide" style={{ color: `${palette.foreground}25` }}>
+          <p className="text-[11px] font-body tracking-wide mb-6" style={{ color: `${palette.foreground}6a` }}>April 19–21, 2026 · Udaipur, Rajasthan</p>
+          <div className="flex flex-wrap items-center justify-center gap-2.5 text-xs font-body tracking-wide" style={{ color: `${palette.foreground}5c` }}>
             <span>© 2026 All Rights Reserved</span>
-            <span style={{ color: `${palette.foreground}15` }}>|</span>
-            <a href="https://blessingsofttech.com" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 transition-opacity hover:opacity-80" style={{ color: `${palette.foreground}35` }} aria-label="Blessing Softtech">
+            <span style={{ color: `${palette.foreground}40` }}>|</span>
+            <a href="https://blessingsofttech.com" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 font-medium transition-opacity hover:opacity-90" style={{ color: `${palette.foreground}a8` }} aria-label="Blessing Softtech">
               <Image src="/images/blessing-softtech.svg" alt="" width={26} height={26} className="shrink-0" />
               <span>Blessing Softtech</span>
             </a>

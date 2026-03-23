@@ -11,9 +11,9 @@ import { motion } from "framer-motion";
    ═══════════════════════════════════════════════════════════ */
 
 export const P = {
-  gold: "#d4af37",
+  gold: "#e2c25a",
   bronze: "#c9956b",
-  maroon: "#8b1a1a",
+  maroon: "#a83a56",
   bg: "#2d1616",
   bgDeep: "#221010",
   muted: "#3f1e1e",

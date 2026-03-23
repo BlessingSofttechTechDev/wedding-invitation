@@ -6,7 +6,7 @@ import { useGSAP } from "@gsap/react";
 import { ChapterWardrobe, Look, W } from "./WardrobeConfig";
 
 const P = {
-  gold: "#d4af37",
+  gold: "#e2c25a",
   cream: "#f5efe6",
   shadow: "rgba(0,0,0,0.35)",
 };
@@ -15,7 +15,7 @@ const COLOR_NAME_TO_HEX: Record<string, string> = {
   Mint: "#b4d3b2", Lavender: "#d4c8e6", "Powder Blue": "#b0c4de",
   Peach: "#f2c7c7", Rust: "#c95a3c", Teal: "#2a9d8f",
   Emerald: "#2d6a4f", Copper: "#b87333", "Deep Maroon": "#8b1a1a",
-  "Antique Gold": "#d4af37", Ivory: "#f5efe6", Vermillion: "#c9422e",
+  "Antique Gold": "#e2c25a", Ivory: "#f5efe6", Vermillion: "#c9422e",
   "Onyx Black": "#1c1c1c", "Midnight Navy": "#0c1445", "Dark Burgundy": "#5c0a1a",
   "Burnished Gold": "#c9a84c", "Deep Emerald": "#1a5e3a", "Antique Bronze": "#8b6914",
   "Blush Pink": "#e8b4b8", "Sage Green": "#a8c5a0", "Soft Peach": "#f5c6a0",

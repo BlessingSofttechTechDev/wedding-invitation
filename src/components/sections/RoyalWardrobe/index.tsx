@@ -22,7 +22,7 @@ gsap.registerPlugin(ScrollTrigger);
 
 
 const P = {
-  gold: "#d4af37",
+  gold: "#e2c25a",
   bronze: "#c9956b",
   maroon: "#8b1a1a",
   bg: "#2d1616",
@@ -530,7 +530,7 @@ function IllustrationCard({ wardrobe, theme, audience }: { wardrobe: ChapterWard
       {/* Hero Content */}
       <div className="relative z-30 text-center space-y-6 max-w-lg mt-12">
         <div className="card-text-el inline-block">
-          <span className="text-[10px] uppercase tracking-[0.8em] text-amber-500" style={{ textShadow: `0 0 12px #d4af3760` }}>
+          <span className="text-[10px] uppercase tracking-[0.8em] text-amber-500" style={{ textShadow: `0 0 12px #e2c25a60` }}>
             Style Lookbook
           </span>
         </div>

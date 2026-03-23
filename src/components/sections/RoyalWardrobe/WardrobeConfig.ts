@@ -132,7 +132,7 @@ export const wardrobeConfig: Record<string, ChapterWardrobe> = {
     illustrationImage: W.midnightIllustration,
     palette: {
       primary: "#1a3a2a",
-      accents: ["#c9a84c", "#d4af37"],
+      accents: ["#c9a84c", "#e2c25a"],
       recommended: [
         { name: "Burnished Gold", hex: "#c9a84c" },
         { name: "Deep Emerald", hex: "#1a5e3a" },
@@ -224,10 +224,10 @@ export const wardrobeConfig: Record<string, ChapterWardrobe> = {
     illustrationImage: W.royalIllustration,
     palette: {
       primary: "#8b1a1a",
-      accents: ["#d4af37", "#c9956b"],
+      accents: ["#e2c25a", "#c9956b"],
       recommended: [
         { name: "Deep Maroon", hex: "#7a1a1a" },
-        { name: "Royal Gold", hex: "#d4af37" },
+        { name: "Royal Gold", hex: "#e2c25a" },
         { name: "Ivory", hex: "#f5efe6" },
         { name: "Vermillion", hex: "#e23d28" },
         { name: "Wine", hex: "#5c1a2a" },
@@ -342,7 +342,7 @@ export const CHAPTER_THEMES: Record<string, ChapterTheme> = {
     separatorColor: "rgba(212,160,23,0.12)",
   },
   "royal-court": {
-    accent: "#d4af37",
+    accent: "#e2c25a",
     accentGlow: "rgba(212,175,55,0.16)",
     accentRgb: "212,175,55",
     bgOverlay: "radial-gradient(ellipse 70% 50% at 50% 30%, rgba(139,26,26,0.14), transparent 60%)",

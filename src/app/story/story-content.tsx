@@ -89,11 +89,14 @@ function StoryHero() {
       <div className="relative z-10 mx-auto max-w-3xl text-center">
         <FadeInView>
           <p
-            className="mb-8 text-xs md:text-[10px] font-body uppercase tracking-[0.42em] md:text-[11px]"
-            style={{ color: `${P.gold}c4` }}
+            className="mb-8 text-xs md:text-[10px] font-body font-semibold uppercase tracking-[0.42em] md:text-[11px]"
+            style={{
+              color: "#f5e8c8",
+              textShadow: "0 1px 2px rgba(0,0,0,0.45)",
+            }}
           >
             Their Story ·{" "}
-            <span className="text-[0.85em]">प्रेम कथा</span>
+            <span className="text-[0.85em] font-medium">प्रेम कथा</span>
           </p>
         </FadeInView>
 

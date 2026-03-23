@@ -45,13 +45,13 @@ function Flourish({ className = "" }: { className?: string }) {
 function MandalaOrnament({ className = "" }: { className?: string }) {
   return (
     <div className={`flex items-center justify-center ${className}`} aria-hidden="true">
-      <div className="h-px w-12 md:w-24" style={{ background: `linear-gradient(to right, transparent, ${P.gold}25)` }} />
+      <div className="h-px w-12 md:w-24" style={{ background: `linear-gradient(to right, transparent, ${P.gold}45)` }} />
       <div className="relative mx-5 w-10 h-10 flex items-center justify-center">
-        <div className="absolute inset-0 rotate-45 border" style={{ borderColor: `${P.gold}18` }} />
-        <div className="absolute inset-2 rotate-45 border" style={{ borderColor: `${P.gold}12` }} />
-        <div className="w-1.5 h-1.5 rounded-full" style={{ backgroundColor: `${P.gold}40` }} />
+        <div className="absolute inset-0 rotate-45 border" style={{ borderColor: `${P.gold}38` }} />
+        <div className="absolute inset-2 rotate-45 border" style={{ borderColor: `${P.gold}22` }} />
+        <div className="w-1.5 h-1.5 rounded-full" style={{ backgroundColor: `${P.gold}70` }} />
       </div>
-      <div className="h-px w-12 md:w-24" style={{ background: `linear-gradient(to left, transparent, ${P.gold}25)` }} />
+      <div className="h-px w-12 md:w-24" style={{ background: `linear-gradient(to left, transparent, ${P.gold}45)` }} />
     </div>
   );
 }
@@ -627,7 +627,7 @@ function SacredPrelude({ onComplete }: { onComplete: () => void }) {
         </p>
 
         {/* Shubh Vivah in Devanagari */}
-        <p className="sp-vivah font-serif text-xs md:text-sm mb-4 md:mb-6" style={{ color: `${P.gold}90` }}>
+        <p className="sp-vivah font-serif text-xs md:text-sm mb-4 md:mb-6 font-semibold tracking-[0.12em]" style={{ color: "#f2ddb0", textShadow: "0 1px 2px rgba(0,0,0,0.35)" }}>
           शुभ विवाह
         </p>
 
@@ -772,7 +772,7 @@ function Hero({ loaded }: { loaded: boolean }) {
       {/* ── Content — flex-1 so “Discover” sits below without overlapping CTAs ── */}
       <div className="hero-content relative z-10 w-full max-w-5xl mx-auto min-h-0 flex-1 flex flex-col items-center justify-start text-center px-4 sm:px-6 md:justify-center invisible">
         {/* Devanagari cultural text — clear of fixed navbar (pt on section + no extra mt) */}
-        <p className="hero-sanskrit text-sm md:text-xs mb-4 md:mb-6 mt-0 md:mt-16" style={{ color: `${P.gold}80` }}>
+        <p className="hero-sanskrit text-sm md:text-xs mb-4 md:mb-6 mt-0 md:mt-16 font-semibold tracking-[0.12em]" style={{ color: "#f2ddb0", textShadow: "0 1px 2px rgba(0,0,0,0.35)" }}>
           शुभ विवाह
         </p>
 
@@ -939,7 +939,7 @@ function RoyalPrologue() {
           space for moments that transcend the ordinary. A city worthy of a Mewari celebration.
         </p>
 
-        <p className="rp-fade font-serif italic text-base md:text-lg max-w-xl mx-auto" style={{ color: `${P.gold}80` }}>
+        <p className="rp-fade font-serif italic text-base md:text-lg max-w-xl mx-auto" style={{ color: `${P.gold}d8` }}>
           This celebration unfolds across three days and five chapters — each a distinct rasa,
           a different mood, a new verse in a love story written against the grandeur of Rajasthan.
         </p>
@@ -993,10 +993,13 @@ function StoryPageCTA() {
           <Flourish className="mb-5" />
         </div>
         <p
-          className="story-cta-el text-xs md:text-[10px] uppercase tracking-[0.38em] font-body mb-4"
-          style={{ color: `${P.gold}99` }}
+          className="story-cta-el text-xs md:text-[10px] uppercase tracking-[0.38em] font-body font-semibold mb-4"
+          style={{
+            color: "#f5e8c8",
+            textShadow: "0 1px 2px rgba(0,0,0,0.45)",
+          }}
         >
-          Their Story · <span className="text-[0.85em] font-normal">प्रेम कथा</span>
+          Their Story · <span className="text-[0.85em] font-medium">प्रेम कथा</span>
         </p>
         <p
           className="story-cta-el font-serif italic text-lg sm:text-xl md:text-2xl leading-snug mb-8 px-1"
@@ -1126,7 +1129,7 @@ function ChapterCard({ event }: { event: (typeof EVENTS)[0] }) {
           <h3 className="font-serif text-lg md:text-xl mb-1 leading-snug" style={{ color: `${P.cream}dd` }}>
             {event.title}
           </h3>
-          <p className="font-serif text-xs italic mb-3" style={{ color: `${palette.accent}cc` }}>
+          <p className="font-serif text-xs italic mb-3" style={{ color: `${palette.secondary}ee` }}>
             {event.subtitle}
           </p>
           <p className="text-xs font-body line-clamp-2 leading-relaxed" style={{ color: `${P.cream}c0` }}>

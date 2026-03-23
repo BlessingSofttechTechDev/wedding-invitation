@@ -686,8 +686,11 @@ function AtmosphereQuote({ event }: { event: WeddingEvent }) {
           &rdquo;
         </p>
         <p
-          className="font-serif text-3xl md:text-5xl mt-6 tracking-[0.15em]"
-          style={{ color: `${palette.accent}14` }}
+          className="font-serif text-3xl md:text-5xl mt-6 tracking-[0.15em] font-semibold"
+          style={{
+            color: palette.secondary,
+            textShadow: "0 1px 3px rgba(0,0,0,0.25)",
+          }}
         >
           प्रारम्भ
         </p>
@@ -1237,13 +1240,6 @@ export default function FirstChapterContent({ event }: ChapterProps) {
         className="relative"
         style={{ backgroundColor: palette.background, borderTop: `1px solid ${palette.accent}10` }}
       >
-        {/* Gradient bridge from content to footer */}
-        <div
-          className="absolute -top-20 left-0 right-0 h-20 pointer-events-none"
-          style={{
-            background: `linear-gradient(to bottom, transparent, ${palette.background})`,
-          }}
-        />
         <div className="max-w-7xl mx-auto px-6 py-10 md:py-16 text-center">
           <div className="flex justify-center mb-8">
             <svg viewBox="0 0 200 120" className="w-24 md:w-32 h-auto" fill="none" style={{ opacity: 0.1 }}>
@@ -1252,7 +1248,7 @@ export default function FirstChapterContent({ event }: ChapterProps) {
               <circle cx="100" cy="28" r="2.5" fill={`${palette.accent}18`} />
             </svg>
           </div>
-          <p className="font-serif text-xs mb-4 tracking-[0.3em]" style={{ color: `${palette.accent}30` }}>
+          <p className="font-serif text-xs mb-4 tracking-[0.12em] font-semibold" style={{ color: `${palette.secondary}ee` }}>
             शुभ विवाह
           </p>
           <p className="font-serif text-2xl md:text-3xl mb-2" style={{ color: `${palette.foreground}cc` }}>
@@ -1265,51 +1261,18 @@ export default function FirstChapterContent({ event }: ChapterProps) {
             {COUPLE.hashtag}
           </p>
 
-          <div className="relative my-12 py-10 px-8 rounded-sm mx-auto max-w-lg" style={{ border: `1px solid ${palette.accent}18`, background: `linear-gradient(165deg,${palette.accent}06,transparent 40%,${palette.primary}04)` }}>
-            <p className="text-[10px] uppercase tracking-[0.35em] mb-4 font-medium" style={{ color: `${palette.accent}55` }}>Your Presence Matters</p>
-            <p className="font-serif text-lg md:text-xl leading-relaxed italic" style={{ color: `${palette.foreground}bb` }}>
-              The celebration is incomplete without you.
-            </p>
-            <p className="font-serif text-lg md:text-xl leading-relaxed italic mt-1" style={{ color: `${palette.foreground}bb` }}>
-              We eagerly await your presence.
-            </p>
-            <p className="mt-5 text-sm tracking-[0.08em]" style={{ color: `${palette.accent}55` }}>
-              आपकी उपस्थिति हमारा सम्मान है
-            </p>
-            <div className="flex justify-center mt-6">
-              <Link href="/rsvp" className="inline-flex items-center gap-2 px-8 py-3 text-xs uppercase tracking-[0.2em] font-medium transition-all duration-300 rounded-sm hover:scale-105" style={{ backgroundColor: `${palette.accent}15`, color: palette.accent, border: `1px solid ${palette.accent}25` }}>
-                RSVP Now
-              </Link>
-            </div>
-          </div>
-
-          <div className="flex items-center justify-center gap-8 mb-10">
-            {[
-              { href: "/itinerary", label: "Itinerary" },
-              { href: "/rsvp", label: "RSVP" },
-            ].map((link) => (
-              <Link
-                key={link.href}
-                href={link.href}
-                className="text-[11px] uppercase tracking-[0.2em] font-body transition-colors duration-300 hover:opacity-80"
-                style={{ color: `${palette.foreground}b0` }}
-              >
-                {link.label}
-              </Link>
-            ))}
-          </div>
           <div className="flex items-center justify-center gap-2 mb-10">
             <div className="h-px w-10 md:w-20" style={{ background: `linear-gradient(to right,transparent,${palette.accent}25)` }} />
             <div className="w-1.5 h-1.5 rotate-45" style={{ border: `1px solid ${palette.accent}30` }} />
             <div className="h-px w-10 md:w-20" style={{ background: `linear-gradient(to left,transparent,${palette.accent}25)` }} />
           </div>
-          <p className="text-[11px] font-body tracking-wide mb-6" style={{ color: `${palette.foreground}30` }}>
+          <p className="text-[11px] font-body tracking-wide mb-6" style={{ color: `${palette.foreground}6a` }}>
             April 19–21, 2026 · Udaipur, Rajasthan
           </p>
-          <div className="flex flex-wrap items-center justify-center gap-2.5 text-xs font-body tracking-wide" style={{ color: `${palette.foreground}25` }}>
+          <div className="flex flex-wrap items-center justify-center gap-2.5 text-xs font-body tracking-wide" style={{ color: `${palette.foreground}5c` }}>
             <span>© 2026 All Rights Reserved</span>
-            <span style={{ color: `${palette.foreground}15` }}>|</span>
-            <a href="https://blessingsofttech.com" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 transition-opacity hover:opacity-80" style={{ color: `${palette.foreground}35` }} aria-label="Blessing Softtech">
+            <span style={{ color: `${palette.foreground}40` }}>|</span>
+            <a href="https://blessingsofttech.com" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 font-medium transition-opacity hover:opacity-90" style={{ color: `${palette.foreground}a8` }} aria-label="Blessing Softtech">
               <Image src="/images/blessing-softtech.svg" alt="" width={26} height={26} className="shrink-0" />
               <span>Blessing Softtech</span>
             </a>

@@ -5,7 +5,7 @@ import { motion, useReducedMotion } from "framer-motion";
 
 
 const CONFETTI_COLORS = [
-  "#d4af37", // gold
+  "#e2c25a", // gold
   "#c9a84c", // warm gold
   "#1a3a2a", // deep green
   "#4ade80", // bright green
@@ -216,7 +216,7 @@ export default function CathedralRogue() {
             top: `${Math.random() * 100}%`,
             width: 2,
             height: 2,
-            backgroundColor: "#d4af37",
+            backgroundColor: "#e2c25a",
           }}
           animate={{
             opacity: [0, 1, 0],

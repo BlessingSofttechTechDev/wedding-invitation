@@ -1,12 +1,6 @@
-import Link from "next/link";
 import Image from "next/image";
 import { COUPLE } from "@/content/events";
 import { P } from "@/components/shared/RoyalPageLayout";
-
-const FOOTER_LINKS = [
-  { href: "/itinerary", label: "Itinerary" },
-  { href: "/rsvp", label: "RSVP" },
-];
 
 export default function Footer() {
   return (
@@ -38,8 +32,8 @@ export default function Footer() {
 
         {/* Devanagari accent */}
         <p
-          className="font-serif text-sm mb-3 md:mb-4"
-          style={{ color: `${P.gold}55` }}
+          className="font-serif text-sm mb-3 md:mb-4 font-semibold tracking-[0.12em]"
+          style={{ color: "#f0d9a8", textShadow: "0 1px 2px rgba(0,0,0,0.35)" }}
         >
           शुभ विवाह
         </p>
@@ -57,39 +51,6 @@ export default function Footer() {
         >
           {COUPLE.hashtag}
         </p>
-
-        {/* Awaiting presence */}
-        <div className="relative my-8 md:my-12 py-6 md:py-10 px-4 sm:px-8 rounded-sm mx-auto max-w-lg" style={{ border: `1px solid ${P.gold}12`, background: `linear-gradient(165deg,${P.gold}05,transparent 40%,${P.gold}03)` }}>
-          <p className="text-xs md:text-[10px] uppercase tracking-[0.35em] mb-4 font-medium" style={{ color: `${P.gold}80` }}>Your Presence Matters</p>
-          <p className="font-serif text-lg md:text-xl leading-relaxed italic" style={{ color: `${P.cream}c8` }}>
-            The celebration is incomplete without you.
-          </p>
-          <p className="font-serif text-lg md:text-xl leading-relaxed italic mt-1" style={{ color: `${P.cream}c8` }}>
-            We eagerly await your presence.
-          </p>
-          <p className="mt-5 text-base tracking-[0.08em]" style={{ color: `${P.gold}85` }}>
-            आपकी उपस्थिति हमारा सम्मान है
-          </p>
-          <div className="flex justify-center mt-6">
-            <Link href="/rsvp" className="inline-flex items-center gap-2 px-8 py-3 text-sm uppercase tracking-[0.2em] font-medium transition-all duration-300 rounded-sm hover:scale-105" style={{ backgroundColor: `${P.gold}18`, color: `${P.gold}ee`, border: `1px solid ${P.gold}40` }}>
-              RSVP Now
-            </Link>
-          </div>
-        </div>
-
-        {/* Nav links */}
-        <div className="flex flex-wrap items-center justify-center gap-6 sm:gap-8 mb-6 md:mb-10">
-          {FOOTER_LINKS.map((link) => (
-            <Link
-              key={link.href}
-              href={link.href}
-              className="text-xs md:text-[11px] uppercase tracking-[0.2em] font-body transition-colors duration-300"
-              style={{ color: `${P.cream}dc` }}
-            >
-              {link.label}
-            </Link>
-          ))}
-        </div>
 
         {/* Gold flourish divider */}
         <div className="flex items-center justify-center gap-2 mb-6 md:mb-10">

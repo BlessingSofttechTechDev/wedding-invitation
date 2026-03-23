@@ -98,7 +98,7 @@ export function StorySection() {
           <Link
             href="/story"
             className="inline-block mt-10 text-xs md:text-[10px] uppercase tracking-[0.3em] font-body transition-colors duration-500 px-8 py-3"
-            style={{ color: "#d4af3799", border: "1px solid #d4af3720" }}
+            style={{ color: "#e2c25a99", border: "1px solid #e2c25a20" }}
           >
             Read Our Full Story →
           </Link>

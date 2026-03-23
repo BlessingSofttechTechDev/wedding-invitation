@@ -1,7 +1,6 @@
 "use client";
 
 import { useRef, useMemo } from "react";
-import Link from "next/link";
 import Image from "next/image";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
@@ -469,14 +468,6 @@ export function ThrillFooter({ event }: { event: WeddingEvent }) {
         borderTop: `1px solid ${T.magenta}1f`,
       }}
     >
-      {/* Fade gradient top */}
-      <div
-        className="absolute -top-20 left-0 right-0 h-20 pointer-events-none"
-        style={{
-          background: `linear-gradient(to bottom, transparent, ${palette.background})`,
-        }}
-      />
-
       <div className="max-w-7xl mx-auto px-6 py-12 md:py-16 text-center">
         <NeonDivider accent={T.cyan} primary={T.magenta} />
 
@@ -499,67 +490,6 @@ export function ThrillFooter({ event }: { event: WeddingEvent }) {
           {COUPLE.hashtag}
         </p>
 
-        {/* Your Presence Matters card */}
-        <div
-          className="relative my-12 py-10 px-8 rounded-sm mx-auto max-w-lg"
-          style={{
-            border: `1px solid ${T.magenta}1a`,
-            background: `linear-gradient(165deg, ${T.magenta}06, transparent 40%, ${T.purple}06)`,
-          }}
-        >
-          <p
-            className="text-[10px] uppercase tracking-[0.35em] mb-4 font-bold"
-            style={{ color: `${T.cyan}55` }}
-          >
-            Your Presence Matters
-          </p>
-
-          <p
-            className="font-serif text-lg md:text-xl leading-relaxed italic"
-            style={{ color: "rgba(255,255,255,0.73)" }}
-          >
-            The celebration is incomplete without you.
-          </p>
-
-          <p
-            className="mt-5 text-sm tracking-[0.08em]"
-            style={{ color: `${T.gold}66` }}
-          >
-            आपकी उपस्थिति हमारा सम्मान है
-          </p>
-
-          <div className="flex justify-center mt-6">
-            <Link
-              href="/rsvp"
-              className="inline-flex items-center gap-2 px-8 py-3 text-xs uppercase tracking-[0.2em] font-bold transition-all duration-300 rounded-sm hover:scale-105"
-              style={{
-                backgroundColor: `${T.magenta}1f`,
-                color: T.magenta,
-                border: `1px solid ${T.magenta}2e`,
-              }}
-            >
-              RSVP Now
-            </Link>
-          </div>
-        </div>
-
-        {/* Navigation links */}
-        <div className="flex items-center justify-center gap-8 mb-10">
-          {[
-            { href: "/itinerary", label: "Itinerary" },
-            { href: "/rsvp", label: "RSVP" },
-          ].map((link) => (
-            <Link
-              key={link.href}
-              href={link.href}
-              className="text-[11px] uppercase tracking-[0.2em] font-body transition-colors duration-300 hover:opacity-80"
-              style={{ color: "rgba(255,255,255,0.4)" }}
-            >
-              {link.label}
-            </Link>
-          ))}
-        </div>
-
         <p
           className="text-[11px] font-body tracking-wide mb-6"
           style={{ color: "rgba(255,255,255,0.25)" }}
@@ -569,16 +499,16 @@ export function ThrillFooter({ event }: { event: WeddingEvent }) {
 
         <div
           className="flex flex-wrap items-center justify-center gap-2.5 text-xs font-body tracking-wide"
-          style={{ color: "rgba(255,255,255,0.15)" }}
+          style={{ color: "rgba(255,255,255,0.45)" }}
         >
           <span>© 2026 All Rights Reserved</span>
-          <span style={{ color: "rgba(255,255,255,0.08)" }}>|</span>
+          <span style={{ color: "rgba(255,255,255,0.35)" }}>|</span>
           <a
             href="https://blessingsofttech.com"
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center gap-2 transition-opacity hover:opacity-80"
-            style={{ color: "rgba(255,255,255,0.22)" }}
+            className="inline-flex items-center gap-2 font-medium transition-opacity hover:opacity-90"
+            style={{ color: "rgba(255,255,255,0.72)" }}
             aria-label="Blessing Softtech"
           >
             <Image

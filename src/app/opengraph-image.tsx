@@ -102,7 +102,7 @@ export default function OGImage() {
             style={{
               fontSize: 42,
               fontStyle: "italic",
-              color: "#d4af37",
+              color: "#e2c25a",
               lineHeight: 1.2,
             }}
           >

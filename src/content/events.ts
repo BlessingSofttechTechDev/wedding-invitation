@@ -3,7 +3,7 @@ import { WeddingEvent } from "@/types";
 export const COUPLE = {
   partner1: "Tarush",
   partner2: "Sanjana",
-  hashtag: "#AThousandTimesYes",
+  hashtag: "#aThousandtimesYesS",
   weddingDate: "2026-04-20",
   location: "Udaipur, Rajasthan",
   venue: "Fairmont Udaipur",
@@ -34,9 +34,9 @@ export const EVENTS: WeddingEvent[] = [
       donts: ["Dark heavy fabrics", "Overly embellished", "All black"],
     },
     palette: {
-      primary: "#c76f7a",
+      primary: "#df8fa0",
       secondary: "#efd4d8",
-      accent: "#6b2438",
+      accent: "#b55a74",
       background: "#fdf5f6",
       foreground: "#140910",
       muted: "#e8ccd1",
@@ -71,8 +71,8 @@ export const EVENTS: WeddingEvent[] = [
     },
     palette: {
       primary: "#1a3a2a",
-      secondary: "#e0c46a",
-      accent: "#e8c547",
+      secondary: "#ecd893",
+      accent: "#f2d774",
       background: "#0a1a12",
       foreground: "#f2ecde",
       muted: "#1e3d2b",
@@ -106,9 +106,9 @@ export const EVENTS: WeddingEvent[] = [
       donts: ["Heavy embroidery", "Dark formal wear", "Synthetic fabrics"],
     },
     palette: {
-      primary: "#8a6808",
-      secondary: "#d4b060",
-      accent: "#5c4500",
+      primary: "#b58a24",
+      secondary: "#e8ca8a",
+      accent: "#8a6820",
       background: "#faf6ee",
       foreground: "#1a1305",
       muted: "#f0e4c8",
@@ -156,7 +156,7 @@ export const EVENTS: WeddingEvent[] = [
     },
     palette: {
       primary: "#8b1a1a",
-      secondary: "#d4af37",
+      secondary: "#e3c766",
       accent: "#c9956b",
       background: "#2d1616",
       foreground: "#ebe4d6",
@@ -191,8 +191,8 @@ export const EVENTS: WeddingEvent[] = [
       donts: ["Traditional / formal", "Muted earth tones", "Anything 'safe'"],
     },
     palette: {
-      primary: "#ff4d9a",
-      secondary: "#9b6af0",
+      primary: "#ff78b8",
+      secondary: "#b894ff",
       accent: "#00c9ae",
       background: "#0a0a0f",
       foreground: "#ececf5",
@@ -229,7 +229,7 @@ export const EVENTS: WeddingEvent[] = [
   //   palette: {
   //     primary: "#ffffff",
   //     secondary: "#f0f0f0",
-  //     accent: "#7a5a0a",
+  //     accent: "#9b7a2f",
   //     background: "#fafafa",
   //     foreground: "#0d0d0d",
   //     muted: "#f5f5f5",
@@ -265,7 +265,7 @@ export const EVENTS: WeddingEvent[] = [
     palette: {
       primary: "#ffffff",
       secondary: "#f0f0f0",
-      accent: "#7a5a0a",
+      accent: "#9b7a2f",
       background: "#fafafa",
       foreground: "#0d0d0d",
       muted: "#f5f5f5",
