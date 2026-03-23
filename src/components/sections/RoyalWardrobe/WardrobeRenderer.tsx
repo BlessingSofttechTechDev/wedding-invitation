@@ -469,7 +469,7 @@ export function GarmentPicker({
     <div className="space-y-3">
       <div className="flex items-center gap-3">
         <svg className="w-4 h-4 opacity-40" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2" /></svg>
-        <span className="text-[9px] uppercase tracking-[0.3em] font-body" style={{ color: `${P.cream}60` }}>
+        <span className="text-[9px] uppercase tracking-[0.3em] font-body" style={{ color: `${P.cream}98` }}>
           Try Different Outfits
         </span>
       </div>
@@ -497,7 +497,7 @@ export function GarmentPicker({
                 <div className="w-full aspect-[3/4] rounded-lg mb-3 flex items-center justify-center overflow-hidden"
                   style={{ backgroundColor: isActive ? `${accentColor}12` : "rgba(255,255,255,0.02)" }}
                 >
-                  <svg className="w-8 h-8 transition-transform duration-500" style={{ color: isActive ? accentColor : `${P.cream}25`, transform: isActive ? "scale(1.1)" : "scale(1)" }} fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <svg className="w-8 h-8 transition-transform duration-500" style={{ color: isActive ? accentColor : `${P.cream}55`, transform: isActive ? "scale(1.1)" : "scale(1)" }} fill="none" viewBox="0 0 24 24" stroke="currentColor">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1} d="M4.26 10.147a60.436 60.436 0 00-.491 6.347A48.627 48.627 0 0112 20.904a48.627 48.627 0 018.232-4.41 60.46 60.46 0 00-.491-6.347m-15.482 0a50.57 50.57 0 00-2.658-.813A59.905 59.905 0 0112 3.493a59.902 59.902 0 0110.399 5.84c-.896.248-1.783.52-2.658.814m-15.482 0A50.697 50.697 0 0112 13.489a50.702 50.702 0 017.74-3.342" />
                   </svg>
                 </div>
@@ -510,7 +510,7 @@ export function GarmentPicker({
                       className="text-[7px] uppercase tracking-wider px-1.5 py-0.5 rounded-full"
                       style={{
                         backgroundColor: isActive ? `${accentColor}20` : "rgba(255,255,255,0.04)",
-                        color: isActive ? accentColor : `${P.cream}40`,
+                        color: isActive ? accentColor : `${P.cream}7c`,
                       }}
                     >
                       {tag}
@@ -521,7 +521,7 @@ export function GarmentPicker({
                 {/* Name */}
                 <h4
                   className="text-[11px] font-serif leading-tight transition-colors duration-300"
-                  style={{ color: isActive ? P.cream : `${P.cream}70` }}
+                  style={{ color: isActive ? P.cream : `${P.cream}c0` }}
                 >
                   {look.name}
                 </h4>

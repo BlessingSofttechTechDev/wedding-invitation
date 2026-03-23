@@ -196,7 +196,7 @@ function AtmosphereQuote({ event }: { event: WeddingEvent }) {
       />
       <div className="relative z-10 max-w-3xl mx-auto text-center">
         <decor.SectionDivider palette={palette} />
-        <p className="font-serif italic text-xl md:text-2xl mt-8 leading-relaxed" style={{ color: `${palette.foreground}77` }}>
+        <p className="font-serif italic text-xl md:text-2xl mt-8 leading-relaxed" style={{ color: `${palette.foreground}a8` }}>
           &ldquo;{quoteWords.map((word, i) => (
             <span key={i} className="atmo-word inline-block mr-[0.3em]">{word}</span>
           ))}&rdquo;
@@ -519,7 +519,7 @@ function BhaatSection({ event }: { event: WeddingEvent }) {
         </p>
         <p
           className="font-body text-sm md:text-base leading-relaxed max-w-xl mx-auto"
-          style={{ color: `${palette.foreground}99` }}
+          style={{ color: `${palette.foreground}de` }}
         >
           This chapter includes the Bhaat (Mayra) ceremony — a pre-wedding ritual where the maternal uncle (Mama) brings gifts, clothes, and sweets, honouring his role in the family.
         </p>
@@ -557,7 +557,7 @@ function VenueSection({ event }: { event: WeddingEvent }) {
         </h3>
         <p
           className="text-lg mb-12"
-          style={{ color: `${palette.foreground}88` }}
+          style={{ color: `${palette.foreground}c8` }}
         >
           {event.venue}
         </p>
@@ -739,7 +739,7 @@ export default function ChapterContent({ event }: ChapterContentProps) {
 
           <p
             className="hero-tagline text-base md:text-lg max-w-lg mx-auto leading-relaxed opacity-0"
-            style={{ color: `${palette.foreground}88` }}
+            style={{ color: `${palette.foreground}c8` }}
           >
             {event.tagline}
           </p>
@@ -763,7 +763,7 @@ export default function ChapterContent({ event }: ChapterContentProps) {
         >
           <span
             className="text-[10px] uppercase tracking-[0.3em] font-light"
-            style={{ color: `${palette.foreground}44` }}
+            style={{ color: `${palette.foreground}b0` }}
           >
             Scroll
           </span>
@@ -804,7 +804,7 @@ export default function ChapterContent({ event }: ChapterContentProps) {
           <div className="max-w-5xl mx-auto px-6 flex flex-wrap justify-center gap-8 md:gap-16">
             <div
               className="flex items-center gap-3 text-sm"
-              style={{ color: `${palette.foreground}99` }}
+              style={{ color: `${palette.foreground}de` }}
             >
               <CalendarDays size={16} style={{ color: palette.accent }} />
               <span>
@@ -813,14 +813,14 @@ export default function ChapterContent({ event }: ChapterContentProps) {
             </div>
             <div
               className="flex items-center gap-3 text-sm"
-              style={{ color: `${palette.foreground}99` }}
+              style={{ color: `${palette.foreground}de` }}
             >
               <Clock size={16} style={{ color: palette.accent }} />
               <span>{event.time}</span>
             </div>
             <div
               className="flex items-center gap-3 text-sm"
-              style={{ color: `${palette.foreground}99` }}
+              style={{ color: `${palette.foreground}de` }}
             >
               <MapPin size={16} style={{ color: palette.accent }} />
               <span>
@@ -872,7 +872,7 @@ export default function ChapterContent({ event }: ChapterContentProps) {
               <Link
                 href="/itinerary"
                 className="inline-flex items-center gap-2 text-sm transition-all duration-300 hover:gap-3"
-                style={{ color: `${palette.foreground}88` }}
+                style={{ color: `${palette.foreground}c8` }}
               >
                 <ArrowLeft size={14} />
                 Back to Itinerary
@@ -889,25 +889,10 @@ export default function ChapterContent({ event }: ChapterContentProps) {
                     backgroundColor: `${palette.muted}20`,
                   }}
                 >
-                  <div className="relative h-28 overflow-hidden">
-                    <Image
-                      src={prevEvent.heroImage}
-                      alt={prevEvent.title}
-                      fill
-                      className="object-cover object-center opacity-40 group-hover:opacity-60 group-hover:scale-105 transition-all duration-700"
-                      sizes="50vw"
-                    />
-                    <div
-                      className="absolute inset-0"
-                      style={{
-                        background: `linear-gradient(to bottom, transparent, ${palette.background}ee)`,
-                      }}
-                    />
-                  </div>
                   <div className="p-6 md:p-8 relative">
                     <p
                       className="text-[11px] uppercase tracking-[0.2em] mb-3 font-medium"
-                      style={{ color: `${palette.foreground}55` }}
+                      style={{ color: `${palette.foreground}8c` }}
                     >
                       ← Previous Chapter
                     </p>
@@ -919,7 +904,7 @@ export default function ChapterContent({ event }: ChapterContentProps) {
                     </p>
                     <p
                       className="text-sm mt-1 italic"
-                      style={{ color: `${palette.foreground}55` }}
+                      style={{ color: `${palette.foreground}8c` }}
                     >
                       {prevEvent.subtitle}
                     </p>
@@ -938,25 +923,10 @@ export default function ChapterContent({ event }: ChapterContentProps) {
                     backgroundColor: `${palette.muted}20`,
                   }}
                 >
-                  <div className="relative h-28 overflow-hidden">
-                    <Image
-                      src={nextEvent.heroImage}
-                      alt={nextEvent.title}
-                      fill
-                      className="object-cover object-center opacity-40 group-hover:opacity-60 group-hover:scale-105 transition-all duration-700"
-                      sizes="50vw"
-                    />
-                    <div
-                      className="absolute inset-0"
-                      style={{
-                        background: `linear-gradient(to bottom, transparent, ${palette.background}ee)`,
-                      }}
-                    />
-                  </div>
                   <div className="p-6 md:p-8 relative">
                     <p
                       className="text-[11px] uppercase tracking-[0.2em] mb-3 font-medium"
-                      style={{ color: `${palette.foreground}55` }}
+                      style={{ color: `${palette.foreground}8c` }}
                     >
                       Next Chapter →
                     </p>
@@ -968,7 +938,7 @@ export default function ChapterContent({ event }: ChapterContentProps) {
                     </p>
                     <p
                       className="text-sm mt-1 italic"
-                      style={{ color: `${palette.foreground}55` }}
+                      style={{ color: `${palette.foreground}8c` }}
                     >
                       {nextEvent.subtitle}
                     </p>

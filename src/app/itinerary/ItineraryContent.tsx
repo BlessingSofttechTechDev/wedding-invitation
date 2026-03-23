@@ -184,12 +184,12 @@ export default function ItineraryContent() {
                     color:
                       activeSlug === event.slug
                         ? P.cream
-                        : `${P.cream}60`,
+                        : `${P.cream}98`,
                   }}
                 >
                   <span
                     className="block text-xs md:text-[10px] uppercase tracking-widest mb-0.5"
-                    style={{ color: `${P.cream}40` }}
+                    style={{ color: `${P.cream}7c` }}
                   >
                     {event.dateShort} ·{" "}
                     {event.time.split(/[–\-]/)[0].replace("onwards", "").trim()}
@@ -332,14 +332,14 @@ export default function ItineraryContent() {
 
                         <p
                           className="leading-[1.8] mb-6 max-w-2xl text-[15px]"
-                          style={{ color: `${P.cream}80` }}
+                          style={{ color: `${P.cream}d8` }}
                         >
                           {event.description}
                         </p>
 
                         <div
                           className="flex items-center gap-2 text-sm mb-5"
-                          style={{ color: `${P.cream}60` }}
+                          style={{ color: `${P.cream}98` }}
                         >
                           <MapPin size={14} className="shrink-0" />
                           <span>
@@ -378,7 +378,7 @@ export default function ItineraryContent() {
                             target="_blank"
                             rel="noopener noreferrer"
                             className="inline-flex items-center gap-2 text-sm transition-colors duration-300 hover:opacity-80"
-                            style={{ color: `${P.cream}60` }}
+                            style={{ color: `${P.cream}98` }}
                           >
                             <Calendar size={14} />
                             Add to Calendar

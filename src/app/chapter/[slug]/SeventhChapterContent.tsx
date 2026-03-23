@@ -88,8 +88,6 @@ export default function SeventhChapterContent({ event }: ChapterProps) {
         <NeonDivider accent={T.cyan} primary={T.magenta} />
       </div>
 
-      <MoodEditorialSection event={event} />
-
       <div
         className="flex justify-center"
         style={{ backgroundColor: palette.background }}

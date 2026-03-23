@@ -44,14 +44,14 @@ export function SectionHeading({
 
       <h2
         className="font-serif text-4xl md:text-5xl lg:text-6xl tracking-tight"
-        style={{ color: `${P.cream}e6` }}
+        style={{ color: `${P.cream}f2` }}
       >
         {title}
       </h2>
       {subtitle && (
         <p
           className="mt-4 text-base md:text-lg font-body max-w-xl mx-auto leading-relaxed"
-          style={{ color: `${P.cream}66` }}
+          style={{ color: `${P.cream}a8` }}
         >
           {subtitle}
         </p>

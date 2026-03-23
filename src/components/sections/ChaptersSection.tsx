@@ -43,7 +43,7 @@ export function ChaptersSection() {
           <Link
             href="/itinerary"
             className="inline-flex items-center gap-2 text-[11px] uppercase tracking-[0.2em] transition-colors duration-300 font-body group"
-            style={{ color: `${P.cream}60` }}
+            style={{ color: `${P.cream}98` }}
           >
             View Full Itinerary
             <span className="inline-block group-hover:translate-x-1.5 transition-transform duration-300">

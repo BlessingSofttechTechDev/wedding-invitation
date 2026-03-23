@@ -339,7 +339,7 @@ function RoyalProclamationIntro({
         <div className="absolute inset-0 flex flex-col items-center justify-center">
           <p
             className="text-xs md:text-sm uppercase tracking-[0.45em] font-light whitespace-nowrap mb-5"
-            style={{ color: `${palette.foreground}88` }}
+            style={{ color: `${palette.foreground}c8` }}
           >
             {en.split("").map((c, i) => (
               <span
@@ -585,7 +585,7 @@ function ProclamationHero({ event }: { event: WeddingEvent }) {
               <p
                 key={i}
                 className="h-line font-serif text-[15px] md:text-lg italic leading-relaxed"
-                style={{ color: `${palette.foreground}88` }}
+                style={{ color: `${palette.foreground}c8` }}
               >
                 {line}
               </p>
@@ -602,7 +602,7 @@ function ProclamationHero({ event }: { event: WeddingEvent }) {
                 <Icon size={16} style={{ color: palette.accent }} className="mx-auto mb-1.5" />
                 <p
                   className="text-[11px] uppercase tracking-[0.15em]"
-                  style={{ color: `${palette.foreground}55` }}
+                  style={{ color: `${palette.foreground}8c` }}
                 >
                   {label}
                 </p>
@@ -675,7 +675,7 @@ function AtmosphereQuote({ event }: { event: WeddingEvent }) {
         <div className="w-16 h-px mx-auto mb-8" style={{ backgroundColor: `${palette.accent}40` }} />
         <p
           className="font-serif italic text-xl md:text-2xl leading-relaxed"
-          style={{ color: `${palette.foreground}77` }}
+          style={{ color: `${palette.foreground}a8` }}
         >
           &ldquo;
           {quote.split(" ").map((w, i) => (
@@ -854,7 +854,7 @@ function RoyalDressCode({ event }: { event: WeddingEvent }) {
             />
             <p
               className="font-serif text-base md:text-lg italic leading-relaxed max-w-lg mx-auto"
-              style={{ color: `${palette.foreground}99` }}
+              style={{ color: `${palette.foreground}de` }}
             >
               {dressCode.description}
             </p>
@@ -907,7 +907,7 @@ function RoyalDressCode({ event }: { event: WeddingEvent }) {
             <div>
               <h4
                 className="text-xs uppercase tracking-[0.25em] mb-6 font-medium flex items-center gap-2.5"
-                style={{ color: `${palette.foreground}55` }}
+                style={{ color: `${palette.foreground}8c` }}
               >
                 <svg viewBox="0 0 14 14" className="w-3.5 h-3.5" fill="none">
                   <line x1="2" y1="2" x2="12" y2="12" stroke={`${palette.foreground}40`} strokeWidth="1" />
@@ -924,7 +924,7 @@ function RoyalDressCode({ event }: { event: WeddingEvent }) {
                     />
                     <span
                       className="text-[15px] leading-relaxed font-light"
-                      style={{ color: `${palette.foreground}77` }}
+                      style={{ color: `${palette.foreground}a8` }}
                     >
                       {item}
                     </span>
@@ -1035,7 +1035,7 @@ function VenueSection({ event }: { event: WeddingEvent }) {
         >
           {event.location}
         </h3>
-        <p className="text-lg mb-12" style={{ color: `${palette.foreground}88` }}>
+        <p className="text-lg mb-12" style={{ color: `${palette.foreground}c8` }}>
           {event.venue}
         </p>
       </div>
@@ -1083,7 +1083,7 @@ export default function FirstChapterContent({ event }: ChapterProps) {
           <div className="max-w-5xl mx-auto px-6 flex flex-wrap justify-center gap-8 md:gap-16">
             <div
               className="flex items-center gap-3 text-sm"
-              style={{ color: `${palette.foreground}99` }}
+              style={{ color: `${palette.foreground}de` }}
             >
               <CalendarDays size={16} className="shrink-0" style={{ color: palette.accent }} />
               <span>
@@ -1092,14 +1092,14 @@ export default function FirstChapterContent({ event }: ChapterProps) {
             </div>
             <div
               className="flex items-center gap-3 text-sm"
-              style={{ color: `${palette.foreground}99` }}
+              style={{ color: `${palette.foreground}de` }}
             >
               <Clock size={16} className="shrink-0" style={{ color: palette.accent }} />
               <span>{event.time}</span>
             </div>
             <div
               className="flex items-center gap-3 text-sm"
-              style={{ color: `${palette.foreground}99` }}
+              style={{ color: `${palette.foreground}de` }}
             >
               <MapPin size={16} className="shrink-0" style={{ color: palette.accent }} />
               <span>
@@ -1121,43 +1121,7 @@ export default function FirstChapterContent({ event }: ChapterProps) {
 
       <RoyalDressCode event={event} />
 
-      {event.heroImage ? (
-        <section className="py-24 md:py-36 relative overflow-hidden">
-          {/* Continuity texture & glow */}
-          <div className="absolute inset-0 pointer-events-none opacity-20"
-            style={{
-              backgroundImage: `radial-gradient(circle at 50% 50%, ${palette.accent}15, transparent), url("https://www.transparenttextures.com/patterns/parchment.png")`
-            }}
-          />
-
-          <div className="max-w-6xl mx-auto px-6 relative z-10">
-            {/* Magazine-style Header */}
-            <div className="text-center mb-20">
-              <div className="inline-flex items-center gap-4 mb-6">
-                <div className="h-px w-8 bg-current opacity-20" />
-                <p className="text-[10px] uppercase tracking-[0.5em] font-medium" style={{ color: palette.accent }}>
-                  {event.slug === 'pre-party' ? 'Visual Curation · विजन' : 'Aesthetic Narrative · विजन'}
-                </p>
-                <div className="h-px w-8 bg-current opacity-20" />
-              </div>
-
-              <h3 className="font-serif text-5xl md:text-7xl mb-10 tracking-tight" style={{ color: palette.foreground }}>
-                {event.slug === 'pre-party' ? (
-                  <>Artifacts <span className="opacity-40 italic">&amp;</span> Alcoves</>
-                ) : (
-                  <>Motifs <span className="opacity-40 italic">&amp;</span> Modernity</>
-                )}
-              </h3>
-
-              <p className="max-w-2xl mx-auto font-serif italic text-xl md:text-2xl leading-relaxed opacity-60">
-                {event.slug === 'pre-party'
-                  ? "A meticulous collection of heritage swatches, antique golds, and architectural vistas that define the soul of Noor Mahal."
-                  : "A contemporary lens on Rajasthan's royal hospitality—where traditional frescoes meet refined, modern silhouettes."}
-              </p>
-            </div>
-          </div>
-        </section>
-      ) : (
+      {!event.heroImage && (
         <>
           <div className="flex justify-center">
             <div
@@ -1188,7 +1152,7 @@ export default function FirstChapterContent({ event }: ChapterProps) {
               <Link
                 href="/itinerary"
                 className="inline-flex items-center gap-2 text-sm transition-all duration-300 hover:gap-3"
-                style={{ color: `${palette.foreground}88` }}
+                style={{ color: `${palette.foreground}c8` }}
               >
                 <ArrowLeft size={14} />
                 Back to Itinerary
@@ -1205,25 +1169,10 @@ export default function FirstChapterContent({ event }: ChapterProps) {
                     backgroundColor: `${palette.muted}20`,
                   }}
                 >
-                  <div className="relative h-28 overflow-hidden">
-                    <Image
-                      src={prevEvent.heroImage}
-                      alt={prevEvent.title}
-                      fill
-                      className="object-cover object-center opacity-40 group-hover:opacity-60 group-hover:scale-105 transition-all duration-700"
-                      sizes="50vw"
-                    />
-                    <div
-                      className="absolute inset-0"
-                      style={{
-                        background: `linear-gradient(to bottom,transparent,${palette.background}ee)`,
-                      }}
-                    />
-                  </div>
                   <div className="p-6 md:p-8 relative">
                     <p
                       className="text-[11px] uppercase tracking-[0.2em] mb-3 font-medium"
-                      style={{ color: `${palette.foreground}55` }}
+                      style={{ color: `${palette.foreground}8c` }}
                     >
                       ← Previous Chapter
                     </p>
@@ -1235,7 +1184,7 @@ export default function FirstChapterContent({ event }: ChapterProps) {
                     </p>
                     <p
                       className="text-sm mt-1 italic"
-                      style={{ color: `${palette.foreground}55` }}
+                      style={{ color: `${palette.foreground}8c` }}
                     >
                       {prevEvent.subtitle}
                     </p>
@@ -1254,25 +1203,10 @@ export default function FirstChapterContent({ event }: ChapterProps) {
                     backgroundColor: `${palette.muted}20`,
                   }}
                 >
-                  <div className="relative h-28 overflow-hidden">
-                    <Image
-                      src={nextEvent.heroImage}
-                      alt={nextEvent.title}
-                      fill
-                      className="object-cover object-center opacity-40 group-hover:opacity-60 group-hover:scale-105 transition-all duration-700"
-                      sizes="50vw"
-                    />
-                    <div
-                      className="absolute inset-0"
-                      style={{
-                        background: `linear-gradient(to bottom,transparent,${palette.background}ee)`,
-                      }}
-                    />
-                  </div>
                   <div className="p-6 md:p-8 relative">
                     <p
                       className="text-[11px] uppercase tracking-[0.2em] mb-3 font-medium"
-                      style={{ color: `${palette.foreground}55` }}
+                      style={{ color: `${palette.foreground}8c` }}
                     >
                       Next Chapter →
                     </p>
@@ -1284,7 +1218,7 @@ export default function FirstChapterContent({ event }: ChapterProps) {
                     </p>
                     <p
                       className="text-sm mt-1 italic"
-                      style={{ color: `${palette.foreground}55` }}
+                      style={{ color: `${palette.foreground}8c` }}
                     >
                       {nextEvent.subtitle}
                     </p>
@@ -1353,13 +1287,12 @@ export default function FirstChapterContent({ event }: ChapterProps) {
             {[
               { href: "/itinerary", label: "Itinerary" },
               { href: "/rsvp", label: "RSVP" },
-              { href: "/travel", label: "Travel" },
             ].map((link) => (
               <Link
                 key={link.href}
                 href={link.href}
                 className="text-[11px] uppercase tracking-[0.2em] font-body transition-colors duration-300 hover:opacity-80"
-                style={{ color: `${palette.foreground}44` }}
+                style={{ color: `${palette.foreground}b0` }}
               >
                 {link.label}
               </Link>

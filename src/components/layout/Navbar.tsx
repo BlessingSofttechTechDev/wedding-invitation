@@ -78,7 +78,7 @@ export default function Navbar() {
             >
               <button
                 className="text-xs md:text-[11px] uppercase tracking-[0.2em] font-body transition-colors duration-300 px-4 py-2 flex items-center gap-1"
-                style={{ color: chaptersHover ? `${P.gold}e6` : `${P.cream}90` }}
+                style={{ color: chaptersHover ? `${P.gold}e6` : `${P.cream}dc` }}
               >
                 Chapters
                 <ChevronDown
@@ -112,7 +112,7 @@ export default function Navbar() {
                         >
                           <span
                             className="text-xs md:text-[10px] uppercase tracking-wider block mb-0.5"
-                            style={{ color: `${P.cream}50` }}
+                            style={{ color: `${P.cream}8c` }}
                           >
                             Ch. {String(event.chapterNumber).padStart(2, "0")} · {event.dateShort} · {event.time.replace(/\s+onwards$/i, "").trim()}
                           </span>
@@ -133,7 +133,7 @@ export default function Navbar() {
             >
               <button
                 className="text-xs md:text-[11px] uppercase tracking-[0.2em] font-body transition-colors duration-300 px-4 py-2 flex items-center gap-1"
-                style={{ color: wardrobeHover ? `${P.gold}e6` : `${P.cream}90` }}
+                style={{ color: wardrobeHover ? `${P.gold}e6` : `${P.cream}dc` }}
               >
                 Wardrobe
                 <ChevronDown
@@ -167,7 +167,7 @@ export default function Navbar() {
                         >
                           <span
                             className="text-xs md:text-[10px] uppercase tracking-wider block mb-0.5"
-                            style={{ color: `${P.cream}50` }}
+                            style={{ color: `${P.cream}8c` }}
                           >
                             Ch. {String(event.chapterNumber).padStart(2, "0")} · {event.dateShort} · {event.time.replace(/\s+onwards$/i, "").trim()}
                           </span>
@@ -185,12 +185,12 @@ export default function Navbar() {
                 <Link
                   href={link.href}
                   className="text-xs md:text-[11px] uppercase tracking-[0.2em] font-body transition-colors duration-300 px-4 py-2"
-                  style={{ color: `${P.cream}90` }}
+                  style={{ color: `${P.cream}dc` }}
                   onMouseEnter={(e) =>
                     (e.currentTarget.style.color = `${P.gold}cc`)
                   }
                   onMouseLeave={(e) =>
-                    (e.currentTarget.style.color = `${P.cream}90`)
+                    (e.currentTarget.style.color = `${P.cream}dc`)
                   }
                 >
                   {link.label}
@@ -208,7 +208,7 @@ export default function Navbar() {
           {/* Mobile toggle */}
           <button
             className="md:hidden relative z-50 w-8 h-8 flex items-center justify-center transition-colors"
-            style={{ color: `${P.cream}99` }}
+            style={{ color: `${P.cream}e2` }}
             onClick={() => setMobileOpen(!mobileOpen)}
             aria-label={mobileOpen ? "Close menu" : "Open menu"}
           >
@@ -311,12 +311,12 @@ export default function Navbar() {
                         onClick={() => setMobileOpen(false)}
                         className="font-serif text-base text-center py-2 px-3 rounded-sm transition-colors leading-tight"
                         style={{
-                          color: `${P.cream}99`,
+                          color: `${P.cream}e2`,
                           backgroundColor: `${P.gold}08`,
                           border: `1px solid ${P.gold}12`,
                         }}
                       >
-                        <span className="block text-[10px] uppercase tracking-[0.12em] mb-0.5 leading-tight" style={{ color: `${P.cream}72` }}>
+                        <span className="block text-[10px] uppercase tracking-[0.12em] mb-0.5 leading-tight" style={{ color: `${P.cream}c4` }}>
                           {event.dateShort} · {event.time.replace(/\s+onwards$/i, "").trim()} · Ch.{event.chapterNumber}
                         </span>
                         <span className="block">{event.title}</span>
@@ -362,12 +362,12 @@ export default function Navbar() {
                         onClick={() => setMobileOpen(false)}
                         className="font-serif text-base text-center py-2 px-3 rounded-sm transition-colors leading-tight"
                         style={{
-                          color: `${P.cream}99`,
+                          color: `${P.cream}e2`,
                           backgroundColor: `${P.gold}08`,
                           border: `1px solid ${P.gold}12`,
                         }}
                       >
-                        <span className="block text-[10px] uppercase tracking-[0.12em] mb-0.5 leading-tight" style={{ color: `${P.cream}72` }}>
+                        <span className="block text-[10px] uppercase tracking-[0.12em] mb-0.5 leading-tight" style={{ color: `${P.cream}c4` }}>
                           {event.dateShort} · {event.time.replace(/\s+onwards$/i, "").trim()} · Ch.{event.chapterNumber}
                         </span>
                         <span className="block">{event.title}</span>

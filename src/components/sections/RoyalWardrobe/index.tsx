@@ -25,9 +25,9 @@ const P = {
   gold: "#d4af37",
   bronze: "#c9956b",
   maroon: "#8b1a1a",
-  bg: "#1a0a0a",
-  bgDeep: "#150808",
-  muted: "#2e1212",
+  bg: "#2d1616",
+  bgDeep: "#221010",
+  muted: "#3f1e1e",
   cream: "#f5efe6",
 } as const;
 
@@ -293,14 +293,14 @@ function WardrobeHero() {
             Wardrobe
           </span>
         </h1>
-        <p className="wh-desc font-body text-sm md:text-base max-w-xl mx-auto leading-[1.75] md:leading-[1.9] px-1" style={{ color: `${P.cream}80` }}>
+        <p className="wh-desc font-body text-sm md:text-base max-w-xl mx-auto leading-[1.75] md:leading-[1.9] px-1" style={{ color: `${P.cream}d8` }}>
           A curated sartorial guide for each chapter of our wedding celebration.
           Discover the colours, fabrics, and silhouettes that honour Udaipur&apos;s heritage
           and the spirit of every event.
         </p>
         <div className="wh-divider h-px w-20 md:w-32 mx-auto mt-6 md:mt-10 origin-center" style={{ background: `linear-gradient(to right, transparent, ${P.gold}40, transparent)` }} />
         <div className="wh-scroll mt-6 md:mt-10 flex flex-col items-center justify-center gap-2">
-          <span className="text-[8px] uppercase tracking-[0.4em] font-body" style={{ color: `${P.cream}40` }}>Explore</span>
+          <span className="text-[8px] uppercase tracking-[0.4em] font-body" style={{ color: `${P.cream}7c` }}>Explore</span>
           <svg width="16" height="24" viewBox="0 0 16 24" fill="none" className="animate-bounce" style={{ animationDuration: "2.5s" }}>
             <path d="M8 4V18M8 18L3 13M8 18L13 13" stroke={`${P.gold}50`} strokeWidth="1" strokeLinecap="round" />
           </svg>
@@ -345,9 +345,9 @@ function ChapterRail({ selectedChapter, onSelect }: { selectedChapter: string; o
           aria-expanded={chaptersOpen}
           aria-haspopup="dialog"
         >
-          <span style={{ color: `${P.cream}60` }}>Chapter</span>
+          <span style={{ color: `${P.cream}98` }}>Chapter</span>
           <span className="truncate max-w-[55%] text-right">{selectedWardrobe?.title ?? selectedChapter}</span>
-          <svg className="shrink-0 w-4 h-4" style={{ color: `${P.cream}40` }} fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <svg className="shrink-0 w-4 h-4" style={{ color: `${P.cream}7c` }} fill="none" viewBox="0 0 24 24" stroke="currentColor">
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
           </svg>
         </button>
@@ -359,7 +359,7 @@ function ChapterRail({ selectedChapter, onSelect }: { selectedChapter: string; o
           <header className="flex items-center justify-between shrink-0 px-5 py-4" style={{ borderBottom: `1px solid ${P.cream}08` }}>
             <span className="font-serif text-xs uppercase tracking-[0.3em]" style={{ color: P.gold }}>{COUPLE.partner1} &amp; {COUPLE.partner2}</span>
             <h2 className="absolute left-1/2 -translate-x-1/2 font-serif text-lg" style={{ color: P.cream }}>Chapters</h2>
-            <button type="button" onClick={() => setChaptersOpen(false)} className="p-2 -m-2" style={{ color: `${P.cream}80` }} aria-label="Close">
+            <button type="button" onClick={() => setChaptersOpen(false)} className="p-2 -m-2" style={{ color: `${P.cream}d8` }} aria-label="Close">
               <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
                 <path strokeLinecap="round" strokeLinejoin="round" d="M6 18L18 6M6 6l12 12" />
               </svg>
@@ -733,7 +733,7 @@ function ChapterEtiquetteNote({ chapter, theme }: { chapter: ChapterWardrobe; th
             &ldquo;{chapter.etiquetteNote}&rdquo;
           </p>
           <div className="en-el mt-8 pt-6" style={{ borderTop: `1px solid ${P.cream}06` }}>
-            <p className="text-[9px] uppercase tracking-[0.3em] font-body" style={{ color: `${P.cream}50` }}>
+            <p className="text-[9px] uppercase tracking-[0.3em] font-body" style={{ color: `${P.cream}8c` }}>
               {COUPLE.partner1} &amp; {COUPLE.partner2} — Styling Committee
             </p>
           </div>

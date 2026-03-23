@@ -128,36 +128,22 @@ export default function ThrillHeroPinned({ event }: ThrillHeroPinnedProps) {
       <div className="relative z-[10] flex flex-col items-center text-center px-6 py-20">
         {/* Title */}
         <h1
-          className="hero-title text-4xl md:text-6xl lg:text-7xl font-bold tracking-tight mb-6 opacity-0"
+          className="hero-title text-4xl md:text-6xl lg:text-7xl font-bold tracking-tight mb-3 opacity-0"
           style={{ color: T.magenta, ...textGlow(T.magenta) }}
         >
           The Thrill Theory
         </h1>
+        <p className="hero-meta-item text-sm md:text-base uppercase tracking-[0.2em] font-light mb-1 opacity-0" style={{ color: `${T.white}aa` }}>
+          {event.subtitle}
+        </p>
 
-        {/* Event meta */}
-        <div className="flex flex-wrap items-center justify-center gap-6 md:gap-8 mb-8">
-          {metaItems.map(({ icon: Icon, label }) => (
-            <div
-              key={label}
-              className="hero-meta-item flex items-center gap-2 opacity-0"
-            >
-              <Icon size={14} style={{ color: T.cyan }} className="shrink-0" />
-              <p
-                className="text-[10px] md:text-xs uppercase tracking-[0.15em]"
-                style={{ color: T.dim }}
-              >
-                {label}
-              </p>
-            </div>
-          ))}
-        </div>
 
         {/* Tagline */}
         <p
           className="hero-tagline text-xs uppercase tracking-[0.3em] font-bold opacity-0"
           style={{ color: `${T.gold}88`, ...textGlow(T.gold) }}
         >
-          Step Inside. Get Lost.
+          {event.tagline}
         </p>
       </div>
 

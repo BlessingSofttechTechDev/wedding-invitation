@@ -17,6 +17,15 @@ export interface DressCode {
   donts: string[];
 }
 
+export interface SubEvent {
+  name: string;
+  time: string;
+  /** Primary place name (kept short for cards) */
+  location: string;
+  /** Optional detail line (e.g. route, secondary venue) */
+  locationSubline?: string;
+}
+
 export interface WeddingEvent {
   slug: string;
   chapterNumber: number;
@@ -35,6 +44,7 @@ export interface WeddingEvent {
   palette: ChapterPalette;
   heroImage: string;
   galleryImages: string[];
+  subEvents?: SubEvent[];
 }
 
 export interface RSVPFormData {

@@ -352,7 +352,7 @@ function CourtyardIntro({
               className="is-line font-body text-[10px] sm:text-[11px] md:text-xs uppercase tracking-[0.14em] sm:tracking-[0.18em] font-normal leading-relaxed text-balance opacity-0"
               style={{ color: `${palette.foreground}9e` }}
             >
-              A Victorian Hi-Tea at a Royal Palace
+              A Victorian Lunch at a Royal Palace
             </p>
           </div>
 
@@ -462,6 +462,8 @@ function CourtyardHero({ event }: { event: WeddingEvent }) {
     "where meticulous craft meets modern editorial restraint.",
   ];
 
+  //explain bhaat below it , keep bhaat  
+
   const hiTeaDetails = [
     { label: "Setting", value: "Fresco-lined Courtyard" },
     { label: "Service", value: "Victorian Silver & Bone China" },
@@ -469,8 +471,8 @@ function CourtyardHero({ event }: { event: WeddingEvent }) {
   ];
 
   return (
-    <section ref={wrapRef} className="min-h-[105vh] md:min-h-0 md:h-[105vh]">
-      <div ref={pinRef} className="relative w-full min-h-screen overflow-visible md:min-h-0 md:h-screen">
+    <section ref={wrapRef} className="min-h-[105vh] md:min-h-0">
+      <div ref={pinRef} className="relative w-full min-h-screen overflow-visible">
         <div
           className="hero-bg-light absolute inset-0"
           style={{ background: `linear-gradient(180deg,#d5c4ac 0%,#c8b8a0 40%,#bfb096 100%)` }}
@@ -510,8 +512,8 @@ function CourtyardHero({ event }: { event: WeddingEvent }) {
           <FloralGarlandStrand x={350} accent={palette.accent} primary={palette.primary} />
         </svg>
 
-        {/* Hero content — on mobile: in-flow so section grows and cards aren't clipped; on desktop: absolute */}
-        <div className="relative md:absolute left-0 right-0 top-0 flex flex-col items-center justify-start pt-[8vh] md:pt-[12vh] pb-6 md:pb-10 z-10 px-6 overflow-visible">
+        {/* Hero content — stays in document flow on all breakpoints so tall blocks (Bhaat, cards) aren't covered by the next section */}
+        <div className="relative z-10 flex w-full flex-col items-center justify-start pt-[8vh] md:pt-[12vh] pb-10 md:pb-16 px-6 overflow-visible">
           <h1
             className="font-serif text-4xl md:text-6xl lg:text-7xl tracking-[0.03em] mb-3 md:mb-5"
             style={{ color: palette.foreground }}
@@ -525,11 +527,17 @@ function CourtyardHero({ event }: { event: WeddingEvent }) {
             आंगन
           </p>
           <h2
-            className="text-sm md:text-base uppercase tracking-[0.3em] font-light mb-6 md:mb-10"
+            className="text-sm md:text-base uppercase tracking-[0.3em] font-light mb-3"
             style={{ color: `${palette.foreground}b8` }}
           >
-            A Victorian Hi-Tea at a Royal Palace
+            {event.subtitle}
           </h2>
+          <p
+            className="font-serif italic text-sm md:text-base mb-6 md:mb-10 max-w-md"
+            style={{ color: `${palette.foreground}c8` }}
+          >
+            {event.tagline}
+          </p>
 
           <div className="max-w-xl text-center space-y-1.5 mb-6 md:mb-10">
             {narrative.map((line, i) => (
@@ -543,20 +551,15 @@ function CourtyardHero({ event }: { event: WeddingEvent }) {
             ))}
           </div>
 
-          <div className="flex items-center gap-4 md:gap-8 mb-6 md:mb-10">
-            {[
-              { icon: CalendarDays, label: event.date },
-              { icon: Clock, label: event.time },
-              { icon: MapPin, label: event.location },
-            ].map(({ icon: Icon, label }) => (
-              <div key={label} className="h-dec text-center opacity-0">
-                <Icon size={16} style={{ color: palette.accent }} className="mx-auto mb-1.5" />
-                <p className="text-xs md:text-[11px] uppercase tracking-[0.15em]" style={{ color: `${palette.foreground}a3` }}>
-                  {label}
-                </p>
-              </div>
-            ))}
+          {/* Bhaat ceremony note */}
+          <div className="max-w-md text-center mb-6 md:mb-10 px-5 py-4 rounded-sm" style={{ border: `1px solid ${palette.accent}25`, background: `${palette.background}88` }}>
+            <p className="font-serif text-xl md:text-2xl mb-1 tracking-wide" style={{ color: palette.accent }}>Bhaat</p>
+            <p className="font-serif text-sm md:text-base mb-2" style={{ color: `${palette.accent}70` }}>भात</p>
+            <p className="font-body text-xs md:text-[13px] leading-relaxed" style={{ color: `${palette.foreground}a0` }}>
+              This chapter includes the Bhaat (Mayra) ceremony — a pre-wedding ritual where the maternal uncle brings gifts, clothes, and sweets, honouring his role in the family.
+            </p>
           </div>
+
 
           {/* Hi-tea detail cards — extra bottom padding on mobile so full card + content below is visible */}
           <div className="flex flex-wrap items-center justify-center gap-3 md:gap-6 pb-4 md:pb-2">
@@ -926,12 +929,6 @@ export default function SecondChapterContent({ event }: ChapterProps) {
         <OrnamentalDivider accent={palette.accent} />
       </div>
 
-      <CourtyardMoodSection event={event} />
-
-      <div className="flex justify-center py-2 md:py-0" style={{ backgroundColor: palette.background }}>
-        <OrnamentalDivider accent={palette.accent} />
-      </div>
-
       <CourtyardVenue event={event} />
 
       {/* Chapter navigation */}
@@ -958,12 +955,8 @@ export default function SecondChapterContent({ event }: ChapterProps) {
                   className="group rounded-2xl overflow-hidden border transition-all duration-500 relative"
                   style={{ borderColor: `${palette.foreground}08`, backgroundColor: `${palette.muted}30` }}
                 >
-                  <div className="relative h-28 overflow-hidden">
-                    <Image src={prevEvent.heroImage} alt={prevEvent.title} fill className="object-cover object-center opacity-50 group-hover:opacity-70 group-hover:scale-105 transition-all duration-700" sizes="50vw" />
-                    <div className="absolute inset-0" style={{ background: `linear-gradient(to bottom,transparent,${palette.background}ee)` }} />
-                  </div>
                   <div className="p-6 md:p-8 relative">
-                    <p className="text-xs md:text-[11px] uppercase tracking-[0.2em] mb-3 font-medium" style={{ color: `${palette.foreground}78` }}>← Previous Chapter</p>
+                    <p className="text-xs md:text-[11px] uppercase tracking-[0.2em] mb-3 font-medium" style={{ color: `${palette.foreground}b0` }}>← Previous Chapter</p>
                     <p className="font-serif text-lg md:text-xl" style={{ color: `${palette.foreground}c4` }}>{prevEvent.title}</p>
                     <p className="text-sm mt-1 italic" style={{ color: `${palette.foreground}85` }}>{prevEvent.subtitle}</p>
                   </div>
@@ -977,12 +970,8 @@ export default function SecondChapterContent({ event }: ChapterProps) {
                   className="group rounded-2xl overflow-hidden border text-right transition-all duration-500 relative"
                   style={{ borderColor: `${palette.foreground}08`, backgroundColor: `${palette.muted}30` }}
                 >
-                  <div className="relative h-28 overflow-hidden">
-                    <Image src={nextEvent.heroImage} alt={nextEvent.title} fill className="object-cover object-center opacity-50 group-hover:opacity-70 group-hover:scale-105 transition-all duration-700" sizes="50vw" />
-                    <div className="absolute inset-0" style={{ background: `linear-gradient(to bottom,transparent,${palette.background}ee)` }} />
-                  </div>
                   <div className="p-6 md:p-8 relative">
-                    <p className="text-xs md:text-[11px] uppercase tracking-[0.2em] mb-3 font-medium" style={{ color: `${palette.foreground}78` }}>Next Chapter →</p>
+                    <p className="text-xs md:text-[11px] uppercase tracking-[0.2em] mb-3 font-medium" style={{ color: `${palette.foreground}b0` }}>Next Chapter →</p>
                     <p className="font-serif text-lg md:text-xl" style={{ color: `${palette.foreground}c4` }}>{nextEvent.title}</p>
                     <p className="text-sm mt-1 italic" style={{ color: `${palette.foreground}85` }}>{nextEvent.subtitle}</p>
                   </div>
@@ -994,38 +983,6 @@ export default function SecondChapterContent({ event }: ChapterProps) {
           </div>
         </section>
       </FadeInView>
-
-      {/* Bhaat — rice ceremony */}
-      <section className="py-5 md:py-12 px-6 relative overflow-hidden" style={{ backgroundColor: palette.background }}>
-        <div
-          className="absolute inset-0 pointer-events-none"
-          style={{
-            background: `radial-gradient(ellipse 60% 50% at 50% 50%, ${palette.accent}08, transparent 70%)`,
-          }}
-        />
-        <div className="relative z-10 max-w-3xl mx-auto text-center">
-          <OrnamentalDivider accent={palette.accent} />
-          <p
-            className="font-serif text-2xl md:text-4xl mt-8 mb-3"
-            style={{ color: palette.accent }}
-          >
-            भात
-          </p>
-          <p
-            className="text-xs md:text-[11px] uppercase tracking-[0.3em] mb-2 font-medium"
-            style={{ color: `${palette.accent}99` }}
-          >
-            Bhaat
-          </p>
-          <p
-            className="font-body text-sm md:text-base leading-relaxed max-w-xl mx-auto"
-            style={{ color: `${palette.foreground}b0` }}
-          >
-            This chapter includes the Bhaat (Mayra) ceremony — a pre-wedding ritual where the maternal uncle (Mama) brings gifts, clothes, and sweets, honouring his role in the family.
-          </p>
-          <OrnamentalDivider accent={palette.accent} />
-        </div>
-      </section>
 
       {/* Chapter-themed footer — warm gray instead of pure white */}
       <footer
@@ -1068,7 +1025,6 @@ export default function SecondChapterContent({ event }: ChapterProps) {
             {[
               { href: "/itinerary", label: "Itinerary" },
               { href: "/rsvp", label: "RSVP" },
-              { href: "/travel", label: "Travel" },
             ].map((link) => (
               <Link
                 key={link.href}

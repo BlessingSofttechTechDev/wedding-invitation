@@ -10,18 +10,9 @@ import { motion, useReducedMotion } from "framer-motion";
 import { Shirt } from "lucide-react";
 import { COUPLE, EVENTS } from "@/content/events";
 import { CountdownTimer } from "@/components/shared/CountdownTimer";
+import { P } from "@/components/shared/RoyalPageLayout";
 
 gsap.registerPlugin(ScrollTrigger);
-
-const P = {
-  gold: "#d4af37",
-  bronze: "#c9956b",
-  maroon: "#8b1a1a",
-  bg: "#1a0a0a",
-  bgDeep: "#150808",
-  muted: "#2e1212",
-  cream: "#f5efe6",
-} as const;
 
 function rand(a: number, b: number = 0): number {
   const x = Math.sin(a * 127.1 + b * 311.7) * 43758.5453;
@@ -661,7 +652,7 @@ function SacredPrelude({ onComplete }: { onComplete: () => void }) {
 
         <p
           className="sp-sub mt-6 w-full max-w-[16rem] sm:max-w-md mx-auto text-center text-[11px] sm:text-xs md:text-[10px] uppercase tracking-[0.2em] sm:tracking-[0.28em] md:tracking-[0.35em] font-body leading-relaxed"
-          style={{ color: `${P.cream}88` }}
+          style={{ color: `${P.cream}e8` }}
         >
           April 2026
           <br />
@@ -680,7 +671,7 @@ function SacredPrelude({ onComplete }: { onComplete: () => void }) {
             </span>
             <div className="absolute -top-0.5 left-1/2 -translate-x-1/2 w-1 h-2 rounded-full" style={{ backgroundColor: `${P.gold}30` }} />
           </div>
-          <span className="sp-seal-label text-xs md:text-[9px] uppercase tracking-[0.35em] font-body opacity-0" style={{ color: `${P.cream}70` }}>
+          <span className="sp-seal-label text-xs md:text-[9px] uppercase tracking-[0.35em] font-body opacity-0" style={{ color: `${P.cream}c0` }}>
             Begin the Royal Journey
           </span>
         </div>
@@ -840,7 +831,7 @@ function Hero({ loaded }: { loaded: boolean }) {
           <p className="font-serif italic text-base md:text-lg leading-relaxed tracking-wide" style={{ color: `${P.cream}bf` }}>
             Beneath ancient arches of Udaipur,
           </p>
-          <p className="font-serif italic text-base md:text-lg leading-relaxed tracking-wide" style={{ color: `${P.cream}99` }}>
+          <p className="font-serif italic text-base md:text-lg leading-relaxed tracking-wide" style={{ color: `${P.cream}e2` }}>
             two hearts unite in sacred promise.
           </p>
         </div>
@@ -854,7 +845,7 @@ function Hero({ loaded }: { loaded: boolean }) {
         {/* Date + venue — brass plate style */}
         <div className="hero-fade space-y-2 animate-brass-pulse rounded px-8 py-4" style={{ border: `1px solid ${P.gold}18`, background: `linear-gradient(135deg, ${P.gold}06, transparent, ${P.gold}04)` }}>
           <p className="text-sm md:text-base uppercase tracking-[0.3em] font-body" style={{ color: `${P.cream}e6` }}>{formattedDate}</p>
-          <p className="text-xs uppercase tracking-[0.3em] font-body" style={{ color: `${P.cream}99` }}>Fairmont Udaipur · {COUPLE.location}</p>
+          <p className="text-xs uppercase tracking-[0.3em] font-body" style={{ color: `${P.cream}e2` }}>Fairmont Udaipur · {COUPLE.location}</p>
         </div>
 
         {/* CTAs — parchment & envelope styled (wrap + gap so long label doesn’t collide) */}
@@ -884,7 +875,7 @@ function Hero({ loaded }: { loaded: boolean }) {
       <div
         className="hero-scroll-ind relative z-10 flex flex-col items-center gap-2 sm:gap-3 shrink-0 pt-2 pb-[max(1.5rem,env(safe-area-inset-bottom,0px))] sm:pb-8 opacity-0"
       >
-        <span className="text-xs md:text-[9px] uppercase tracking-[0.4em] font-body" style={{ color: `${P.cream}78` }}>Discover</span>
+        <span className="text-xs md:text-[9px] uppercase tracking-[0.4em] font-body" style={{ color: `${P.cream}d6` }}>Discover</span>
         <DiyaFlame size="sm" />
       </div>
     </section>
@@ -910,21 +901,19 @@ function RoyalPrologue() {
   }, { scope: ref });
 
   return (
-    <section ref={ref} className="relative py-12 md:py-16 overflow-hidden" style={{ backgroundColor: P.bg }}>
+    <section ref={ref} className="relative py-8 md:py-12 overflow-hidden" style={{ backgroundColor: P.bg }}>
       <div className="absolute inset-0" style={{ background: `linear-gradient(to bottom, ${P.bg}, ${P.bg}e6, ${P.bg})` }} />
       <div className="absolute inset-0 pointer-events-none" style={{ background: `radial-gradient(ellipse 50% 40% at 50% 50%, rgba(139,26,26,0.04), transparent 70%)` }} />
 
-      {/* Sandstone texture overlay */}
       <div className="absolute inset-0 pointer-events-none opacity-[0.03]" style={{ background: `repeating-linear-gradient(0deg, ${P.gold}08 0px, transparent 1px, transparent 3px)` }} />
 
       <div className="relative z-10 max-w-4xl mx-auto px-6 text-center">
-        <MandalaOrnament className="rp-fade mb-10" />
-        <span className="rp-fade block text-xs md:text-[10px] uppercase tracking-[0.4em] font-body mb-10" style={{ color: `${P.gold}80` }}>
+        <MandalaOrnament className="rp-fade mb-8" />
+        <span className="rp-fade block text-xs md:text-[10px] uppercase tracking-[0.4em] font-body mb-8" style={{ color: `${P.gold}80` }}>
           The Sacred Setting
         </span>
 
-        {/* Jharokha arch framing city name */}
-        <div className="rp-arch w-36 h-52 md:w-44 md:h-60 mx-auto mb-10">
+        <div className="rp-arch w-36 h-52 md:w-44 md:h-60 mx-auto mb-8">
           <JharokhaArch>
             <p className="font-serif italic text-base md:text-lg" style={{ color: `${P.gold}50` }}>उदयपुर</p>
           </JharokhaArch>
@@ -933,29 +922,29 @@ function RoyalPrologue() {
         <h2 className="rp-fade font-serif text-3xl md:text-5xl lg:text-6xl mb-4 leading-tight" style={{ color: `${P.cream}e6` }}>
           In the Heart of the City of Lakes
         </h2>
-        <p className="rp-fade font-serif italic text-sm md:text-base mb-8" style={{ color: `${P.gold}60` }}>
+        <p className="rp-fade font-serif italic text-sm md:text-base mb-6" style={{ color: `${P.gold}60` }}>
           <span className="text-[0.85em]">झीलों की नगरी</span> — The Venice of the East
         </p>
 
-        <p className="rp-fade font-body text-sm md:text-base leading-[2] max-w-2xl mx-auto mb-8" style={{ color: `${P.cream}99` }}>
+        <p className="rp-fade font-body text-sm md:text-base leading-[2] max-w-2xl mx-auto mb-6" style={{ color: `${P.cream}e2` }}>
           Where marble palaces rise from shimmering lakes and the Aravalli hills stand as
           silent witnesses to centuries of devotion. Where Maharanas once held court beneath
           mirrored ceilings, their kingdoms fragrant with jasmine and rose. In this city where
           every jharokha frames a story of honour and romance, two families chose to write a new verse.
         </p>
 
-        <p className="rp-fade font-body text-sm md:text-base leading-[2] max-w-2xl mx-auto mb-8" style={{ color: `${P.cream}80` }}>
+        <p className="rp-fade font-body text-sm md:text-base leading-[2] max-w-2xl mx-auto mb-6" style={{ color: `${P.cream}d8` }}>
           Udaipur — founded by Maharana Udai Singh II in 1559, nestled between five lakes
           and ancient hills. A city that understands ceremony, that knows how to hold sacred
           space for moments that transcend the ordinary. A city worthy of a Mewari celebration.
         </p>
 
         <p className="rp-fade font-serif italic text-base md:text-lg max-w-xl mx-auto" style={{ color: `${P.gold}80` }}>
-          This celebration unfolds across three days and six chapters — each a distinct rasa,
+          This celebration unfolds across three days and five chapters — each a distinct rasa,
           a different mood, a new verse in a love story written against the grandeur of Rajasthan.
         </p>
 
-        <MandalaOrnament className="rp-fade mt-14" />
+        <MandalaOrnament className="rp-fade mt-10" />
       </div>
     </section>
   );
@@ -990,7 +979,7 @@ function StoryPageCTA() {
   return (
     <section
       ref={ref}
-      className="relative py-12 md:py-16 overflow-hidden"
+      className="relative py-8 md:py-10 overflow-hidden"
       style={{ backgroundColor: P.bg }}
     >
       <div
@@ -1001,7 +990,7 @@ function StoryPageCTA() {
       />
       <div className="relative z-10 max-w-2xl mx-auto px-5 sm:px-6 text-center">
         <div className="story-cta-el">
-          <Flourish className="mb-6" />
+          <Flourish className="mb-5" />
         </div>
         <p
           className="story-cta-el text-xs md:text-[10px] uppercase tracking-[0.38em] font-body mb-4"
@@ -1058,7 +1047,7 @@ function VenueShowcase() {
   return (
     <section
       ref={ref}
-      className="relative flex items-center justify-center overflow-hidden py-14 sm:py-16 md:py-24"
+      className="relative flex items-center justify-center overflow-hidden py-10 sm:py-12 md:py-16"
       style={{ backgroundColor: P.bg }}
     >
       <div className="vs-img absolute inset-0 min-h-full">
@@ -1117,15 +1106,8 @@ function VenueShowcase() {
 }
 
 
-function ChapterStoryRow({
-  event,
-  contentOn,
-}: {
-  event: (typeof EVENTS)[0];
-  contentOn: "left" | "right";
-}) {
+function ChapterCard({ event }: { event: (typeof EVENTS)[0] }) {
   const { palette } = event;
-  const isContentRight = contentOn === "right";
 
   return (
     <Link
@@ -1136,56 +1118,28 @@ function ChapterStoryRow({
         backgroundColor: `${P.muted}15`,
       }}
     >
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-0 min-h-[280px] md:min-h-[320px]">
-        {/* Image half — order-2 on md when content is left (so image appears right) */}
-        <div
-          className={`relative h-56 md:h-full md:min-h-[320px] overflow-hidden ${!isContentRight ? "md:order-2" : ""}`}
-        >
-          <Image
-            src={event.heroImage}
-            alt={event.title}
-            fill
-            className="object-cover transition-transform duration-700 group-hover:scale-105"
-            sizes="(max-width: 768px) 100vw, 50vw"
-          />
-          <div
-            className="absolute inset-0"
-            style={{
-              background: `linear-gradient(to bottom, ${palette.primary}25 0%, rgba(0,0,0,0.15) 40%, rgba(0,0,0,0.45) 100%)`,
-            }}
-          />
-          <div className="absolute inset-0 bg-black/10 group-hover:bg-black/5 transition-colors duration-500" />
-          <div className="absolute top-4 right-4 z-10">
-            <span className="text-xs md:text-[10px] uppercase tracking-[0.3em] font-body" style={{ color: "rgba(255,255,255,0.7)" }}>
-              {String(event.chapterNumber).padStart(2, "0")}
-            </span>
-          </div>
-        </div>
-
-        {/* Content half — order-1 on md when content is left */}
-        <div
-          className={`flex flex-col justify-center p-6 md:p-8 lg:p-10 text-left ${!isContentRight ? "md:order-1" : ""}`}
-        >
-          <p className="text-xs md:text-[10px] uppercase tracking-[0.2em] font-body mb-3" style={{ color: `${P.cream}78` }}>
+      <div className="flex flex-col justify-between p-5 md:p-6 h-full">
+        <div>
+          <p className="text-[10px] uppercase tracking-[0.2em] font-body mb-2" style={{ color: `${P.cream}98` }}>
             {event.date} · {event.time}
           </p>
-          <h3 className="font-serif text-2xl md:text-3xl lg:text-4xl mb-2 leading-tight" style={{ color: `${P.cream}dd` }}>
+          <h3 className="font-serif text-lg md:text-xl mb-1 leading-snug" style={{ color: `${P.cream}dd` }}>
             {event.title}
           </h3>
-          <p className="font-serif text-sm md:text-base italic mb-4" style={{ color: `${palette.accent}cc` }}>
+          <p className="font-serif text-xs italic mb-3" style={{ color: `${palette.accent}cc` }}>
             {event.subtitle}
           </p>
-          <p className="text-[13px] md:text-sm font-body line-clamp-2 md:line-clamp-3 leading-relaxed mb-5" style={{ color: `${P.cream}85` }}>
+          <p className="text-xs font-body line-clamp-2 leading-relaxed" style={{ color: `${P.cream}c0` }}>
             {event.tagline}
           </p>
-          <div className="flex items-center justify-between pt-4" style={{ borderTop: `1px solid ${P.gold}12` }}>
-            <span className="text-xs md:text-[10px] uppercase tracking-[0.15em] font-body" style={{ color: `${P.cream}72` }}>
-              {event.location}
-            </span>
-            <span className="text-sm group-hover:translate-x-1 transition-transform duration-300" style={{ color: P.gold }}>
-              →
-            </span>
-          </div>
+        </div>
+        <div className="flex items-center justify-between pt-3 mt-4" style={{ borderTop: `1px solid ${P.gold}10` }}>
+          <span className="text-[10px] uppercase tracking-[0.15em] font-body" style={{ color: `${P.cream}98` }}>
+            {event.location}
+          </span>
+          <span className="text-sm group-hover:translate-x-1 transition-transform duration-300" style={{ color: P.gold }}>
+            →
+          </span>
         </div>
       </div>
     </Link>
@@ -1198,7 +1152,6 @@ function ChapterStoryRow({
 
 function ChapterJourneySection() {
   const ref = useRef<HTMLElement>(null);
-  let rowIndex = 0;
 
   useGSAP(() => {
     const el = ref.current;
@@ -1214,7 +1167,7 @@ function ChapterJourneySection() {
   }, { scope: ref });
 
   return (
-    <section ref={ref} className="relative py-16 md:py-24 overflow-hidden" style={{ backgroundColor: P.bg }}>
+    <section ref={ref} className="relative py-10 md:py-14 overflow-hidden" style={{ backgroundColor: P.bg }}>
       <div className="absolute top-0 left-0 right-0 z-10 pt-8 pb-6 text-center pointer-events-none" style={{ background: `linear-gradient(to bottom, ${P.bg}, transparent)` }}>
         <Flourish className="mb-3" />
         <span className="text-xs md:text-[10px] uppercase tracking-[0.4em] font-body" style={{ color: `${P.gold}99` }}>
@@ -1222,7 +1175,7 @@ function ChapterJourneySection() {
         </span>
       </div>
 
-      <div className="relative z-10 max-w-5xl mx-auto px-4 sm:px-6 pt-20 space-y-10 md:space-y-14">
+      <div className="relative z-10 max-w-5xl mx-auto px-4 sm:px-6 pt-16 space-y-8 md:space-y-10">
         {DAYS.map((d) => (
           <Fragment key={`day-${d.day}`}>
             <div className="chapter-day-label flex flex-col items-center text-center">
@@ -1232,18 +1185,20 @@ function ChapterJourneySection() {
               <p className="text-xs md:text-[10px] uppercase tracking-[0.25em] font-body mb-2" style={{ color: `${P.gold}66` }}>
                 {d.date}
               </p>
-              <p className="font-serif italic text-sm md:text-base" style={{ color: `${P.cream}55` }}>
+              <p className="font-serif italic text-sm md:text-base" style={{ color: `${P.cream}92` }}>
                 {d.mood}
               </p>
             </div>
 
-            <div className="space-y-6 md:space-y-8">
-              {d.events.map((event) => {
-                const contentOn = rowIndex++ % 2 === 0 ? "right" : "left";
-                return (
-                  <ChapterStoryRow key={event.slug} event={event} contentOn={contentOn} />
-                );
-              })}
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 md:gap-5">
+              {d.events.map((event, i) => (
+                <div
+                  key={event.slug}
+                  className={d.events.length % 2 === 1 && i === d.events.length - 1 ? "sm:col-start-1 sm:col-end-3 sm:max-w-[50%] sm:mx-auto" : ""}
+                >
+                  <ChapterCard event={event} />
+                </div>
+              ))}
             </div>
           </Fragment>
         ))}
@@ -1271,11 +1226,11 @@ function RoyalTimeline() {
   }, { scope: ref });
 
   return (
-    <section ref={ref} className="relative py-12 md:py-16" style={{ backgroundColor: P.bg, borderTop: `1px solid ${P.cream}08` }}>
+    <section ref={ref} className="relative py-8 md:py-10" style={{ backgroundColor: P.bg, borderTop: `1px solid ${P.cream}08` }}>
       <div className="absolute inset-0 pointer-events-none" style={{ background: `radial-gradient(ellipse 50% 40% at 50% 50%, rgba(139,26,26,0.03), transparent 70%)` }} />
 
       <div className="relative z-10 max-w-5xl mx-auto px-6">
-        <div className="text-center mb-14 tl-item">
+        <div className="text-center mb-10 tl-item">
           <MandalaOrnament className="mb-6" />
           <span className="text-xs md:text-[10px] uppercase tracking-[0.4em] font-body block mb-6" style={{ color: `${P.gold}59` }}>
             The Royal Itinerary
@@ -1283,52 +1238,9 @@ function RoyalTimeline() {
           <h2 className="font-serif text-3xl md:text-5xl" style={{ color: `${P.cream}cc` }}>
             Udaipur
           </h2>
-          <p className="font-body text-xs md:text-sm mt-4 max-w-md mx-auto leading-relaxed" style={{ color: `${P.cream}72` }}>
+          <p className="font-body text-xs md:text-sm mt-4 max-w-md mx-auto leading-relaxed" style={{ color: `${P.cream}c4` }}>
             The main events unfold in Udaipur — chapters crafted to honour heritage, love, and the joy of togetherness.
           </p>
-        </div>
-
-        <div className="relative">
-          {/* Glowing diya line */}
-          <div className="tl-line absolute left-1/2 top-0 bottom-0 w-px -translate-x-1/2 origin-top" style={{ background: `linear-gradient(to bottom, transparent, ${P.gold}30, ${P.gold}35, ${P.gold}30, transparent)`, boxShadow: `0 0 8px ${P.gold}15, 0 0 20px ${P.gold}08` }} />
-
-          {DAYS.map((d, di) => (
-            <div key={di} className="tl-item relative mb-14 last:mb-0">
-              <div className="flex items-center justify-center mb-6">
-                <div className="h-px flex-1" style={{ background: `linear-gradient(to right, transparent, ${P.gold}12)` }} />
-                <div className="mx-6 text-center">
-                  <div className="w-3 h-3 rotate-45 mx-auto mb-3" style={{ border: `1px solid ${P.gold}35`, backgroundColor: `${P.gold}0a` }} />
-                  <p className="font-serif text-xl md:text-2xl" style={{ color: `${P.cream}cc` }}>{d.label}</p>
-                  <p className="text-xs md:text-[9px] uppercase tracking-[0.3em] font-body mt-1" style={{ color: `${P.gold}4d` }}>{d.date}, 2026</p>
-                  <p className="font-serif italic text-xs mt-1" style={{ color: `${P.cream}5c` }}>{d.mood}</p>
-                </div>
-                <div className="h-px flex-1" style={{ background: `linear-gradient(to left, transparent, ${P.gold}12)` }} />
-              </div>
-
-              <div className={`grid gap-4 max-w-4xl mx-auto ${d.events.length === 1 ? "grid-cols-1 max-w-sm" : d.events.length === 2 ? "grid-cols-1 md:grid-cols-2" : "grid-cols-1 md:grid-cols-3"}`}>
-                {d.events.map((event) => {
-                  const isLight = event.slug === "courtyard-edit" || event.slug === "world-of-our-own";
-                  const accent = isLight ? "#d4a060" : event.palette.accent;
-                  return (
-                    <Link key={event.slug} href={`/chapter/${event.slug}`} className="group block p-5 rounded-sm border transition-all duration-500" style={{ borderColor: `${accent}20`, backgroundColor: `${event.palette.background}15`, background: `linear-gradient(135deg, ${event.palette.background}15, ${accent}05)`, boxShadow: `0 2px 12px ${accent}08, inset 0 1px 0 ${accent}10` }}>
-                      <div className="flex items-center gap-2 mb-3">
-                        <span className="text-xs md:text-[9px] uppercase tracking-[0.3em] font-body" style={{ color: accent }}>Ch. {String(event.chapterNumber).padStart(2, "0")}</span>
-                        <div className="h-px flex-1" style={{ backgroundColor: `${accent}12` }} />
-                        <span className="text-xs md:text-[8px] font-body" style={{ color: `${P.cream}5c` }}>{event.time}</span>
-                      </div>
-                      <h4 className="font-serif text-base md:text-lg mb-1 group-hover:translate-x-1 transition-transform duration-500" style={{ color: `${P.cream}cc` }}>{event.title}</h4>
-                      <p className="font-serif italic text-xs mb-2" style={{ color: `${accent}80` }}>{event.subtitle}</p>
-                      <p className="text-xs md:text-[9px] font-body leading-relaxed mb-2 line-clamp-2" style={{ color: `${P.cream}5c` }}>{event.description.slice(0, 120)}…</p>
-                      <div className="flex items-center justify-between">
-                        <span className="text-xs md:text-[8px] uppercase tracking-[0.15em] font-body" style={{ color: `${P.cream}55` }}>{event.location}</span>
-                        <span className="text-xs md:text-[8px] font-body opacity-0 group-hover:opacity-100 transition-opacity duration-500" style={{ color: accent }}>→</span>
-                      </div>
-                    </Link>
-                  );
-                })}
-              </div>
-            </div>
-          ))}
         </div>
       </div>
     </section>
@@ -1350,7 +1262,7 @@ function FinalBlessing() {
   }, { scope: ref });
 
   return (
-    <section ref={ref} className="relative py-10 md:py-14 overflow-hidden" style={{ backgroundColor: P.bg }}>
+    <section ref={ref} className="relative py-8 md:py-12 overflow-hidden" style={{ backgroundColor: P.bg }}>
       <div className="absolute inset-0" style={{ background: `radial-gradient(ellipse 60% 40% at 50% 50%, rgba(139,26,26,0.06), transparent 70%)` }} />
       <div className="absolute inset-0" style={{ background: `radial-gradient(ellipse 40% 30% at 50% 60%, rgba(212,175,55,0.04), transparent 60%)` }} />
 
@@ -1367,7 +1279,7 @@ function FinalBlessing() {
       </div>
 
       <div className="relative z-10 text-center px-6">
-        <div className="bl-el"><MandalaOrnament className="mb-12" /></div>
+        <div className="bl-el"><MandalaOrnament className="mb-8" /></div>
         <p className="bl-el text-xs md:text-[10px] uppercase tracking-[0.4em] font-body mb-4" style={{ color: `${P.gold}70` }}>
           The Sacred Invitation · निमंत्रण
         </p>
@@ -1383,16 +1295,16 @@ function FinalBlessing() {
           Sacred Beginning
         </h2>
 
-        <p className="bl-el font-body text-sm md:text-base max-w-lg mx-auto mb-4 leading-loose" style={{ color: `${P.cream}99` }}>
+        <p className="bl-el font-body text-sm md:text-base max-w-lg mx-auto mb-4 leading-loose" style={{ color: `${P.cream}e2` }}>
           Kindly grace us with your presence and bless our union.
-          Three days in the City of Lakes — six chapters of celebration,
+          Three days in the City of Lakes — five chapters of celebration,
           from intimate courtyards to gilded ceremonies, from sacred
           rituals at dawn to midnight revelry.
         </p>
         <p className="bl-el font-serif italic text-sm max-w-md mx-auto mb-4" style={{ color: `${P.gold}80` }}>
           Every moment means more with you there.
         </p>
-        <p className="bl-el font-serif text-xs mb-14" style={{ color: `${P.gold}50` }}>
+        <p className="bl-el font-serif text-xs mb-10" style={{ color: `${P.gold}50` }}>
           अतिथि देवो भव
         </p>
 
@@ -1404,12 +1316,12 @@ function FinalBlessing() {
               RSVP — Accept with Joy
             </span>
           </Link>
-          <Link href="/itinerary" className="px-12 py-4 text-xs md:text-[11px] uppercase tracking-[0.25em] font-body transition-all duration-700" style={{ color: `${P.cream}80`, border: `1px solid ${P.cream}18`, background: `linear-gradient(to bottom, ${P.gold}06, transparent)` }}>
+          <Link href="/itinerary" className="px-12 py-4 text-xs md:text-[11px] uppercase tracking-[0.25em] font-body transition-all duration-700" style={{ color: `${P.cream}d8`, border: `1px solid ${P.cream}18`, background: `linear-gradient(to bottom, ${P.gold}06, transparent)` }}>
             Full Itinerary
           </Link>
         </div>
 
-        <div className="bl-el"><Flourish className="mt-16" /></div>
+        <div className="bl-el"><Flourish className="mt-10" /></div>
       </div>
     </section>
   );
@@ -1438,15 +1350,12 @@ export default function LandingExperience() {
       <Hero loaded={loaded} />
       <RitualTransition variant="lotus" />
       <RoyalPrologue />
-      <RitualTransition variant="elephant" />
       <StoryPageCTA />
       <RitualTransition variant="mandala" />
       <VenueShowcase />
-      <RitualTransition variant="silk" />
       <ChapterJourneySection />
-      <RitualTransition variant="mandala" />
-      <RoyalTimeline />
       <RitualTransition variant="lotus" />
+      <RoyalTimeline />
       <FinalBlessing />
     </>
   );

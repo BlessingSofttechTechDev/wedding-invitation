@@ -49,7 +49,7 @@ export default function RSVPPage() {
               </p>
               <p
                 className="font-body text-sm md:text-base leading-relaxed mb-10"
-                style={{ color: `${P.cream}78` }}
+                style={{ color: `${P.cream}d6` }}
               >
                 Your presence is our blessing
               </p>
@@ -82,7 +82,7 @@ export default function RSVPPage() {
 
                     <p
                       className="font-body text-sm leading-relaxed max-w-md"
-                      style={{ color: `${P.cream}90` }}
+                      style={{ color: `${P.cream}dc` }}
                     >
                       Please reach out to us via call or WhatsApp for any
                       information regarding the celebrations, travel, stay, or to
@@ -161,7 +161,7 @@ export default function RSVPPage() {
                 <RoyalDivider />
                 <p
                   className="font-serif italic text-base md:text-lg"
-                  style={{ color: `${P.cream}99` }}
+                  style={{ color: `${P.cream}e2` }}
                 >
                   &ldquo;The celebration is incomplete without you.
                   <br />
@@ -183,7 +183,7 @@ export default function RSVPPage() {
                   href="/"
                   className="inline-flex items-center gap-2 px-8 py-3 font-body text-xs uppercase tracking-[0.18em] transition-opacity hover:opacity-80 rounded-sm"
                   style={{
-                    color: `${P.cream}80`,
+                    color: `${P.cream}d8`,
                     border: `1px solid ${P.gold}18`,
                     background: `linear-gradient(to bottom, ${P.gold}06, transparent)`,
                   }}

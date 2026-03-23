@@ -491,8 +491,11 @@ function WorldHero({ event }: { event: WeddingEvent }) {
           <p className="font-serif font-hindi text-3xl md:text-5xl lg:text-6xl tracking-[0.04em] mb-3" style={{ color: "#4a3520", textShadow: `0 0 30px ${palette.accent}30` }}>
             हमारी दुनिया
           </p>
+          <p className="text-sm uppercase tracking-[0.2em] font-light mb-2" style={{ color: `${palette.foreground}cc` }}>
+            {event.subtitle}
+          </p>
           <p className="text-xs italic tracking-[0.12em] mb-4" style={{ color: `${palette.foreground}aa` }}>
-            Where every city they've lived in meets in one afternoon
+            {event.tagline}
           </p>
 
           <div className="max-w-md text-center mb-4 space-y-1">
@@ -506,18 +509,6 @@ function WorldHero({ event }: { event: WeddingEvent }) {
             ))}
           </div>
 
-          <div className="flex items-center gap-6 mb-3">
-            {[
-              { icon: CalendarDays, label: event.date },
-              { icon: Clock, label: event.time },
-              { icon: MapPin, label: event.location },
-            ].map(({ icon: Icon, label }) => (
-              <div key={label} className="text-center">
-                <Icon size={13} style={{ color: palette.accent }} className="mx-auto mb-1" />
-                <p className="text-[9px] uppercase tracking-[0.15em]" style={{ color: `${palette.foreground}99` }}>{label}</p>
-              </div>
-            ))}
-          </div>
 
           <div className="hero-journey w-full max-w-xs md:max-w-md mb-3">
             <JourneyMap accent={palette.accent} fg={palette.foreground} />
@@ -703,7 +694,7 @@ function JourneySection({ event }: { event: WeddingEvent }) {
             >
               <p className="text-[10px] uppercase tracking-[0.2em] mb-1 font-medium" style={{ color: "#5a4530" }}>{c.name}</p>
               <p className="font-serif text-sm mb-1" style={{ color: `${palette.foreground}ee` }}>{c.sub}</p>
-              <p className="text-[10px] italic" style={{ color: `${palette.foreground}99` }}>{c.detail}</p>
+              <p className="text-[10px] italic" style={{ color: `${palette.foreground}de` }}>{c.detail}</p>
             </div>
           ))}
         </div>
@@ -765,7 +756,7 @@ function WorldDressCode({ event }: { event: WeddingEvent }) {
               </ul>
             </div>
             <div>
-              <h4 className="text-xs uppercase tracking-[0.25em] mb-6 font-medium" style={{ color: `${palette.foreground}88` }}>Kindly Avoid</h4>
+              <h4 className="text-xs uppercase tracking-[0.25em] mb-6 font-medium" style={{ color: `${palette.foreground}c8` }}>Kindly Avoid</h4>
               <ul className="space-y-4">
                 {dressCode.donts.map((item) => (
                   <li key={item} className="dc-i flex items-start gap-3">
@@ -880,7 +871,7 @@ export default function FifthChapterContent({ event }: ChapterProps) {
               { icon: Clock, label: event.time },
               { icon: MapPin, label: `${event.location}, ${event.venue}` },
             ].map(({ icon: Icon, label }) => (
-              <div key={label} className="flex items-center gap-3 text-sm" style={{ color: `${palette.foreground}99` }}>
+              <div key={label} className="flex items-center gap-3 text-sm" style={{ color: `${palette.foreground}de` }}>
                 <Icon size={16} style={{ color: palette.accent }} />
                 <span>{label}</span>
               </div>
@@ -895,8 +886,6 @@ export default function FifthChapterContent({ event }: ChapterProps) {
       <div className="flex justify-center py-2" style={{ backgroundColor: "#c8b89c" }}><LotusDivider accent={palette.accent} /></div>
       <WorldDressCode event={event} />
       <div className="flex justify-center py-2" style={{ backgroundColor: "#c8b89c" }}><LotusDivider accent={palette.accent} /></div>
-      <WorldMoodSection event={event} />
-      <div className="flex justify-center py-2" style={{ backgroundColor: "#c8b89c" }}><LotusDivider accent={palette.accent} /></div>
       <WorldVenue event={event} />
 
       {/* Chapter navigation */}
@@ -904,35 +893,27 @@ export default function FifthChapterContent({ event }: ChapterProps) {
         <section className="py-8 md:py-10 px-6 border-t" style={{ borderColor: `${palette.foreground}12`, backgroundColor: "#c8b89c" }}>
           <div className="max-w-5xl mx-auto">
             <div className="text-center mb-16">
-              <Link href="/itinerary" className="inline-flex items-center gap-2 text-sm transition-all duration-300 hover:gap-3" style={{ color: `${palette.foreground}88` }}>
+              <Link href="/itinerary" className="inline-flex items-center gap-2 text-sm transition-all duration-300 hover:gap-3" style={{ color: `${palette.foreground}c8` }}>
                 <ArrowLeft size={14} /> Back to Itinerary
               </Link>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6">
               {prevEvent && (
                 <Link href={`/chapter/${prevEvent.slug}`} className="group rounded-xl overflow-hidden border transition-all duration-500 relative" style={{ borderColor: `${palette.foreground}10`, backgroundColor: `${palette.foreground}08` }}>
-                  <div className="relative h-28 overflow-hidden">
-                    <Image src={prevEvent.heroImage} alt={prevEvent.title} fill className="object-cover object-center opacity-30 group-hover:opacity-50 group-hover:scale-105 transition-all duration-700" sizes="50vw" />
-                    <div className="absolute inset-0" style={{ background: `linear-gradient(to bottom,transparent,#c8b89cee)` }} />
-                  </div>
                   <div className="p-6 md:p-8 relative">
-                    <p className="text-[11px] uppercase tracking-[0.2em] mb-3 font-medium" style={{ color: `${palette.foreground}55` }}>← Previous Chapter</p>
+                    <p className="text-[11px] uppercase tracking-[0.2em] mb-3 font-medium" style={{ color: `${palette.foreground}8c` }}>← Previous Chapter</p>
                     <p className="font-serif text-lg md:text-xl" style={{ color: `${palette.foreground}bb` }}>{prevEvent.title}</p>
-                    <p className="text-sm mt-1 italic" style={{ color: `${palette.foreground}55` }}>{prevEvent.subtitle}</p>
+                    <p className="text-sm mt-1 italic" style={{ color: `${palette.foreground}8c` }}>{prevEvent.subtitle}</p>
                   </div>
                 </Link>
               )}
               {!prevEvent && <div />}
               {nextEvent && (
                 <Link href={`/chapter/${nextEvent.slug}`} className="group rounded-xl overflow-hidden border text-right transition-all duration-500 relative" style={{ borderColor: `${palette.foreground}10`, backgroundColor: `${palette.foreground}08` }}>
-                  <div className="relative h-28 overflow-hidden">
-                    <Image src={nextEvent.heroImage} alt={nextEvent.title} fill className="object-cover object-center opacity-30 group-hover:opacity-50 group-hover:scale-105 transition-all duration-700" sizes="50vw" />
-                    <div className="absolute inset-0" style={{ background: `linear-gradient(to bottom,transparent,#c8b89cee)` }} />
-                  </div>
                   <div className="p-6 md:p-8 relative">
-                    <p className="text-[11px] uppercase tracking-[0.2em] mb-3 font-medium" style={{ color: `${palette.foreground}55` }}>Next Chapter →</p>
+                    <p className="text-[11px] uppercase tracking-[0.2em] mb-3 font-medium" style={{ color: `${palette.foreground}8c` }}>Next Chapter →</p>
                     <p className="font-serif text-lg md:text-xl" style={{ color: `${palette.foreground}bb` }}>{nextEvent.title}</p>
-                    <p className="text-sm mt-1 italic" style={{ color: `${palette.foreground}55` }}>{nextEvent.subtitle}</p>
+                    <p className="text-sm mt-1 italic" style={{ color: `${palette.foreground}8c` }}>{nextEvent.subtitle}</p>
                   </div>
                 </Link>
               )}
@@ -972,11 +953,11 @@ export default function FifthChapterContent({ event }: ChapterProps) {
           </div>
 
           <div className="flex items-center justify-center gap-8 mb-10">
-            {[{ href: "/itinerary", label: "Itinerary" }, { href: "/rsvp", label: "RSVP" }, { href: "/travel", label: "Travel" }].map((link) => (
+            {[{ href: "/itinerary", label: "Itinerary" }, { href: "/rsvp", label: "RSVP" }].map((link) => (
               <Link key={link.href} href={link.href} className="text-[11px] uppercase tracking-[0.2em] font-body transition-colors duration-300 hover:opacity-80" style={{ color: `${palette.foreground}aa` }}>{link.label}</Link>
             ))}
           </div>
-          <p className="text-[11px] font-body tracking-wide mb-6" style={{ color: `${palette.foreground}88` }}>April 19–21, 2026 · Udaipur, Rajasthan</p>
+          <p className="text-[11px] font-body tracking-wide mb-6" style={{ color: `${palette.foreground}c8` }}>April 19–21, 2026 · Udaipur, Rajasthan</p>
           <div className="flex flex-wrap items-center justify-center gap-2.5 text-xs font-body tracking-wide" style={{ color: `${palette.foreground}25` }}>
             <span>© 2026 All Rights Reserved</span>
             <span style={{ color: `${palette.foreground}15` }}>|</span>

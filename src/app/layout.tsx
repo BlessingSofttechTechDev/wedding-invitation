@@ -62,7 +62,7 @@ export default function RootLayout({
     <html lang="en">
       <body
         className={`${playfairDisplay.variable} ${dmSans.variable} ${notoSerifDevanagari.variable} font-body antialiased overflow-x-hidden`}
-        style={{ backgroundColor: "#1a0a0a", color: "#f5efe6" }}
+        style={{ backgroundColor: "#2d1616", color: "#ebe4d6" }}
       >
         <ScrollToTop />
         {children}

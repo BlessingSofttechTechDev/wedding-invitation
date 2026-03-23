@@ -1,7 +1,6 @@
 "use client";
 
 import Link from "next/link";
-import Image from "next/image";
 import { motion } from "framer-motion";
 import { WeddingEvent } from "@/types";
 import { P } from "@/components/shared/RoyalPageLayout";
@@ -20,39 +19,19 @@ export function ChapterCard({ event }: ChapterCardProps) {
         backgroundColor: `${P.muted}20`,
       }}
     >
-      {/* Hero image with overlay */}
-      <div className="relative h-52 md:h-56 overflow-hidden">
-        <Image
-          src={event.heroImage}
-          alt={event.title}
-          fill
-          className="object-cover transition-transform duration-700 group-hover:scale-105"
-          sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-        />
-        <div
-          className="absolute inset-0 transition-opacity duration-700"
-          style={{
-            background: `linear-gradient(to bottom, ${event.palette.primary}90 0%, ${event.palette.background}ee 100%)`,
-          }}
-        />
-        <div className="absolute inset-0 bg-black/20 group-hover:bg-black/10 transition-colors duration-700" />
-
-        {/* Chapter number */}
-        <div className="absolute top-4 right-4 z-10">
-          <span
-            className="text-xs md:text-[10px] uppercase tracking-[0.3em] font-body"
-            style={{ color: `${event.palette.foreground}60` }}
-          >
-            {String(event.chapterNumber).padStart(2, "0")}
-          </span>
-        </div>
-
-        <div
-          className="absolute bottom-0 left-0 right-0 h-24"
-          style={{
-            background: `linear-gradient(to top, ${event.palette.background}, transparent)`,
-          }}
-        />
+      {/* Text-only header (no chapter imagery) */}
+      <div
+        className="relative h-24 md:h-28 overflow-hidden flex items-center justify-end px-5 md:px-6"
+        style={{
+          background: `linear-gradient(135deg, ${event.palette.muted}80 0%, ${event.palette.background}cc 50%, ${event.palette.primary}35 100%)`,
+        }}
+      >
+        <span
+          className="text-xs md:text-[10px] uppercase tracking-[0.3em] font-body"
+          style={{ color: `${event.palette.foreground}50` }}
+        >
+          {String(event.chapterNumber).padStart(2, "0")}
+        </span>
       </div>
 
       {/* Gold accent line */}
@@ -67,7 +46,7 @@ export function ChapterCard({ event }: ChapterCardProps) {
       <div className="p-6 md:p-7">
         <p
           className="text-xs md:text-[10px] uppercase tracking-[0.2em] font-body mb-4"
-          style={{ color: `${P.cream}40` }}
+          style={{ color: `${P.cream}7c` }}
         >
           {event.date} · {event.time}
         </p>
@@ -88,7 +67,7 @@ export function ChapterCard({ event }: ChapterCardProps) {
 
         <p
           className="text-[13px] font-body line-clamp-2 leading-relaxed"
-          style={{ color: `${P.cream}50` }}
+          style={{ color: `${P.cream}8c` }}
         >
           {event.tagline}
         </p>
@@ -99,7 +78,7 @@ export function ChapterCard({ event }: ChapterCardProps) {
         >
           <span
             className="text-xs md:text-[10px] uppercase tracking-[0.15em] font-body"
-            style={{ color: `${P.cream}30` }}
+            style={{ color: `${P.cream}c4` }}
           >
             {event.location}
           </span>

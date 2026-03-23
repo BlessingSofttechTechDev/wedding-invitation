@@ -548,7 +548,6 @@ export function ThrillFooter({ event }: { event: WeddingEvent }) {
           {[
             { href: "/itinerary", label: "Itinerary" },
             { href: "/rsvp", label: "RSVP" },
-            { href: "/travel", label: "Travel" },
           ].map((link) => (
             <Link
               key={link.href}

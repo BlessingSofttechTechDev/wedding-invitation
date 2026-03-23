@@ -150,7 +150,7 @@ export default function StayPage() {
                       </svg>
                     )}
                   </div>
-                  <p className="font-body text-sm" style={{ color: `${P.cream}99` }}>
+                  <p className="font-body text-sm" style={{ color: `${P.cream}e2` }}>
                     {amenity}
                   </p>
                 </RoyalSectionFrame>
@@ -178,7 +178,7 @@ export default function StayPage() {
                     >
                       {i + 1}
                     </span>
-                    <p className="font-body text-sm md:text-base leading-relaxed pt-0.5" style={{ color: `${P.cream}80` }}>
+                    <p className="font-body text-sm md:text-base leading-relaxed pt-0.5" style={{ color: `${P.cream}d8` }}>
                       {rule}
                     </p>
                   </li>
@@ -207,7 +207,7 @@ export default function StayPage() {
               <h3 className="font-serif text-2xl md:text-3xl mb-3" style={{ color: P.cream }}>
                 Room Assignments
               </h3>
-              <p className="font-body text-sm md:text-base leading-relaxed mb-6 max-w-md mx-auto" style={{ color: `${P.cream}60` }}>
+              <p className="font-body text-sm md:text-base leading-relaxed mb-6 max-w-md mx-auto" style={{ color: `${P.cream}98` }}>
                 Your room assignment will be available in the Guest Portal. Log in to view your room details and manage your stay.
               </p>
               <Link

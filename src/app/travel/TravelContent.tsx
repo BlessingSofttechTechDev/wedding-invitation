@@ -72,7 +72,7 @@ function FlightPathSVG() {
       {/* Airport marker */}
       <circle cx="30" cy="90" r="5" stroke={P.gold} strokeWidth="0.8" fill={`${P.gold}15`} />
       <circle cx="30" cy="90" r="2" fill={`${P.gold}50`} />
-      <text x="30" y="110" textAnchor="middle" fill={`${P.cream}60`} fontSize="8" fontFamily="serif">JAI</text>
+      <text x="30" y="110" textAnchor="middle" fill={`${P.cream}98`} fontSize="8" fontFamily="serif">JAI</text>
       {/* Airplane icon at midpoint */}
       <g className="fp-plane" transform="translate(300,22) rotate(-8)">
         <path d="M-6 0 L-2 -1.5 L4 -4 L6 -1 L2 0 L6 1 L4 4 L-2 1.5Z" fill={P.gold} opacity="0.7" />
@@ -80,7 +80,7 @@ function FlightPathSVG() {
       {/* Venue marker */}
       <circle cx="570" cy="90" r="5" stroke={P.gold} strokeWidth="0.8" fill={`${P.gold}15`} />
       <circle cx="570" cy="90" r="2" fill={`${P.gold}50`} />
-      <text x="570" y="110" textAnchor="middle" fill={`${P.cream}60`} fontSize="8" fontFamily="serif">Venue</text>
+      <text x="570" y="110" textAnchor="middle" fill={`${P.cream}98`} fontSize="8" fontFamily="serif">Venue</text>
     </svg>
   );
 }
@@ -206,7 +206,7 @@ function RoyalArrivalHero() {
         <p className="hero-sub mt-4 font-serif text-lg md:text-xl tracking-[0.08em] opacity-0" style={{ color: `${P.gold}aa` }}>
           Getting There
         </p>
-        <p className="hero-desc mt-6 text-base md:text-lg font-body max-w-lg mx-auto leading-relaxed opacity-0" style={{ color: `${P.cream}55` }}>
+        <p className="hero-desc mt-6 text-base md:text-lg font-body max-w-lg mx-auto leading-relaxed opacity-0" style={{ color: `${P.cream}92` }}>
           Your curated arrival protocol to {COUPLE.venue}.
         </p>
         <RoyalFlourish className="mt-10" />
@@ -252,7 +252,7 @@ function TravelConcierge() {
               <h2 className="font-serif text-2xl md:text-3xl mb-3 mt-4" style={{ color: P.cream }}>
                 We&rsquo;ll handle everything.
               </h2>
-              <p className="font-body text-sm leading-relaxed mb-8 max-w-md" style={{ color: `${P.cream}70` }}>
+              <p className="font-body text-sm leading-relaxed mb-8 max-w-md" style={{ color: `${P.cream}c0` }}>
                 Complimentary airport pickups are arranged for all guests.
                 Share your flight details and a chauffeur will greet you at arrivals.
               </p>
@@ -364,13 +364,13 @@ function ArrivalGate() {
           <div className="mt-8 space-y-3">
             <div className="gate-detail flex items-start gap-3 opacity-0">
               <div className="w-1.5 h-1.5 rounded-full mt-2 shrink-0" style={{ backgroundColor: `${P.gold}60` }} />
-              <p className="font-body text-sm leading-relaxed" style={{ color: `${P.cream}70` }}>
+              <p className="font-body text-sm leading-relaxed" style={{ color: `${P.cream}c0` }}>
                 {TRAVEL_INFO.airport} — {TRAVEL_INFO.distance}
               </p>
             </div>
             <div className="gate-detail flex items-start gap-3 opacity-0">
               <div className="w-1.5 h-1.5 rounded-full mt-2 shrink-0" style={{ backgroundColor: `${P.gold}60` }} />
-              <p className="font-body text-sm leading-relaxed" style={{ color: `${P.cream}70` }}>
+              <p className="font-body text-sm leading-relaxed" style={{ color: `${P.cream}c0` }}>
                 {TRAVEL_INFO.pickupNote}
               </p>
             </div>
@@ -552,7 +552,7 @@ function TransportTabs() {
               className="tt-tab flex items-center gap-2 px-4 md:px-6 py-3 rounded-sm text-xs uppercase tracking-[0.15em] font-medium transition-all duration-300 opacity-0"
               style={{
                 backgroundColor: active === mode.id ? `${P.gold}18` : `${P.muted}30`,
-                color: active === mode.id ? P.gold : `${P.cream}55`,
+                color: active === mode.id ? P.gold : `${P.cream}92`,
                 border: `1px solid ${active === mode.id ? `${P.gold}30` : `${P.gold}0a`}`,
               }}
             >
@@ -592,7 +592,7 @@ function TransportTabs() {
               </div>
             </div>
 
-            <p className="font-body text-sm leading-relaxed mb-8" style={{ color: `${P.cream}70` }}>
+            <p className="font-body text-sm leading-relaxed mb-8" style={{ color: `${P.cream}c0` }}>
               {current.directions}
             </p>
 
@@ -701,7 +701,7 @@ function CourtOfAssistance() {
                   <a
                     href={`tel:${contact.phone.replace(/\s/g, "")}`}
                     className="inline-flex items-center gap-1.5 px-4 py-2 text-xs md:text-[10px] uppercase tracking-[0.15em] font-medium rounded-sm transition-all duration-300 hover:scale-105"
-                    style={{ color: `${P.cream}88`, border: `1px solid ${P.gold}18`, backgroundColor: `${P.gold}08` }}
+                    style={{ color: `${P.cream}e8`, border: `1px solid ${P.gold}18`, backgroundColor: `${P.gold}08` }}
                   >
                     <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
                       <path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z" />
@@ -713,7 +713,7 @@ function CourtOfAssistance() {
                     target="_blank"
                     rel="noopener noreferrer"
                     className="inline-flex items-center gap-1.5 px-4 py-2 text-xs md:text-[10px] uppercase tracking-[0.15em] font-medium rounded-sm transition-all duration-300 hover:scale-105"
-                    style={{ color: `${P.cream}88`, border: `1px solid ${P.gold}18`, backgroundColor: `${P.gold}08` }}
+                    style={{ color: `${P.cream}e8`, border: `1px solid ${P.gold}18`, backgroundColor: `${P.gold}08` }}
                   >
                     <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
                       <path d="M21 11.5a8.38 8.38 0 01-.9 3.8 8.5 8.5 0 01-7.6 4.7 8.38 8.38 0 01-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 01-.9-3.8 8.5 8.5 0 014.7-7.6 8.38 8.38 0 013.8-.9h.5a8.48 8.48 0 018 8v.5z" />
@@ -794,7 +794,7 @@ function RoyalDispatches() {
                   <h3 className="font-serif text-lg text-center mb-2" style={{ color: `${P.cream}dd` }}>
                     {doc.title}
                   </h3>
-                  <p className="font-body text-xs text-center leading-relaxed mb-5" style={{ color: `${P.cream}55` }}>
+                  <p className="font-body text-xs text-center leading-relaxed mb-5" style={{ color: `${P.cream}92` }}>
                     {doc.subtitle}
                   </p>
 

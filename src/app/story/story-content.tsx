@@ -90,7 +90,7 @@ function StoryHero() {
         <FadeInView>
           <p
             className="mb-8 text-xs md:text-[10px] font-body uppercase tracking-[0.42em] md:text-[11px]"
-            style={{ color: `${P.gold}99` }}
+            style={{ color: `${P.gold}c4` }}
           >
             Their Story ·{" "}
             <span className="text-[0.85em]">प्रेम कथा</span>
@@ -129,7 +129,7 @@ function StoryHero() {
         <FadeInView delay={0.22}>
           <p
             className="font-serif text-sm"
-            style={{ color: `${P.gold}55` }}
+            style={{ color: `${P.gold}8c` }}
           >
             एक प्रेम कहानी, जो हमेशा लिखी जानी थी
           </p>
@@ -177,7 +177,7 @@ function ProseSection({
         <FadeInView duration={0.9}>
           <span
             className="text-xs md:text-[10px] font-body uppercase tracking-[0.38em]"
-            style={{ color: `${P.gold}7a` }}
+            style={{ color: `${P.gold}b0` }}
           >
             {label}
             {labelHindi && (
@@ -216,7 +216,7 @@ function ProseSection({
 
         <div
           className="space-y-6 font-body text-[15px] leading-[1.85] md:text-base md:leading-[1.9]"
-          style={{ color: `${P.cream}90` }}
+          style={{ color: `${P.cream}dc` }}
         >
           {children}
         </div>
@@ -321,12 +321,12 @@ function VenueMoment() {
               }}
             />
             <div className="absolute bottom-0 left-0 right-0 p-6 md:p-8">
-              <p
+              {/* <p
                 className="text-xs md:text-[10px] font-body uppercase tracking-[0.35em]"
-                style={{ color: `${P.gold}99` }}
+                style={{ color: `${P.gold}c4` }}
               >
                 Where we say forever · {COUPLE.venue}
-              </p>
+              </p> */}
               <p
                 className="mt-2 font-serif text-xl md:text-2xl"
                 style={{ color: P.cream }}
@@ -369,7 +369,7 @@ const MILESTONES = [
   {
     year: "2026",
     title: "The Celebration",
-    desc: "In Udaipur, their story arrives at its most magical chapter — three days, six chapters, one celebration.",
+    desc: "In Udaipur, their story arrives at its most magical moment — three days, countless memories, one celebration.",
   },
 ] as const;
 
@@ -387,13 +387,13 @@ function Timeline() {
           background: `radial-gradient(ellipse 50% 50% at 50% 30%, rgba(212,175,55,0.04), transparent 70%)`,
         }}
       />
-      <div className="relative z-10 mx-auto max-w-xl">
+      <div className="relative z-10 mx-auto max-w-3xl lg:max-w-4xl">
         <FadeInView>
           <div className="mb-14 text-center">
             <RoyalDivider className="mb-8" />
             <span
               className="mb-4 block text-xs md:text-[10px] font-body uppercase tracking-[0.38em]"
-              style={{ color: `${P.gold}7a` }}
+              style={{ color: `${P.gold}b0` }}
             >
               The Journey · यात्रा
             </span>
@@ -407,67 +407,70 @@ function Timeline() {
         </FadeInView>
 
         <div className="relative pl-0">
+          {/* Center axis — milestones alternate left / right of this line */}
           <div
-            className="absolute left-[5px] top-2 bottom-2 w-px sm:left-1/2 sm:-translate-x-1/2"
+            className="absolute left-[11px] top-2 bottom-2 w-px sm:left-1/2 sm:-translate-x-1/2"
             style={{
               background: `linear-gradient(to bottom, transparent, ${P.gold}28, ${P.gold}30, ${P.gold}28, transparent)`,
             }}
             aria-hidden="true"
           />
-          <ul className="relative space-y-12 md:space-y-14">
-            {MILESTONES.map((m, i) => (
-              <li
-                key={m.year}
-                className="relative grid grid-cols-1 gap-4 pl-10 sm:grid-cols-2 sm:gap-10 sm:pl-0"
-              >
-                <FadeInView direction="none" duration={0.5} delay={0.05}>
+          <ul className="relative space-y-12 md:space-y-16">
+            {MILESTONES.map((m, i) => {
+              const isLeft = i % 2 === 0;
+              return (
+                <li
+                  key={m.year}
+                  className="relative grid grid-cols-1 pl-10 sm:grid-cols-2 sm:gap-x-12 sm:gap-y-0 sm:pl-0"
+                >
+                  {/* Marker sits on the center line (not a grid item — avoids pushing content into one column) */}
                   <div
-                    className="absolute left-0 top-1.5 z-10 size-2.5 rotate-45 sm:left-1/2 sm:-translate-x-1/2"
+                    className="absolute left-[11px] top-1.5 z-10 size-2.5 -translate-x-1/2 rotate-45 sm:left-1/2 sm:-translate-x-1/2"
                     style={{
                       border: `1px solid ${P.gold}55`,
                       backgroundColor: `${P.gold}12`,
                     }}
                     aria-hidden="true"
                   />
-                </FadeInView>
-                <div
-                  className={
-                    i % 2 === 0
-                      ? "sm:pr-10 sm:text-right"
-                      : "sm:col-start-2 sm:pl-10 sm:text-left"
-                  }
-                >
-                  <FadeInView
-                    delay={0.06}
-                    duration={0.85}
-                    direction={i % 2 === 0 ? "right" : "left"}
+                  <div
+                    className={
+                      isLeft
+                        ? "sm:col-start-1 sm:row-start-1 sm:pr-10 sm:text-right"
+                        : "sm:col-start-2 sm:row-start-1 sm:pl-10 sm:text-left"
+                    }
                   >
-                    <span
-                      className="font-serif text-2xl md:text-3xl"
-                      style={{
-                        background: `linear-gradient(180deg, ${P.gold}, ${P.bronze})`,
-                        WebkitBackgroundClip: "text",
-                        WebkitTextFillColor: "transparent",
-                      }}
+                    <FadeInView
+                      delay={0.06}
+                      duration={0.85}
+                      direction={isLeft ? "right" : "left"}
                     >
-                      {m.year}
-                    </span>
-                    <h3
-                      className="mt-1 font-serif text-lg"
-                      style={{ color: `${P.cream}cc` }}
-                    >
-                      {m.title}
-                    </h3>
-                    <p
-                      className="mt-2 text-sm leading-relaxed"
-                      style={{ color: `${P.cream}6e` }}
-                    >
-                      {m.desc}
-                    </p>
-                  </FadeInView>
-                </div>
-              </li>
-            ))}
+                      <span
+                        className="font-serif text-2xl md:text-3xl"
+                        style={{
+                          background: `linear-gradient(180deg, ${P.gold}, ${P.bronze})`,
+                          WebkitBackgroundClip: "text",
+                          WebkitTextFillColor: "transparent",
+                        }}
+                      >
+                        {m.year}
+                      </span>
+                      <h3
+                        className="mt-1 font-serif text-lg"
+                        style={{ color: `${P.cream}cc` }}
+                      >
+                        {m.title}
+                      </h3>
+                      <p
+                        className="mt-2 text-sm leading-relaxed"
+                        style={{ color: `${P.cream}8e` }}
+                      >
+                        {m.desc}
+                      </p>
+                    </FadeInView>
+                  </div>
+                </li>
+              );
+            })}
           </ul>
         </div>
       </div>
@@ -500,13 +503,13 @@ function ParentsBlessingSection() {
         <FadeInView delay={0.06} duration={0.85}>
           <span
             className="mb-3 block text-xs md:text-[10px] font-body uppercase tracking-[0.38em]"
-            style={{ color: `${P.gold}6e` }}
+            style={{ color: `${P.gold}a0` }}
           >
             With the Blessings of Our Families · परिवार का आशीर्वाद
           </span>
           <p
             className="mb-10 font-serif text-xs italic md:text-sm"
-            style={{ color: `${P.gold}45` }}
+            style={{ color: `${P.gold}78` }}
           >
             सर्वे भवन्तु सुखिनः
           </p>
@@ -531,7 +534,7 @@ function ParentsBlessingSection() {
                 </p>
                 <p
                   className="text-xs md:text-[9px] font-body uppercase tracking-[0.22em]"
-                  style={{ color: `${P.cream}48` }}
+                  style={{ color: `${P.cream}84` }}
                 >
                   Groom&apos;s Family
                 </p>
@@ -560,7 +563,7 @@ function ParentsBlessingSection() {
                 </p>
                 <p
                   className="text-xs md:text-[9px] font-body uppercase tracking-[0.22em]"
-                  style={{ color: `${P.cream}48` }}
+                  style={{ color: `${P.cream}84` }}
                 >
                   Bride&apos;s Family
                 </p>
@@ -609,9 +612,9 @@ function StoryCTA() {
           <RoyalFlourish className="mb-8" />
           <p
             className="mb-5 text-xs md:text-[10px] font-body uppercase tracking-[0.38em]"
-            style={{ color: `${P.gold}6e` }}
+            style={{ color: `${P.gold}a0` }}
           >
-            The Next Verse · अगला अध्याय
+            The Next Verse · अगला पड़ाव
           </p>
           <h2
             className="mb-2 font-serif text-3xl italic leading-tight md:text-4xl lg:text-5xl"
@@ -631,10 +634,10 @@ function StoryCTA() {
           </h2>
           <p
             className="mx-auto mb-10 max-w-md text-sm leading-relaxed md:text-[15px]"
-            style={{ color: `${P.cream}78` }}
+            style={{ color: `${P.cream}d6` }}
           >
-            Three days. Six chapters. One celebration woven from heritage and
-            love. We&apos;d love to share it with you.
+            Three days of celebration, woven from heritage and love — we&apos;d
+            love to share it with you.
           </p>
         </FadeInView>
 
@@ -649,13 +652,13 @@ function StoryCTA() {
                 boxShadow: `0 10px 28px rgba(212,175,55,0.18)`,
               }}
             >
-              Explore the Chapters
+              View the itinerary
             </Link>
             <Link
               href="/rsvp"
               className="inline-flex min-w-[200px] items-center justify-center px-10 py-3.5 text-[11px] font-body uppercase tracking-[0.22em] transition-opacity hover:opacity-90"
               style={{
-                color: `${P.cream}85`,
+                color: `${P.cream}e4`,
                 border: `1px solid ${P.gold}22`,
                 background: `linear-gradient(to bottom, ${P.gold}06, transparent)`,
               }}
@@ -683,7 +686,7 @@ export default function StoryPageContent() {
       <StoryHero />
 
       <ProseSection
-        label="Chapter One"
+        label="Verse One"
         labelHindi="आरंभ"
         title="Where It All"
         titleAccent="Began"
@@ -712,7 +715,7 @@ export default function StoryPageContent() {
       <QuoteBand quote="In the city of dreams, two dreamers found each other." />
 
       <ProseSection
-        label="Chapter Two"
+        label="Verse Two"
         labelHindi="लंदन"
         title="London"
         titleAccent="Calling"
@@ -738,7 +741,7 @@ export default function StoryPageContent() {
       <QuoteBand quote="Every piece of their story had been quietly waiting to complete the puzzle." />
 
       <ProseSection
-        label="Chapter Three"
+        label="Verse Three"
         labelHindi="सगाई"
         title="When Everything"
         titleAccent="Fell Into Place"
@@ -769,15 +772,15 @@ export default function StoryPageContent() {
         <ProseParagraph>
           Against the timeless romance of Udaipur — palaces, lakes, and the
           Aravallis as quiet witnesses — their story arrives at its most magical
-          chapter.
+          moment.
         </ProseParagraph>
         <ProseParagraph>
-          A three-day celebration across six unforgettable chapters: intimate
-          courtyards, gilded nights, sacred rituals, and joy written with
-          intention.
+          A three-day celebration across intimate courtyards, gilded nights,
+          sacred rituals, and joy written with intention — each gathering its
+          own memory.
         </ProseParagraph>
         <PullQuote>
-          Not just a wedding — a story told across three days, six chapters, and
+          Not just a wedding — a story told across three days, many moments, and
           one breathtaking city.
         </PullQuote>
       </ProseSection>

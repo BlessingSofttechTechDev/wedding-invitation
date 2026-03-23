@@ -5,16 +5,20 @@ import { motion } from "framer-motion";
 
 /* ═══════════════════════════════════════════════════════════
    Royal Color Palette — shared across all pages
+   (Cream is intentionally a touch deeper than pure ivory so body
+   copy stays readable on maroon; pair with higher alpha suffixes
+   like …d8 / …e0 hex alpha suffixes for paragraphs.)
    ═══════════════════════════════════════════════════════════ */
 
 export const P = {
   gold: "#d4af37",
   bronze: "#c9956b",
   maroon: "#8b1a1a",
-  bg: "#1a0a0a",
-  bgDeep: "#150808",
-  muted: "#2e1212",
-  cream: "#f5efe6",
+  bg: "#2d1616",
+  bgDeep: "#221010",
+  muted: "#3f1e1e",
+  /** Slightly deeper than pure cream — reads better on maroon backgrounds */
+  cream: "#ebe4d6",
 } as const;
 
 const GRAIN_URL =
@@ -98,7 +102,7 @@ export function RoyalPageHero({
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
             className="text-xs md:text-[11px] tracking-[0.3em] font-body mb-6"
-            style={{ color: `${P.gold}99` }}
+            style={{ color: `${P.gold}c4` }}
           >
             {label}
           </motion.p>
@@ -136,7 +140,7 @@ export function RoyalPageHero({
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.7, delay: 0.2 }}
             className="mt-6 text-base md:text-lg font-body max-w-lg mx-auto leading-relaxed"
-            style={{ color: `${P.cream}66` }}
+            style={{ color: `${P.cream}a5` }}
           >
             {subtitle}
           </motion.p>

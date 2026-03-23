@@ -591,21 +591,13 @@ function CathedralHero({ event }: { event: WeddingEvent }) {
           <p className="font-serif font-hindi text-2xl md:text-4xl lg:text-5xl tracking-[0.04em] mb-3" style={{ color: palette.accent, textShadow: `0 0 40px ${palette.accent}30, 0 2px 20px ${palette.background}` }}>
             रात्रि महोत्सव
           </p>
-          <p className="text-xs sm:text-sm italic tracking-[0.1em] sm:tracking-[0.15em] mb-6 sm:mb-8 max-w-[85vw] mx-auto" style={{ color: `${palette.accent}88` }}>
-            Cathedral Gone Rogue &mdash; Gilded After Dark
+          <p className="text-sm sm:text-base uppercase tracking-[0.2em] font-light mb-2" style={{ color: `${palette.foreground}aa` }}>
+            {event.subtitle}
           </p>
-          <div className="flex flex-wrap items-center justify-center gap-4 sm:gap-6">
-            {[
-              { icon: CalendarDays, label: event.date },
-              { icon: Clock, label: event.time },
-              { icon: MapPin, label: event.location },
-            ].map(({ icon: Icon, label }) => (
-              <div key={label} className="text-center min-w-0">
-                <Icon size={14} style={{ color: palette.accent }} className="mx-auto mb-1" />
-                <p className="text-[10px] uppercase tracking-[0.15em] truncate max-w-[28vw] sm:max-w-none mx-auto" style={{ color: `${palette.foreground}66` }}>{label}</p>
-              </div>
-            ))}
-          </div>
+          <p className="text-xs sm:text-sm italic tracking-[0.1em] sm:tracking-[0.15em] mb-6 sm:mb-8 max-w-[85vw] mx-auto" style={{ color: `${palette.accent}88` }}>
+            {event.tagline}
+          </p>
+          
         </div>
 
         {/* ── BEAT 4: Stage canopy reveal (hidden on mobile to prevent overlap) ── */}
@@ -645,7 +637,7 @@ function CathedralQuote({ event }: { event: WeddingEvent }) {
       <div className="absolute inset-0" style={{ background: `linear-gradient(180deg,${palette.background},${palette.muted}12,${palette.background})` }} />
       <div className="relative z-10 max-w-3xl mx-auto text-center">
         <GoldDivider accent={palette.accent} />
-        <p className="font-serif italic text-xl md:text-2xl mt-8 leading-relaxed" style={{ color: `${palette.foreground}77` }}>
+        <p className="font-serif italic text-xl md:text-2xl mt-8 leading-relaxed" style={{ color: `${palette.foreground}a8` }}>
           &ldquo;{quote.split(" ").map((w, i) => (<span key={i} className="aq-w inline-block mr-[0.3em]">{w}</span>))}&rdquo;
         </p>
         <p className="font-serif text-2xl md:text-4xl mt-6" style={{ color: `${palette.accent}12` }}>महोत्सव</p>
@@ -722,7 +714,7 @@ function CathedralDressCode({ event }: { event: WeddingEvent }) {
           <div className="text-center mb-10">
             <p className="font-serif text-2xl md:text-3xl tracking-[0.04em] mb-3" style={{ color: palette.accent }}>{dressCode.title}</p>
             <div className="w-16 h-px mx-auto mb-5" style={{ background: `linear-gradient(90deg,transparent,${palette.accent}40,transparent)` }} />
-            <p className="font-serif text-base md:text-lg italic leading-relaxed max-w-lg mx-auto" style={{ color: `${palette.foreground}99` }}>{dressCode.description}</p>
+            <p className="font-serif text-base md:text-lg italic leading-relaxed max-w-lg mx-auto" style={{ color: `${palette.foreground}de` }}>{dressCode.description}</p>
           </div>
           <div className="mb-10"><GoldDivider accent={palette.accent} /></div>
           <div className="grid md:grid-cols-2 gap-10 md:gap-16">
@@ -738,12 +730,12 @@ function CathedralDressCode({ event }: { event: WeddingEvent }) {
               </ul>
             </div>
             <div>
-              <h4 className="text-xs uppercase tracking-[0.25em] mb-6 font-medium" style={{ color: `${palette.foreground}55` }}>Kindly Avoid</h4>
+              <h4 className="text-xs uppercase tracking-[0.25em] mb-6 font-medium" style={{ color: `${palette.foreground}8c` }}>Kindly Avoid</h4>
               <ul className="space-y-4">
                 {dressCode.donts.map((item) => (
                   <li key={item} className="dc-i flex items-start gap-3">
                     <span className="mt-1.5 w-1.5 h-1.5 rounded-full shrink-0" style={{ backgroundColor: `${palette.foreground}30` }} />
-                    <span className="text-[15px] leading-relaxed font-light" style={{ color: `${palette.foreground}77` }}>{item}</span>
+                    <span className="text-[15px] leading-relaxed font-light" style={{ color: `${palette.foreground}a8` }}>{item}</span>
                   </li>
                 ))}
               </ul>
@@ -821,7 +813,7 @@ function CathedralVenue({ event }: { event: WeddingEvent }) {
       <div className="relative z-10 max-w-4xl mx-auto">
         <p className="text-[11px] uppercase tracking-[0.3em] mb-8 font-medium" style={{ color: palette.accent }}>Venue · स्थान</p>
         <h3 className="font-serif text-3xl md:text-4xl lg:text-5xl mb-3" style={{ color: palette.foreground }}>{event.location}</h3>
-        <p className="text-lg mb-12" style={{ color: `${palette.foreground}88` }}>{event.venue}</p>
+        <p className="text-lg mb-12" style={{ color: `${palette.foreground}c8` }}>{event.venue}</p>
       </div>
     </section>
   );
@@ -860,7 +852,7 @@ export default function FourthChapterContent({ event }: ChapterProps) {
               { icon: Clock, label: event.time },
               { icon: MapPin, label: `${event.location}, ${event.venue}` },
             ].map(({ icon: Icon, label }) => (
-              <div key={label} className="flex items-center gap-3 text-sm" style={{ color: `${palette.foreground}99` }}>
+              <div key={label} className="flex items-center gap-3 text-sm" style={{ color: `${palette.foreground}de` }}>
                 <Icon size={16} style={{ color: palette.accent }} />
                 <span>{label}</span>
               </div>
@@ -873,8 +865,6 @@ export default function FourthChapterContent({ event }: ChapterProps) {
       <div className="flex justify-center" style={{ backgroundColor: palette.background }}><GoldDivider accent={palette.accent} /></div>
       <CathedralDressCode event={event} />
       <div className="flex justify-center" style={{ backgroundColor: palette.background }}><GoldDivider accent={palette.accent} /></div>
-      <CathedralMoodSection event={event} />
-      <div className="flex justify-center" style={{ backgroundColor: palette.background }}><GoldDivider accent={palette.accent} /></div>
       <CathedralVenue event={event} />
 
       {/* Chapter navigation */}
@@ -882,35 +872,27 @@ export default function FourthChapterContent({ event }: ChapterProps) {
         <section className="py-8 md:py-10 px-6 border-t" style={{ borderColor: `${palette.foreground}10`, backgroundColor: palette.background }}>
           <div className="max-w-5xl mx-auto">
             <div className="text-center mb-16">
-              <Link href="/itinerary" className="inline-flex items-center gap-2 text-sm transition-all duration-300 hover:gap-3" style={{ color: `${palette.foreground}88` }}>
+              <Link href="/itinerary" className="inline-flex items-center gap-2 text-sm transition-all duration-300 hover:gap-3" style={{ color: `${palette.foreground}c8` }}>
                 <ArrowLeft size={14} /> Back to Itinerary
               </Link>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6">
               {prevEvent && (
                 <Link href={`/chapter/${prevEvent.slug}`} className="group rounded-xl overflow-hidden border transition-all duration-500 relative" style={{ borderColor: `${palette.foreground}08`, backgroundColor: `${palette.muted}20` }}>
-                  <div className="relative h-28 overflow-hidden">
-                    <Image src={prevEvent.heroImage} alt={prevEvent.title} fill className="object-cover object-center opacity-40 group-hover:opacity-60 group-hover:scale-105 transition-all duration-700" sizes="50vw" />
-                    <div className="absolute inset-0" style={{ background: `linear-gradient(to bottom,transparent,${palette.background}ee)` }} />
-                  </div>
                   <div className="p-6 md:p-8 relative">
-                    <p className="text-[11px] uppercase tracking-[0.2em] mb-3 font-medium" style={{ color: `${palette.foreground}55` }}>← Previous Chapter</p>
+                    <p className="text-[11px] uppercase tracking-[0.2em] mb-3 font-medium" style={{ color: `${palette.foreground}8c` }}>← Previous Chapter</p>
                     <p className="font-serif text-lg md:text-xl" style={{ color: `${palette.foreground}bb` }}>{prevEvent.title}</p>
-                    <p className="text-sm mt-1 italic" style={{ color: `${palette.foreground}55` }}>{prevEvent.subtitle}</p>
+                    <p className="text-sm mt-1 italic" style={{ color: `${palette.foreground}8c` }}>{prevEvent.subtitle}</p>
                   </div>
                 </Link>
               )}
               {!prevEvent && <div />}
               {nextEvent && (
                 <Link href={`/chapter/${nextEvent.slug}`} className="group rounded-xl overflow-hidden border text-right transition-all duration-500 relative" style={{ borderColor: `${palette.foreground}08`, backgroundColor: `${palette.muted}20` }}>
-                  <div className="relative h-28 overflow-hidden">
-                    <Image src={nextEvent.heroImage} alt={nextEvent.title} fill className="object-cover object-center opacity-40 group-hover:opacity-60 group-hover:scale-105 transition-all duration-700" sizes="50vw" />
-                    <div className="absolute inset-0" style={{ background: `linear-gradient(to bottom,transparent,${palette.background}ee)` }} />
-                  </div>
                   <div className="p-6 md:p-8 relative">
-                    <p className="text-[11px] uppercase tracking-[0.2em] mb-3 font-medium" style={{ color: `${palette.foreground}55` }}>Next Chapter →</p>
+                    <p className="text-[11px] uppercase tracking-[0.2em] mb-3 font-medium" style={{ color: `${palette.foreground}8c` }}>Next Chapter →</p>
                     <p className="font-serif text-lg md:text-xl" style={{ color: `${palette.foreground}bb` }}>{nextEvent.title}</p>
-                    <p className="text-sm mt-1 italic" style={{ color: `${palette.foreground}55` }}>{nextEvent.subtitle}</p>
+                    <p className="text-sm mt-1 italic" style={{ color: `${palette.foreground}8c` }}>{nextEvent.subtitle}</p>
                   </div>
                 </Link>
               )}
@@ -950,8 +932,8 @@ export default function FourthChapterContent({ event }: ChapterProps) {
           </div>
 
           <div className="flex items-center justify-center gap-8 mb-10">
-            {[{ href: "/itinerary", label: "Itinerary" }, { href: "/rsvp", label: "RSVP" }, { href: "/travel", label: "Travel" }].map((link) => (
-              <Link key={link.href} href={link.href} className="text-[11px] uppercase tracking-[0.2em] font-body transition-colors duration-300 hover:opacity-80" style={{ color: `${palette.foreground}66` }}>{link.label}</Link>
+            {[{ href: "/itinerary", label: "Itinerary" }, { href: "/rsvp", label: "RSVP" }].map((link) => (
+              <Link key={link.href} href={link.href} className="text-[11px] uppercase tracking-[0.2em] font-body transition-colors duration-300 hover:opacity-80" style={{ color: `${palette.foreground}96` }}>{link.label}</Link>
             ))}
           </div>
           <p className="text-[11px] font-body tracking-wide mb-6" style={{ color: `${palette.foreground}40` }}>April 19–21, 2026 · Udaipur, Rajasthan</p>

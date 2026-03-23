@@ -10,7 +10,7 @@ export default function Icon() {
         style={{
           width: 32,
           height: 32,
-          background: "linear-gradient(145deg, #1a0a0a 0%, #2e1212 60%, #3d1515 100%)",
+          background: "linear-gradient(145deg, #2d1616 0%, #3f1e1e 60%, #4d2222 100%)",
           borderRadius: 6,
           display: "flex",
           alignItems: "center",

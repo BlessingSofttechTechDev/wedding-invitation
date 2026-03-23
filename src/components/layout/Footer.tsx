@@ -6,7 +6,6 @@ import { P } from "@/components/shared/RoyalPageLayout";
 const FOOTER_LINKS = [
   { href: "/itinerary", label: "Itinerary" },
   { href: "/rsvp", label: "RSVP" },
-  { href: "/travel", label: "Travel" },
 ];
 
 export default function Footer() {
@@ -85,7 +84,7 @@ export default function Footer() {
               key={link.href}
               href={link.href}
               className="text-xs md:text-[11px] uppercase tracking-[0.2em] font-body transition-colors duration-300"
-              style={{ color: `${P.cream}90` }}
+              style={{ color: `${P.cream}dc` }}
             >
               {link.label}
             </Link>
@@ -114,13 +113,13 @@ export default function Footer() {
 
         <p
           className="text-xs md:text-[11px] font-body tracking-wide mb-6 md:mb-8"
-          style={{ color: `${P.cream}80` }}
+          style={{ color: `${P.cream}d8` }}
         >
           April 19–21, 2026 · {COUPLE.location}
         </p>
 
         {/* Copyright + Blessing Softtech */}
-        <div className="flex flex-wrap items-center justify-center gap-2.5 text-sm sm:text-sm font-body tracking-wide" style={{ color: `${P.cream}75` }}>
+        <div className="flex flex-wrap items-center justify-center gap-2.5 text-sm sm:text-sm font-body tracking-wide" style={{ color: `${P.cream}c8` }}>
           <span>© 2026 All Rights Reserved</span>
           <span style={{ color: `${P.gold}45` }}>|</span>
           <a
@@ -128,7 +127,7 @@ export default function Footer() {
             target="_blank"
             rel="noopener noreferrer"
             className="inline-flex items-center gap-2 transition-opacity hover:opacity-80"
-            style={{ color: `${P.cream}85` }}
+            style={{ color: `${P.cream}e4` }}
             aria-label="Blessing Softtech"
           >
             <Image

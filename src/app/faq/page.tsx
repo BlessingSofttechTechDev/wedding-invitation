@@ -58,7 +58,7 @@ export default function FAQPage() {
                   </AccordionTrigger>
                   <AccordionContent
                     className="pb-5 font-body text-sm md:text-base leading-relaxed"
-                    style={{ color: `${P.cream}73` }}
+                    style={{ color: `${P.cream}c6` }}
                   >
                     {faq.answer}
                   </AccordionContent>
@@ -102,14 +102,14 @@ export default function FAQPage() {
                       <p className="font-body text-sm" style={{ color: `${P.cream}cc` }}>
                         {contact.name}
                       </p>
-                      <p className="font-body text-xs" style={{ color: `${P.cream}40` }}>
+                      <p className="font-body text-xs" style={{ color: `${P.cream}7c` }}>
                         {contact.role}
                       </p>
                     </div>
                   </a>
                 ))}
               </div>
-              <p className="mt-8 font-body text-xs" style={{ color: `${P.cream}30` }}>
+              <p className="mt-8 font-body text-xs" style={{ color: `${P.cream}c4` }}>
                 Or reach out to the hotel concierge during your stay.
               </p>
             </RoyalSectionFrame>
