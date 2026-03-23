@@ -52,7 +52,7 @@ export const EVENTS: WeddingEvent[] = [
     chapterNumber: 2,
     title: "The Midnight Cathedral",
     subtitle: "Sangeet | Cocktail",
-    tagline: "The night the wild took over. \n Followed by the After Party.",
+    tagline: "The night the wild took over /\n Followed by the After Party.",
     date: "20th April, 2026",
     dateShort: "Apr 20",
     day: "Monday",

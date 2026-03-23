@@ -909,20 +909,20 @@ function RoyalPrologue() {
 
       <div className="relative z-10 max-w-4xl mx-auto px-6 text-center">
         <MandalaOrnament className="rp-fade mb-8" />
-        <span className="rp-fade block text-xs md:text-[10px] uppercase tracking-[0.4em] font-body mb-8" style={{ color: `${P.gold}80` }}>
+        <span className="rp-fade block text-xs md:text-[10px] uppercase tracking-[0.4em] font-body font-semibold mb-8" style={{ color: "#f2ddb0", textShadow: "0 1px 2px rgba(0,0,0,0.35)" }}>
           The Sacred Setting
         </span>
 
         <div className="rp-arch w-36 h-52 md:w-44 md:h-60 mx-auto mb-8">
           <JharokhaArch>
-            <p className="font-serif italic text-base md:text-lg" style={{ color: `${P.gold}50` }}>उदयपुर</p>
+            <p className="font-serif italic text-base md:text-lg font-medium" style={{ color: "#f3dfb8", textShadow: "0 1px 2px rgba(0,0,0,0.35)" }}>उदयपुर</p>
           </JharokhaArch>
         </div>
 
         <h2 className="rp-fade font-serif text-3xl md:text-5xl lg:text-6xl mb-4 leading-tight" style={{ color: `${P.cream}e6` }}>
           In the Heart of the City of Lakes
         </h2>
-        <p className="rp-fade font-serif italic text-sm md:text-base mb-6" style={{ color: `${P.gold}60` }}>
+        <p className="rp-fade font-serif italic text-sm md:text-base mb-6 font-medium" style={{ color: "#edd7a6", textShadow: "0 1px 2px rgba(0,0,0,0.3)" }}>
           <span className="text-[0.85em]">झीलों की नगरी</span> — The Venice of the East
         </p>
 
