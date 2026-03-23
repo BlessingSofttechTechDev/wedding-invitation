@@ -26,7 +26,7 @@ export const metadata: Metadata = {
   metadataBase: new URL(
     process.env.NEXT_PUBLIC_SITE_URL ?? "https://tarushandsanjana.com"
   ),
-  title: "T & S — A Wedding Celebration",
+  title: "T & S  -  A Wedding Celebration",
   description:
     "Join us in celebrating the wedding of T & S. A weekend of love, laughter, and happily ever after.",
   keywords: [
@@ -38,7 +38,7 @@ export const metadata: Metadata = {
     "wedding website",
   ],
   openGraph: {
-    title: "T & S — A Wedding Celebration",
+    title: "T & S  -  A Wedding Celebration",
     description:
       "Join us in celebrating the wedding of T & S. A weekend of love, laughter, and happily ever after.",
     type: "website",
@@ -47,7 +47,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "T & S — A Wedding Celebration",
+    title: "T & S  -  A Wedding Celebration",
     description:
       "Join us in celebrating the wedding of T & S. A weekend of love, laughter, and happily ever after.",
   },

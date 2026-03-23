@@ -4,7 +4,7 @@ import Footer from "@/components/layout/Footer";
 import GalleryContent from "./gallery-content";
 
 export const metadata: Metadata = {
-  title: "Gallery — T & S Wedding",
+  title: "Gallery  -  T & S Wedding",
 };
 
 export default function GalleryPage() {

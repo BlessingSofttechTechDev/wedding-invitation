@@ -206,7 +206,7 @@ export default function LoginPage() {
           <FadeInView delay={0.3} className="mt-8 text-center">
             <p className="text-stone-600 font-body text-[11px] tracking-wide">
               Your personalized itinerary, room details, and event information
-              — all in one place.
+               -  all in one place.
             </p>
           </FadeInView>
         </FadeInView>

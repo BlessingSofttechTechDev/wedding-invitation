@@ -20,7 +20,7 @@ interface ChapterProps {
 }
 
 /* ═══════════════════════════════════════════════════════════════════
-   SVG SET — The Courtyard Edit · Victorian Hi-Tea in Udaipur Haveli
+   SVG SET  -  The Courtyard Edit · Victorian Hi-Tea in Udaipur Haveli
    (1) Haveli arch/doorway  (2) Fresco border frame  (3) Jaali lattice
    (4) Stripe canopy        (5) Floral garlands       (6) Ornamental divider
    Light palette: warm cream bg, bronze accent, dusty rose, peach
@@ -323,7 +323,7 @@ function CourtyardIntro({
         <FrescoBorderFrame accent={palette.accent} fg={palette.foreground} />
       </div>
 
-      {/* Arch above copy — avoids cramped overlay and awkward per-letter wraps */}
+      {/* Arch above copy  -  avoids cramped overlay and awkward per-letter wraps */}
       <div className="relative z-10 w-full max-w-md mx-auto px-5 sm:px-8 flex flex-col items-center text-center">
         <div className="w-full max-w-[min(280px,85vw)] md:max-w-[320px] mx-auto shrink-0">
           <HaveliArchOutline accent={palette.accent} />
@@ -369,7 +369,7 @@ function CourtyardIntro({
 }
 
 /* ═══════════════════════════════════════════════════════════════════
-   SCROLL-DRIVEN HERO — Morning Gold → Crisp Midday
+   SCROLL-DRIVEN HERO  -  Morning Gold → Crisp Midday
    Pinned scene: title + canopy + garlands + hi-tea details
    Jaali lattice parallax, dust motes, sun flares
    ═══════════════════════════════════════════════════════════════════ */
@@ -458,7 +458,7 @@ function CourtyardHero({ event }: { event: WeddingEvent }) {
     "Step through arched doorways into a courtyard dressed in pastels and heritage.",
     "Hand-painted frescoes frame every corner,",
     "fine bone china and silver service set the table.",
-    "Rajasthan's royal hospitality reimagined —",
+    "Rajasthan's royal hospitality reimagined  - ",
     "where meticulous craft meets modern editorial restraint.",
   ];
 
@@ -512,7 +512,7 @@ function CourtyardHero({ event }: { event: WeddingEvent }) {
           <FloralGarlandStrand x={350} accent={palette.accent} primary={palette.primary} />
         </svg>
 
-        {/* Hero content — stays in document flow on all breakpoints so tall blocks (Bhaat, cards) aren't covered by the next section */}
+        {/* Hero content  -  stays in document flow on all breakpoints so tall blocks (Bhaat, cards) aren't covered by the next section */}
         <div className="relative z-10 flex w-full flex-col items-center justify-start pt-[8vh] md:pt-[12vh] pb-10 md:pb-16 px-6 overflow-visible">
           <h1
             className="font-serif text-4xl md:text-6xl lg:text-7xl tracking-[0.03em] mb-3 md:mb-5"
@@ -556,12 +556,12 @@ function CourtyardHero({ event }: { event: WeddingEvent }) {
             <p className="font-serif text-xl md:text-2xl mb-1 tracking-wide" style={{ color: palette.accent }}>Bhaat</p>
             <p className="font-serif text-sm md:text-base mb-2" style={{ color: `${palette.accent}70` }}>भात</p>
             <p className="font-body text-xs md:text-[13px] leading-relaxed" style={{ color: `${palette.foreground}a0` }}>
-              This chapter includes the Bhaat (Mayra) ceremony — a pre-wedding ritual where the maternal uncle brings gifts, clothes, and sweets, honouring his role in the family.
+              This chapter includes the Bhaat (Mayra) ceremony  -  a pre-wedding ritual where the maternal uncle brings gifts, clothes, and sweets, honouring his role in the family.
             </p>
           </div>
 
 
-          {/* Hi-tea detail cards — extra bottom padding on mobile so full card + content below is visible */}
+          {/* Hi-tea detail cards  -  extra bottom padding on mobile so full card + content below is visible */}
           <div className="flex flex-wrap items-center justify-center gap-3 md:gap-6 pb-4 md:pb-2">
             {hiTeaDetails.map((d) => (
               <div
@@ -613,7 +613,7 @@ function CourtyardQuote({ event }: { event: WeddingEvent }) {
   const { palette } = event;
   const ref = useRef<HTMLDivElement>(null);
   const quote =
-    "Rajasthan reimagined inside a refined, modern setting — where meticulous Mughal craft meets editorial restraint.";
+    "Rajasthan reimagined inside a refined, modern setting  -  where meticulous Mughal craft meets editorial restraint.";
 
   useGSAP(
     () => {
@@ -656,7 +656,7 @@ function CourtyardQuote({ event }: { event: WeddingEvent }) {
 }
 
 /* ═══════════════════════════════════════════════════════════════════
-   STORY SECTION — single vibe quote
+   STORY SECTION  -  single vibe quote
    ═══════════════════════════════════════════════════════════════════ */
 
 function StorySection({ event }: { event: WeddingEvent }) {
@@ -695,7 +695,7 @@ function StorySection({ event }: { event: WeddingEvent }) {
 }
 
 /* ═══════════════════════════════════════════════════════════════════
-   DRESS CODE — Pastel Organza · Courtyard Edition
+   DRESS CODE  -  Pastel Organza · Courtyard Edition
    ═══════════════════════════════════════════════════════════════════ */
 
 function CourtyardDressCode({ event }: { event: WeddingEvent }) {
@@ -799,7 +799,7 @@ function CourtyardDressCode({ event }: { event: WeddingEvent }) {
 }
 
 /* ═══════════════════════════════════════════════════════════════════
-   GALLERY — soft masonry
+   GALLERY  -  soft masonry
    ═══════════════════════════════════════════════════════════════════ */
 
 function CourtyardMoodSection({ event }: { event: WeddingEvent }) {
@@ -842,7 +842,7 @@ function CourtyardMoodSection({ event }: { event: WeddingEvent }) {
           </h3>
 
           <p className="max-w-2xl mx-auto font-serif italic text-xl md:text-2xl leading-relaxed opacity-60">
-            A contemporary lens on Rajasthan&apos;s royal hospitality—where traditional frescoes meet refined, modern silhouettes.
+            A contemporary lens on Rajasthan&apos;s royal hospitality - where traditional frescoes meet refined, modern silhouettes.
           </p>
         </div>
 
@@ -874,7 +874,7 @@ function CourtyardVenue({ event }: { event: WeddingEvent }) {
 }
 
 /* ═══════════════════════════════════════════════════════════════════
-   MAIN — SecondChapterContent
+   MAIN  -  SecondChapterContent
    ═══════════════════════════════════════════════════════════════════ */
 
 export default function SecondChapterContent({ event }: ChapterProps) {
@@ -984,7 +984,7 @@ export default function SecondChapterContent({ event }: ChapterProps) {
         </section>
       </FadeInView>
 
-      {/* Chapter-themed footer — warm gray instead of pure white */}
+      {/* Chapter-themed footer  -  warm gray instead of pure white */}
       <footer
         className="relative"
         style={{ backgroundColor: "#d8d0c4", borderTop: `1px solid ${palette.accent}20` }}
@@ -1009,7 +1009,7 @@ export default function SecondChapterContent({ event }: ChapterProps) {
             <div className="h-px w-10 md:w-20" style={{ background: `linear-gradient(to left,transparent,${palette.accent}50)` }} />
           </div>
           <p className="text-xs md:text-[11px] font-body tracking-wide mb-6" style={{ color: `${palette.foreground}96` }}>
-            April 19–21, 2026 · Udaipur, Rajasthan
+            April 20–22, 2026 · Udaipur, Rajasthan
           </p>
           <div className="flex flex-wrap items-center justify-center gap-2.5 text-xs font-body tracking-wide" style={{ color: `${palette.foreground}5c` }}>
             <span>© 2026 All Rights Reserved</span>

@@ -10,7 +10,7 @@ const mockGuest: GuestInfo = {
   name: "Priya Sharma",
   room: "Royal Suite 204, Fairmont Udaipur",
   pickupTime: "19th April, 1:00 PM",
-  pickupLocation: "Maharana Pratap Airport, Udaipur — Arrivals",
+  pickupLocation: "Maharana Pratap Airport, Udaipur  -  Arrivals",
   events: [
     "courtyard-edit",
     "midnight-cathedral",

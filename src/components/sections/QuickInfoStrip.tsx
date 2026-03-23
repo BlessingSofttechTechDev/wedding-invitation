@@ -19,7 +19,7 @@ const INFO_ITEMS = [
       </svg>
     ),
     label: "Dates",
-    value: "Apr 19 – 21, 2026",
+    value: "Apr 20 – 22, 2026",
   },
   {
     icon: (

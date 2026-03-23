@@ -13,7 +13,7 @@ import { NeonDivider } from "./PremiumSVGs";
 gsap.registerPlugin(ScrollTrigger);
 
 /* ═══════════════════════════════════════════════════════════════════
-   1. QuoteSection — Breathing space after the hero
+   1. QuoteSection  -  Breathing space after the hero
    ═══════════════════════════════════════════════════════════════════ */
 
 export function QuoteSection({ event }: { event: WeddingEvent }) {
@@ -108,7 +108,7 @@ export function QuoteSection({ event }: { event: WeddingEvent }) {
 }
 
 /* ═══════════════════════════════════════════════════════════════════
-   2. ThrillStorySection — Premium narrative block
+   2. ThrillStorySection  -  Premium narrative block
    ═══════════════════════════════════════════════════════════════════ */
 
 export function ThrillStorySection({ event }: { event: WeddingEvent }) {
@@ -182,7 +182,7 @@ export function ThrillStorySection({ event }: { event: WeddingEvent }) {
 }
 
 /* ═══════════════════════════════════════════════════════════════════
-   3. DressCodePanel — Luxury styling card
+   3. DressCodePanel  -  Luxury styling card
    ═══════════════════════════════════════════════════════════════════ */
 
 export function DressCodePanel({ event }: { event: WeddingEvent }) {
@@ -353,7 +353,7 @@ export function DressCodePanel({ event }: { event: WeddingEvent }) {
 }
 
 /* ═══════════════════════════════════════════════════════════════════
-   4. MoodEditorialSection — Cinematic editorial spread
+   4. MoodEditorialSection  -  Cinematic editorial spread
    ═══════════════════════════════════════════════════════════════════ */
 
 export function MoodEditorialSection({ event }: { event: WeddingEvent }) {
@@ -419,7 +419,7 @@ export function MoodEditorialSection({ event }: { event: WeddingEvent }) {
 }
 
 /* ═══════════════════════════════════════════════════════════════════
-   5. ThrillVenueSection — Late-night invitation panel
+   5. ThrillVenueSection  -  Late-night invitation panel
    ═══════════════════════════════════════════════════════════════════ */
 
 export function ThrillVenueSection({ event }: { event: WeddingEvent }) {
@@ -454,7 +454,7 @@ export function ThrillVenueSection({ event }: { event: WeddingEvent }) {
 }
 
 /* ═══════════════════════════════════════════════════════════════════
-   6. ThrillFooter — Premium cinematic footer
+   6. ThrillFooter  -  Premium cinematic footer
    ═══════════════════════════════════════════════════════════════════ */
 
 export function ThrillFooter({ event }: { event: WeddingEvent }) {
@@ -494,7 +494,7 @@ export function ThrillFooter({ event }: { event: WeddingEvent }) {
           className="text-[11px] font-body tracking-wide mb-6"
           style={{ color: "rgba(255,255,255,0.25)" }}
         >
-          April 19–21, 2026 · Udaipur, Rajasthan
+          April 20–22, 2026 · Udaipur, Rajasthan
         </p>
 
         <div

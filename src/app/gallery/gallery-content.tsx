@@ -30,10 +30,10 @@ const GALLERY_ITEMS: GalleryItem[] = EVENTS.flatMap((event, eventIdx) =>
     src,
     aspect: (["tall", "square", "wide", "square"] as AspectType[])[imgIdx % 4],
     label: [
-      `${event.title} — ambience`,
-      `${event.title} — details`,
-      `${event.title} — atmosphere`,
-      `${event.title} — moments`,
+      `${event.title}  -  ambience`,
+      `${event.title}  -  details`,
+      `${event.title}  -  atmosphere`,
+      `${event.title}  -  moments`,
     ][imgIdx % 4],
   }))
 );

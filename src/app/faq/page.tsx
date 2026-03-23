@@ -20,7 +20,7 @@ import {
 } from "@/components/shared/RoyalPageLayout";
 
 export const metadata: Metadata = {
-  title: "FAQ — T & S Wedding",
+  title: "FAQ  -  T & S Wedding",
 };
 
 export default function FAQPage() {

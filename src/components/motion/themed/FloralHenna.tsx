@@ -4,7 +4,7 @@ import { useMemo } from "react";
 import { motion, useReducedMotion } from "framer-motion";
 
 /**
- * Chapter 1 — The Courtyard Edit (Lunch)
+ * Chapter 1  -  The Courtyard Edit (Lunch)
  * "Victorian Hi-Tea / Jaipur Haveli" atmosphere:
  * - Falling flower petals (pastel blush, lavender, sage)
  * - Wisteria-like cascading petal chains
@@ -120,7 +120,7 @@ export default function FloralHenna() {
         </motion.div>
       ))}
 
-      {/* Henna line-art tracing — left edge */}
+      {/* Henna line-art tracing  -  left edge */}
       <svg
         className="absolute left-0 top-0 h-full w-20 md:w-32 opacity-[0.08]"
         viewBox="0 0 100 400"
@@ -151,7 +151,7 @@ export default function FloralHenna() {
         />
       </svg>
 
-      {/* Henna line-art tracing — right edge */}
+      {/* Henna line-art tracing  -  right edge */}
       <svg
         className="absolute right-0 top-0 h-full w-20 md:w-32 opacity-[0.08]"
         viewBox="0 0 100 400"

@@ -85,7 +85,7 @@ export function StorySection() {
         {/* Editorial paragraph */}
         <FadeInView delay={0.36}>
           <p className="font-body text-sm md:text-[15px] text-stone-400/90 leading-[1.8] max-w-2xl mx-auto">
-            She grew up in Goregaon, he in Pune — both foodies, both
+            She grew up in Goregaon, he in Pune  -  both foodies, both
             dreamers. They first crossed paths in Mumbai before heading to
             London for their masters. What started as friendship turned into
             something neither expected. Now, against the backdrop of

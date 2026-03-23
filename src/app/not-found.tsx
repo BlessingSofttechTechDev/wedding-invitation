@@ -8,7 +8,7 @@ export default function NotFound() {
       </p>
       <h1 className="font-serif text-5xl md:text-7xl mb-6">404</h1>
       <p className="text-stone-400 text-lg mb-10 text-center max-w-md">
-        This page doesn&apos;t exist — but the celebration does. Let&apos;s get
+        This page doesn&apos;t exist  -  but the celebration does. Let&apos;s get
         you back on track.
       </p>
       <Link

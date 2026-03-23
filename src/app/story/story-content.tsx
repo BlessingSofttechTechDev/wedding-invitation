@@ -12,12 +12,12 @@ import {
   RoyalPageWrapper,
 } from "@/components/shared/RoyalPageLayout";
 
-/** Single editorial image — venue only (meaningful, one network decode). */
+/** Single editorial image  -  venue only (meaningful, one network decode). */
 const VENUE_IMAGE =
   "/cdn-images/f_auto,q_auto:good,w_1600/v1773415146/fairmont_rbltfh.jpg";
 
 /* ─────────────────────────────────────────────────────────────── */
-/*  Light ornament — fewer nodes than full mehendi border          */
+/*  Light ornament  -  fewer nodes than full mehendi border          */
 /* ─────────────────────────────────────────────────────────────── */
 
 function GoldRule({ className = "" }: { className?: string }) {
@@ -47,7 +47,7 @@ function GoldRule({ className = "" }: { className?: string }) {
 }
 
 /* ─────────────────────────────────────────────────────────────── */
-/*  Hero — gradient only, no grain / no parallax / no photo        */
+/*  Hero  -  gradient only, no grain / no parallax / no photo        */
 /* ─────────────────────────────────────────────────────────────── */
 
 function StoryHero() {
@@ -64,7 +64,7 @@ function StoryHero() {
         `,
       }}
     >
-      {/* Subtle arch — static SVG, no animation */}
+      {/* Subtle arch  -  static SVG, no animation */}
       <div className="pointer-events-none absolute inset-0 flex items-start justify-center pt-24 opacity-[0.07]">
         <svg
           viewBox="0 0 400 320"
@@ -147,7 +147,7 @@ function StoryHero() {
 }
 
 /* ─────────────────────────────────────────────────────────────── */
-/*  Prose section — typography-first                               */
+/*  Prose section  -  typography-first                               */
 /* ─────────────────────────────────────────────────────────────── */
 
 function ProseSection({
@@ -308,7 +308,7 @@ function VenueMoment() {
           >
             <Image
               src={VENUE_IMAGE}
-              alt={`${COUPLE.venue} — ${COUPLE.location}`}
+              alt={`${COUPLE.venue}  -  ${COUPLE.location}`}
               fill
               className="object-cover"
               sizes="(max-width: 1024px) 100vw, 896px"
@@ -345,7 +345,7 @@ function VenueMoment() {
 }
 
 /* ─────────────────────────────────────────────────────────────── */
-/*  Timeline — each milestone animates in on scroll                 */
+/*  Timeline  -  each milestone animates in on scroll                 */
 /* ─────────────────────────────────────────────────────────────── */
 
 const MILESTONES = [
@@ -357,22 +357,22 @@ const MILESTONES = [
   {
     year: "2020",
     title: "Off to London",
-    desc: "Both pursuing their Masters in London — late-night chai and new cities drew them close again.",
+    desc: "Both pursuing their Masters in London  -  late-night chai and new cities drew them close again.",
   },
   {
     year: "2021",
     title: "Friendship Becomes Love",
-    desc: "Somewhere between shared adventures, friendship quietly turned into love — right time, right person.",
+    desc: "Somewhere between shared adventures, friendship quietly turned into love  -  right time, right person.",
   },
   {
     year: "2023",
     title: "The Families Unite",
-    desc: "December 2023 — with blessings from both families, every piece fell beautifully into place.",
+    desc: "December 2023  -  with blessings from both families, every piece fell beautifully into place.",
   },
   {
     year: "2026",
     title: "The Celebration",
-    desc: "In Udaipur, their story arrives at its most magical moment — three days, countless memories, one celebration.",
+    desc: "In Udaipur, their story arrives at its most magical moment  -  three days, countless memories, one celebration.",
   },
 ] as const;
 
@@ -410,7 +410,7 @@ function Timeline() {
         </FadeInView>
 
         <div className="relative pl-0">
-          {/* Center axis — milestones alternate left / right of this line */}
+          {/* Center axis  -  milestones alternate left / right of this line */}
           <div
             className="absolute left-[11px] top-2 bottom-2 w-px sm:left-1/2 sm:-translate-x-1/2"
             style={{
@@ -426,7 +426,7 @@ function Timeline() {
                   key={m.year}
                   className="relative grid grid-cols-1 pl-10 sm:grid-cols-2 sm:gap-x-12 sm:gap-y-0 sm:pl-0"
                 >
-                  {/* Marker sits on the center line (not a grid item — avoids pushing content into one column) */}
+                  {/* Marker sits on the center line (not a grid item  -  avoids pushing content into one column) */}
                   <div
                     className="absolute left-[11px] top-1.5 z-10 size-2.5 -translate-x-1/2 rotate-45 sm:left-1/2 sm:-translate-x-1/2"
                     style={{
@@ -482,7 +482,7 @@ function Timeline() {
 }
 
 /* ─────────────────────────────────────────────────────────────── */
-/*  Parents' blessing — simplified frame                           */
+/*  Parents' blessing  -  simplified frame                           */
 /* ─────────────────────────────────────────────────────────────── */
 
 function ParentsBlessingSection() {
@@ -639,7 +639,7 @@ function StoryCTA() {
             className="mx-auto mb-10 max-w-md text-sm leading-relaxed md:text-[15px]"
             style={{ color: `${P.cream}d6` }}
           >
-            Three days of celebration, woven from heritage and love — we&apos;d
+            Three days of celebration, woven from heritage and love  -  we&apos;d
             love to share it with you.
           </p>
         </FadeInView>
@@ -701,16 +701,16 @@ export default function StoryPageContent() {
         </ProseParagraph>
         <ProseParagraph>
           Their story began in what can only be described as a true Bollywood
-          meet-cute — the kind you see on screen and think, &ldquo;that only
+          meet-cute  -  the kind you see on screen and think, &ldquo;that only
           happens in movies.&rdquo; Sometimes, life writes better scripts.
         </ProseParagraph>
         <ProseParagraph>
           In a city of millions, fate chose an ordinary day to introduce two
-          extraordinary souls — the first page of a story that would span
+          extraordinary souls  -  the first page of a story that would span
           continents.
         </ProseParagraph>
         <PullQuote>
-          Some love stories start with a quiet certainty — that you&apos;ve
+          Some love stories start with a quiet certainty  -  that you&apos;ve
           found someone who understands your silence.
         </PullQuote>
       </ProseSection>
@@ -724,13 +724,13 @@ export default function StoryPageContent() {
         titleAccent="Calling"
       >
         <ProseParagraph>
-          Life carried them both to London for their Masters — different
+          Life carried them both to London for their Masters  -  different
           universities, same city, same appetite for adventure. Friendly
           catch-ups turned into something neither of them expected.
         </ProseParagraph>
         <ProseParagraph>
           Somewhere between late-night chai, weekend wanderings, and shared
-          laughter, friendship quietly became love — the kind that feels like
+          laughter, friendship quietly became love  -  the kind that feels like
           right time, right person.
         </ProseParagraph>
         <PullQuote>
@@ -751,8 +751,8 @@ export default function StoryPageContent() {
       >
         <ProseParagraph>
           By December 2023, with their families&apos; blessings, everything fell
-          beautifully into place. Two families — different cities, different
-          traditions — united by the same joy.
+          beautifully into place. Two families  -  different cities, different
+          traditions  -  united by the same joy.
         </ProseParagraph>
         <ProseParagraph>
           The Goels and the Harlalkas came together for more than a ceremony: a
@@ -773,17 +773,17 @@ export default function StoryPageContent() {
         titleAccent="Udaipur"
       >
         <ProseParagraph>
-          Against the timeless romance of Udaipur — palaces, lakes, and the
-          Aravallis as quiet witnesses — their story arrives at its most magical
+          Against the timeless romance of Udaipur  -  palaces, lakes, and the
+          Aravallis as quiet witnesses  -  their story arrives at its most magical
           moment.
         </ProseParagraph>
         <ProseParagraph>
           A three-day celebration across intimate courtyards, gilded nights,
-          sacred rituals, and joy written with intention — each gathering its
+          sacred rituals, and joy written with intention  -  each gathering its
           own memory.
         </ProseParagraph>
         <PullQuote>
-          Not just a wedding — a story told across three days, many moments, and
+          Not just a wedding  -  a story told across three days, many moments, and
           one breathtaking city.
         </PullQuote>
       </ProseSection>

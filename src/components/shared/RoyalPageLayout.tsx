@@ -4,7 +4,7 @@ import { ReactNode } from "react";
 import { motion } from "framer-motion";
 
 /* ═══════════════════════════════════════════════════════════
-   Royal Color Palette — shared across all pages
+   Royal Color Palette  -  shared across all pages
    (Cream is intentionally a touch deeper than pure ivory so body
    copy stays readable on maroon; pair with higher alpha suffixes
    like …d8 / …e0 hex alpha suffixes for paragraphs.)
@@ -17,7 +17,7 @@ export const P = {
   bg: "#2d1616",
   bgDeep: "#221010",
   muted: "#3f1e1e",
-  /** Slightly deeper than pure cream — reads better on maroon backgrounds */
+  /** Slightly deeper than pure cream  -  reads better on maroon backgrounds */
   cream: "#ebe4d6",
 } as const;
 
@@ -25,7 +25,7 @@ const GRAIN_URL =
   "url(\"data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.5'/%3E%3C/svg%3E\")";
 
 /* ═══════════════════════════════════════════════════════════
-   Royal Page Hero — ornamental page header with arch framing
+   Royal Page Hero  -  ornamental page header with arch framing
    ═══════════════════════════════════════════════════════════ */
 
 interface RoyalPageHeroProps {
@@ -161,7 +161,7 @@ export function RoyalPageHero({
 }
 
 /* ═══════════════════════════════════════════════════════════
-   Royal Flourish — gold ornamental divider
+   Royal Flourish  -  gold ornamental divider
    ═══════════════════════════════════════════════════════════ */
 
 export function RoyalFlourish({ className = "" }: { className?: string }) {
@@ -201,7 +201,7 @@ export function RoyalFlourish({ className = "" }: { className?: string }) {
 }
 
 /* ═══════════════════════════════════════════════════════════
-   Royal Divider — section separator with mandala diamond
+   Royal Divider  -  section separator with mandala diamond
    ═══════════════════════════════════════════════════════════ */
 
 export function RoyalDivider({ className = "" }: { className?: string }) {
@@ -241,7 +241,7 @@ export function RoyalDivider({ className = "" }: { className?: string }) {
 }
 
 /* ═══════════════════════════════════════════════════════════
-   Royal Section Frame — ornamental card wrapper
+   Royal Section Frame  -  ornamental card wrapper
    ═══════════════════════════════════════════════════════════ */
 
 interface RoyalSectionFrameProps {
@@ -306,7 +306,7 @@ export function RoyalSectionFrame({
 }
 
 /* ═══════════════════════════════════════════════════════════
-   Royal Section Divider — full-width with maroon glow
+   Royal Section Divider  -  full-width with maroon glow
    ═══════════════════════════════════════════════════════════ */
 
 export function RoyalSectionBorder() {
@@ -319,7 +319,7 @@ export function RoyalSectionBorder() {
 }
 
 /* ═══════════════════════════════════════════════════════════
-   Royal Page Wrapper — consistent page background
+   Royal Page Wrapper  -  consistent page background
    ═══════════════════════════════════════════════════════════ */
 
 export function RoyalPageWrapper({ children }: { children: ReactNode }) {

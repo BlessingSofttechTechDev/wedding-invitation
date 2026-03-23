@@ -1,5 +1,5 @@
 /* ═══════════════════════════════════════════════════════════════════
-   Theme — The Thrill Theory · उन्मुक्त रात्रि
+   Theme  -  The Thrill Theory · उन्मुक्त रात्रि
    Deep plum + neon magenta + cyan + gold. Premium afterparty palette.
    ═══════════════════════════════════════════════════════════════════ */
 

@@ -20,7 +20,7 @@ interface ChapterProps {
 }
 
 /* ═══════════════════════════════════════════════════════════════════
-   SVG SET — The Midnight Cathedral · रात्रि महोत्सव
+   SVG SET  -  The Midnight Cathedral · रात्रि महोत्सव
    Deep indigo/emerald + gold. Architectural drama.
    (1) Cathedral arches  (2) Chandelier clusters  (3) Baroque overlay
    (4) Stage canopy      (5) Corner filigree       (6) Velvet drapes
@@ -29,7 +29,7 @@ interface ChapterProps {
 function CathedralArches({ accent }: { accent: string }) {
   return (
     <svg viewBox="0 0 600 700" className="cathedral-arches w-[320px] md:w-[480px] lg:w-[560px] mx-auto" fill="none">
-      {/* Outer arch — grand pointed gothic-mughal hybrid */}
+      {/* Outer arch  -  grand pointed gothic-mughal hybrid */}
       <path
         className="arch-s"
         d="M40 700 L40 320 Q40 200 120 130 Q180 78 250 42 Q280 28 300 22
@@ -38,7 +38,7 @@ function CathedralArches({ accent }: { accent: string }) {
         strokeWidth="1.6"
         strokeLinecap="round"
       />
-      {/* Second arch — slightly inset */}
+      {/* Second arch  -  slightly inset */}
       <path
         className="arch-s"
         d="M70 695 L70 330 Q70 218 145 152 Q200 102 260 68 Q285 52 300 46
@@ -47,7 +47,7 @@ function CathedralArches({ accent }: { accent: string }) {
         strokeWidth="0.9"
         opacity="0.55"
       />
-      {/* Third arch — innermost */}
+      {/* Third arch  -  innermost */}
       <path
         className="arch-s"
         d="M105 690 L105 340 Q105 240 170 180 Q220 130 270 100 Q290 88 300 82
@@ -66,7 +66,7 @@ function CathedralArches({ accent }: { accent: string }) {
       />
       <circle className="arch-s" cx="300" cy="10" r="6" stroke={accent} strokeWidth="0.7" opacity="0.5" />
       <circle className="arch-s" cx="300" cy="10" r="2.5" fill={`${accent}25`} />
-      {/* Capitals — decorative column tops */}
+      {/* Capitals  -  decorative column tops */}
       <path className="arch-s" d="M30 320 L50 310 L50 330Z" stroke={accent} strokeWidth="0.5" opacity="0.3" fill={`${accent}08`} />
       <path className="arch-s" d="M570 320 L550 310 L550 330Z" stroke={accent} strokeWidth="0.5" opacity="0.3" fill={`${accent}08`} />
       {/* Column fluting */}
@@ -92,7 +92,7 @@ function ChandelierCluster({ accent, id }: { accent: string; id: string }) {
       <path className="ch-chain" d="M60 0 L60 30" stroke={accent} strokeWidth="0.6" opacity="0.4" />
       {/* Crown ring */}
       <ellipse className="ch-frame" cx="60" cy="35" rx="28" ry="6" stroke={accent} strokeWidth="0.5" opacity="0.4" />
-      {/* Arms — 5 tiers radiating outward */}
+      {/* Arms  -  5 tiers radiating outward */}
       {[-2, -1, 0, 1, 2].map((i) => {
         const x = 60 + i * 18;
         const bend = 50 + Math.abs(i) * 12;
@@ -105,11 +105,11 @@ function ChandelierCluster({ accent, id }: { accent: string; id: string }) {
           </g>
         );
       })}
-      {/* Center drop — large crystal */}
+      {/* Center drop  -  large crystal */}
       <path className="ch-frame" d="M60 35 L60 75" stroke={accent} strokeWidth="0.4" opacity="0.3" />
       <path className="ch-crystal" d="M55 75 L60 95 L65 75Z" stroke={accent} strokeWidth="0.4" opacity="0.35" fill={`${accent}08`} />
       <circle className="ch-crystal" cx="60" cy="98" r="2.5" fill={`${accent}18`} stroke={accent} strokeWidth="0.3" />
-      {/* Glow halo — animated */}
+      {/* Glow halo  -  animated */}
       <circle className="ch-glow" cx="60" cy="65" r="40" fill={`${accent}00`} />
       {/* Swag chains between arms */}
       <path className="ch-frame" d="M42 53 Q50 58 60 55 Q70 58 78 53" stroke={accent} strokeWidth="0.2" opacity="0.2" />
@@ -343,7 +343,7 @@ function MidnightCathedralIntro({
 }
 
 /* ═══════════════════════════════════════════════════════════════════
-   SCROLL-DRIVEN HERO — 4 Cinematic Beats
+   SCROLL-DRIVEN HERO  -  4 Cinematic Beats
    Beat 1: Architecture Rises (arches complete, chandeliers ignite)
    Beat 2: Wild Takes Over (baroque overlays, gold dust, velvet drapes)
    Beat 3: Energy Builds (confetti sparks, glow pulse, light streaks)
@@ -426,7 +426,7 @@ function CathedralHero({ event }: { event: WeddingEvent }) {
 
       scrollTl.fromTo(".b1-content", { opacity: 0.8 }, { opacity: 1, duration: 0.06 }, 0);
 
-      /* ── Beat 2: Wild Takes Over — baroque projections + gold dust ── */
+      /* ── Beat 2: Wild Takes Over  -  baroque projections + gold dust ── */
       scrollTl.fromTo(
         ".cathedral-bg",
         { background: `linear-gradient(180deg,#050d08 0%,#0a0f1a 30%,#0d0818 60%,${palette.background} 100%)` },
@@ -438,7 +438,7 @@ function CathedralHero({ event }: { event: WeddingEvent }) {
       scrollTl.to(".lyr-drape-l", { x: -15, duration: 0.3 }, 0.22);
       scrollTl.to(".lyr-drape-r", { x: 15, duration: 0.3 }, 0.22);
 
-      /* ── Beat 3: Energy Builds — confetti sparks, glow pulse, light streaks ── */
+      /* ── Beat 3: Energy Builds  -  confetti sparks, glow pulse, light streaks ── */
       scrollTl.fromTo(
         ".cathedral-bg",
         { background: `linear-gradient(180deg,#0d0818 0%,#1a0f2e 30%,#2a1028 60%,${palette.background} 100%)` },
@@ -459,7 +459,7 @@ function CathedralHero({ event }: { event: WeddingEvent }) {
         0.55
       );
 
-      /* ── Beat 4: Darbar Reveal — stage canopy + golden halo ── */
+      /* ── Beat 4: Darbar Reveal  -  stage canopy + golden halo ── */
       scrollTl.to(canopyPaths, { strokeDashoffset: 0, duration: 0.15, stagger: 0.01, ease: "power2.inOut" }, 0.72);
       scrollTl.fromTo(".stage-canopy", { opacity: 0 }, { opacity: 1, duration: 0.1 }, 0.72);
       scrollTl.fromTo(".stage-halo", { opacity: 0, scale: 0.6 }, { opacity: 0.25, scale: 1.2, duration: 0.2, ease: "power2.out" }, 0.78);
@@ -473,7 +473,7 @@ function CathedralHero({ event }: { event: WeddingEvent }) {
   return (
     <section ref={wrapRef} className="h-[85vh] sm:h-[105vh]">
       <div ref={pinRef} className="relative w-full h-screen overflow-hidden">
-        {/* Background — transitions through indigo → amethyst → midnight wine */}
+        {/* Background  -  transitions through indigo → amethyst → midnight wine */}
         <div
           className="cathedral-bg absolute inset-0"
           style={{ background: `linear-gradient(180deg,#050d08 0%,#0a0f1a 30%,#0d0818 60%,${palette.background} 100%)` }}
@@ -568,7 +568,7 @@ function CathedralHero({ event }: { event: WeddingEvent }) {
           <CathedralArches accent={palette.accent} />
         </div>
 
-        {/* Chandeliers — positioned across vault */}
+        {/* Chandeliers  -  positioned across vault */}
         <div className="absolute top-6 md:top-10 left-0 right-0 flex justify-center items-start gap-10 md:gap-20 pointer-events-none">
           {["h1", "h2", "h3"].map((id) => (
             <div key={id} className="hero-chandelier opacity-0">
@@ -690,7 +690,7 @@ function StorySection({ event }: { event: WeddingEvent }) {
 }
 
 /* ═══════════════════════════════════════════════════════════════════
-   DRESS CODE — Gilded After Dark
+   DRESS CODE  -  Gilded After Dark
    ═══════════════════════════════════════════════════════════════════ */
 
 function CathedralDressCode({ event }: { event: WeddingEvent }) {
@@ -828,7 +828,7 @@ function CathedralVenue({ event }: { event: WeddingEvent }) {
 }
 
 /* ═══════════════════════════════════════════════════════════════════
-   MAIN — FourthChapterContent
+   MAIN  -  FourthChapterContent
    ═══════════════════════════════════════════════════════════════════ */
 
 export default function FourthChapterContent({ event }: ChapterProps) {
@@ -920,7 +920,7 @@ export default function FourthChapterContent({ event }: ChapterProps) {
           </p>
           <p className="text-[10px] tracking-[0.3em] font-body mb-10" style={{ color: `${palette.accent}55` }}>{COUPLE.hashtag}</p>
 
-          <p className="text-[11px] font-body tracking-wide mb-6" style={{ color: `${palette.foreground}6a` }}>April 19–21, 2026 · Udaipur, Rajasthan</p>
+          <p className="text-[11px] font-body tracking-wide mb-6" style={{ color: `${palette.foreground}6a` }}>April 20–22, 2026 · Udaipur, Rajasthan</p>
           <div className="flex flex-wrap items-center justify-center gap-2.5 text-xs font-body tracking-wide" style={{ color: `${palette.foreground}5c` }}>
             <span>© 2026 All Rights Reserved</span>
             <span style={{ color: `${palette.foreground}40` }}>|</span>

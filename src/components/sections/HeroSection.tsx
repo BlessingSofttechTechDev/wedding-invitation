@@ -46,7 +46,7 @@ export function HeroSection() {
   const contentY = useTransform(scrollYProgress, [0, 1], ["0%", "12%"]);
   const contentOpacity = useTransform(scrollYProgress, [0, 0.75], [1, 0]);
 
-  const formattedDate = "April 20–21, 2026";
+  const formattedDate = "April 20–22, 2026";
 
   return (
     <section

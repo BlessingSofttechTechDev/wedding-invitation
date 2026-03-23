@@ -25,7 +25,7 @@ export function useWardrobePlanner(initialChapter?: string) {
     const [activeAccessories, setActiveAccessories] = useState<string[]>([]);
     const [userAvatar, setUserAvatar] = useState<string | null>(null);
 
-    // Garment selection — the core of the dress-up engine
+    // Garment selection  -  the core of the dress-up engine
     const [selectedLookMen, setSelectedLookMen] = useState<Look | null>(null);
     const [selectedLookWomen, setSelectedLookWomen] = useState<Look | null>(null);
 

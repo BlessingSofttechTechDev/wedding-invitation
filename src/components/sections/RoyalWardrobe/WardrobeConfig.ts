@@ -16,7 +16,7 @@ export const W = {
   womenLehenga: "/images/wardrobe/women_heritage_red_lehanga_gold_1772910224600.png",
   coutureHim: "/images/wardrobe/couture_him.png",
   coutureHer: "/images/wardrobe/couture_her.png",
-  // Lookbook images (per chapter — "The Lookbook" view)
+  // Lookbook images (per chapter  -  "The Lookbook" view)
   courtyardIllustration: "/cdn-images/v1773253847/Screenshot_2026-03-11_at_11.57.48_PM_x5cn0k.png",
   midnightIllustration: "/cdn-images/v1773253898/Screenshot_2026-03-12_at_12.01.29_AM_wkbszv.png",
   worldIllustration: "/cdn-images/v1773253926/Screenshot_2026-03-12_at_12.01.51_AM_pnjomb.png",
@@ -106,28 +106,28 @@ export const wardrobeConfig: Record<string, ChapterWardrobe> = {
       men: ["Tan leather loafers", "Kolhapuri chappals", "Suede mules"],
       women: ["Block heels in pastel tones", "Embroidered juttis", "Strappy flats"],
     },
-    etiquetteNote: "This is a daytime garden affair beneath courtyard arches. Let your outfit breathe with the breeze — pastels and light fabrics honour the haveli setting.",
+    etiquetteNote: "This is a daytime garden affair beneath courtyard arches. Let your outfit breathe with the breeze  -  pastels and light fabrics honour the haveli setting.",
     animationPreset: "fade",
   },
 
   "midnight-cathedral": {
     id: "midnight-cathedral",
     title: "The Midnight Cathedral",
-    moodLine: "Cathedral arches meet reckless glamour — dress for the night that never ends.",
+    moodLine: "Cathedral arches meet reckless glamour  -  dress for the night that never ends.",
     dressCode: {
       title: "Gilded After Dark",
-      description: "The Sangeet demands drama. Cathedral-scale grandeur meets uninhibited celebration — shimmer, depth, and bold luxury under arched ceilings.",
+      description: "The Sangeet demands drama. Cathedral-scale grandeur meets uninhibited celebration  -  shimmer, depth, and bold luxury under arched ceilings.",
     },
     mood: "Drama, shimmer, bold luxury",
     men: [
-      { id: "mc-m-1", name: "Black Zardosi Sherwani", description: "Gold floral zardosi on midnight — high collar, commanding presence.", image: W.midnightIllustration, tags: ["Sherwani", "Embroidered"] },
+      { id: "mc-m-1", name: "Black Zardosi Sherwani", description: "Gold floral zardosi on midnight  -  high collar, commanding presence.", image: W.midnightIllustration, tags: ["Sherwani", "Embroidered"] },
       { id: "mc-m-2", name: "Velvet Metallic Achkan", description: "Dark velvet base with gold embroidery and structural shoulders.", image: W.midnightIllustration, tags: ["Velvet", "Bold"] },
-      { id: "mc-m-3", name: "Gold Statement Jacket", description: "Metallic gold blazer with antique buttons — unapologetic glamour.", image: W.midnightIllustration, tags: ["Metallic", "Statement"] },
+      { id: "mc-m-3", name: "Gold Statement Jacket", description: "Metallic gold blazer with antique buttons  -  unapologetic glamour.", image: W.midnightIllustration, tags: ["Metallic", "Statement"] },
     ],
     women: [
       { id: "mc-w-1", name: "Sculpted Gold Gown", description: "Off-shoulder metallic gold with architectural draping and train.", image: W.midnightIllustration, tags: ["Metallic", "Glamour"] },
       { id: "mc-w-2", name: "Sequined Lehanga", description: "Full-volume sequined skirt with corset blouse in bronze.", image: W.midnightIllustration, tags: ["Sequin", "Bold"] },
-      { id: "mc-w-3", name: "Emerald Shimmer Drape", description: "Deep emerald saree gown with crystal embellishment — opulent.", image: W.midnightIllustration, tags: ["Shimmer", "Evening"] },
+      { id: "mc-w-3", name: "Emerald Shimmer Drape", description: "Deep emerald saree gown with crystal embellishment  -  opulent.", image: W.midnightIllustration, tags: ["Shimmer", "Evening"] },
     ],
     illustrationImage: W.midnightIllustration,
     palette: {
@@ -152,7 +152,7 @@ export const wardrobeConfig: Record<string, ChapterWardrobe> = {
       men: ["Velvet mojaris with gold embroidery", "Patent leather boots"],
       women: ["Crystal-embellished stilettos", "Metallic strappy sandals"],
     },
-    etiquetteNote: "This is the Sangeet — the night of music, dance, and unrestrained celebration. Embrace shimmer and drama without apology. Conservative restraint can rest tonight.",
+    etiquetteNote: "This is the Sangeet  -  the night of music, dance, and unrestrained celebration. Embrace shimmer and drama without apology. Conservative restraint can rest tonight.",
     animationPreset: "elegant",
   },
 
@@ -162,18 +162,18 @@ export const wardrobeConfig: Record<string, ChapterWardrobe> = {
     moodLine: "Sun-kissed ease where every city they've called home meets in one golden afternoon.",
     dressCode: {
       title: "The Linen Collective",
-      description: "An intimate lakeside lunch mapping their journey — Mumbai, Pune, London — in natural fabrics, warm neutrals, and the art of effortless refinement.",
+      description: "An intimate lakeside lunch mapping their journey  -  Mumbai, Pune, London  -  in natural fabrics, warm neutrals, and the art of effortless refinement.",
     },
     mood: "Relaxed luxury travel",
     men: [
       { id: "woo-m-1", name: "Linen Blazer", description: "Cream or sand double-breasted, open collar, lakeside-ready.", image: "/cdn-unsplash/photo-1594938298603-c8148c4dae35?w=800&q=80", tags: ["Linen", "Relaxed"] },
-      { id: "woo-m-2", name: "Tailored Earth Tones", description: "Tan trousers with olive shirt — refined ease.", image: "/cdn-unsplash/photo-1488161628813-244a2ceba24b?w=800&q=80", tags: ["Resort", "Minimal"] },
+      { id: "woo-m-2", name: "Tailored Earth Tones", description: "Tan trousers with olive shirt  -  refined ease.", image: "/cdn-unsplash/photo-1488161628813-244a2ceba24b?w=800&q=80", tags: ["Resort", "Minimal"] },
       { id: "woo-m-3", name: "Neutral Suit", description: "Soft structure in warm neutrals, sun-ready.", image: "/cdn-unsplash/photo-1593032465175-481ac7f401a0?w=800&q=80", tags: ["Neutral", "Smart Casual"] },
     ],
     women: [
       { id: "woo-w-1", name: "Embroidered Co-ords", description: "Sleeveless vest with wide-leg trousers in raw silk.", image: "/cdn-unsplash/photo-1583391733956-6c70273b586e?w=800&q=80", tags: ["Linen", "Resort"] },
-      { id: "woo-w-2", name: "Draped Kaftan", description: "Champagne or beige with elegant layering — effortless.", image: "/cdn-unsplash/photo-1515886657613-9f3515b0c78f?w=800&q=80", tags: ["Kaftan", "Light"] },
-      { id: "woo-w-3", name: "Resort Midi Dress", description: "Terracotta linen with gold accessories — warm and easy.", image: "/cdn-unsplash/photo-1496747611176-843222e1e57c?w=800&q=80", tags: ["Resort", "Minimal"] },
+      { id: "woo-w-2", name: "Draped Kaftan", description: "Champagne or beige with elegant layering  -  effortless.", image: "/cdn-unsplash/photo-1515886657613-9f3515b0c78f?w=800&q=80", tags: ["Kaftan", "Light"] },
+      { id: "woo-w-3", name: "Resort Midi Dress", description: "Terracotta linen with gold accessories  -  warm and easy.", image: "/cdn-unsplash/photo-1496747611176-843222e1e57c?w=800&q=80", tags: ["Resort", "Minimal"] },
     ],
     illustrationImage: W.worldIllustration,
     palette: {
@@ -198,23 +198,23 @@ export const wardrobeConfig: Record<string, ChapterWardrobe> = {
       men: ["Tan leather loafers", "Espadrilles", "Clean leather sandals"],
       women: ["Block-heel sandals", "Woven flats", "Leather espadrilles"],
     },
-    etiquetteNote: "An intimate lakeside afternoon — dress for sunlit ease. The setting is warm and open; let comfort guide your elegance. No one has ever been underdressed in linen by the water.",
+    etiquetteNote: "An intimate lakeside afternoon  -  dress for sunlit ease. The setting is warm and open; let comfort guide your elegance. No one has ever been underdressed in linen by the water.",
     animationPreset: "fade",
   },
 
   "royal-court": {
     id: "royal-court",
     title: "The Royal Court",
-    moodLine: "Where Mughal splendour meets living craft — dress as though the court awaits you.",
+    moodLine: "Where Mughal splendour meets living craft  -  dress as though the court awaits you.",
     dressCode: {
       title: "Heritage in Every Thread",
-      description: "The wedding ceremony — the most sacred chapter. Mughal court architecture, couture craftsmanship, and heritage textiles converge beneath the Durbar Hall.",
+      description: "The wedding ceremony  -  the most sacred chapter. Mughal court architecture, couture craftsmanship, and heritage textiles converge beneath the Durbar Hall.",
     },
     mood: "Grand Indian heritage",
     men: [
       { id: "rc-m-1", name: "Ceremonial Sherwani", description: "Gold and cream mirror-work sherwani with churidar and mojaris.", image: "/cdn-unsplash/photo-1594938298603-c8148c4dae35?w=800&q=80", tags: ["Sherwani", "Traditional"] },
-      { id: "rc-m-2", name: "Heritage Bandhgala", description: "Raw silk bandhgala with antique gold buttons — understated grandeur.", image: "/cdn-unsplash/photo-1617130863154-8250122e8f5a?w=800&q=80", tags: ["Bandhgala", "Heritage"] },
-      { id: "rc-m-3", name: "Embroidered Achkan", description: "Full traditional with safa — court-worthy elegance.", image: "/cdn-unsplash/photo-1593032465175-481ac7f401a0?w=800&q=80", tags: ["Achkan", "Mojaris"] },
+      { id: "rc-m-2", name: "Heritage Bandhgala", description: "Raw silk bandhgala with antique gold buttons  -  understated grandeur.", image: "/cdn-unsplash/photo-1617130863154-8250122e8f5a?w=800&q=80", tags: ["Bandhgala", "Heritage"] },
+      { id: "rc-m-3", name: "Embroidered Achkan", description: "Full traditional with safa  -  court-worthy elegance.", image: "/cdn-unsplash/photo-1593032465175-481ac7f401a0?w=800&q=80", tags: ["Achkan", "Mojaris"] },
     ],
     women: [
       { id: "rc-w-1", name: "Grand Lehanga", description: "Heavy mirror-work lehanga, choli, and mockup with kundan set.", image: "/cdn-unsplash/photo-1583391733956-6c70273b586e?w=800&q=80", tags: ["Lehanga", "Bridal"] },
@@ -244,23 +244,23 @@ export const wardrobeConfig: Record<string, ChapterWardrobe> = {
       men: ["Embroidered mojaris", "Gold-threaded juttis"],
       women: ["Embellished wedge heels", "Traditional juttis with mirror-work"],
     },
-    etiquetteNote: "This is the wedding ceremony — the most sacred chapter. Modest, regal attire is essential. Please honour the rituals with covered shoulders, traditional grace, and an open heart.",
+    etiquetteNote: "This is the wedding ceremony  -  the most sacred chapter. Modest, regal attire is essential. Please honour the rituals with covered shoulders, traditional grace, and an open heart.",
     animationPreset: "elegant",
   },
 
   "thrill-theory": {
     id: "thrill-theory",
     title: "The Thrill Theory",
-    moodLine: "Press play on the chaos — rules dissolve under strobes and sequins.",
+    moodLine: "Press play on the chaos  -  rules dissolve under strobes and sequins.",
     dressCode: {
       title: "Neon Genesis",
-      description: "A neon-drenched afterparty inside a surreal amusement park. The only dress code is daring. Sequins, metallic, experimental — wear what future-you would photograph.",
+      description: "A neon-drenched afterparty inside a surreal amusement park. The only dress code is daring. Sequins, metallic, experimental  -  wear what future-you would photograph.",
     },
     mood: "Experimental, nightclub energy",
     men: [
       { id: "tt-m-1", name: "Sequin Statement Jacket", description: "Two-tone silver-and-black sequin blazer with pearl chain.", image: "/cdn-unsplash/photo-1555066931-4365d14bab8c?w=800&q=80", tags: ["Sequin", "Party"] },
       { id: "tt-m-2", name: "Metallic Street Luxe", description: "Chrome-finish shirt, layered chains, experimental edge.", image: "/cdn-unsplash/photo-1523381235312-ca999d162310?w=800&q=80", tags: ["Metallic", "Bold"] },
-      { id: "tt-m-3", name: "Avant-Garde Suit", description: "Unconventional texture, deconstructed fit — nightclub-ready.", image: "/cdn-unsplash/photo-1539106602014-d69c4b2744e0?w=800&q=80", tags: ["Fashion", "Experimental"] },
+      { id: "tt-m-3", name: "Avant-Garde Suit", description: "Unconventional texture, deconstructed fit  -  nightclub-ready.", image: "/cdn-unsplash/photo-1539106602014-d69c4b2744e0?w=800&q=80", tags: ["Fashion", "Experimental"] },
     ],
     women: [
       { id: "tt-w-1", name: "Sequined Mini-Dress", description: "Oversized sequin shirt as mini-dress, metallic knee-highs.", image: "/cdn-unsplash/photo-1566174053879-31528523f8ae?w=800&q=80", tags: ["Glitter", "Party"] },
@@ -290,7 +290,7 @@ export const wardrobeConfig: Record<string, ChapterWardrobe> = {
       men: ["Black combat boots", "Platform sneakers", "High-top metallics"],
       women: ["Metallic knee-high boots", "Platform heels", "Chrome combat boots"],
     },
-    etiquetteNote: "There is no dress code — only the dare to be unforgettable. This is the afterparty. Wear what future-you would photograph and past-you would never have attempted.",
+    etiquetteNote: "There is no dress code  -  only the dare to be unforgettable. This is the afterparty. Wear what future-you would photograph and past-you would never have attempted.",
     animationPreset: "slide",
   },
 };

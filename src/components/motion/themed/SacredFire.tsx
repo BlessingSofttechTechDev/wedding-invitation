@@ -4,11 +4,11 @@ import { useMemo } from "react";
 import { motion, useReducedMotion } from "framer-motion";
 
 /**
- * Chapter 4 — The Royal Court (Wedding Ceremony)
+ * Chapter 4  -  The Royal Court (Wedding Ceremony)
  * Sacred Mughal ceremony atmosphere:
  * - Sacred fire flame particles rising from center
  * - Floating diya flames (small gold triangles)
- * - Rose petals floating down softly — more visible
+ * - Rose petals floating down softly  -  more visible
  * - Stronger mandap golden glow pulse
  * - Sanskrit/calligraphy wisps fading in and out
  */
@@ -75,7 +75,7 @@ export default function SacredFire() {
 
   return (
     <div className="absolute inset-0 pointer-events-none overflow-hidden z-[1]">
-      {/* Central mandap golden glow pulse — stronger */}
+      {/* Central mandap golden glow pulse  -  stronger */}
       <motion.div
         className="absolute left-1/2 bottom-[30%] -translate-x-1/2"
         style={{
@@ -90,7 +90,7 @@ export default function SacredFire() {
         transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
       />
 
-      {/* Sacred fire — flame particles rising from bottom center */}
+      {/* Sacred fire  -  flame particles rising from bottom center */}
       {flames.map((f) => (
         <motion.div
           key={`flame-${f.id}`}
@@ -119,7 +119,7 @@ export default function SacredFire() {
         />
       ))}
 
-      {/* Floating diya flames — gold triangle shapes */}
+      {/* Floating diya flames  -  gold triangle shapes */}
       {diyas.map((d) => (
         <motion.div
           key={`diya-${d.id}`}
@@ -149,7 +149,7 @@ export default function SacredFire() {
         />
       ))}
 
-      {/* Rose petals falling — more visible */}
+      {/* Rose petals falling  -  more visible */}
       {petals.map((p) => (
         <motion.div
           key={`petal-${p.id}`}

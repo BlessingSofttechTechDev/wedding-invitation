@@ -1,4 +1,4 @@
-# T & S — Wedding Experience Website
+# T & S  -  Wedding Experience Website
 
 A premium, illustration-driven wedding microsite built with Next.js 15, featuring immersive parallax storytelling, editorial typography, and cinematic motion design.
 
@@ -82,7 +82,7 @@ export const COUPLE = {
   weddingDate: "2026-04-21",
   location: "Jaipur, Rajasthan",
   venue: "Fairmont Udaipur",
-  tagline: "Different cities, different journeys — one decision.",
+  tagline: "Different cities, different journeys  -  one decision.",
 };
 
 // Each event in the EVENTS array has:
@@ -144,7 +144,7 @@ palette: {
 1. Push the repo to GitHub
 2. Connect to [Vercel](https://vercel.com)
 3. Framework preset will auto-detect Next.js
-4. Deploy — no environment variables required for the static site
+4. Deploy  -  no environment variables required for the static site
 5. Add your custom domain in Vercel dashboard
 
 ```bash

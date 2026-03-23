@@ -4,7 +4,7 @@ import { useMemo } from "react";
 import { motion, useReducedMotion } from "framer-motion";
 
 /**
- * Chapter 1 — The First Chapter (Welcome Dinner)
+ * Chapter 1  -  The First Chapter (Welcome Dinner)
  * "From Dusk Till Dawn" atmosphere:
  * - Warm candlelight flickers (amber/gold glowing dots)
  * - Drifting embers rising slowly

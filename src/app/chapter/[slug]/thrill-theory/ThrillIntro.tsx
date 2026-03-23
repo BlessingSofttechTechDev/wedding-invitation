@@ -73,7 +73,7 @@ export default function ThrillIntro({ event, onComplete }: ThrillIntroProps) {
         1.5
       );
 
-      /* Phase 3 (2–3.2s): "THE THRILL THEORY" — letter by letter, all white/cream */
+      /* Phase 3 (2–3.2s): "THE THRILL THEORY"  -  letter by letter, all white/cream */
       tl.fromTo(
         el.querySelectorAll(".intro-letter"),
         { opacity: 0, y: 30 },
@@ -117,7 +117,7 @@ export default function ThrillIntro({ event, onComplete }: ThrillIntroProps) {
       className="fixed inset-0 z-50 flex items-center justify-center overflow-hidden"
       style={{ backgroundColor: "#000" }}
     >
-      {/* Radial ambient — deep plum glow, NOT magenta */}
+      {/* Radial ambient  -  deep plum glow, NOT magenta */}
       <div
         className="intro-radial absolute inset-0 pointer-events-none opacity-0"
         style={{
@@ -127,7 +127,7 @@ export default function ThrillIntro({ event, onComplete }: ThrillIntroProps) {
 
       {/* Centered title card composition */}
       <div className="relative z-10 flex flex-col items-center text-center px-6 select-none">
-        {/* Chapter number — small, gold, refined */}
+        {/* Chapter number  -  small, gold, refined */}
         <p
           className="chapter-num text-[10px] uppercase tracking-[0.6em] font-medium mb-8 opacity-0"
           style={{ color: `${T.gold}88` }}
@@ -135,7 +135,7 @@ export default function ThrillIntro({ event, onComplete }: ThrillIntroProps) {
           Chapter V
         </p>
 
-        {/* Horizontal rule — left */}
+        {/* Horizontal rule  -  left */}
         <div className="flex items-center gap-6 mb-6">
           <div
             className="intro-rule h-px w-16 md:w-28 origin-right"
@@ -151,7 +151,7 @@ export default function ThrillIntro({ event, onComplete }: ThrillIntroProps) {
           />
         </div>
 
-        {/* Title — all uppercase, letter-spaced, white/cream, NOT magenta */}
+        {/* Title  -  all uppercase, letter-spaced, white/cream, NOT magenta */}
         <h1 className="text-2xl md:text-4xl lg:text-5xl font-light tracking-[0.25em] md:tracking-[0.35em] leading-relaxed">
           {titleText.split("").map((char, i) => (
             <span
@@ -167,7 +167,7 @@ export default function ThrillIntro({ event, onComplete }: ThrillIntroProps) {
           ))}
         </h1>
 
-        {/* Subtitle — small, muted */}
+        {/* Subtitle  -  small, muted */}
         <p
           className="intro-subtitle mt-6 text-[10px] uppercase tracking-[1em] font-medium opacity-0"
           style={{ color: T.dim }}
@@ -175,7 +175,7 @@ export default function ThrillIntro({ event, onComplete }: ThrillIntroProps) {
           Afterparty
         </p>
 
-        {/* Hindi — very subtle */}
+        {/* Hindi  -  very subtle */}
         <p
           className="intro-hindi mt-3 text-xs tracking-widest opacity-0"
           style={{ color: `${T.gold}50` }}

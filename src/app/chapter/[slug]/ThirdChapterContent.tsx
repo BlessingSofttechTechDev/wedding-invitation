@@ -20,7 +20,7 @@ interface ChapterProps {
 }
 
 /* ═══════════════════════════════════════════════════════════════════
-   SVG SET — Mehndi Darbar · मेहंदी दरबार
+   SVG SET  -  Mehndi Darbar · मेहंदी दरबार
    Emerald + gold palette. All paths clean for stroke animation.
    (1) Mehndi mandala  (2) Henna hand  (3) Paisley divider
    (4) Jharokha arch   (5) Jaali lattice  (6) Silk drape mask
@@ -31,7 +31,7 @@ function MehndiMandala({ accent }: { accent: string }) {
   const petals = 12;
   return (
     <svg viewBox="-150 -150 300 300" className="mandala-svg w-[260px] md:w-[340px] mx-auto" fill="none">
-      {/* Outer ring — repeating lotus petals */}
+      {/* Outer ring  -  repeating lotus petals */}
       {Array.from({ length: petals }, (_, i) => {
         const a = (i * 360) / petals;
         return (
@@ -50,7 +50,7 @@ function MehndiMandala({ accent }: { accent: string }) {
       <circle className="mandala-stroke" cx="0" cy="0" r="125" stroke={accent} strokeWidth="0.5" opacity="0.4" />
       <circle className="mandala-stroke" cx="0" cy="0" r="115" stroke={accent} strokeWidth="0.3" opacity="0.25" strokeDasharray="3 5" />
 
-      {/* Middle ring — paisley fan */}
+      {/* Middle ring  -  paisley fan */}
       {Array.from({ length: 8 }, (_, i) => {
         const a = (i * 360) / 8 + 22.5;
         return (
@@ -67,7 +67,7 @@ function MehndiMandala({ accent }: { accent: string }) {
       })}
       <circle className="mandala-stroke" cx="0" cy="0" r="82" stroke={accent} strokeWidth="0.4" opacity="0.35" />
 
-      {/* Inner ring — dots + small petals */}
+      {/* Inner ring  -  dots + small petals */}
       {Array.from({ length: 16 }, (_, i) => {
         const a = (i * 360) / 16;
         const r = 55;
@@ -95,7 +95,7 @@ function MehndiMandala({ accent }: { accent: string }) {
       <circle className="mandala-stroke" cx="0" cy="0" r="8" stroke={accent} strokeWidth="0.6" opacity="0.6" />
       <circle className="mandala-stroke" cx="0" cy="0" r="3" fill={`${accent}30`} stroke={accent} strokeWidth="0.4" />
 
-      {/* Ink bloom mask — fills on animation */}
+      {/* Ink bloom mask  -  fills on animation */}
       <circle className="mandala-bloom" cx="0" cy="0" r="125" fill={`${accent}00`} />
     </svg>
   );
@@ -104,7 +104,7 @@ function MehndiMandala({ accent }: { accent: string }) {
 function HennaHand({ accent }: { accent: string }) {
   return (
     <svg viewBox="0 0 300 520" className="henna-hand w-[160px] md:w-[200px] mx-auto" fill="none">
-      {/* ── Hand silhouette — graceful open palm ── */}
+      {/* ── Hand silhouette  -  graceful open palm ── */}
       <path
         className="hand-outline"
         d="M108 518 L98 440 Q94 410 96 380 L98 350 Q94 328 88 312
@@ -128,7 +128,7 @@ function HennaHand({ accent }: { accent: string }) {
       <path className="hand-finger" d="M166 76 Q172 62 180 60 Q188 62 190 76 L182 126 Q176 120 170 118 Q166 108 166 88Z" fill={`${accent}18`} stroke={accent} strokeWidth="0.5" opacity="0.5" />
       <path className="hand-finger" d="M200 118 Q208 100 216 102 Q222 108 218 126 L210 156 Q202 144 198 130Z" fill={`${accent}15`} stroke={accent} strokeWidth="0.5" opacity="0.45" />
 
-      {/* ── Index finger — vine + bands ── */}
+      {/* ── Index finger  -  vine + bands ── */}
       <path className="hand-finger" d="M82 210 Q88 208 96 210" stroke={accent} strokeWidth="0.5" opacity="0.5" />
       <path className="hand-finger" d="M80 198 Q88 195 96 198" stroke={accent} strokeWidth="0.45" opacity="0.45" />
       <path className="hand-finger" d="M80 186 Q88 183 95 186" stroke={accent} strokeWidth="0.4" opacity="0.4" />
@@ -146,7 +146,7 @@ function HennaHand({ accent }: { accent: string }) {
         <circle key={`id${y}`} className="hand-palm-dot" cx="88" cy={y} r="0.8" fill={accent} opacity="0.2" />
       ))}
 
-      {/* ── Middle finger — dense pattern ── */}
+      {/* ── Middle finger  -  dense pattern ── */}
       <path className="hand-finger" d="M108 168 Q116 165 124 168" stroke={accent} strokeWidth="0.5" opacity="0.5" />
       <path className="hand-finger" d="M106 156 Q115 153 122 156" stroke={accent} strokeWidth="0.45" opacity="0.45" />
       <path className="hand-finger" d="M108 144 Q115 141 122 144" stroke={accent} strokeWidth="0.4" opacity="0.4" />
@@ -164,7 +164,7 @@ function HennaHand({ accent }: { accent: string }) {
         <circle key={`md${y}`} className="hand-palm-dot" cx="115" cy={y} r="0.7" fill={accent} opacity="0.2" />
       ))}
 
-      {/* ── Ring finger — bands + paisley ── */}
+      {/* ── Ring finger  -  bands + paisley ── */}
       <path className="hand-finger" d="M140 168 Q148 165 156 168" stroke={accent} strokeWidth="0.5" opacity="0.5" />
       <path className="hand-finger" d="M140 156 Q148 153 156 156" stroke={accent} strokeWidth="0.45" opacity="0.45" />
       <path className="hand-finger" d="M142 144 Q148 141 154 144" stroke={accent} strokeWidth="0.4" opacity="0.4" />
@@ -181,19 +181,19 @@ function HennaHand({ accent }: { accent: string }) {
         <circle key={`rd${y}`} className="hand-palm-dot" cx="148" cy={y} r="0.7" fill={accent} opacity="0.2" />
       ))}
 
-      {/* ── Little finger — simple bands ── */}
+      {/* ── Little finger  -  simple bands ── */}
       <path className="hand-finger" d="M174 178 Q180 175 186 178" stroke={accent} strokeWidth="0.45" opacity="0.45" />
       <path className="hand-finger" d="M174 168 Q180 165 186 168" stroke={accent} strokeWidth="0.4" opacity="0.4" />
       <path className="hand-finger" d="M176 158 Q180 155 184 158" stroke={accent} strokeWidth="0.35" opacity="0.35" />
       <circle className="hand-finger" cx="180" cy="148" r="2.5" stroke={accent} strokeWidth="0.3" opacity="0.35" />
       <circle className="hand-finger" cx="180" cy="140" r="1.5" fill={`${accent}12`} />
 
-      {/* ── Thumb — bands ── */}
+      {/* ── Thumb  -  bands ── */}
       <path className="hand-finger" d="M66 270 Q74 266 82 270" stroke={accent} strokeWidth="0.4" opacity="0.4" />
       <path className="hand-finger" d="M64 260 Q72 256 80 260" stroke={accent} strokeWidth="0.35" opacity="0.35" />
       <circle className="hand-finger" cx="72" cy="250" r="2.5" stroke={accent} strokeWidth="0.3" opacity="0.3" />
 
-      {/* ═══ PALM — Large central mandala/flower ═══ */}
+      {/* ═══ PALM  -  Large central mandala/flower ═══ */}
       {/* Outer petal ring */}
       {Array.from({ length: 10 }, (_, i) => {
         const a = (i * 36) * (Math.PI / 180);
@@ -289,7 +289,7 @@ function HennaHand({ accent }: { accent: string }) {
         stroke={accent} strokeWidth="0.45" opacity="0.4" />
       <circle className="hand-palm-dot" cx="196" cy="292" r="1.5" fill={accent} opacity="0.2" />
 
-      {/* ═══ Vine trails — palm to wrist ═══ */}
+      {/* ═══ Vine trails  -  palm to wrist ═══ */}
       <path className="hand-palm" d="M148 356 C140 368 156 380 148 392" stroke={accent} strokeWidth="0.4" opacity="0.35" />
       <path className="hand-palm" d="M148 392 C140 404 156 416 148 428" stroke={accent} strokeWidth="0.35" opacity="0.3" />
       {[362, 374, 386, 398, 410, 422].map((y, i) => (
@@ -299,29 +299,29 @@ function HennaHand({ accent }: { accent: string }) {
         </g>
       ))}
 
-      {/* Side vine — left */}
+      {/* Side vine  -  left */}
       <path className="hand-palm" d="M110 356 C104 368 114 378 108 390" stroke={accent} strokeWidth="0.35" opacity="0.3" />
       {[360, 370, 380].map((y, i) => (
         <path key={`svl${y}`} className="hand-palm-dot" d={`M${108 - 4} ${y} Q${108 - 8} ${y - 3} ${108 - 5} ${y - 6}`} stroke={accent} strokeWidth="0.2" opacity="0.2" />
       ))}
-      {/* Side vine — right */}
+      {/* Side vine  -  right */}
       <path className="hand-palm" d="M186 356 C192 368 182 378 188 390" stroke={accent} strokeWidth="0.35" opacity="0.3" />
       {[360, 370, 380].map((y, i) => (
         <path key={`svr${y}`} className="hand-palm-dot" d={`M${188 + 4} ${y} Q${188 + 8} ${y - 3} ${188 + 5} ${y - 6}`} stroke={accent} strokeWidth="0.2" opacity="0.2" />
       ))}
 
-      {/* ═══ Ornate wrist cuff — 5 decorative bands ═══ */}
+      {/* ═══ Ornate wrist cuff  -  5 decorative bands ═══ */}
       <path className="hand-wrist" d="M98 430 Q148 420 198 430" stroke={accent} strokeWidth="0.7" opacity="0.55" />
       <path className="hand-wrist" d="M98 438 Q148 428 198 438" stroke={accent} strokeWidth="0.6" opacity="0.5" />
       <path className="hand-wrist" d="M98 446 Q148 436 198 446" stroke={accent} strokeWidth="0.5" opacity="0.45" />
       <path className="hand-wrist" d="M98 454 Q148 444 198 454" stroke={accent} strokeWidth="0.45" opacity="0.4" />
       <path className="hand-wrist" d="M98 462 Q148 452 198 462" stroke={accent} strokeWidth="0.4" opacity="0.35" />
 
-      {/* Wrist — scallop chain */}
+      {/* Wrist  -  scallop chain */}
       {[108, 120, 132, 144, 156, 168, 180].map((x) => (
         <path key={`wc${x}`} className="hand-wrist" d={`M${x} 438 Q${x - 4} 432 ${x} 426 Q${x + 4} 432 ${x} 438Z`} stroke={accent} strokeWidth="0.3" opacity="0.3" />
       ))}
-      {/* Wrist — hanging drops */}
+      {/* Wrist  -  hanging drops */}
       {[114, 132, 148, 164, 182].map((x) => (
         <g key={`wd${x}`}>
           <path className="hand-wrist" d={`M${x} 462 L${x} 472`} stroke={accent} strokeWidth="0.3" opacity="0.3" />
@@ -329,7 +329,7 @@ function HennaHand({ accent }: { accent: string }) {
           <circle className="hand-palm-dot" cx={x} cy={475} r="0.8" fill={accent} opacity="0.2" />
         </g>
       ))}
-      {/* Wrist — diamond fill pattern */}
+      {/* Wrist  -  diamond fill pattern */}
       {[108, 118, 128, 138, 148, 158, 168, 178, 188].map((x) => (
         <path key={`wdm${x}`} className="hand-wrist" d={`M${x} 446 L${x + 4} 450 L${x} 454 L${x - 4} 450Z`} stroke={accent} strokeWidth="0.2" opacity="0.2" fill={`${accent}05`} />
       ))}
@@ -349,7 +349,7 @@ function HennaHand({ accent }: { accent: string }) {
         <circle key={`d${i}`} className="hand-palm-dot" cx={cx} cy={cy} r="1" fill={accent} opacity="0.2" />
       ))}
 
-      {/* ═══ Floral bloom accents — animate last ═══ */}
+      {/* ═══ Floral bloom accents  -  animate last ═══ */}
       {[
         [148, 240], [116, 270], [180, 270], [104, 320], [192, 320],
         [120, 340], [176, 340], [148, 360], [130, 390], [166, 390],
@@ -371,7 +371,7 @@ function HennaHand({ accent }: { accent: string }) {
       <path className="hand-palm" d="M124 196 Q132 206 140 198" stroke={accent} strokeWidth="0.3" opacity="0.25" strokeDasharray="2 3" />
       <path className="hand-palm" d="M156 198 Q164 208 172 200" stroke={accent} strokeWidth="0.3" opacity="0.25" strokeDasharray="2 3" />
 
-      {/* ═══ Extra detail — small teardrop chain on sides ═══ */}
+      {/* ═══ Extra detail  -  small teardrop chain on sides ═══ */}
       {[270, 290, 310, 330].map((y) => (
         <g key={`lt${y}`}>
           <path className="hand-palm-dot" d={`M94 ${y} Q90 ${y - 4} 94 ${y - 8} Q98 ${y - 4} 94 ${y}Z`} stroke={accent} strokeWidth="0.2" opacity="0.2" />
@@ -581,7 +581,7 @@ function MehndiDarbarIntro({
 }
 
 /* ═══════════════════════════════════════════════════════════════════
-   SCROLL-DRIVEN HERO — Afternoon peach → Golden Hour
+   SCROLL-DRIVEN HERO  -  Afternoon peach → Golden Hour
    4 beats: Invitation, Art, Darbar Luxe, Celebration
    Parallax: sandstone, jaali shadow, marigold petals, grain
    ═══════════════════════════════════════════════════════════════════ */
@@ -636,10 +636,10 @@ function DarbarHero({ event }: { event: WeddingEvent }) {
       scrollTl.fromTo(".jaali-shadow", { opacity: 0, x: -20 }, { opacity: 0.06, x: 20, duration: 1 }, 0);
       scrollTl.to(".lyr-petals", { y: -80, duration: 1 }, 0);
 
-      /* Beat 1 — Invitation: title + diya */
+      /* Beat 1  -  Invitation: title + diya */
       scrollTl.fromTo(".b1-content", { opacity: 0.8 }, { opacity: 1, duration: 0.08 }, 0);
 
-      /* Beat 2 — Art: henna hand draws */
+      /* Beat 2  -  Art: henna hand draws */
       scrollTl.fromTo(".b2-content", { opacity: 0 }, { opacity: 1, duration: 0.06 }, 0.18);
       scrollTl.to(handStrokes, { strokeDashoffset: 0, duration: 0.2, stagger: 0.01, ease: "power1.inOut" }, 0.2);
       scrollTl.fromTo(
@@ -655,7 +655,7 @@ function DarbarHero({ event }: { event: WeddingEvent }) {
         0.4
       );
 
-      /* Beat 3 — Darbar Luxe: decor cards */
+      /* Beat 3  -  Darbar Luxe: decor cards */
       scrollTl.fromTo(
         pin.querySelectorAll(".darbar-card"),
         { opacity: 0, y: 30, scale: 0.9 },
@@ -663,7 +663,7 @@ function DarbarHero({ event }: { event: WeddingEvent }) {
         0.52
       );
 
-      /* Beat 4 — Celebration: radial glow + petal shower */
+      /* Beat 4  -  Celebration: radial glow + petal shower */
       scrollTl.to(".celebration-glow", { opacity: 0.2, scale: 1.2, duration: 0.2, ease: "power2.out" }, 0.75);
       scrollTl.fromTo(
         pin.querySelectorAll(".petal-fall"),
@@ -742,7 +742,7 @@ function DarbarHero({ event }: { event: WeddingEvent }) {
           </div>
         </div>
 
-        {/* ── BEAT 2: Art — Henna hand draws itself ── */}
+        {/* ── BEAT 2: Art  -  Henna hand draws itself ── */}
         <div className="b2-content absolute top-1/2 right-6 md:right-16 lg:right-24 -translate-y-1/2 z-[8] opacity-0">
           <div className="relative">
             <div
@@ -783,7 +783,7 @@ function DarbarHero({ event }: { event: WeddingEvent }) {
 function DarbarQuote({ event }: { event: WeddingEvent }) {
   const { palette } = event;
   const ref = useRef<HTMLDivElement>(null);
-  const quote = "Grand arches, dramatic height, clean symmetry — but inside that structure, the wild takes over.";
+  const quote = "Grand arches, dramatic height, clean symmetry  -  but inside that structure, the wild takes over.";
 
   useGSAP(() => {
     const el = ref.current;
@@ -852,7 +852,7 @@ function StorySection({ event }: { event: WeddingEvent }) {
 }
 
 /* ═══════════════════════════════════════════════════════════════════
-   DRESS CODE — Mehndi Darbar · Gilded After Dark
+   DRESS CODE  -  Mehndi Darbar · Gilded After Dark
    ═══════════════════════════════════════════════════════════════════ */
 
 function DarbarDressCode({ event }: { event: WeddingEvent }) {
@@ -970,7 +970,7 @@ function DarbarVenue({ event }: { event: WeddingEvent }) {
 }
 
 /* ═══════════════════════════════════════════════════════════════════
-   MAIN — ThirdChapterContent
+   MAIN  -  ThirdChapterContent
    ═══════════════════════════════════════════════════════════════════ */
 
 export default function ThirdChapterContent({ event }: ChapterProps) {
@@ -1064,7 +1064,7 @@ export default function ThirdChapterContent({ event }: ChapterProps) {
           </p>
           <p className="text-[10px] tracking-[0.3em] font-body mb-10" style={{ color: `${palette.accent}44` }}>{COUPLE.hashtag}</p>
 
-          <p className="text-[11px] font-body tracking-wide mb-6" style={{ color: `${palette.foreground}6a` }}>April 19–21, 2026 · Udaipur, Rajasthan</p>
+          <p className="text-[11px] font-body tracking-wide mb-6" style={{ color: `${palette.foreground}6a` }}>April 20–22, 2026 · Udaipur, Rajasthan</p>
           <div className="flex flex-wrap items-center justify-center gap-2.5 text-xs font-body tracking-wide" style={{ color: `${palette.foreground}5c` }}>
             <span>© 2026 All Rights Reserved</span>
             <span style={{ color: `${palette.foreground}40` }}>|</span>

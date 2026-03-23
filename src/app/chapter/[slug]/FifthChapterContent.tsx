@@ -20,7 +20,7 @@ interface ChapterProps {
 }
 
 /* ═══════════════════════════════════════════════════════════════════
-   SVG SET — A World of Our Own · हमारी दुनिया
+   SVG SET  -  A World of Our Own · हमारी दुनिया
    Warm sandstone, ivory linen, muted gold, soft Mediterranean blue.
    (1) Open haveli arch  (2) Jaali lattice shadow  (3) Journey map
    (4) Ornamental divider (5) Linen canopy stripes  (6) Monogram seal
@@ -50,10 +50,10 @@ function HaveliArchFrame({ accent }: { accent: string }) {
       {/* Keystone drop */}
       <path className="arch-s" d="M274 20 L280 4 L286 20" stroke={accent} strokeWidth="0.7" opacity="0.5" />
       <circle className="arch-s" cx="280" cy="4" r="4" stroke={accent} strokeWidth="0.5" opacity="0.4" />
-      {/* Ornamental corners — top-left */}
+      {/* Ornamental corners  -  top-left */}
       <path className="arch-s" d="M30 220 Q20 220 18 210 L18 195" stroke={accent} strokeWidth="0.4" opacity="0.3" />
       <path className="arch-s" d="M22 215 Q28 208 35 215" stroke={accent} strokeWidth="0.3" opacity="0.2" />
-      {/* Ornamental corners — top-right */}
+      {/* Ornamental corners  -  top-right */}
       <path className="arch-s" d="M530 220 Q540 220 542 210 L542 195" stroke={accent} strokeWidth="0.4" opacity="0.3" />
       <path className="arch-s" d="M525 215 Q532 208 538 215" stroke={accent} strokeWidth="0.3" opacity="0.2" />
       {/* Base plinth lines */}
@@ -122,7 +122,7 @@ function JourneyMap({ accent, fg }: { accent: string; fg: string }) {
           </text>
         </g>
       ))}
-      {/* Final convergence marker — Udaipur gets a larger ring */}
+      {/* Final convergence marker  -  Udaipur gets a larger ring */}
       <circle className="jaipur-ring" cx="350" cy="48" r="8" stroke={accent} strokeWidth="0.6" opacity="0" fill="none" />
       <circle className="jaipur-ring" cx="350" cy="48" r="12" stroke={accent} strokeWidth="0.3" opacity="0" fill="none" strokeDasharray="2 3" />
     </svg>
@@ -194,7 +194,7 @@ function MonogramSeal({ accent }: { accent: string }) {
 }
 
 /* ═══════════════════════════════════════════════════════════════════
-   INTRO — Warm sunlight gradient wipe through haveli arch
+   INTRO  -  Warm sunlight gradient wipe through haveli arch
    introTl: arch reveal → jaali drift begins → title shimmer →
    copy fade → journey line draws
    ═══════════════════════════════════════════════════════════════════ */
@@ -316,7 +316,7 @@ function WorldIntro({
 }
 
 /* ═══════════════════════════════════════════════════════════════════
-   SCROLL-DRIVEN HERO — Calm, floating progression
+   SCROLL-DRIVEN HERO  -  Calm, floating progression
    Sunlight warmth shift, jaali shadow drift, fabric sway,
    staggered decor reveal. Restrained motion, breathable.
    ═══════════════════════════════════════════════════════════════════ */
@@ -442,7 +442,7 @@ function WorldHero({ event }: { event: WeddingEvent }) {
           style={{ background: `linear-gradient(180deg,#c8b89c 0%,#d4c4a8 30%,#cabc9e 70%,#c0b094 100%)` }}
         />
 
-        {/* Sunlight wash — warm diagonal radial */}
+        {/* Sunlight wash  -  warm diagonal radial */}
         <div
           className="sunlight-hero absolute inset-0 opacity-0 pointer-events-none"
           style={{ background: `radial-gradient(ellipse 70% 60% at 60% 30%,${palette.accent}25,transparent 70%)` }}
@@ -515,7 +515,7 @@ function WorldHero({ event }: { event: WeddingEvent }) {
           </div>
         </div>
 
-        {/* ── Decor cards — bottom (hidden on mobile to prevent overlap) ── */}
+        {/* ── Decor cards  -  bottom (hidden on mobile to prevent overlap) ── */}
         <div className="absolute bottom-24 left-1/2 -translate-x-1/2 z-10 hidden md:flex flex-wrap items-center justify-center gap-3 md:gap-4">
           {decorItems.map((d) => (
             <div
@@ -605,7 +605,7 @@ function StorySection({ event }: { event: WeddingEvent }) {
 }
 
 /* ═══════════════════════════════════════════════════════════════════
-   JOURNEY SECTION — Full-width city path with personal details
+   JOURNEY SECTION  -  Full-width city path with personal details
    ═══════════════════════════════════════════════════════════════════ */
 
 function JourneySection({ event }: { event: WeddingEvent }) {
@@ -704,7 +704,7 @@ function JourneySection({ event }: { event: WeddingEvent }) {
 }
 
 /* ═══════════════════════════════════════════════════════════════════
-   DRESS CODE — The Linen Collective
+   DRESS CODE  -  The Linen Collective
    ═══════════════════════════════════════════════════════════════════ */
 
 function WorldDressCode({ event }: { event: WeddingEvent }) {
@@ -839,7 +839,7 @@ function WorldVenue({ event }: { event: WeddingEvent }) {
 }
 
 /* ═══════════════════════════════════════════════════════════════════
-   MAIN — FifthChapterContent
+   MAIN  -  FifthChapterContent
    ═══════════════════════════════════════════════════════════════════ */
 
 export default function FifthChapterContent({ event }: ChapterProps) {
@@ -933,7 +933,7 @@ export default function FifthChapterContent({ event }: ChapterProps) {
           </p>
           <p className="text-[10px] tracking-[0.3em] font-body mb-10" style={{ color: "#5a4530" }}>{COUPLE.hashtag}</p>
 
-          <p className="text-[11px] font-body tracking-wide mb-6" style={{ color: `${palette.foreground}c8` }}>April 19–21, 2026 · Udaipur, Rajasthan</p>
+          <p className="text-[11px] font-body tracking-wide mb-6" style={{ color: `${palette.foreground}c8` }}>April 20–22, 2026 · Udaipur, Rajasthan</p>
           <div className="flex flex-wrap items-center justify-center gap-2.5 text-xs font-body tracking-wide" style={{ color: `${palette.foreground}5c` }}>
             <span>© 2026 All Rights Reserved</span>
             <span style={{ color: `${palette.foreground}40` }}>|</span>

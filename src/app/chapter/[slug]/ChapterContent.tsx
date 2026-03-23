@@ -455,7 +455,7 @@ function ImmersiveGallery({ event }: { event: WeddingEvent }) {
           Mood
         </p>
 
-        {/* Masonry layout — 2 cols mobile, 3 cols desktop */}
+        {/* Masonry layout  -  2 cols mobile, 3 cols desktop */}
         <div className="columns-2 md:columns-3 gap-2 md:gap-4 space-y-2 md:space-y-4 w-full">
           {galleryImages.map((src, i) => (
             <div
@@ -521,7 +521,7 @@ function BhaatSection({ event }: { event: WeddingEvent }) {
           className="font-body text-sm md:text-base leading-relaxed max-w-xl mx-auto"
           style={{ color: `${palette.foreground}de` }}
         >
-          This chapter includes the Bhaat (Mayra) ceremony — a pre-wedding ritual where the maternal uncle (Mama) brings gifts, clothes, and sweets, honouring his role in the family.
+          This chapter includes the Bhaat (Mayra) ceremony  -  a pre-wedding ritual where the maternal uncle (Mama) brings gifts, clothes, and sweets, honouring his role in the family.
         </p>
         <decor.SectionDivider palette={palette} />
       </div>

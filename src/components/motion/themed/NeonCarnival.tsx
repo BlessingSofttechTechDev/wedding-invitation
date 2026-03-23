@@ -4,7 +4,7 @@ import { useMemo } from "react";
 import { motion, useReducedMotion } from "framer-motion";
 
 /**
- * Chapter 5 — The Thrill Theory (Afterparty)
+ * Chapter 5  -  The Thrill Theory (Afterparty)
  * "Psychedelic abandoned amusement park" atmosphere:
  * - Neon color flickers and glitches
  * - Roller coaster "whoosh" trails (curved neon lines)
@@ -86,7 +86,7 @@ export default function NeonCarnival() {
 
   return (
     <div className="absolute inset-0 pointer-events-none overflow-hidden z-[1]">
-      {/* Psychedelic color wash — rotating gradients */}
+      {/* Psychedelic color wash  -  rotating gradients */}
       <motion.div
         className="absolute inset-0 opacity-[0.06]"
         style={{
@@ -96,7 +96,7 @@ export default function NeonCarnival() {
         transition={{ duration: 30, repeat: Infinity, ease: "linear" }}
       />
 
-      {/* Strobe pulse — stronger */}
+      {/* Strobe pulse  -  stronger */}
       <motion.div
         className="absolute inset-0 bg-white"
         animate={{ opacity: [0, 0.03, 0, 0, 0.04, 0, 0, 0, 0.02, 0, 0, 0] }}
@@ -166,7 +166,7 @@ export default function NeonCarnival() {
         />
       ))}
 
-      {/* Electric sparks — rapid flicker points */}
+      {/* Electric sparks  -  rapid flicker points */}
       {sparks.map((s) => (
         <motion.div
           key={`spark-${s.id}`}
@@ -192,7 +192,7 @@ export default function NeonCarnival() {
         />
       ))}
 
-      {/* Glitch bars — horizontal scan lines */}
+      {/* Glitch bars  -  horizontal scan lines */}
       {glitchBars.map((g) => (
         <motion.div
           key={`glitch-${g.id}`}

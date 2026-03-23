@@ -20,7 +20,7 @@ interface ChapterProps {
 }
 
 /* ═══════════════════════════════════════════════════════════════════
-   SVG SET — The Royal Court · राज दरबार
+   SVG SET  -  The Royal Court · राज दरबार
    Deep maroon + antique gold + sandstone ivory. Monumental symmetry.
    (1) Royal court arches  (2) Mandap canopy  (3) Agni flame
    (4) Diya row            (5) Jaali overlay   (6) Monogram crest
@@ -376,7 +376,7 @@ function RoyalCourtIntro({
 }
 
 /* ═══════════════════════════════════════════════════════════════════
-   SCROLL-DRIVEN HERO — 4 Sacred Beats
+   SCROLL-DRIVEN HERO  -  4 Sacred Beats
    Beat 1: Architecture Rises (arches lock, sandstone texture)
    Beat 2: Mandap Emerges (canopy + halo + diya ignition)
    Beat 3: Sacred Atmosphere (petals, agni flicker, shimmer waves)
@@ -687,7 +687,7 @@ function StorySection({ event }: { event: WeddingEvent }) {
 }
 
 /* ═══════════════════════════════════════════════════════════════════
-   DRESS CODE — Royal Couture
+   DRESS CODE  -  Royal Couture
    ═══════════════════════════════════════════════════════════════════ */
 
 function CourtDressCode({ event }: { event: WeddingEvent }) {
@@ -822,7 +822,7 @@ function CourtVenue({ event }: { event: WeddingEvent }) {
 }
 
 /* ═══════════════════════════════════════════════════════════════════
-   MAIN — SixthChapterContent
+   MAIN  -  SixthChapterContent
    ═══════════════════════════════════════════════════════════════════ */
 
 export default function SixthChapterContent({ event }: ChapterProps) {
@@ -942,7 +942,7 @@ export default function SixthChapterContent({ event }: ChapterProps) {
           </p>
           <p className="text-[10px] tracking-[0.3em] font-body mb-10" style={{ color: `${palette.accent}55` }}>{COUPLE.hashtag}</p>
 
-          <p className="text-[11px] font-body tracking-wide mb-6" style={{ color: `${palette.foreground}6a` }}>April 19–21, 2026 · Udaipur, Rajasthan</p>
+          <p className="text-[11px] font-body tracking-wide mb-6" style={{ color: `${palette.foreground}6a` }}>April 20–22, 2026 · Udaipur, Rajasthan</p>
           <div className="flex flex-wrap items-center justify-center gap-2.5 text-xs font-body tracking-wide" style={{ color: `${palette.foreground}5c` }}>
             <span>© 2026 All Rights Reserved</span>
             <span style={{ color: `${palette.foreground}40` }}>|</span>

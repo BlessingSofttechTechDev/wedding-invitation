@@ -423,7 +423,7 @@ function ChapterRail({ selectedChapter, onSelect }: { selectedChapter: string; o
 }
 
 /* ═══════════════════════════════════════════════════════════════════ */
-/*  SHOWCASE STAGE (Left — couture stage with layered depth)           */
+/*  SHOWCASE STAGE (Left  -  couture stage with layered depth)           */
 /* ═══════════════════════════════════════════════════════════════════ */
 
 function IllustrationCard({ wardrobe, theme, audience }: { wardrobe: ChapterWardrobe; theme: ChapterTheme; audience: Audience }) {
@@ -477,7 +477,7 @@ function IllustrationCard({ wardrobe, theme, audience }: { wardrobe: ChapterWard
     >
       <GoldDustParticles count={60} />
 
-      {/* Background Illustration — full image visible, no crop (contain within frame) */}
+      {/* Background Illustration  -  full image visible, no crop (contain within frame) */}
       <div ref={layerRef} className="absolute inset-0 z-0 transition-all duration-1000 ease-out">
         <div className="illustration-bg absolute inset-0 w-full h-full transition-all duration-1000">
           {wardrobe.illustrationImage.startsWith("http") ? (
@@ -514,13 +514,13 @@ function IllustrationCard({ wardrobe, theme, audience }: { wardrobe: ChapterWard
       </div>
 
       {/* Floating Meta Details */}
-      <div className="absolute top-12 left-12 z-30 card-text-el">
+      <div className="absolute top-6 left-6 md:top-12 md:left-12 z-30 card-text-el hidden md:block">
         <span className="block text-[8px] uppercase tracking-[0.6em] text-amber-500/60 mb-1">Archive No.</span>
         <span className="font-serif text-xl text-white/40">2026-RW-{WARDROBE_CHAPTER_IDS.indexOf(wardrobe.id) + 1}</span>
       </div>
 
       {/* Persona Label */}
-      <div className="absolute top-12 right-12 z-30 card-text-el text-right">
+      <div className="absolute top-6 right-6 md:top-12 md:right-12 z-30 card-text-el text-right hidden md:block">
         <span className="block text-[8px] uppercase tracking-[0.6em] text-amber-500/60 mb-1">Portfolio</span>
         <span className="font-serif text-lg text-white/60 italic">
           {audience === "all" ? "The Couple" : audience === "men" ? "His Selection" : "Her Selection"}
@@ -528,17 +528,15 @@ function IllustrationCard({ wardrobe, theme, audience }: { wardrobe: ChapterWard
       </div>
 
       {/* Hero Content */}
-      <div className="relative z-30 text-center space-y-6 max-w-lg mt-12">
+      <div className="relative z-30 text-center space-y-5 md:space-y-6 max-w-lg mt-4 md:mt-12 px-4 md:px-8">
         <div className="card-text-el inline-block">
           <span className="text-[10px] uppercase tracking-[0.8em] text-amber-500" style={{ textShadow: `0 0 12px #e2c25a60` }}>
             Style Lookbook
           </span>
         </div>
 
-        <h3 className="card-text-el font-serif text-5xl md:text-7xl text-white leading-[0.9] tracking-tighter">
-          {wardrobe.title.split(' ').map((word, i) => (
-            <span key={i} className="block">{word}</span>
-          ))}
+        <h3 className="card-text-el font-serif text-[clamp(1.75rem,6.8vw,3.35rem)] md:text-[clamp(3rem,6.4vw,5.2rem)] text-white leading-[1.05] tracking-normal max-w-[76%] sm:max-w-[82%] md:max-w-[82%] mx-auto text-balance wrap-anywhere">
+          {wardrobe.title}
         </h3>
 
         <div className="card-text-el flex items-center justify-center gap-4">
@@ -589,7 +587,7 @@ function ShowcaseStage({ selectors, theme }: { selectors: WPState["selectors"]; 
 }
 
 /* ═══════════════════════════════════════════════════════════════════ */
-/*  GUIDANCE PANEL (Right — bespoke editorial styling guide)           */
+/*  GUIDANCE PANEL (Right  -  bespoke editorial styling guide)           */
 /* ═══════════════════════════════════════════════════════════════════ */
 
 function ChapterLookbookGuide({ wardrobe, theme }: { wardrobe: ChapterWardrobe; theme: ChapterTheme }) {
@@ -734,7 +732,7 @@ function ChapterEtiquetteNote({ chapter, theme }: { chapter: ChapterWardrobe; th
           </p>
           <div className="en-el mt-8 pt-6" style={{ borderTop: `1px solid ${P.cream}06` }}>
             <p className="text-[9px] uppercase tracking-[0.3em] font-body" style={{ color: `${P.cream}8c` }}>
-              {COUPLE.partner1} &amp; {COUPLE.partner2} — Styling Committee
+              {COUPLE.partner1} &amp; {COUPLE.partner2}  -  Styling Committee
             </p>
           </div>
         </div>

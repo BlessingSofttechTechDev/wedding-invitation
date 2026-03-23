@@ -56,7 +56,7 @@ export default function ScrollToTop() {
     cleanupAndScroll();
   }, [pathname, cleanupAndScroll]);
 
-  // AFTER paint: belt-and-suspenders — covers late hydration / lazy chunks
+  // AFTER paint: belt-and-suspenders  -  covers late hydration / lazy chunks
   useEffect(() => {
     if (isPopState.current) {
       isPopState.current = false;
@@ -74,7 +74,7 @@ export default function ScrollToTop() {
       return () => cancelAnimationFrame(raf2);
     });
 
-    // Delayed fallback — catches async images / fonts reflow
+    // Delayed fallback  -  catches async images / fonts reflow
     const t1 = setTimeout(() => {
       forceScrollZero();
       ScrollTrigger.refresh();

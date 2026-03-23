@@ -15,7 +15,7 @@ import {
 } from "@/components/shared/RoyalPageLayout";
 
 export const metadata: Metadata = {
-  title: "Your Stay — T & S Wedding",
+  title: "Your Stay  -  T & S Wedding",
 };
 
 const AMENITY_ICONS: Record<string, React.ReactNode> = {

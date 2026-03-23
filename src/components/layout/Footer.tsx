@@ -76,7 +76,7 @@ export default function Footer() {
           className="text-xs md:text-[11px] font-body tracking-wide mb-6 md:mb-8"
           style={{ color: `${P.cream}d8` }}
         >
-          April 19–21, 2026 · {COUPLE.location}
+          April 20–22, 2026 · {COUPLE.location}
         </p>
 
         {/* Copyright + Blessing Softtech */}

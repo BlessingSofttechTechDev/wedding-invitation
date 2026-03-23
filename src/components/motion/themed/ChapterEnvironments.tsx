@@ -11,7 +11,7 @@ interface EnvProps {
 }
 
 /* ════════════════════════════════════════════════════════════════
-   CH1 — TENT DRAPE ENV (Welcome Dinner · Dusk Till Dawn)
+   CH1  -  TENT DRAPE ENV (Welcome Dinner · Dusk Till Dawn)
    Cascading tent drapes, candelabra silhouettes, wax seals, feathers
    ════════════════════════════════════════════════════════════════ */
 
@@ -86,7 +86,7 @@ function TentDrapeEnv({ palette }: EnvProps) {
 }
 
 /* ════════════════════════════════════════════════════════════════
-   CH2 — PINK ARCH ENV (Victorian Hi-Tea · Jaipur Haveli)
+   CH2  -  PINK ARCH ENV (Victorian Hi-Tea · Jaipur Haveli)
    Triple jharokha arch gateway, jali lattice, wisteria garlands
    ════════════════════════════════════════════════════════════════ */
 
@@ -158,7 +158,7 @@ function PinkArchEnv({ palette }: EnvProps) {
 }
 
 /* ════════════════════════════════════════════════════════════════
-   CH3 — GOTHIC CATHEDRAL ENV (Sangeet · Cathedral Gone Rogue)
+   CH3  -  GOTHIC CATHEDRAL ENV (Sangeet · Cathedral Gone Rogue)
    Pointed arches, ribbed vaults, rose window, ivy vines
    ════════════════════════════════════════════════════════════════ */
 
@@ -233,7 +233,7 @@ function GothicCathedralEnv({ palette }: EnvProps) {
 }
 
 /* ════════════════════════════════════════════════════════════════
-   CH4 — SUNLIT JOURNEY ENV (Personal Lunch · Sun-Drenched)
+   CH4  -  SUNLIT JOURNEY ENV (Personal Lunch · Sun-Drenched)
    Hot air balloon, compass rose, sunflower border, travel stamps
    ════════════════════════════════════════════════════════════════ */
 
@@ -314,7 +314,7 @@ function SunlitJourneyEnv({ palette }: EnvProps) {
 }
 
 /* ════════════════════════════════════════════════════════════════
-   CH5 — MANDAP COURT ENV (Wedding Ceremony · Mughal Grandeur)
+   CH5  -  MANDAP COURT ENV (Wedding Ceremony · Mughal Grandeur)
    Mandap pillars, domed canopy, diyas, rangoli, Mughal arch backdrop
    ════════════════════════════════════════════════════════════════ */
 
@@ -407,7 +407,7 @@ function MandapCourtEnv({ palette }: EnvProps) {
 }
 
 /* ════════════════════════════════════════════════════════════════
-   CH6 — NEON CARNIVAL ENV (Afterparty · Thrill Theory)
+   CH6  -  NEON CARNIVAL ENV (Afterparty · Thrill Theory)
    Roller coaster curves, Ferris wheel, neon sign, starbursts
    ════════════════════════════════════════════════════════════════ */
 
@@ -482,7 +482,7 @@ function NeonCarnivalEnv({ palette }: EnvProps) {
 }
 
 /* ════════════════════════════════════════════════════════════════
-   EXPORT — getChapterEnvironment
+   EXPORT  -  getChapterEnvironment
    ════════════════════════════════════════════════════════════════ */
 
 const ENV_MAP: Record<string, React.FC<EnvProps>> = {

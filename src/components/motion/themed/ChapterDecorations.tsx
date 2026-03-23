@@ -9,7 +9,7 @@ interface DecorationProps {
 }
 
 /* ════════════════════════════════════════════════════════════════════
-   CHAPTER 1 — THE FIRST CHAPTER (Welcome Dinner · Dusk Till Dawn)
+   CHAPTER 1  -  THE FIRST CHAPTER (Welcome Dinner · Dusk Till Dawn)
    Twilight sunset arc, candelabra silhouettes, rising stars
    ════════════════════════════════════════════════════════════════════ */
 
@@ -117,7 +117,7 @@ function DuskDivider({ palette }: DecorationProps) {
 }
 
 /* ════════════════════════════════════════════════════════════════════
-   CHAPTER 2 — THE COURTYARD EDIT (Victorian Hi-Tea · Haveli)
+   CHAPTER 2  -  THE COURTYARD EDIT (Victorian Hi-Tea · Haveli)
    Jharokha window arch, jasmine garlands, haveli lattice
    ════════════════════════════════════════════════════════════════════ */
 
@@ -173,7 +173,7 @@ function JharokhaHero({ palette }: DecorationProps) {
           animate={{ pathLength: 1 }}
           transition={{ duration: 2, delay: 2.2 }}
         />
-        {/* Lattice jali pattern — more detail */}
+        {/* Lattice jali pattern  -  more detail */}
         {Array.from({ length: 7 }, (_, i) => (
           <motion.ellipse
             key={i}
@@ -256,7 +256,7 @@ function JasmineDivider({ palette }: DecorationProps) {
 }
 
 /* ════════════════════════════════════════════════════════════════════
-   CHAPTER 3 — THE MIDNIGHT CATHEDRAL (Sangeet · Cathedral Gone Rogue)
+   CHAPTER 3  -  THE MIDNIGHT CATHEDRAL (Sangeet · Cathedral Gone Rogue)
    Gothic arch, rose window, musical elements
    ════════════════════════════════════════════════════════════════════ */
 
@@ -389,7 +389,7 @@ function MusicDivider({ palette }: DecorationProps) {
 }
 
 /* ════════════════════════════════════════════════════════════════════
-   CHAPTER 4 — A WORLD OF OUR OWN (Personal Lunch · Sun-Drenched)
+   CHAPTER 4  -  A WORLD OF OUR OWN (Personal Lunch · Sun-Drenched)
    Compass rose, olive branches, sunbeam rays, travel motifs
    ════════════════════════════════════════════════════════════════════ */
 
@@ -512,7 +512,7 @@ function OliveBranchDivider({ palette }: DecorationProps) {
 }
 
 /* ════════════════════════════════════════════════════════════════════
-   CHAPTER 5 — THE ROYAL COURT (Wedding Ceremony · Mughal Grandeur)
+   CHAPTER 5  -  THE ROYAL COURT (Wedding Ceremony · Mughal Grandeur)
    Mandap arch, sacred lotus, kalash, Sanskrit mantras
    ════════════════════════════════════════════════════════════════════ */
 
@@ -576,7 +576,7 @@ function MandapHero({ palette }: DecorationProps) {
           transition={{ delay: 3 }}
           transform="translate(0, 15)"
         />
-        {/* Decorative inner scallops — more detail */}
+        {/* Decorative inner scallops  -  more detail */}
         {Array.from({ length: 5 }, (_, i) => (
           <motion.ellipse
             key={i}
@@ -650,7 +650,7 @@ function SacredFireDivider({ palette }: DecorationProps) {
 }
 
 /* ════════════════════════════════════════════════════════════════════
-   CHAPTER 6 — THE THRILL THEORY (Afterparty · Neon Carnival)
+   CHAPTER 6  -  THE THRILL THEORY (Afterparty · Neon Carnival)
    Ferris wheel, neon signs, carnival chaos
    ════════════════════════════════════════════════════════════════════ */
 
@@ -932,7 +932,7 @@ function EdgeOrnaments({ slug, palette }: { slug: string; palette: ChapterPalett
 }
 
 /* ════════════════════════════════════════════════════════════════════
-   ENVIRONMENT FRAME — decorative border wrapping page content
+   ENVIRONMENT FRAME  -  decorative border wrapping page content
    ════════════════════════════════════════════════════════════════════ */
 
 function EnvironmentFrame({ slug, palette }: { slug: string; palette: ChapterPalette }) {

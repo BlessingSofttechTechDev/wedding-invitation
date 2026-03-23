@@ -66,7 +66,7 @@ const MALE_GARMENTS: Record<string, GarmentTemplate> = {
   kurta: {
     id: "kurta",
     layers: [
-      // Kurta body — loose A-line
+      // Kurta body  -  loose A-line
       { d: "M435 240 L410 500 L405 740 L430 750 L512 760 L594 750 L619 740 L614 500 L589 240 Z", fill: "base", opacity: 0.88 },
       // Short front slit
       { d: "M512 590 L505 750 L519 750 Z", fill: "accent", opacity: 0.3 },
@@ -417,7 +417,7 @@ export function GarmentEngine({ wardrobe, audience, color, fabric, activeAccesso
             );
           })
         ) : (
-          /* No look selected — show subtle "select an outfit" placeholder */
+          /* No look selected  -  show subtle "select an outfit" placeholder */
           <g className="no-garment-hint">
             <rect x="412" y="260" width="200" height="40" rx="20" fill="white" opacity="0.05" />
             <text x="512" y="285" textAnchor="middle" fill={P.cream} opacity="0.25" fontSize="12" fontFamily="sans-serif">
@@ -449,7 +449,7 @@ export function GarmentEngine({ wardrobe, audience, color, fabric, activeAccesso
 }
 
 /* ═══════════════════════════════════════════════════════════════════ */
-/*  GARMENT PICKER — Card carousel for selecting outfits               */
+/*  GARMENT PICKER  -  Card carousel for selecting outfits               */
 /* ═══════════════════════════════════════════════════════════════════ */
 
 export function GarmentPicker({

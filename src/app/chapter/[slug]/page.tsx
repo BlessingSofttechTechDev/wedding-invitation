@@ -22,14 +22,14 @@ export async function generateMetadata({
   const event = getEventBySlug(slug);
 
   if (!event) {
-    return { title: "Chapter Not Found — T & S Wedding" };
+    return { title: "Chapter Not Found  -  T & S Wedding" };
   }
 
   return {
-    title: `${event.title} — T & S Wedding`,
+    title: `${event.title}  -  T & S Wedding`,
     description: event.tagline,
     openGraph: {
-      title: `${event.title} — T & S Wedding`,
+      title: `${event.title}  -  T & S Wedding`,
       description: event.tagline,
     },
   };

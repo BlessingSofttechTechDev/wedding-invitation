@@ -22,7 +22,7 @@ interface ChapterProps {
 }
 
 /* ═══════════════════════════════════════════════════════════════════
-   SVG SET — Royal Proclamation Cultural Elements
+   SVG SET  -  Royal Proclamation Cultural Elements
    (1) Silk Curtain   (2) Jharokha Arch   (3) Diya Strip
    (4) Palace Facade  (5) Royal Crest     (6) Elephant Band
    All SVGs: clean stroke paths, maskable fills, parallax-ready
@@ -470,14 +470,14 @@ function ProclamationHero({ event }: { event: WeddingEvent }) {
       "the Noor Mahal Soirée unfolds in",
       "cascading florals, antique gold,",
       "and projection-mapped grandeur.",
-      "This is the pre-party reception —",
+      "This is the pre-party reception  - ",
       "the opening act before Udaipur.",
     ]
     : [
       "As the sun sets over Lake Pichola,",
       "the evening unfolds in warm ambers,",
       "deep wines, and candlelit golds.",
-      "This is not just a welcome dinner —",
+      "This is not just a welcome dinner  - ",
       "it is the opening scene, the first verse,",
       "the moment the story begins.",
     ];
@@ -491,7 +491,7 @@ function ProclamationHero({ event }: { event: WeddingEvent }) {
           style={{ background: "linear-gradient(180deg,#2d1810 0%,#4a2010 40%,#1a0a2e 100%)" }}
         />
 
-        {/* L1 — sandstone grain texture */}
+        {/* L1  -  sandstone grain texture */}
         <div
           className="lyr-sand absolute inset-0 opacity-[0.18]"
           style={{
@@ -499,7 +499,7 @@ function ProclamationHero({ event }: { event: WeddingEvent }) {
           }}
         />
 
-        {/* L2 — palace silhouette skyline */}
+        {/* L2  -  palace silhouette skyline */}
         <div className="lyr-pal absolute bottom-0 left-0 right-0 h-2/3 pointer-events-none">
           <svg
             viewBox="0 0 1200 400"
@@ -514,7 +514,7 @@ function ProclamationHero({ event }: { event: WeddingEvent }) {
           </svg>
         </div>
 
-        {/* L3 — chandelier bokeh */}
+        {/* L3  -  chandelier bokeh */}
         <div className="lyr-bokeh absolute inset-0 opacity-25 pointer-events-none">
           {bokehDots.map((d, i) => (
             <div
@@ -531,7 +531,7 @@ function ProclamationHero({ event }: { event: WeddingEvent }) {
           ))}
         </div>
 
-        {/* L4 — candle glow */}
+        {/* L4  -  candle glow */}
         <div className="lyr-candle absolute bottom-0 left-0 right-0 h-1/3 pointer-events-none">
           <div
             className="w-full h-full"
@@ -611,7 +611,7 @@ function ProclamationHero({ event }: { event: WeddingEvent }) {
           </div>
         </div>
 
-        {/* Royal crest/monogram — emboss mask-wipe reveal */}
+        {/* Royal crest/monogram  -  emboss mask-wipe reveal */}
         <div className="absolute bottom-24 left-1/2 -translate-x-1/2 z-10">
           <RoyalCrestSVG accent={palette.accent} />
         </div>
@@ -634,14 +634,14 @@ function ProclamationHero({ event }: { event: WeddingEvent }) {
 }
 
 /* ═══════════════════════════════════════════════════════════════════
-   ATMOSPHERE QUOTE — word-by-word GSAP reveal
+   ATMOSPHERE QUOTE  -  word-by-word GSAP reveal
    ═══════════════════════════════════════════════════════════════════ */
 
 function AtmosphereQuote({ event }: { event: WeddingEvent }) {
   const { palette } = event;
   const ref = useRef<HTMLDivElement>(null);
   const quote =
-    "Different cities, different journeys — one decision. From separate lives to a shared narrative, from dusk till dawn.";
+    "Different cities, different journeys  -  one decision. From separate lives to a shared narrative, from dusk till dawn.";
 
   useGSAP(
     () => {
@@ -700,7 +700,7 @@ function AtmosphereQuote({ event }: { event: WeddingEvent }) {
 }
 
 /* ═══════════════════════════════════════════════════════════════════
-   STORY SECTION — single vibe quote
+   STORY SECTION  -  single vibe quote
    ═══════════════════════════════════════════════════════════════════ */
 
 function StorySection({ event }: { event: WeddingEvent }) {
@@ -741,7 +741,7 @@ function StorySection({ event }: { event: WeddingEvent }) {
 }
 
 /* ═══════════════════════════════════════════════════════════════════
-   DRESS CODE — Royal Proclamation · वेश विधान
+   DRESS CODE  -  Royal Proclamation · वेश विधान
    Rajputana-themed: gold ornamental borders, sandstone card,
    diya bullet points, arch-framed title, cultural tone
    ═══════════════════════════════════════════════════════════════════ */
@@ -943,7 +943,7 @@ function RoyalDressCode({ event }: { event: WeddingEvent }) {
 }
 
 /* ═══════════════════════════════════════════════════════════════════
-   GALLERY — masonry with staggered reveal
+   GALLERY  -  masonry with staggered reveal
    ═══════════════════════════════════════════════════════════════════ */
 
 function ImmersiveGallery({ event }: { event: WeddingEvent }) {
@@ -1011,7 +1011,7 @@ function ImmersiveGallery({ event }: { event: WeddingEvent }) {
 }
 
 /* ═══════════════════════════════════════════════════════════════════
-   VENUE — parallax hero image
+   VENUE  -  parallax hero image
    ═══════════════════════════════════════════════════════════════════ */
 
 function VenueSection({ event }: { event: WeddingEvent }) {
@@ -1047,7 +1047,7 @@ function VenueSection({ event }: { event: WeddingEvent }) {
 }
 
 /* ═══════════════════════════════════════════════════════════════════
-   MAIN COMPONENT — FirstChapterContent
+   MAIN COMPONENT  -  FirstChapterContent
    Orchestrates: Intro → Hero → Quote → Info → Story → Dress →
    Gallery → Venue → Navigation
    ═══════════════════════════════════════════════════════════════════ */
@@ -1235,7 +1235,7 @@ export default function FirstChapterContent({ event }: ChapterProps) {
         </section>
       </FadeInView>
 
-      {/* Chapter-themed footer — overrides global maroon to match palette */}
+      {/* Chapter-themed footer  -  overrides global maroon to match palette */}
       <footer
         className="relative"
         style={{ backgroundColor: palette.background, borderTop: `1px solid ${palette.accent}10` }}
@@ -1267,7 +1267,7 @@ export default function FirstChapterContent({ event }: ChapterProps) {
             <div className="h-px w-10 md:w-20" style={{ background: `linear-gradient(to left,transparent,${palette.accent}25)` }} />
           </div>
           <p className="text-[11px] font-body tracking-wide mb-6" style={{ color: `${palette.foreground}6a` }}>
-            April 19–21, 2026 · Udaipur, Rajasthan
+            April 20–22, 2026 · Udaipur, Rajasthan
           </p>
           <div className="flex flex-wrap items-center justify-center gap-2.5 text-xs font-body tracking-wide" style={{ color: `${palette.foreground}5c` }}>
             <span>© 2026 All Rights Reserved</span>

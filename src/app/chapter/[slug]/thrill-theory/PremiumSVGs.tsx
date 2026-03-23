@@ -3,7 +3,7 @@
 import { useEffect, useRef } from "react";
 
 /* ═══════════════════════════════════════════════════════════════════
-   Premium SVGs — The Thrill Theory · उन्मुक्त रात्रि
+   Premium SVGs  -  The Thrill Theory · उन्मुक्त रात्रि
    Abstract luxury light art. Stroke-based, fine weights, minimal.
    ═══════════════════════════════════════════════════════════════════ */
 
@@ -42,7 +42,7 @@ export function PremiumGateway({ accent, primary, className }: SVGProps) {
         </filter>
       </defs>
 
-      {/* Outer arch — slight asymmetry */}
+      {/* Outer arch  -  slight asymmetry */}
       <path
         d="M38 500 L36 260 Q32 170 100 108 Q160 56 232 30 Q268 16 282 12
            Q300 16 345 34 Q420 62 472 118 Q530 185 524 270 L520 500"
@@ -71,11 +71,11 @@ export function PremiumGateway({ accent, primary, className }: SVGProps) {
       <circle cx="282" cy="2" r="4" stroke={accent} strokeWidth="0.5" opacity="0.5" />
       <circle cx="282" cy="2" r="1.5" fill={`${accent}30`} />
 
-      {/* Accent filigree — left */}
+      {/* Accent filigree  -  left */}
       <path d="M36 260 Q24 258 22 248 L22 232" stroke={accent} strokeWidth="0.4" opacity="0.25" />
       <path d="M28 252 Q34 244 40 252" stroke={primary} strokeWidth="0.3" opacity="0.18" />
 
-      {/* Accent filigree — right */}
+      {/* Accent filigree  -  right */}
       <path d="M524 270 Q536 268 538 258 L538 240" stroke={accent} strokeWidth="0.4" opacity="0.25" />
       <path d="M530 260 Q536 252 542 260" stroke={primary} strokeWidth="0.3" opacity="0.18" />
 

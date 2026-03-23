@@ -20,12 +20,12 @@ import {
 /** Readable on maroon cards; lighter than raw palette.accent */
 const itineraryAccentText = (event: WeddingEvent) => event.palette.secondary;
 
-/** Schedule times / section dates — bright gold, bold */
+/** Schedule times / section dates  -  bright gold, bold */
 const ITINERARY_GOLD_TEXT = "#f8e8b8";
 const ITINERARY_GOLD_MUTED = "#e8d48a";
 
 /* ────────────────────────────────────────────────────────
-   Google Calendar — opens directly in the calendar app
+   Google Calendar  -  opens directly in the calendar app
    ──────────────────────────────────────────────────────── */
 
 function to24h(hours: number, period: string): number {
@@ -80,7 +80,7 @@ function getGoogleCalendarUrl(event: WeddingEvent): string {
 
   const params = new URLSearchParams({
     action: "TEMPLATE",
-    text: `${event.title} — T & S Wedding`,
+    text: `${event.title}  -  T & S Wedding`,
     dates: `${startIST}/${endIST}`,
     ctz: "Asia/Kolkata",
     location: `${event.location}, ${event.venue}`,
@@ -159,7 +159,7 @@ export default function ItineraryContent() {
 
       {/* Main layout */}
       <div className="max-w-7xl mx-auto px-6 pb-40 lg:flex lg:gap-16">
-        {/* Sticky sidebar — desktop only */}
+        {/* Sticky sidebar  -  desktop only */}
         <aside className="hidden lg:block lg:w-60 shrink-0 sticky top-32 h-fit self-start">
           <nav>
             <p
@@ -251,7 +251,7 @@ export default function ItineraryContent() {
                     className={cn("relative", ei > 0 ? "mt-14" : "")}
                   >
                     <FadeInView delay={ei * 0.12}>
-                      {/* Timeline dot — diamond shape */}
+                      {/* Timeline dot  -  diamond shape */}
                       <div
                         className="absolute -left-10 top-8 z-10 flex items-center justify-center"
                         style={{ width: 16, height: 16 }}
@@ -300,7 +300,7 @@ export default function ItineraryContent() {
                           }}
                         />
 
-                        {/* Time pill — light gold, bold (readable on dark cards) */}
+                        {/* Time pill  -  light gold, bold (readable on dark cards) */}
                         <div
                           className="inline-flex items-center gap-2 text-sm font-bold px-3 py-1.5 rounded-sm mb-5"
                           style={{

@@ -104,18 +104,18 @@ function WeddingMandala({ className = "" }: { className?: string }) {
 }
 
 /* ─────────────────────────────────────────────────────────────── */
-/*  V3.0 — Cultural SVG Components                                 */
+/*  V3.0  -  Cultural SVG Components                                 */
 /* ─────────────────────────────────────────────────────────────── */
 
 function JharokhaArch({ className = "", children }: { className?: string; children?: React.ReactNode }) {
   return (
     <div className={`relative ${className}`} aria-hidden="true">
       <svg viewBox="0 0 240 340" className="w-full h-full" fill="none" xmlns="http://www.w3.org/2000/svg">
-        {/* Outer cusped arch — distinctly Rajasthani */}
+        {/* Outer cusped arch  -  distinctly Rajasthani */}
         <path d="M20 340 V160 Q20 100 50 72 Q65 55 85 42 Q100 33 120 26 Q140 33 155 42 Q175 55 190 72 Q220 100 220 160 V340" stroke={`${P.gold}25`} strokeWidth="1" />
         {/* Inner cusped arch */}
         <path d="M38 340 V168 Q38 112 62 86 Q76 70 94 58 Q108 48 120 42 Q132 48 146 58 Q164 70 178 86 Q202 112 202 168 V340" stroke={`${P.gold}15`} strokeWidth="0.6" />
-        {/* Cusps — scalloped detail at top */}
+        {/* Cusps  -  scalloped detail at top */}
         <path d="M62 86 Q72 78 82 82" stroke={`${P.gold}18`} strokeWidth="0.5" />
         <path d="M82 82 Q96 68 110 72" stroke={`${P.gold}18`} strokeWidth="0.5" />
         <path d="M110 72 Q120 66 130 72" stroke={`${P.gold}18`} strokeWidth="0.5" />
@@ -151,7 +151,7 @@ function DiyaFlame({ size = "md", className = "" }: { size?: "sm" | "md" | "lg";
         <path d="M14 85 Q10 78 14 72 L18 68 Q22 65 30 64 Q38 65 42 68 L46 72 Q50 78 46 85" fill={`${P.gold}12`} stroke={`${P.gold}25`} strokeWidth="0.6" />
         {/* Wick */}
         <line x1="30" y1="64" x2="30" y2="48" stroke={`${P.gold}40`} strokeWidth="1" />
-        {/* Flame — animated */}
+        {/* Flame  -  animated */}
         <g className="animate-diya-flicker" style={{ transformOrigin: "30px 48px" }}>
           <path d="M30 48 Q22 34 24 22 Q26 10 30 4 Q34 10 36 22 Q38 34 30 48Z" fill="url(#flameGrad)" opacity="0.9" />
           <path d="M30 48 Q25 38 27 28 Q29 18 30 12 Q31 18 33 28 Q35 38 30 48Z" fill="url(#flameInner)" opacity="0.7" />
@@ -257,7 +257,7 @@ function GoldFoilSpeckles() {
 }
 
 /* ─────────────────────────────────────────────────────────────── */
-/*  V3.0 — Ritual Transitions (replaces SectionTransition)        */
+/*  V3.0  -  Ritual Transitions (replaces SectionTransition)        */
 /* ─────────────────────────────────────────────────────────────── */
 
 function RitualTransition({ variant = "lotus" }: { variant?: "lotus" | "elephant" | "mandala" | "silk" }) {
@@ -360,7 +360,7 @@ function JaimalaAnimation({ className = "" }: { className?: string }) {
   return (
     <div className={`relative mx-auto ${className}`} style={{ width: "clamp(160px, 32vw, 260px)" }}>
       <svg viewBox="0 0 400 310" fill="none" xmlns="http://www.w3.org/2000/svg" className="w-full h-auto" aria-hidden="true">
-        {/* Groom — left figure */}
+        {/* Groom  -  left figure */}
         <circle cx="138" cy="78" r="20" stroke={P.gold} strokeWidth="1" opacity="0.55" />
         <path d="M118 72 Q124 50 142 46 Q158 50 156 72" stroke={P.gold} strokeWidth="0.7" opacity="0.35" />
         <path d="M150 54 L155 46 L153 60" stroke={P.gold} strokeWidth="0.5" opacity="0.28" />
@@ -372,7 +372,7 @@ function JaimalaAnimation({ className = "" }: { className?: string }) {
         <line x1="121" y1="222" x2="114" y2="280" stroke={P.gold} strokeWidth="0.5" opacity="0.15" />
         <line x1="155" y1="222" x2="162" y2="280" stroke={P.gold} strokeWidth="0.5" opacity="0.15" />
 
-        {/* Bride — right figure */}
+        {/* Bride  -  right figure */}
         <circle cx="262" cy="78" r="20" stroke={P.gold} strokeWidth="1" opacity="0.55" />
         <path d="M242 72 Q248 53 266 50 Q282 53 282 72 Q290 78 294 96 Q290 114 286 126" stroke={P.gold} strokeWidth="0.7" opacity="0.3" fill="none" />
         <circle cx="262" cy="60" r="2.5" fill={P.maroon} opacity="0.55" />
@@ -392,14 +392,14 @@ function JaimalaAnimation({ className = "" }: { className?: string }) {
         <motion.path d="M162 112 Q150 96 138 106 Q126 116 114 108" stroke={P.bronze} strokeWidth="2.5" fill="none" strokeLinecap="round" opacity="0.55"
           initial={reduced ? false : { pathLength: 0, opacity: 0 }} animate={{ pathLength: 1, opacity: 0.55 }} transition={{ duration: 1.4, delay: 2.9, ease: "easeOut" }} />
 
-        {/* Flower dots — bride garland */}
+        {/* Flower dots  -  bride garland */}
         {garlandFlowers.brideFlowers.map((f, i) => (
           <motion.circle key={`fb-${i}`} cx={f.cx} cy={f.cy} r="3" fill={P.maroon}
             initial={reduced ? false : { scale: 0, opacity: 0 }} animate={{ scale: 1, opacity: 0.45 }}
             transition={{ duration: 0.35, delay: 2.8 + i * 0.14, ease: "backOut" }} />
         ))}
 
-        {/* Flower dots — groom garland */}
+        {/* Flower dots  -  groom garland */}
         {garlandFlowers.groomFlowers.map((f, i) => (
           <motion.circle key={`fg-${i}`} cx={f.cx} cy={f.cy} r="3" fill={P.bronze}
             initial={reduced ? false : { scale: 0, opacity: 0 }} animate={{ scale: 1, opacity: 0.45 }}
@@ -528,7 +528,7 @@ function DreamParticles({ count }: { count: number }) {
 }
 
 /* ─────────────────────────────────────────────────────────────── */
-/*  V3.0 — Sacred Prelude (Ceremonial Invocation)                  */
+/*  V3.0  -  Sacred Prelude (Ceremonial Invocation)                  */
 /* ─────────────────────────────────────────────────────────────── */
 
 function SacredPrelude({ onComplete }: { onComplete: () => void }) {
@@ -555,7 +555,7 @@ function SacredPrelude({ onComplete }: { onComplete: () => void }) {
           else { clearInterval(fade); audio.pause(); }
         }, 400);
       }, 14000);
-    } catch { /* no audio — graceful */ }
+    } catch { /* no audio  -  graceful */ }
 
     document.body.style.overflow = "";
     const tl = gsap.timeline({ onComplete });
@@ -643,7 +643,7 @@ function SacredPrelude({ onComplete }: { onComplete: () => void }) {
           <div className="sp-line-r h-px w-16 md:w-24 origin-left" style={{ backgroundColor: `${P.gold}40` }} />
         </div>
 
-        {/* Couple initials — embossed gold feel */}
+        {/* Couple initials  -  embossed gold feel */}
         <div className="flex items-baseline gap-3 md:gap-5">
           <span className="sp-char font-serif text-6xl md:text-8xl lg:text-9xl" style={{ color: P.cream, textShadow: `0 2px 4px rgba(0,0,0,0.5), 0 0 40px ${P.gold}15` }}>{COUPLE.partner1.charAt(0)}</span>
           <span className="sp-char font-serif italic text-3xl md:text-5xl" style={{ background: `linear-gradient(180deg, ${P.gold}, ${P.bronze})`, WebkitBackgroundClip: "text", WebkitTextFillColor: "transparent" }}>&amp;</span>
@@ -662,7 +662,7 @@ function SacredPrelude({ onComplete }: { onComplete: () => void }) {
           A Sacred Celebration
         </p>
 
-        {/* Wax seal — "Begin the Royal Journey" — inside flow */}
+        {/* Wax seal  -  "Begin the Royal Journey"  -  inside flow */}
         <div className="mt-10 flex flex-col items-center gap-4 cursor-pointer">
           <div className="sp-seal relative w-16 h-16 md:w-20 md:h-20 rounded-full flex items-center justify-center opacity-0" style={{ background: `radial-gradient(circle at 40% 35%, ${P.maroon}, #5a1010, #3d0808)`, boxShadow: `0 4px 20px rgba(139,26,26,0.5), inset 0 1px 0 rgba(255,255,255,0.08), 0 0 30px rgba(139,26,26,0.3)` }}>
             <div className="absolute inset-1 rounded-full" style={{ border: `1px solid rgba(212,175,55,0.2)` }} />
@@ -681,7 +681,7 @@ function SacredPrelude({ onComplete }: { onComplete: () => void }) {
 }
 
 /* ─────────────────────────────────────────────────────────────── */
-/*  Hero — Royal Heritage Cinematic                                */
+/*  Hero  -  Royal Heritage Cinematic                                */
 /* ─────────────────────────────────────────────────────────────── */
 
 function Hero({ loaded }: { loaded: boolean }) {
@@ -689,7 +689,7 @@ function Hero({ loaded }: { loaded: boolean }) {
   const archOuterRef = useRef<SVGPathElement>(null);
   const archInnerRef = useRef<SVGPathElement>(null);
 
-  const formattedDate = "April 20–21, 2026";
+  const formattedDate = "April 20–22, 2026";
 
   useGSAP(() => {
     if (!loaded) return;
@@ -769,9 +769,9 @@ function Hero({ loaded }: { loaded: boolean }) {
         <div className="hf-c absolute -bottom-0.5 left-1/2 -translate-x-1/2 w-1 h-1 rotate-45" style={{ backgroundColor: `${P.gold}25` }} />
       </div>
 
-      {/* ── Content — flex-1 so “Discover” sits below without overlapping CTAs ── */}
+      {/* ── Content  -  flex-1 so “Discover” sits below without overlapping CTAs ── */}
       <div className="hero-content relative z-10 w-full max-w-5xl mx-auto min-h-0 flex-1 flex flex-col items-center justify-start text-center px-4 sm:px-6 md:justify-center invisible">
-        {/* Devanagari cultural text — clear of fixed navbar (pt on section + no extra mt) */}
+        {/* Devanagari cultural text  -  clear of fixed navbar (pt on section + no extra mt) */}
         <p className="hero-sanskrit text-sm md:text-xs mb-4 md:mb-6 mt-0 md:mt-16 font-semibold tracking-[0.12em]" style={{ color: "#f2ddb0", textShadow: "0 1px 2px rgba(0,0,0,0.35)" }}>
           शुभ विवाह
         </p>
@@ -842,13 +842,13 @@ function Hero({ loaded }: { loaded: boolean }) {
           <div className="h-px w-10 md:w-20" style={{ background: `linear-gradient(to right, transparent, ${P.maroon}40, transparent)` }} />
         </div>
 
-        {/* Date + venue — brass plate style */}
+        {/* Date + venue  -  brass plate style */}
         <div className="hero-fade space-y-2 animate-brass-pulse rounded px-8 py-4" style={{ border: `1px solid ${P.gold}18`, background: `linear-gradient(135deg, ${P.gold}06, transparent, ${P.gold}04)` }}>
           <p className="text-sm md:text-base uppercase tracking-[0.3em] font-body" style={{ color: `${P.cream}e6` }}>{formattedDate}</p>
           <p className="text-xs uppercase tracking-[0.3em] font-body" style={{ color: `${P.cream}e2` }}>Fairmont Udaipur · {COUPLE.location}</p>
         </div>
 
-        {/* CTAs — parchment & envelope styled (wrap + gap so long label doesn’t collide) */}
+        {/* CTAs  -  parchment & envelope styled (wrap + gap so long label doesn’t collide) */}
         <div className="hero-fade flex flex-col sm:flex-row flex-wrap items-stretch sm:items-center justify-center gap-3 sm:gap-4 mt-8 w-full max-w-md sm:max-w-none mx-auto">
           <Link href="/itinerary" className="group relative px-8 sm:px-10 py-3.5 sm:py-4 text-xs md:text-[11px] uppercase tracking-[0.25em] font-body transition-all duration-700 overflow-hidden text-center sm:text-left flex items-center justify-center" style={{ color: `${P.gold}e6`, border: `1px solid ${P.gold}30`, background: `linear-gradient(to bottom, ${P.gold}08, transparent)`, boxShadow: `inset 0 1px 0 ${P.gold}12` }}>
             <span className="relative z-10 flex items-center justify-center gap-2">
@@ -871,7 +871,7 @@ function Hero({ loaded }: { loaded: boolean }) {
         </div>
       </div>
 
-      {/* Scroll indicator — in document flow so it never stacks over CTAs */}
+      {/* Scroll indicator  -  in document flow so it never stacks over CTAs */}
       <div
         className="hero-scroll-ind relative z-10 flex flex-col items-center gap-2 sm:gap-3 shrink-0 pt-2 pb-[max(1.5rem,env(safe-area-inset-bottom,0px))] sm:pb-8 opacity-0"
       >
@@ -883,7 +883,7 @@ function Hero({ loaded }: { loaded: boolean }) {
 }
 
 /* ─────────────────────────────────────────────────────────────── */
-/*  Royal Prologue — Jaipur Heritage Narrative                     */
+/*  Royal Prologue  -  Jaipur Heritage Narrative                     */
 /* ─────────────────────────────────────────────────────────────── */
 
 function RoyalPrologue() {
@@ -923,7 +923,7 @@ function RoyalPrologue() {
           In the Heart of the City of Lakes
         </h2>
         <p className="rp-fade font-serif italic text-sm md:text-base mb-6 font-medium" style={{ color: "#edd7a6", textShadow: "0 1px 2px rgba(0,0,0,0.3)" }}>
-          <span className="text-[0.85em]">झीलों की नगरी</span> — The Venice of the East
+          <span className="text-[0.85em]">झीलों की नगरी</span>  -  The Venice of the East
         </p>
 
         <p className="rp-fade font-body text-sm md:text-base leading-[2] max-w-2xl mx-auto mb-6" style={{ color: `${P.cream}e2` }}>
@@ -934,13 +934,13 @@ function RoyalPrologue() {
         </p>
 
         <p className="rp-fade font-body text-sm md:text-base leading-[2] max-w-2xl mx-auto mb-6" style={{ color: `${P.cream}d8` }}>
-          Udaipur — founded by Maharana Udai Singh II in 1559, nestled between five lakes
+          Udaipur  -  founded by Maharana Udai Singh II in 1559, nestled between five lakes
           and ancient hills. A city that understands ceremony, that knows how to hold sacred
           space for moments that transcend the ordinary. A city worthy of a Mewari celebration.
         </p>
 
         <p className="rp-fade font-serif italic text-base md:text-lg max-w-xl mx-auto" style={{ color: `${P.gold}d8` }}>
-          This celebration unfolds across three days and five chapters — each a distinct rasa,
+          This celebration unfolds across three days and five chapters  -  each a distinct rasa,
           a different mood, a new verse in a love story written against the grandeur of Rajasthan.
         </p>
 
@@ -951,7 +951,7 @@ function RoyalPrologue() {
 }
 
 /* ─────────────────────────────────────────────────────────────── */
-/*  Our Story — single CTA to dedicated story page                 */
+/*  Our Story  -  single CTA to dedicated story page                 */
 /* ─────────────────────────────────────────────────────────────── */
 
 function StoryPageCTA() {
@@ -1070,7 +1070,7 @@ function VenueShowcase() {
       </div>
 
       <div className="relative z-10 w-full max-w-3xl mx-auto px-4 sm:px-6 md:px-8 text-center">
-        {/* Very subtle glass hint — extra vertical room on small screens */}
+        {/* Very subtle glass hint  -  extra vertical room on small screens */}
         <div
           className="vs-fade rounded-xl sm:rounded-2xl px-5 py-8 sm:px-7 sm:py-10 md:px-12 md:py-14 backdrop-blur-[2px] mx-auto"
           style={{
@@ -1150,7 +1150,7 @@ function ChapterCard({ event }: { event: (typeof EVENTS)[0] }) {
 }
 
 /* ─────────────────────────────────────────────────────────────── */
-/*  The Chapters — alternating story rows with day groupings       */
+/*  The Chapters  -  alternating story rows with day groupings       */
 /* ─────────────────────────────────────────────────────────────── */
 
 function ChapterJourneySection() {
@@ -1242,7 +1242,7 @@ function RoyalTimeline() {
             Udaipur
           </h2>
           <p className="font-body text-xs md:text-sm mt-4 max-w-md mx-auto leading-relaxed" style={{ color: `${P.cream}c4` }}>
-            The main events unfold in Udaipur — chapters crafted to honour heritage, love, and the joy of togetherness.
+            The main events unfold in Udaipur  -  chapters crafted to honour heritage, love, and the joy of togetherness.
           </p>
         </div>
       </div>
@@ -1300,7 +1300,7 @@ function FinalBlessing() {
 
         <p className="bl-el font-body text-sm md:text-base max-w-lg mx-auto mb-4 leading-loose" style={{ color: `${P.cream}e2` }}>
           Kindly grace us with your presence and bless our union.
-          Three days in the City of Lakes — five chapters of celebration,
+          Three days in the City of Lakes  -  five chapters of celebration,
           from intimate courtyards to gilded ceremonies, from sacred
           rituals at dawn to midnight revelry.
         </p>
@@ -1316,7 +1316,7 @@ function FinalBlessing() {
           <Link href="/rsvp" className="group relative px-12 py-4 text-xs md:text-[11px] uppercase tracking-[0.25em] font-body font-medium transition-all duration-700 overflow-hidden" style={{ color: P.bg, background: `linear-gradient(135deg, ${P.gold}, #c9a030, ${P.gold})`, boxShadow: `0 12px 32px rgba(212,175,55,0.2), inset 0 1px 0 rgba(255,255,255,0.15)` }}>
             <span className="relative z-10 flex items-center gap-2">
               <svg width="14" height="10" viewBox="0 0 14 10" fill="none"><path d="M1 1h12v8H1z" stroke={P.bg} strokeWidth="0.8" /><path d="M1 1l6 4 6-4" stroke={P.bg} strokeWidth="0.6" /></svg>
-              RSVP — Accept with Joy
+              RSVP  -  Accept with Joy
             </span>
           </Link>
           <Link href="/itinerary" className="px-12 py-4 text-xs md:text-[11px] uppercase tracking-[0.25em] font-body transition-all duration-700" style={{ color: `${P.cream}d8`, border: `1px solid ${P.cream}18`, background: `linear-gradient(to bottom, ${P.gold}06, transparent)` }}>

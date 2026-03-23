@@ -49,16 +49,16 @@ export async function sendRsvpNotification(payload: RsvpPayload): Promise<boolea
 
   const eventsList = Array.isArray(payload.eventsAttending) && payload.eventsAttending.length > 0
     ? payload.eventsAttending.join(", ")
-    : "—";
+    : " - ";
 
   const html = `
     <h2>${payload.isUpdate ? "Updated" : "New"} RSVP</h2>
     <p><strong>Name:</strong> ${payload.name}</p>
     <p><strong>Email:</strong> ${payload.email}</p>
-    <p><strong>Phone:</strong> ${payload.phone || "—"}</p>
+    <p><strong>Phone:</strong> ${payload.phone || " - "}</p>
     <p><strong>Attending:</strong> ${payload.attending}</p>
     <p><strong>Events:</strong> ${eventsList}</p>
-    <p><strong>Dietary:</strong> ${payload.dietaryRestrictions || "—"}</p>
+    <p><strong>Dietary:</strong> ${payload.dietaryRestrictions || " - "}</p>
     <p><strong>Plus one:</strong> ${payload.plusOne ? "Yes" : "No"}${payload.plusOneName ? ` (${payload.plusOneName})` : ""}</p>
     ${payload.notes ? `<p><strong>Notes:</strong> ${payload.notes}</p>` : ""}
     <p><em>Sent at ${new Date().toISOString()}</em></p>

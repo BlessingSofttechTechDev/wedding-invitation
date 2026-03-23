@@ -7,7 +7,7 @@ export const COUPLE = {
   weddingDate: "2026-04-20",
   location: "Udaipur, Rajasthan",
   venue: "Fairmont Udaipur",
-  tagline: "Mumbai, Pune, London — different cities, one love story.",
+  tagline: "Mumbai, Pune, London  -  different cities, one love story.",
 } as const;
 
 export const EVENTS: WeddingEvent[] = [
@@ -26,11 +26,11 @@ export const EVENTS: WeddingEvent[] = [
     description:
       "Inspired by the fresco-lined havelis of Rajasthan, this lunch reimagines the traditional courtyard through a contemporary lens. Traditional motifs meet soft stripes and clean silhouettes, creating a space that feels regal yet fresh.",
     longDescription:
-      "Rajasthan's royal hospitality in a pastel courtyard — frescoes, fine china, and afternoon tea.",
+      "Rajasthan's royal hospitality in a pastel courtyard  -  frescoes, fine china, and afternoon tea.",
     dressCode: {
       title: "Pastel Organza Silhouettes",
       description: "Light, airy, and refined. Let the courtyard be your canvas.",
-      dos: ["Pastels — blush, sage, lavender, ivory", "Organza, chiffon, linen", "Floral prints", "Light jewellery"],
+      dos: ["Pastels  -  blush, sage, lavender, ivory", "Organza, chiffon, linen", "Floral prints", "Light jewellery"],
       donts: ["Dark heavy fabrics", "Overly embellished", "All black"],
     },
     palette: {
@@ -60,7 +60,7 @@ export const EVENTS: WeddingEvent[] = [
     location: "Jewel Ballroom & Terrace",
     venue: "Fairmont Udaipur",
     description:
-      "Inspired by the raw, wild energy of the venue, this Sangeet is what happens when a cathedral throws a party and no one stops it. Grand arches, dramatic height, clean symmetry — but inside that structure, the wild takes over.",
+      "Inspired by the raw, wild energy of the venue, this Sangeet is what happens when a cathedral throws a party and no one stops it. Grand arches, dramatic height, clean symmetry  -  but inside that structure, the wild takes over.",
     longDescription:
       "A cathedral Sangeet where sacred geometry meets wild celebration and projection-mapped chaos.",
     dressCode: {
@@ -96,13 +96,13 @@ export const EVENTS: WeddingEvent[] = [
     location: "Imperial Banquet & Terrace",
     venue: "Fairmont Udaipur",
     description:
-      "Mumbai was the first meeting. Pune was where he grew up. London was where friendship became love. December 2023 was when the families came together. A minimalist setting with subtle details that reflect their journey — as they begin a new one together.",
+      "Mumbai was the first meeting. Pune was where he grew up. London was where friendship became love. December 2023 was when the families came together. A minimalist setting with subtle details that reflect their journey  -  as they begin a new one together.",
     longDescription:
-      "An intimate lunch mapping their journey — Mumbai, Pune, London — in sun-drenched simplicity.",
+      "An intimate lunch mapping their journey  -  Mumbai, Pune, London  -  in sun-drenched simplicity.",
     dressCode: {
       title: "The Linen Collective",
       description: "Sun-kissed simplicity. Effortless, natural, warm.",
-      dos: ["Linen, cotton, light knits", "Earth tones — sand, olive, terracotta", "Relaxed tailoring", "Minimal accessories"],
+      dos: ["Linen, cotton, light knits", "Earth tones  -  sand, olive, terracotta", "Relaxed tailoring", "Minimal accessories"],
       donts: ["Heavy embroidery", "Dark formal wear", "Synthetic fabrics"],
     },
     palette: {
@@ -145,13 +145,13 @@ export const EVENTS: WeddingEvent[] = [
       },
     ],
     description:
-      "Inspired by two things deeply rooted in Indian weddings: Mughal court architecture and couture craftsmanship. Instead of static décor, the architecture becomes a canvas — heritage interpreted through technology.",
+      "Inspired by two things deeply rooted in Indian weddings: Mughal court architecture and couture craftsmanship. Instead of static décor, the architecture becomes a canvas  -  heritage interpreted through technology.",
     longDescription:
-      "The ceremony as living court — Mughal archways reimagined in light, projection, and craft.",
+      "The ceremony as living court  -  Mughal archways reimagined in light, projection, and craft.",
     dressCode: {
       title: "Royal Couture",
       description: "This is the ceremony. Dress with intention. Honour the craft.",
-      dos: ["Traditional Indian formalwear", "Rich maroons, golds, deep reds", "Heritage textiles — Banarasi, Kanjeevaram", "Heirloom jewellery"],
+      dos: ["Traditional Indian formalwear", "Rich maroons, golds, deep reds", "Heritage textiles  -  Banarasi, Kanjeevaram", "Heirloom jewellery"],
       donts: ["Western formal", "White or black", "Casual ethnic"],
     },
     palette: {
@@ -181,13 +181,13 @@ export const EVENTS: WeddingEvent[] = [
     location: "Jewel Ballroom & Terrace",
     venue: "Fairmont Udaipur",
     description:
-      "Everyone's heard stories of an abandoned amusement park — but this is not your regular one. Imagine a lost amusement park but with a dark, surreal, and psychedelic twist. There's no script here — only the thrill of rebellion, the echoes of childhood, and the madness of letting go.",
+      "Everyone's heard stories of an abandoned amusement park  -  but this is not your regular one. Imagine a lost amusement park but with a dark, surreal, and psychedelic twist. There's no script here  -  only the thrill of rebellion, the echoes of childhood, and the madness of letting go.",
     longDescription:
       "A neon-drenched afterparty where the only rule is: there are no rules.",
     dressCode: {
       title: "Speed & Sparkle",
       description: "Go fast, go loud, go home glittering.",
-      dos: ["Sequins, metallics, neon", "Party-ready — think festival meets fashion", "Platform shoes welcome", "Experimental / avant-garde"],
+      dos: ["Sequins, metallics, neon", "Party-ready  -  think festival meets fashion", "Platform shoes welcome", "Experimental / avant-garde"],
       donts: ["Traditional / formal", "Muted earth tones", "Anything 'safe'"],
     },
     palette: {
@@ -292,7 +292,7 @@ export const FAQ_DATA = [
   },
   {
     question: "What about dietary restrictions?",
-    answer: "Absolutely — please mention any dietary requirements in your RSVP. Our culinary team will ensure you're well taken care of.",
+    answer: "Absolutely  -  please mention any dietary requirements in your RSVP. Our culinary team will ensure you're well taken care of.",
   },
   {
     question: "Is there parking available?",
@@ -308,7 +308,7 @@ export const FAQ_DATA = [
   },
   {
     question: "Can I take photos during the ceremony?",
-    answer: "We have a dedicated photography team capturing every moment. We kindly request an unplugged ceremony — please keep phones away during the wedding rituals. All other events are open for photos!",
+    answer: "We have a dedicated photography team capturing every moment. We kindly request an unplugged ceremony  -  please keep phones away during the wedding rituals. All other events are open for photos!",
   },
   {
     question: "What's the weather like in Udaipur in April?",
@@ -329,8 +329,8 @@ export const TRAVEL_INFO = {
 
 export const STAY_INFO = {
   hotel: "Fairmont Udaipur",
-  checkIn: "19th April, 2026 — 2:00 PM",
-  checkOut: "22nd April, 2026 — 12:00 PM",
+  checkIn: "19th April, 2026  -  2:00 PM",
+  checkOut: "22nd April, 2026  -  12:00 PM",
   amenities: [
     "Complimentary Wi-Fi",
     "Spa & wellness centre",
@@ -341,7 +341,7 @@ export const STAY_INFO = {
   ],
   houseRules: [
     "Please carry a valid photo ID for check-in",
-    "Rooms are pre-assigned — refer to your guest portal for details",
+    "Rooms are pre-assigned  -  refer to your guest portal for details",
     "All meals during the wedding events are covered",
     "Mini-bar and laundry are on the guest's account",
   ],

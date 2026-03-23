@@ -119,12 +119,12 @@ export default function ThrillHeroPinned({ event }: ThrillHeroPinnedProps) {
         }}
       />
 
-      {/* Gateway architecture — anchored to bottom */}
+      {/* Gateway architecture  -  anchored to bottom */}
       <div className="premium-gateway absolute inset-x-0 bottom-0 flex items-end justify-center z-[5] pointer-events-none">
         <PremiumGateway accent={palette.accent} primary={palette.primary} />
       </div>
 
-      {/* Main content — centered vertically */}
+      {/* Main content  -  centered vertically */}
       <div className="relative z-[10] flex flex-col items-center text-center px-6 py-20">
         {/* Title */}
         <h1
