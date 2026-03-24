@@ -8,7 +8,8 @@ import { ArrowLeft, MapPin, Clock, CalendarDays } from "lucide-react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { useGSAP } from "@gsap/react";
-import { EVENTS, COUPLE } from "@/content/events";
+import { EVENTS } from "@/content/events";
+import { HashtagMark } from "@/components/HashtagMark";
 import { WeddingEvent } from "@/types";
 import Navbar from "@/components/layout/Navbar";
 import FadeInView from "@/components/motion/FadeInView";
@@ -466,7 +467,6 @@ function CourtyardHero({ event }: { event: WeddingEvent }) {
 
   const hiTeaDetails = [
     { label: "Setting", value: "Fresco-lined Courtyard" },
-    { label: "Service", value: "Victorian Silver & Bone China" },
     { label: "Ambiance", value: "Pastels, Jasmine & Sunlight" },
   ];
 
@@ -764,34 +764,8 @@ function CourtyardDressCode({ event }: { event: WeddingEvent }) {
             <div className="flex-1 h-px" style={{ background: `linear-gradient(90deg,${palette.accent}20,transparent)` }} />
           </div>
 
-          <div className="grid md:grid-cols-2 gap-8 md:gap-16">
-            <div>
-              <h4 className="text-xs uppercase tracking-[0.25em] mb-6 font-medium" style={{ color: palette.accent }}>
-                Embrace
-              </h4>
-              <ul className="space-y-4">
-                {dressCode.dos.map((item) => (
-                  <li key={item} className="dc-i flex items-start gap-3">
-                    <span className="mt-1.5 w-1.5 h-1.5 rounded-full shrink-0" style={{ backgroundColor: palette.accent }} />
-                    <span className="text-[15px] leading-relaxed font-light" style={{ color: `${palette.foreground}c4` }}>{item}</span>
-                  </li>
-                ))}
-              </ul>
-            </div>
-            <div>
-              <h4 className="text-xs uppercase tracking-[0.25em] mb-6 font-medium" style={{ color: `${palette.foreground}85` }}>
-                Kindly Avoid
-              </h4>
-              <ul className="space-y-4">
-                {dressCode.donts.map((item) => (
-                  <li key={item} className="dc-i flex items-start gap-3">
-                    <span className="mt-1.5 w-1.5 h-1.5 rounded-full shrink-0" style={{ backgroundColor: `${palette.foreground}25` }} />
-                    <span className="text-[15px] leading-relaxed font-light" style={{ color: `${palette.foreground}90` }}>{item}</span>
-                  </li>
-                ))}
-              </ul>
-            </div>
-          </div>
+          <div className="grid md:grid-cols-1 gap-8 md:gap-12">
+</div>
         </div>
       </div>
     </section>
@@ -1000,7 +974,7 @@ export default function SecondChapterContent({ event }: ChapterProps) {
             Tarush <span style={{ color: palette.accent }}>&amp;</span> Sanjana
           </p>
           <p className="text-xs md:text-[10px] tracking-[0.3em] font-body mb-10" style={{ color: `${palette.accent}cc` }}>
-            {COUPLE.hashtag}
+            <HashtagMark />
           </p>
 
           <div className="flex items-center justify-center gap-2 mb-10">

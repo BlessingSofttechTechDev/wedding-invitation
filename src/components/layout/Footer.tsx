@@ -1,5 +1,6 @@
 import Image from "next/image";
 import { COUPLE } from "@/content/events";
+import { HashtagMark } from "@/components/HashtagMark";
 import { P } from "@/components/shared/RoyalPageLayout";
 
 export default function Footer() {
@@ -49,7 +50,7 @@ export default function Footer() {
           className="text-xs sm:text-xs md:text-[10px] tracking-[0.2em] sm:tracking-[0.3em] font-body mb-6 md:mb-10"
           style={{ color: `${P.gold}70` }}
         >
-          {COUPLE.hashtag}
+          <HashtagMark />
         </p>
 
         {/* Gold flourish divider */}

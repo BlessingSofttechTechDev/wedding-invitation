@@ -8,7 +8,8 @@ import { ArrowLeft, MapPin, Clock, CalendarDays } from "lucide-react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { useGSAP } from "@gsap/react";
-import { EVENTS, COUPLE } from "@/content/events";
+import { EVENTS } from "@/content/events";
+import { HashtagMark } from "@/components/HashtagMark";
 import { WeddingEvent } from "@/types";
 import Navbar from "@/components/layout/Navbar";
 import FadeInView from "@/components/motion/FadeInView";
@@ -890,30 +891,8 @@ function DarbarDressCode({ event }: { event: WeddingEvent }) {
             <p className="font-serif text-base md:text-lg italic leading-relaxed max-w-lg mx-auto" style={{ color: `${palette.foreground}de` }}>{dressCode.description}</p>
           </div>
           <div className="mb-10"><PaisleyDivider accent={palette.accent} /></div>
-          <div className="grid md:grid-cols-2 gap-10 md:gap-16">
-            <div>
-              <h4 className="text-xs uppercase tracking-[0.25em] mb-6 font-medium" style={{ color: palette.accent }}>Embrace</h4>
-              <ul className="space-y-4">
-                {dressCode.dos.map((item) => (
-                  <li key={item} className="dc-i flex items-start gap-3">
-                    <span className="mt-1.5 w-1.5 h-1.5 rounded-full shrink-0" style={{ backgroundColor: palette.accent }} />
-                    <span className="text-[15px] leading-relaxed font-light" style={{ color: `${palette.foreground}cc` }}>{item}</span>
-                  </li>
-                ))}
-              </ul>
-            </div>
-            <div>
-              <h4 className="text-xs uppercase tracking-[0.25em] mb-6 font-medium" style={{ color: `${palette.foreground}8c` }}>Kindly Avoid</h4>
-              <ul className="space-y-4">
-                {dressCode.donts.map((item) => (
-                  <li key={item} className="dc-i flex items-start gap-3">
-                    <span className="mt-1.5 w-1.5 h-1.5 rounded-full shrink-0" style={{ backgroundColor: `${palette.foreground}30` }} />
-                    <span className="text-[15px] leading-relaxed font-light" style={{ color: `${palette.foreground}a8` }}>{item}</span>
-                  </li>
-                ))}
-              </ul>
-            </div>
-          </div>
+          <div className="grid md:grid-cols-1 gap-8 md:gap-12">
+</div>
         </div>
       </div>
     </section>
@@ -1062,7 +1041,7 @@ export default function ThirdChapterContent({ event }: ChapterProps) {
           <p className="font-serif text-2xl md:text-3xl mb-2" style={{ color: `${palette.foreground}cc` }}>
             Tarush <span style={{ color: `${palette.accent}77` }}>&amp;</span> Sanjana
           </p>
-          <p className="text-[10px] tracking-[0.3em] font-body mb-10" style={{ color: `${palette.accent}44` }}>{COUPLE.hashtag}</p>
+          <p className="text-[10px] tracking-[0.3em] font-body mb-10" style={{ color: `${palette.accent}44` }}><HashtagMark /></p>
 
           <p className="text-[11px] font-body tracking-wide mb-6" style={{ color: `${palette.foreground}6a` }}>April 20–22, 2026 · Udaipur, Rajasthan</p>
           <div className="flex flex-wrap items-center justify-center gap-2.5 text-xs font-body tracking-wide" style={{ color: `${palette.foreground}5c` }}>

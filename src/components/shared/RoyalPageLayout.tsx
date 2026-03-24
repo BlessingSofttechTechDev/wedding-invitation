@@ -29,7 +29,7 @@ const GRAIN_URL =
    ═══════════════════════════════════════════════════════════ */
 
 interface RoyalPageHeroProps {
-  label?: string;
+  label?: ReactNode;
   title: string;
   titleAccent?: string;
   subtitle?: string;

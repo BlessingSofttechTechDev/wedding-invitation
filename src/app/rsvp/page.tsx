@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import { Phone } from "lucide-react";
-import { COUPLE } from "@/content/events";
+import { HashtagMark } from "@/components/HashtagMark";
 import Navbar from "@/components/layout/Navbar";
 import Footer from "@/components/layout/Footer";
 import FadeInView from "@/components/motion/FadeInView";
@@ -34,7 +34,7 @@ export default function RSVPPage() {
             className="mt-5 text-xs md:text-[11px] font-body tracking-[0.35em]"
             style={{ color: `${P.gold}60` }}
           >
-            {COUPLE.hashtag}
+            <HashtagMark />
           </p>
         </RoyalPageHero>
 

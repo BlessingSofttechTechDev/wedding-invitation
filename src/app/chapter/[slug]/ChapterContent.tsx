@@ -332,7 +332,7 @@ function ImmersiveDressCode({ event }: { event: WeddingEvent }) {
           <decor.SectionDivider palette={palette} />
         </div>
 
-        <div className="grid md:grid-cols-2 gap-12 md:gap-20">
+        <div className="grid md:grid-cols-1 gap-12 md:gap-20 max-w-3xl">
           <div>
             <h4
               className="text-sm uppercase tracking-[0.2em] mb-8 font-medium flex items-center gap-2"
@@ -344,37 +344,10 @@ function ImmersiveDressCode({ event }: { event: WeddingEvent }) {
               Do
             </h4>
             <ul className="space-y-5">
-              {dressCode.dos.map((item, i) => (
+              {dressCode.dos.map((item) => (
                 <li key={item} className="dc-item flex items-start gap-3">
                   <span className="text-green-400 mt-0.5 text-base shrink-0">
                     ✓
-                  </span>
-                  <span
-                    className="text-[15px] leading-relaxed"
-                    style={{ color: `${palette.foreground}bb` }}
-                  >
-                    {item}
-                  </span>
-                </li>
-              ))}
-            </ul>
-          </div>
-
-          <div>
-            <h4
-              className="text-sm uppercase tracking-[0.2em] mb-8 font-medium flex items-center gap-2"
-              style={{ color: "#f87171" }}
-            >
-              <span className="w-5 h-5 rounded-full bg-red-400/10 flex items-center justify-center text-xs">
-                ✗
-              </span>
-              Don&apos;t
-            </h4>
-            <ul className="space-y-5">
-              {dressCode.donts.map((item, i) => (
-                <li key={item} className="dc-item flex items-start gap-3">
-                  <span className="text-red-400 mt-0.5 text-base shrink-0">
-                    ✗
                   </span>
                   <span
                     className="text-[15px] leading-relaxed"

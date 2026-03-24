@@ -3,7 +3,7 @@ import { WeddingEvent } from "@/types";
 export const COUPLE = {
   partner1: "Tarush",
   partner2: "Sanjana",
-  hashtag: "#aThousandtimesYesS",
+  hashtag: "#ThousandtimesyeS",
   weddingDate: "2026-04-20",
   location: "Udaipur, Rajasthan",
   venue: "Fairmont Udaipur",

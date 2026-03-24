@@ -473,7 +473,7 @@ function IllustrationCard({ wardrobe, theme, audience }: { wardrobe: ChapterWard
     <div
       ref={cardRef}
       onMouseMove={handleMouseMove}
-      className="relative w-full h-full overflow-hidden flex flex-col items-center justify-center p-8 perspective-1000"
+      className="relative w-full h-full overflow-hidden flex flex-col items-center justify-center p-6 sm:p-10 md:p-12 perspective-1000"
     >
       <GoldDustParticles count={60} />
 
@@ -527,15 +527,15 @@ function IllustrationCard({ wardrobe, theme, audience }: { wardrobe: ChapterWard
         </span>
       </div>
 
-      {/* Hero Content */}
-      <div className="relative z-30 text-center space-y-5 md:space-y-6 max-w-lg mt-4 md:mt-12 px-4 md:px-8">
+      {/* Hero Content  -  word breaks at spaces only (no wrap-anywhere mid-word) */}
+      <div className="relative z-30 w-full max-w-4xl mx-auto text-center space-y-6 md:space-y-7 mt-6 md:mt-14 px-5 sm:px-8 md:px-12">
         <div className="card-text-el inline-block">
           <span className="text-[10px] uppercase tracking-[0.8em] text-amber-500" style={{ textShadow: `0 0 12px #e2c25a60` }}>
             Style Lookbook
           </span>
         </div>
 
-        <h3 className="card-text-el font-serif text-[clamp(1.75rem,6.8vw,3.35rem)] md:text-[clamp(3rem,6.4vw,5.2rem)] text-white leading-[1.05] tracking-normal max-w-[76%] sm:max-w-[82%] md:max-w-[82%] mx-auto text-balance wrap-anywhere">
+        <h3 className="card-text-el font-serif text-[clamp(1.85rem,5.2vw,3.25rem)] md:text-[clamp(2.5rem,5vw,4.25rem)] text-white leading-[1.08] tracking-normal mx-auto max-w-full text-balance break-normal hyphens-none">
           {wardrobe.title}
         </h3>
 
@@ -547,7 +547,7 @@ function IllustrationCard({ wardrobe, theme, audience }: { wardrobe: ChapterWard
           <div className="h-px w-8 bg-white/20" />
         </div>
 
-        <p className="card-text-el text-white/50 text-[11px] uppercase tracking-[0.3em] leading-relaxed max-w-xs mx-auto">
+        <p className="card-text-el text-white/50 text-[11px] uppercase tracking-[0.3em] leading-relaxed max-w-md mx-auto px-1 break-normal hyphens-none">
           {wardrobe.moodLine}
         </p>
       </div>
@@ -643,23 +643,6 @@ function ChapterLookbookGuide({ wardrobe, theme }: { wardrobe: ChapterWardrobe; 
         </div>
       </div>
 
-      {/* Palette Guidance */}
-      <div className="gp-el p-6 rounded-2xl border border-red-500/10 bg-red-500/[0.02]">
-        <div className="flex items-center gap-3 mb-4">
-          <div className="w-2 h-2 rounded-full bg-red-500/40" />
-          <span className="text-[9px] uppercase tracking-[0.4em] text-red-200/40">Palettes to Avoid</span>
-        </div>
-        <div className="flex flex-wrap gap-2">
-          {wardrobe.palette.avoid.map(item => (
-            <span key={item} className="px-3 py-1.5 rounded-lg border border-red-500/10 bg-red-500/5 text-red-200/50 text-[10px] uppercase tracking-widest font-body">
-              {item}
-            </span>
-          ))}
-        </div>
-        <p className="mt-4 text-[10px] italic text-red-200/30 font-serif">
-          * Steering clear of these tones ensures a cohesive and high-fashion aesthetic for the photographs.
-        </p>
-      </div>
 
       {/* Accessories / Adornments */}
       <div className="gp-el p-6 rounded-3xl border border-white/5 bg-gradient-to-br from-white/[0.03] to-transparent">

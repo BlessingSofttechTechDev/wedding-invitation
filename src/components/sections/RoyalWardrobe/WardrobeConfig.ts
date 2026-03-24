@@ -253,7 +253,7 @@ export const wardrobeConfig: Record<string, ChapterWardrobe> = {
     title: "The Thrill Theory",
     moodLine: "Press play on the chaos  -  rules dissolve under strobes and sequins.",
     dressCode: {
-      title: "Neon Genesis",
+      title: "Speed & Sparkle",
       description: "A neon-drenched afterparty inside a surreal amusement park. The only dress code is daring. Sequins, metallic, experimental  -  wear what future-you would photograph.",
     },
     mood: "Experimental, nightclub energy",

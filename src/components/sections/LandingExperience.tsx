@@ -1017,7 +1017,7 @@ function StoryPageCTA() {
               boxShadow: `0 10px 28px rgba(212,175,55,0.2), inset 0 1px 0 rgba(255,255,255,0.12)`,
             }}
           >
-            Read Our Love Story
+            Step into Our Own World
             <span aria-hidden="true">→</span>
           </Link>
         </div>

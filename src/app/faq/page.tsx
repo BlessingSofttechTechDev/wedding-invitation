@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
-import { FAQ_DATA, COUPLE, TRAVEL_INFO } from "@/content/events";
+import { FAQ_DATA, TRAVEL_INFO } from "@/content/events";
+import { HashtagMark } from "@/components/HashtagMark";
 import Navbar from "@/components/layout/Navbar";
 import Footer from "@/components/layout/Footer";
 import FadeInView from "@/components/motion/FadeInView";
@@ -29,7 +30,7 @@ export default function FAQPage() {
       <Navbar />
 
       <RoyalPageHero
-        label={COUPLE.hashtag}
+        label={<HashtagMark />}
         title="Frequently Asked"
         titleAccent="Questions"
         subtitle="Everything you need to know"

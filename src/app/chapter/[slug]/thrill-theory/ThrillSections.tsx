@@ -6,7 +6,7 @@ import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { useGSAP } from "@gsap/react";
 import { WeddingEvent } from "@/types";
-import { COUPLE } from "@/content/events";
+import { HashtagMark } from "@/components/HashtagMark";
 import { T, textGlow } from "./theme";
 import { NeonDivider } from "./PremiumSVGs";
 
@@ -290,18 +290,18 @@ export function DressCodePanel({ event }: { event: WeddingEvent }) {
             <NeonDivider accent={palette.accent} primary={palette.primary} />
           </div>
 
-          <div className="grid md:grid-cols-2 gap-10 md:gap-16">
+          <div className="max-w-xl mx-auto w-full">
             {/* Go For */}
-            <div>
+            <div className="text-left pl-1 md:pl-2">
               <h4
-                className="text-xs uppercase tracking-[0.25em] mb-6 font-bold"
+                className="text-xs uppercase tracking-[0.25em] mb-5 font-bold"
                 style={{ color: T.cyan }}
               >
                 Go For
               </h4>
-              <ul className="space-y-4">
+              <ul className="space-y-3.5">
                 {dressCode.dos.map((item) => (
-                  <li key={item} className="dc-item flex items-start gap-3">
+                  <li key={item} className="dc-item flex items-start gap-2.5">
                     <span
                       className="mt-1.5 w-1.5 h-1.5 rounded-full shrink-0"
                       style={{
@@ -320,31 +320,6 @@ export function DressCodePanel({ event }: { event: WeddingEvent }) {
               </ul>
             </div>
 
-            {/* Skip */}
-            <div>
-              <h4
-                className="text-xs uppercase tracking-[0.25em] mb-6 font-bold"
-                style={{ color: "rgba(255,255,255,0.6)" }}
-              >
-                Skip
-              </h4>
-              <ul className="space-y-4">
-                {dressCode.donts.map((item) => (
-                  <li key={item} className="dc-item flex items-start gap-3">
-                    <span
-                      className="mt-1.5 w-1.5 h-1.5 rounded-full shrink-0"
-                      style={{ backgroundColor: T.dim }}
-                    />
-                    <span
-                      className="text-[15px] leading-relaxed font-light"
-                      style={{ color: "rgba(255,255,255,0.47)" }}
-                    >
-                      {item}
-                    </span>
-                  </li>
-                ))}
-              </ul>
-            </div>
           </div>
         </div>
       </div>
@@ -487,7 +462,7 @@ export function ThrillFooter({ event }: { event: WeddingEvent }) {
           className="text-[10px] tracking-[0.3em] font-body mb-10"
           style={{ color: `${T.cyan}66` }}
         >
-          {COUPLE.hashtag}
+          <HashtagMark />
         </p>
 
         <p

@@ -100,7 +100,7 @@ export function StorySection() {
             className="inline-block mt-10 text-xs md:text-[10px] uppercase tracking-[0.3em] font-body transition-colors duration-500 px-8 py-3"
             style={{ color: "#e2c25a99", border: "1px solid #e2c25a20" }}
           >
-            Read Our Full Story →
+            Step into Our Own World →
           </Link>
         </FadeInView>
         <FadeInView delay={0.56}>

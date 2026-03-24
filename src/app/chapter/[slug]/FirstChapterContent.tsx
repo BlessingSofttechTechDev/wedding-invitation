@@ -8,7 +8,8 @@ import { ArrowLeft, MapPin, Clock, CalendarDays } from "lucide-react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { useGSAP } from "@gsap/react";
-import { EVENTS, COUPLE } from "@/content/events";
+import { EVENTS } from "@/content/events";
+import { HashtagMark } from "@/components/HashtagMark";
 import { WeddingEvent } from "@/types";
 import Navbar from "@/components/layout/Navbar";
 
@@ -874,60 +875,25 @@ function RoyalDressCode({ event }: { event: WeddingEvent }) {
             <div className="flex-1 h-px" style={{ background: `linear-gradient(90deg,${palette.accent}25,transparent)` }} />
           </div>
 
-          {/* Two columns */}
-          <div className="grid md:grid-cols-2 gap-10 md:gap-16">
-            {/* Embrace column */}
+          {/* Single wardrobe column */}
+          <div className="grid md:grid-cols-1 gap-8 md:gap-12 max-w-3xl mx-auto">
             <div>
               <h4
-                className="text-xs uppercase tracking-[0.25em] mb-6 font-medium flex items-center gap-2.5"
+                className="text-xs uppercase tracking-[0.3em] mb-6 font-medium"
                 style={{ color: palette.accent }}
               >
-                <svg viewBox="0 0 16 16" className="w-3.5 h-3.5" fill="none">
-                  <path d="M3 16 Q1 17 8 20 Q15 17 13 16Z" fill={palette.accent} opacity="0.5" transform="scale(0.8) translate(0,-6)" />
-                  <path d="M8 14 Q5 8 6 4 Q8 0 8 0 Q8 0 10 4 Q11 8 8 14Z" fill={palette.accent} opacity="0.7" transform="scale(0.8) translate(0,-2)" />
-                </svg>
                 Embrace
               </h4>
               <ul className="space-y-4">
                 {dressCode.dos.map((item) => (
                   <li key={item} className="dc-i flex items-start gap-3">
                     <span
-                      className="mt-1.5 w-1.5 h-1.5 rounded-full shrink-0"
+                      className="mt-1.5 w-2 h-2 rounded-full shrink-0"
                       style={{ backgroundColor: palette.accent }}
                     />
                     <span
-                      className="text-[15px] leading-relaxed font-light"
-                      style={{ color: `${palette.foreground}cc` }}
-                    >
-                      {item}
-                    </span>
-                  </li>
-                ))}
-              </ul>
-            </div>
-
-            {/* Avoid column */}
-            <div>
-              <h4
-                className="text-xs uppercase tracking-[0.25em] mb-6 font-medium flex items-center gap-2.5"
-                style={{ color: `${palette.foreground}8c` }}
-              >
-                <svg viewBox="0 0 14 14" className="w-3.5 h-3.5" fill="none">
-                  <line x1="2" y1="2" x2="12" y2="12" stroke={`${palette.foreground}40`} strokeWidth="1" />
-                  <line x1="12" y1="2" x2="2" y2="12" stroke={`${palette.foreground}40`} strokeWidth="1" />
-                </svg>
-                Kindly Avoid
-              </h4>
-              <ul className="space-y-4">
-                {dressCode.donts.map((item) => (
-                  <li key={item} className="dc-i flex items-start gap-3">
-                    <span
-                      className="mt-1.5 w-1.5 h-1.5 rounded-full shrink-0"
-                      style={{ backgroundColor: `${palette.foreground}30` }}
-                    />
-                    <span
-                      className="text-[15px] leading-relaxed font-light"
-                      style={{ color: `${palette.foreground}a8` }}
+                      className="text-[15px] md:text-base leading-relaxed"
+                      style={{ color: `${palette.foreground}d0` }}
                     >
                       {item}
                     </span>
@@ -1258,7 +1224,7 @@ export default function FirstChapterContent({ event }: ChapterProps) {
             className="text-[10px] tracking-[0.3em] font-body mb-10"
             style={{ color: `${palette.accent}35` }}
           >
-            {COUPLE.hashtag}
+            <HashtagMark />
           </p>
 
           <div className="flex items-center justify-center gap-2 mb-10">

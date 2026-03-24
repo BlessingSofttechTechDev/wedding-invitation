@@ -5,6 +5,7 @@ import Link from "next/link";
 import { motion, AnimatePresence } from "framer-motion";
 import { ChevronDown } from "lucide-react";
 import { COUPLE, EVENTS_FOR_CHAPTER_NAV } from "@/content/events";
+import { HashtagMark } from "@/components/HashtagMark";
 import { P } from "@/components/shared/RoyalPageLayout";
 
 const NAV_LINKS = [
@@ -433,7 +434,7 @@ export default function Navbar() {
                 className="text-xs md:text-[10px] tracking-[0.3em] font-body"
                 style={{ color: `${P.gold}55` }}
               >
-                {COUPLE.hashtag}
+                <HashtagMark />
               </span>
             </motion.div>
           </motion.div>
