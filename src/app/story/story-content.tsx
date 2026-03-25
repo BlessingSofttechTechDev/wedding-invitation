@@ -344,142 +344,7 @@ function VenueMoment() {
   );
 }
 
-/* ─────────────────────────────────────────────────────────────── */
-/*  Timeline  -  each milestone animates in on scroll                 */
-/* ─────────────────────────────────────────────────────────────── */
-
-const MILESTONES = [
-  {
-    year: "2018",
-    title: "The First Meeting",
-    desc: "A Bollywood-worthy meet-cute in Mumbai. Two strangers who didn't know their lives were about to change forever.",
-  },
-  {
-    year: "2020",
-    title: "Off to London",
-    desc: "Both pursuing their Masters in London  -  late-night chai and new cities drew them close again.",
-  },
-  {
-    year: "2021",
-    title: "Friendship Becomes Love",
-    desc: "Somewhere between shared adventures, friendship quietly turned into love  -  right time, right person.",
-  },
-  {
-    year: "2023",
-    title: "The Families Unite",
-    desc: "December 2023  -  with blessings from both families, every piece fell beautifully into place.",
-  },
-  {
-    year: "2026",
-    title: "The Celebration",
-    desc: "In Udaipur, their story arrives at its most magical moment  -  three days, countless memories, one celebration.",
-  },
-] as const;
-
-function Timeline() {
-  return (
-    <section
-      className="relative px-6 py-20 md:py-28"
-      style={{
-        backgroundColor: P.bg,
-      }}
-    >
-      <div
-        className="pointer-events-none absolute inset-0"
-        style={{
-          background: `radial-gradient(ellipse 50% 50% at 50% 30%, rgba(212,175,55,0.04), transparent 70%)`,
-        }}
-      />
-      <div className="relative z-10 mx-auto max-w-3xl lg:max-w-4xl">
-        <FadeInView>
-          <div className="mb-14 text-center">
-            <RoyalDivider className="mb-8" />
-            <span
-              className="mb-4 block text-xs md:text-[10px] font-body uppercase tracking-[0.38em]"
-              style={{ color: `${P.gold}b0` }}
-            >
-              The Journey · यात्रा
-            </span>
-            <h2
-              className="font-serif text-3xl md:text-4xl"
-              style={{ color: `${P.cream}ee` }}
-            >
-              How We Got Here
-            </h2>
-          </div>
-        </FadeInView>
-
-        <div className="relative pl-0">
-          {/* Center axis  -  milestones alternate left / right of this line */}
-          <div
-            className="absolute left-[11px] top-2 bottom-2 w-px sm:left-1/2 sm:-translate-x-1/2"
-            style={{
-              background: `linear-gradient(to bottom, transparent, ${P.gold}28, ${P.gold}30, ${P.gold}28, transparent)`,
-            }}
-            aria-hidden="true"
-          />
-          <ul className="relative space-y-12 md:space-y-16">
-            {MILESTONES.map((m, i) => {
-              const isLeft = i % 2 === 0;
-              return (
-                <li
-                  key={m.year}
-                  className="relative grid grid-cols-1 pl-10 sm:grid-cols-2 sm:gap-x-12 sm:gap-y-0 sm:pl-0"
-                >
-                  {/* Marker sits on the center line (not a grid item  -  avoids pushing content into one column) */}
-                  <div
-                    className="absolute left-[11px] top-1.5 z-10 size-2.5 -translate-x-1/2 rotate-45 sm:left-1/2 sm:-translate-x-1/2"
-                    style={{
-                      border: `1px solid ${P.gold}55`,
-                      backgroundColor: `${P.gold}12`,
-                    }}
-                    aria-hidden="true"
-                  />
-                  <div
-                    className={
-                      isLeft
-                        ? "sm:col-start-1 sm:row-start-1 sm:pr-10 sm:text-right"
-                        : "sm:col-start-2 sm:row-start-1 sm:pl-10 sm:text-left"
-                    }
-                  >
-                    <FadeInView
-                      delay={0.06}
-                      duration={0.85}
-                      direction={isLeft ? "right" : "left"}
-                    >
-                      <span
-                        className="font-serif text-2xl md:text-3xl"
-                        style={{
-                          background: `linear-gradient(180deg, ${P.gold}, ${P.bronze})`,
-                          WebkitBackgroundClip: "text",
-                          WebkitTextFillColor: "transparent",
-                        }}
-                      >
-                        {m.year}
-                      </span>
-                      <h3
-                        className="mt-1 font-serif text-lg"
-                        style={{ color: `${P.cream}cc` }}
-                      >
-                        {m.title}
-                      </h3>
-                      <p
-                        className="mt-2 text-sm leading-relaxed"
-                        style={{ color: `${P.cream}8e` }}
-                      >
-                        {m.desc}
-                      </p>
-                    </FadeInView>
-                  </div>
-                </li>
-              );
-            })}
-          </ul>
-        </div>
-      </div>
-    </section>
-  );
-}
+// "How We Got Here" timeline removed on request.
 
 /* ─────────────────────────────────────────────────────────────── */
 /*  Parents' blessing  -  simplified frame                           */
@@ -739,8 +604,6 @@ export default function StoryPageContent() {
         </PullQuote>
       </ProseSection>
 
-      <Timeline />
-
       <QuoteBand quote="Every piece of their story had been quietly waiting to complete the puzzle." />
 
       <ProseSection
@@ -750,7 +613,7 @@ export default function StoryPageContent() {
         titleAccent="Fell Into Place"
       >
         <ProseParagraph>
-          By December 2023, with their families&apos; blessings, everything fell
+         With their families&apos; blessings, everything fell
           beautifully into place. Two families  -  different cities, different
           traditions  -  united by the same joy.
         </ProseParagraph>

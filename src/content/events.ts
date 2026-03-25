@@ -96,7 +96,7 @@ export const EVENTS: WeddingEvent[] = [
     location: "Imperial Banquet & Terrace",
     venue: "Fairmont Udaipur",
     description:
-      "Mumbai was the first meeting. Pune was where he grew up. London was where friendship became love. December 2023 was when the families came together. A minimalist setting with subtle details that reflect their journey  -  as they begin a new one together.",
+      "Mumbai was the first meeting. Pune was where he grew up. London was where friendship became love. Cappadocia was where they took a step forward. A minimalist setting with subtle details that reflect their journey  -  as they begin a new one together.",
     longDescription:
       "An intimate lunch mapping their journey  -  Mumbai, Pune, London  -  in sun-drenched simplicity.",
     dressCode: {

@@ -1035,6 +1035,27 @@ function StoryPageCTA() {
 
 function VenueShowcase() {
   const ref = useRef<HTMLElement>(null);
+  const fairmontSpaces = useMemo(() => {
+    const out: string[] = [];
+    const seen = new Set<string>();
+
+    const add = (value?: string) => {
+      if (!value) return;
+      const trimmed = value.trim();
+      if (!trimmed) return;
+      const normalized = trimmed.replace(/\s+and\s+/gi, " & ");
+      if (seen.has(normalized)) return;
+      seen.add(normalized);
+      out.push(normalized);
+    };
+
+    EVENTS.filter((e) => e.venue === "Fairmont Udaipur" && e.chapterNumber !== 0).forEach((e) => {
+      add(e.location);
+      e.subEvents?.forEach((se) => add(se.location));
+    });
+
+    return out.slice(0, 6);
+  }, []);
 
   useGSAP(() => {
     gsap.fromTo(".vs-fade", { opacity: 0, y: 25 }, {
@@ -1095,8 +1116,8 @@ function VenueShowcase() {
 
           {/* Palace spaces with diya dots */}
           <div className="flex flex-wrap items-center justify-center gap-x-3 gap-y-3 sm:gap-4 md:gap-6 mt-6 sm:mt-8 pt-5 sm:pt-6" style={{ borderTop: "1px solid rgba(212, 175, 55, 0.05)" }}>
-            {["The Grand Lawn", "The Haveli Courtyard", "The Durbar Hall", "The Grand Ballroom"].map((space, i) => (
-              <span key={i} className="flex items-center gap-2 text-[11px] sm:text-xs md:text-[11px] uppercase tracking-[0.18em] sm:tracking-[0.2em] font-body max-w-[11rem] sm:max-w-none justify-center text-center sm:text-left" style={{ color: `${P.cream}dd`, textShadow: "0 1px 10px rgba(0,0,0,0.6)" }}>
+            {fairmontSpaces.map((space) => (
+              <span key={space} className="flex items-center gap-2 text-[11px] sm:text-xs md:text-[11px] uppercase tracking-[0.18em] sm:tracking-[0.2em] font-body max-w-[11rem] sm:max-w-none justify-center text-center sm:text-left" style={{ color: `${P.cream}dd`, textShadow: "0 1px 10px rgba(0,0,0,0.6)" }}>
                 <span className="w-1.5 h-1.5 rounded-full shrink-0" style={{ backgroundColor: P.gold, boxShadow: "0 0 8px rgba(212,175,55,0.6)" }} />
                 {space}
               </span>
