@@ -204,6 +204,25 @@ export default function Navbar() {
                 )}
               </span>
             ))}
+            <Link
+              href="/app"
+              className="ml-3 text-xs md:text-[11px] uppercase tracking-[0.2em] font-body transition-all duration-300 px-4 py-1.5 rounded-sm"
+              style={{
+                color: `${P.gold}e6`,
+                border: `1px solid ${P.gold}40`,
+                background: `linear-gradient(to bottom, ${P.gold}10, transparent)`,
+              }}
+              onMouseEnter={(e) => {
+                e.currentTarget.style.background = `linear-gradient(to bottom, ${P.gold}22, ${P.gold}08)`;
+                e.currentTarget.style.borderColor = `${P.gold}70`;
+              }}
+              onMouseLeave={(e) => {
+                e.currentTarget.style.background = `linear-gradient(to bottom, ${P.gold}10, transparent)`;
+                e.currentTarget.style.borderColor = `${P.gold}40`;
+              }}
+            >
+              Open App
+            </Link>
           </div>
 
           {/* Mobile toggle */}
@@ -401,6 +420,30 @@ export default function Navbar() {
                 </Link>
               </motion.div>
             ))}
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              exit={{ opacity: 0, y: -10 }}
+              transition={{
+                delay: (NAV_LINKS.length + 2) * 0.08 + 0.1,
+                duration: 0.4,
+                ease: [0.16, 1, 0.3, 1],
+              }}
+              className="shrink-0 w-full pt-2"
+            >
+              <Link
+                href="/app"
+                onClick={() => setMobileOpen(false)}
+                className="block text-center font-body text-xs uppercase tracking-[0.25em] py-3 px-6 rounded-sm transition-colors"
+                style={{
+                  color: `${P.gold}e6`,
+                  border: `1px solid ${P.gold}50`,
+                  background: `linear-gradient(to bottom, ${P.gold}14, transparent)`,
+                }}
+              >
+                Open App
+              </Link>
+            </motion.div>
               </div>
             </div>
 
