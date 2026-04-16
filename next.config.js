@@ -9,6 +9,7 @@ const WEBAPP_UPSTREAM_URL = process.env.WEBAPP_UPSTREAM_URL;
 
 /** @type {import('next').NextConfig} */
 const nextConfig = {
+  allowedDevOrigins: ["*.ngrok-free.app", "*.ngrok-free.dev", "*.ngrok.app", "*.ngrok.io", "*.ngrok.dev"],
   turbopack: {
     root: projectRoot,
   },

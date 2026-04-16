@@ -886,7 +886,7 @@ function Hero({ loaded }: { loaded: boolean }) {
 /*  Royal Prologue  -  Jaipur Heritage Narrative                     */
 /* ─────────────────────────────────────────────────────────────── */
 
-function RoyalPrologu() {
+function RoyalPrologue() {
   const ref = useRef<HTMLElement>(null);
 
   useGSAP(() => {
